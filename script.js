@@ -18,7 +18,7 @@ const rawEventsData = [
         registration: "Not specified",
         contact: "info@edinburghsteinerschool.org.uk",
         description: "An event related to the Steiner Waldorf Olympic Games.",
-        eventUrl: "https://edinburghsteinerschool.org.uk/event/steiner-waldorf-olympics/", // Reverted to specific link
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/steiner-waldorf-olympics/",
         type: "multi-day"
     },
     {
@@ -32,7 +32,7 @@ const rawEventsData = [
         registration: "Not specified",
         contact: "info@edinburghsteinerschool.org.uk",
         description: "Ruth will be hosting a Waldorf Stationery Stall on the last Friday of the term for parents to buy next year's materials.",
-        eventUrl: "https://edinburghsteinerschool.org.uk/event/waldorf-stationery-stall/", // Reverted to specific link
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/waldorf-stationery-stall/",
         type: "single-day"
     },
     {
@@ -46,7 +46,7 @@ const rawEventsData = [
         registration: "Not specified",
         contact: "info@edinburghsteinerschool.org.uk",
         description: "Class 12 will put on three performances of their final year play.",
-        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/", // Reverted to specific link
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/",
         type: "multi-day"
     },
     {
@@ -60,7 +60,7 @@ const rawEventsData = [
         registration: "summer.camp@edinburghsteinerschool.org.uk",
         contact: "info@edinburghsteinerschool.org.uk",
         description: "Summer camps focusing on circus activities and crafts for children aged 6+. Delivered independently of the School by Steiner Waldorf Teachers, on campus.",
-        eventUrl: "https://edinburghsteinerschool.org.uk/event/summer-camp/", // Reverted to specific link
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/summer-camp/",
         type: "multi-day"
     },
     {
@@ -74,7 +74,7 @@ const rawEventsData = [
         registration: "Not specified",
         contact: "info@edinburghsteinerschool.org.uk",
         description: "Summer camps specifically for Kindergarten age children. A week of play and summertime fun.",
-        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/", // Reverted to specific link
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/",
         type: "multi-day"
     },
 
@@ -93,23 +93,7 @@ const rawEventsData = [
         eventUrl: "https://www.tiphereth.org.uk/", // Main page, as specific fayre link not found
         type: "single-day"
     },
-    // Removed Tiphereth Open Day as no confirmed 2025 date/link found
-    /*
-    {
-        id: 61,
-        title: "Tiphereth Open Day",
-        organization: "Tiphereth",
-        date: "Saturday, 13 September 2025",
-        time: "11:00 AM - 3:00 PM",
-        location: "Tiphereth, 55 Torphin Road, Edinburgh, EH13 0PQ",
-        cost: "Free",
-        registration: "Not specified",
-        contact: "admin@tiphereth.org.uk",
-        description: "An opportunity to explore the workshops, gardens and community life at Tiphereth.",
-        eventUrl: "", // This link was broken
-        type: "single-day"
-    },
-    */
+    // Tiphereth Open Day (id: 61) was removed as no confirmed 2025 date/link found
 
     // --- Garvald Edinburgh Events ---
     {
@@ -123,7 +107,7 @@ const rawEventsData = [
         registration: "Not specified",
         contact: "admin@garvaldedinburgh.org.uk",
         description: "An exhibition featuring Grant's Robot Faces.",
-        eventUrl: "https://www.garvaldedinburgh.org.uk/news-and-events", // Retained, lists exhibition
+        eventUrl: "https://www.garvaldedinburgh.org.uk/news-and-events",
         type: "multi-day"
     },
     {
@@ -151,7 +135,7 @@ const rawEventsData = [
         registration: "Not required",
         contact: "admin@garvaldedinburgh.org.uk",
         description: "Browse unique handmade gifts, crafts, and art created by Garvald artists and makers, perfect for Christmas shopping.",
-        eventUrl: "https://www.garvaldedinburgh.org.uk/news-and-events", // Retained, lists event
+        eventUrl: "https://www.garvaldedinburgh.org.uk/news-and-events",
         type: "multi-day"
     },
 
@@ -185,20 +169,7 @@ const rawEventsData = [
         eventUrl: "https://www.ticketsource.co.uk/whats-on/dumfries/loch-arthur-camphill-community/international-youth-conference-in-camphill-2025/e-ddapem",
         type: "multi-day"
     },
-    {
-        id: 101,
-        title: "Loch Arthur Christmas Market",
-        organization: "Camphill (Loch Arthur)",
-        date: "Saturday, 23 November 2025",
-        time: "10:00 AM - 4:00 PM",
-        location: "Loch Arthur Camphill Community, Dumfries",
-        cost: "Free entry",
-        registration: "Not required",
-        contact: "admin@locharthur.org.uk",
-        description: "Annual Christmas Market with crafts, food, and festive atmosphere.",
-        eventUrl: "https://www.locharthur.org.uk/whats-on/", // Most specific events page
-        type: "single-day"
-    },
+    // Loch Arthur Christmas Market (id: 101) was removed as no confirmed 2025 date/link found
 
 
     // --- Edinburgh Christian Community Events ---
@@ -213,7 +184,7 @@ const rawEventsData = [
         registration: "None",
         contact: "0131 229 4514",
         description: "Weekly service. All welcome.",
-        eventUrl: "https://www.christiancommunity.org.uk/branches/edinburgh/",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
         type: "recurring",
         recurrence: { type: "weekly", dayOfWeek: 0 } // Sunday is 0
     },
@@ -221,14 +192,14 @@ const rawEventsData = [
         id: 12,
         title: "Children's Service",
         organization: "Edinburgh Christian Community",
-        date: "Most Sundays (check schedule)",
+        date: "Most Sundays (check schedule)", // Keeping as 'Most Sundays' as often aligns with school terms
         time: "9:30 AM",
         location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
         cost: "Free",
         registration: "None",
         contact: "0131 229 4514",
-        description: "A shorter service suitable for children, held before the main Sunday Service.",
-        eventUrl: "https://www.christiancommunity.org.uk/branches/edinburgh/",
+        description: "A shorter service suitable for children, held before the main Sunday Service. Please contact for specific dates.", // Added note to contact
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
         type: "recurring",
         recurrence: { type: "weekly", dayOfWeek: 0 } // Sunday is 0
     },
@@ -242,8 +213,8 @@ const rawEventsData = [
         cost: "Free",
         registration: "None",
         contact: "0131 229 4514",
-        description: "Weekly study group exploring aspects of the meditative path. All welcome to join.",
-        eventUrl: "https://www.christiancommunity.org.uk/branches/edinburgh/",
+        description: "Weekly study group exploring aspects of the meditative path. All welcome to join. Please contact for specific dates/breaks.", // Added note to contact
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
         type: "recurring",
         recurrence: { type: "weekly", dayOfWeek: 2 } // Tuesday is 2
     }
@@ -315,10 +286,7 @@ function parseDateRange(dateString) {
 
     if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
         // For complex strings like "Multiple sessions: July 2 - August 8, 2025"
-        // We can try to extract the last year found and apply it, then re-parse components.
-        // This is a more robust, but more complex, parsing. For now, rely on `rawEventsData` for such types.
-        console.warn("Could not fully parse date string:", dateString);
-        // Attempt to extract last date if it's a "Multiple sessions" type string
+        // We can try to extract the last date if it's a "Multiple sessions" type string
         const dateMatch = dateString.match(/([A-Za-z]+ \d{1,2}(,)? \d{4})/);
         if (dateMatch && dateMatch[1]) {
             startDate = new Date(dateMatch[1]);
