@@ -83,17 +83,16 @@ const rawEventsData = [
         id: 6,
         title: "Tiphereth Summer Fayre",
         organization: "Tiphereth",
-        date: "Saturday, 21 June 2025", // This event is in the past from 26 June. It will be filtered out by default.
+        date: "Saturday, 21 June 2025",
         time: "10:00 AM - 2:00 PM",
         location: "Tiphereth, 55 Torphin Road, Edinburgh, EH13 0PQ",
         cost: "Not specified",
         registration: "Not specified",
         contact: "admin@tiphereth.org.uk",
         description: "Discover beautiful handmade goods from workshops, meet people, and enjoy a fun day out. Families and members of the public welcome.",
-        eventUrl: "https://www.tiphereth.org.uk/", // Main page, as specific fayre link not found
+        eventUrl: "https://www.tiphereth.org.uk/",
         type: "single-day"
     },
-    // Tiphereth Open Day (id: 61) was removed as no confirmed 2025 date/link found
 
     // --- Garvald Edinburgh Events ---
     {
@@ -114,7 +113,7 @@ const rawEventsData = [
         id: 8,
         title: "You and Me and Everyone Exhibition",
         organization: "Garvald",
-        date: "31 May - 22 June 2025", // Past event - will be filtered
+        date: "31 May - 22 June 2025",
         time: "Not specified",
         location: "Summerhall, 1 Summerhall, Edinburgh, EH9 1PL",
         cost: "Not specified",
@@ -145,7 +144,7 @@ const rawEventsData = [
         id: 9,
         title: "Bike Safari 2025",
         organization: "Camphill Blair Drummond",
-        date: "Saturday, 14 June 2025", // Past Event - will be filtered
+        date: "Saturday, 14 June 2025",
         time: "5:30 PM - 8:30 PM",
         location: "Blair Drummond Safari Park, Stirling (near Edinburgh)",
         cost: "Adults £14.25, Children £8.83",
@@ -169,10 +168,9 @@ const rawEventsData = [
         eventUrl: "https://www.ticketsource.co.uk/whats-on/dumfries/loch-arthur-camphill-community/international-youth-conference-in-camphill-2025/e-ddapem",
         type: "multi-day"
     },
-    // Loch Arthur Christmas Market (id: 101) was removed as no confirmed 2025 date/link found
 
 
-    // --- Edinburgh Christian Community Events (Updated based on provided list) ---
+    // --- Edinburgh Christian Community Events ---
     {
         id: 13,
         title: "Children's Service",
