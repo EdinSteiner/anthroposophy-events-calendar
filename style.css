@@ -112,7 +112,6 @@ a:hover {
 
 .event-card .more-info a {
     display: inline-block; /* Allows padding/margin for button-like appearance if needed */
-    /* Add any button-like styling here if desired, e.g., background, padding */
 }
 
 
@@ -127,6 +126,7 @@ a:hover {
     font-size: 1em; /* Smaller for event title */
     margin-top: 0;
     margin-bottom: 10px;
+    color: #333; /* Make event titles black */
 }
 
 
@@ -141,12 +141,21 @@ a:hover {
     margin-bottom: 8px; /* Reduced margin for compactness */
     padding: 8px 12px; /* Reduced padding for compactness */
     background-color: #fcfcfc;
+    /* Added: Thin black horizontal line at the top of each day card */
+    border-top: 1px solid #333; /* Thin black line */
+    padding-top: 15px; /* Add some space after the line */
+}
+
+/* Remove top border for the very first day card to avoid double border */
+.diary-day-card:first-of-type {
+    border-top: none;
+    padding-top: 8px; /* Reset padding for first card */
 }
 
 .diary-day-card h4 {
     margin-top: 0;
     margin-bottom: 4px; /* Reduced margin */
-    color: #007bff;
+    color: #333; /* Make date font black */
     font-size: 1.1em; /* Keep day name clear */
 }
 
@@ -175,14 +184,15 @@ a:hover {
 
 /* Specific styling for organization name and event title in diary view */
 .diary-event-list .event-org-name-diary {
-    font-size: 0.9em; /* A bit smaller for diary view */
+    font-size: 1.05em; /* Larger for organization name */
     font-weight: bold;
     margin-bottom: 1px;
 }
 
 .diary-event-list h4 {
-    font-size: 0.95em; /* Smaller for diary view */
+    font-size: 0.9em; /* Smaller for event title */
     margin-bottom: 3px;
+    color: #333; /* Make event titles black */
 }
 
 .diary-event-list .event-time-diary,
@@ -308,21 +318,21 @@ a:hover {
 
 /* Color Coding for Organization Names and Titles */
 /* Edinburgh Steiner School */
-.title-steiner { color: #8B0000; /* Dark Red */ }
+.title-steiner { color: #0056B3; /* Strong Blue */ }
 /* Tiphereth */
-.title-tiphereth { color: #2E8B57; /* Sea Green */ }
+.title-tiphereth { color: #28A745; /* Emerald Green */ }
 /* Garvald */
-.title-garvald { color: #8A2BE2; /* Blue Violet */ }
+.title-garvald { color: #DC3545; /* Vivid Red */ }
 /* Columcille (if added later) */
-.title-columcille { color: #D2691E; /* Chocolate */ }
+.title-columcille { color: #FFC107; /* Amber (use with dark background if text, or for border/icon) - for text, need good contrast */ }
 /* Camphill Blair Drummond */
-.title-camphill-blair-drummond { color: #4682B4; /* Steel Blue */ }
+.title-camphill-blair-drummond { color: #6F42C1; /* Deep Purple */ }
 /* Camphill (Loch Arthur) */
-.title-camphill-loch-arthur { color: #6A5ACD; /* Slate Blue */ }
+.title-camphill-loch-arthur { color: #17A2B8; /* Teal Blue */ }
 /* Ruskin Mill (if added later) */
-.title-ruskin-mill { color: #A0522D; /* Sienna */ }
+.title-ruskin-mill { color: #FD7E14; /* Bright Orange */ }
 /* Edinburgh Christian Community */
-.title-christian-community { color: #B8860B; /* Dark Goldenrod */ }
+.title-christian-community { color: #20C997; /* Mint Green */ }
 
 
 /* Responsive Adjustments */
@@ -355,4 +365,22 @@ a:hover {
     }
     .organization-events-column {
         flex-direction: column; /* Stack events vertically */
-        overflow-x: hidden; /* No horizontal scroll
+        overflow-x: hidden; /* No horizontal scroll if stacked */
+        padding: 15px; /* Adjust padding */
+    }
+    .organization-events-column .event-card {
+        width: auto; /* Let cards take full width */
+    }
+    .organization-header {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    .organization-header .header-org-name,
+    .organization-header .header-events {
+        width: auto;
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+}
