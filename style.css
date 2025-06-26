@@ -101,11 +101,20 @@ a:hover {
     margin-bottom: 15px;
 }
 
+/* Adjusted: "More Information" link styling */
 .event-card .more-info {
-    margin-top: auto; /* Pushes the link to the bottom */
-    text-align: right;
+    margin-top: 5px; /* Reduced space above */
+    margin-bottom: 0; /* Reduced space below */
+    text-align: left; /* Aligned to the left */
     font-size: 0.9em;
+    padding-top: 5px; /* Slight padding to separate from last text line */
 }
+
+.event-card .more-info a {
+    display: inline-block; /* Allows padding/margin for button-like appearance if needed */
+    /* Add any button-like styling here if desired, e.g., background, padding */
+}
+
 
 /* Specific styling for organization name and event title in card view */
 .event-card .event-org-name {
@@ -346,22 +355,4 @@ a:hover {
     }
     .organization-events-column {
         flex-direction: column; /* Stack events vertically */
-        overflow-x: hidden; /* No horizontal scroll if stacked */
-        padding: 15px; /* Adjust padding */
-    }
-    .organization-events-column .event-card {
-        width: auto; /* Let cards take full width */
-    }
-    .organization-header {
-        flex-direction: column;
-        align-items: flex-start;
-        border-bottom: none;
-    }
-    .organization-header .header-org-name,
-    .organization-header .header-events {
-        width: auto;
-        text-align: left;
-        padding-left: 0;
-        margin-bottom: 5px;
-    }
-}
+        overflow-x: hidden; /* No horizontal scroll
