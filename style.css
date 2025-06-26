@@ -9,193 +9,123 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
-    padding: 20px;
-    background-color: #e0e7ee; /* Light blue-grey */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-header h1 {
-    color: #2c3e50; /* Darker blue-grey */
-    margin-bottom: 10px;
-}
-
-header p {
-    color: #555;
-    font-size: 1.1em;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-#calendar-view h2 {
-    text-align: center;
+h1 {
     color: #2c3e50;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #e0e7ee;
-    padding-bottom: 10px;
+    font-size: 2.5em;
 }
 
-#event-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 10px;
+/* Styles for the events container to make cards display side-by-side */
+#events-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers cards when there aren't enough to fill a row */
+    gap: 20px; /* Space between event cards */
+    padding: 20px;
+    max-width: 1200px; /* Max width for the container */
+    margin: 0 auto; /* Center the container on the page */
 }
 
 .event-card {
-    background-color: #fdfdfd;
-    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    flex: 1 1 calc(33.333% - 40px); /* Allows 3 cards per row, accounting for gap */
+    /* flex-grow, flex-shrink, flex-basis */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 380px; /* Max width to prevent cards from becoming too wide on large screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex; /* Use flexbox for internal layout of card content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push "More Info" link to bottom if content varies */
 }
 
 .event-card h3 {
     margin-top: 0;
-    color: #3498db; /* Blue */
-    font-size: 1.3em;
-    border-bottom: 1px dashed #e0e7ee;
-    padding-bottom: 8px;
+    color: #3498db; /* A blue color for headings */
+    font-size: 1.4em;
+    line-height: 1.3;
     margin-bottom: 10px;
+}
+
+.event-card h3 a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from h3 */
+    display: block; /* Make the whole heading area clickable */
+}
+
+.event-card h3 a:hover {
+    text-decoration: underline;
 }
 
 .event-card p {
-    margin-bottom: 8px;
+    margin: 5px 0;
     font-size: 0.95em;
-    color: #444;
 }
 
-.event-card p strong {
-    color: #2c3e50;
+.event-card strong {
+    color: #555;
 }
 
-.event-card .details-popup {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in-out;
-    font-weight: bold;
+.event-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    flex-grow: 1; /* Allows description to take up available space */
 }
 
-.event-card .details-popup:hover {
-    background-color: #2980b9; /* Darker blue */
-    cursor: pointer;
-}
-
-/* --- Pop-up styles --- */
-.popup-overlay {
-    display: flex; /* Changed to flex for centering */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6); /* Darker overlay */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top */
-}
-
-.popup-content {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 700px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative;
-    animation: fadeIn 0.3s ease-out; /* Simple animation */
-}
-
-.popup-content h2 {
-    color: #2c3e50;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e0e7ee;
-    padding-bottom: 10px;
-}
-
-.popup-content p {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.popup-content p strong {
-    color: #2c3e50;
-}
-
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-}
-
-.close-button:hover {
-    color: #333;
-}
-
-/* Animation for popup */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* --- Last updated text --- */
-.last-updated {
+.more-info {
     text-align: right;
-    margin-top: 30px;
-    font-size: 0.85em;
-    color: #777;
-    padding-top: 15px;
-    border-top: 1px dashed #e0e7ee;
+    margin-top: 15px; /* Space above the more info link */
 }
 
-/* --- Footer styles --- */
+.more-info a {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.more-info a:hover {
+    background-color: #2980b9;
+}
+
+.event-school-name {
+    font-size: 0.85em;
+    color: #888;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
 footer {
     text-align: center;
     margin-top: 40px;
-    padding: 20px;
-    font-size: 0.8em;
+    padding: 20px 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
     color: #777;
-    background-color: #e0e7ee;
-    border-radius: 8px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    font-size: 0.85em;
 }
 
 /* Basic responsiveness for smaller screens */
 @media (max-width: 768px) {
-    body {
-        margin: 10px;
+    .event-card {
+        flex: 1 1 calc(50% - 30px); /* 2 cards per row on medium screens */
     }
-    main {
-        padding: 15px;
-    }
-    #event-list {
-        grid-template-columns: 1fr; /* Stack cards on small screens */
-    }
-    .popup-content {
-        width: 95%;
-        padding: 20px;
+}
+
+@media (max-width: 480px) {
+    .event-card {
+        flex: 1 1 100%; /* 1 card per row on small screens */
     }
 }
