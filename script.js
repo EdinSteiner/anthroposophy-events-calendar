@@ -172,51 +172,160 @@ const rawEventsData = [
     // Loch Arthur Christmas Market (id: 101) was removed as no confirmed 2025 date/link found
 
 
-    // --- Edinburgh Christian Community Events ---
+    // --- Edinburgh Christian Community Events (Updated based on provided list) ---
     {
-        id: 11,
-        title: "Sunday Service (The Act of Consecration of Man)",
-        organization: "Edinburgh Christian Community",
-        date: "Every Sunday",
-        time: "10:30 AM",
-        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
-        cost: "Free",
-        registration: "None",
-        contact: "0131 229 4514",
-        description: "Weekly service. All welcome.",
-        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
-        type: "recurring",
-        recurrence: { type: "weekly", dayOfWeek: 0 } // Sunday is 0
-    },
-    {
-        id: 12,
+        id: 13,
         title: "Children's Service",
         organization: "Edinburgh Christian Community",
-        date: "Most Sundays (check schedule)", // Keeping as 'Most Sundays' as often aligns with school terms
-        time: "9:30 AM",
+        date: "Sunday, June 29, 2025",
+        time: "9:00 AM",
         location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
         cost: "Free",
         registration: "None",
         contact: "0131 229 4514",
-        description: "A shorter service suitable for children, held before the main Sunday Service. Please contact for specific dates.", // Added note to contact
-        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
-        type: "recurring",
-        recurrence: { type: "weekly", dayOfWeek: 0 } // Sunday is 0
+        description: "Children's Service.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
     },
     {
-        id: 121,
-        title: "Study Group: Meditative Path",
+        id: 14,
+        title: "Act of Consecration of Man (Mark 1)",
         organization: "Edinburgh Christian Community",
-        date: "Every Tuesday",
-        time: "7:00 PM",
+        date: "Sunday, June 29, 2025",
+        time: "10:00 AM",
         location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
         cost: "Free",
         registration: "None",
         contact: "0131 229 4514",
-        description: "Weekly study group exploring aspects of the meditative path. All welcome to join. Please contact for specific dates/breaks.", // Added note to contact
-        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB", // Updated link
-        type: "recurring",
-        recurrence: { type: "weekly", dayOfWeek: 2 } // Tuesday is 2
+        description: "Sunday Service (The Act of Consecration of Man).",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 15,
+        title: "St John's Fire and social time in the Garden",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, June 29, 2025",
+        time: "11:30 AM",
+        location: "Edinburgh Christian Community Garden",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Celebrate St John's Fire with social time in the garden.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 16,
+        title: "Garden Work Party with Bring-and-Share lunch",
+        organization: "Edinburgh Christian Community",
+        date: "Saturday, July 5, 2025",
+        time: "10:30 AM - early afternoon",
+        location: "Edinburgh Christian Community Garden",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Join us for a garden work party, followed by a bring-and-share lunch.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 17,
+        title: "Act of Consecration of Man (John 1, 19-34)",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, July 6, 2025",
+        time: "10:00 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Sunday Service (The Act of Consecration of Man).",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 18,
+        title: "Croquet Evening at Meadows",
+        organization: "Edinburgh Christian Community",
+        date: "Friday, July 11, 2025",
+        time: "5:30 PM - 8:30 PM",
+        location: "The Meadows, Edinburgh",
+        cost: "Not specified",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "An evening of croquet at the Meadows.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 19,
+        title: "Act of Consecration of Man (John 3, 22-36)",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, July 13, 2025",
+        time: "10:00 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Sunday Service (The Act of Consecration of Man).",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 20,
+        title: "Act of Consecration of Man",
+        organization: "Edinburgh Christian Community",
+        date: "Thursday, July 17, 2025",
+        time: "10:00 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Service of the Act of Consecration of Man.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 21,
+        title: "Act of Consecration of Man (Matthew 11, 1-15)",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, July 20, 2025",
+        time: "10:00 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Sunday Service (The Act of Consecration of Man).",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 22,
+        title: "Farewell for Lucienne",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, July 20, 2025",
+        time: "11:30 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Not specified",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "A farewell gathering for Lucienne.",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
+    },
+    {
+        id: 23,
+        title: "Act of Consecration of Man (Mark 8, 27-38)",
+        organization: "Edinburgh Christian Community",
+        date: "Sunday, July 27, 2025",
+        time: "10:00 AM",
+        location: "Edinburgh Christian Community, 37 Spylaw Rd, Edinburgh, EH10 5BP",
+        cost: "Free",
+        registration: "None",
+        contact: "0131 229 4514",
+        description: "Sunday Service (The Act of Consecration of Man).",
+        eventUrl: "https://www.facebook.com/CCEdinburgh/about?locale=en_GB",
+        type: "single-day"
     }
 ];
 
