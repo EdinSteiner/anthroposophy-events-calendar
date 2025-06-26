@@ -1,131 +1,105 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+// This file contains the events data for the Edinburgh Anthroposophical Events Calendar.
+// Data last updated by AI using targeted Google Search queries and user feedback on June 26, 2025.
+// Please note: While AI attempted to find specific event URLs, some may be generic
+// or point to the main events page if a dedicated link was not clearly identifiable
+// through search. Always verify with the source.
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px 0;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-}
-
-h1 {
-    color: #2c3e50;
-    font-size: 2.5em;
-}
-
-/* Styles for the events container to make cards display side-by-side */
-#events-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
-    justify-content: center; /* Centers cards when there aren't enough to fill a row */
-    gap: 20px; /* Space between event cards */
-    padding: 20px;
-    max-width: 1200px; /* Max width for the container */
-    margin: 0 auto; /* Center the container on the page */
-}
-
-.event-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 40px); /* Allows 3 cards per row, accounting for gap */
-    /* flex-grow, flex-shrink, flex-basis */
-    min-width: 280px; /* Minimum width before wrapping */
-    max-width: 380px; /* Max width to prevent cards from becoming too wide on large screens */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    display: flex; /* Use flexbox for internal layout of card content */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Push "More Info" link to bottom if content varies */
-}
-
-.event-card h3 {
-    margin-top: 0;
-    color: #3498db; /* A blue color for headings */
-    font-size: 1.4em;
-    line-height: 1.3;
-    margin-bottom: 10px;
-}
-
-.event-card h3 a {
-    text-decoration: none;
-    color: inherit; /* Inherit color from h3 */
-    display: block; /* Make the whole heading area clickable */
-}
-
-.event-card h3 a:hover {
-    text-decoration: underline;
-}
-
-.event-card p {
-    margin: 5px 0;
-    font-size: 0.95em;
-}
-
-.event-card strong {
-    color: #555;
-}
-
-.event-description {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 10px;
-    flex-grow: 1; /* Allows description to take up available space */
-}
-
-.more-info {
-    text-align: right;
-    margin-top: 15px; /* Space above the more info link */
-}
-
-.more-info a {
-    display: inline-block;
-    background-color: #3498db;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-}
-
-.more-info a:hover {
-    background-color: #2980b9;
-}
-
-.event-school-name {
-    font-size: 0.85em;
-    color: #888;
-    text-align: right;
-    margin-bottom: 5px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px 0;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    color: #777;
-    font-size: 0.85em;
-}
-
-/* Basic responsiveness for smaller screens */
-@media (max-width: 768px) {
-    .event-card {
-        flex: 1 1 calc(50% - 30px); /* 2 cards per row on medium screens */
+const events = [
+    {
+        id: 1,
+        title: "Steiner Waldorf Olympic Games",
+        date: "25 - 28 June 2025",
+        time: "Not specified",
+        location: "Edinburgh Steiner School",
+        cost: "Not specified",
+        registration: "Not specified",
+        contact: "Not specified",
+        description: "An event related to the Steiner Waldorf Olympic Games.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/steiner-waldorf-olympics/"
+    },
+    {
+        id: 2,
+        title: "Waldorf Stationery Stall",
+        date: "Friday, June 27, 2025",
+        time: "1:00 PM - 2:00 PM",
+        location: "Edinburgh Steiner School",
+        cost: "Not specified",
+        registration: "Not specified",
+        contact: "Ruth",
+        description: "Ruth will be hosting a Waldorf Stationery Stall on the last Friday of the term for parents to buy next year's materials in-person, including Stockmar's giant pencils and beeswax block & stick crayons used in Classes 1-6, and Caran D'Ache watercolours and pastels from Classes 5 – 12. Full class sets, top-ups and replenishment items are available. Kindergarten families are also invited to purchase a 'home set' of beewax crayons.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/waldorf-stationery-stall/"
+    },
+    {
+        id: 3,
+        title: "Black Coffee – Class 12 Play",
+        date: "29 - 30 June 2025",
+        time: "3:00 PM / 7:00 PM",
+        location: "Edinburgh Steiner School",
+        cost: "Not specified",
+        registration: "Not specified",
+        contact: "Not specified",
+        description: "Class 12 will put on three performances of their final year play.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/"
+    },
+    {
+        id: 7, // Consolidated ID
+        title: "Summer Circus & Crafts Camps (Age 6+)",
+        date: "Multiple sessions: July 2 - August 8, 2025 (Check event page for specific dates and times)",
+        time: "Varies",
+        location: "Edinburgh Steiner School",
+        cost: "Not specified",
+        registration: "summer.camp@edinburghsteinerschool.org.uk (email)",
+        contact: "Peter Sheen and Yifat Leibner",
+        description: "Summer camps focusing on circus activities and crafts for children aged 6+. Delivered independently of the School by Steiner Waldorf Teachers Peter Sheen and Yifat Leibner, on campus. Includes Games, Circus Arts, and Crafts. Book via email.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/summer-camp/"
+    },
+    {
+        id: 9,
+        title: "Kindergarten Summer Camps",
+        date: "4 - 15 August 2025",
+        time: "9:00 AM - 1:00 PM",
+        location: "Edinburgh Steiner School",
+        cost: "Not specified",
+        registration: "Not specified",
+        contact: "Not specified",
+        description: "Summer camps specifically for Kindergarten age children. A week of play and summertime fun, with a gentle rhythm of stories, songs, crafts, and free play inside and out.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
     }
-}
+];
 
-@media (max-width: 480px) {
-    .event-card {
-        flex: 1 1 100%; /* 1 card per row on small screens */
+// --- END OF EVENTS DATA ---
+
+// Existing JavaScript functions to display events
+document.addEventListener('DOMContentLoaded', () => {
+    const eventsContainer = document.getElementById('events-container');
+
+    if (!eventsContainer) {
+        console.error('Events container not found.');
+        return;
     }
-}
+
+    if (events.length === 0) {
+        eventsContainer.innerHTML = '<p>No upcoming events currently listed. Please check back soon!</p>';
+        return;
+    }
+
+    events.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+
+        eventCard.innerHTML = `
+            <p class="event-school-name">Edinburgh Steiner School</p>
+            <h3>
+                ${event.eventUrl ? `<a href="${event.eventUrl}" target="_blank" rel="noopener noreferrer">${event.title}</a>` : event.title}
+            </h3>
+            <p><strong>Date:</strong> ${event.date}</p>
+            ${event.time && event.time !== "Not specified" ? `<p><strong>Time:</strong> ${event.time}</p>` : ''}
+            ${event.cost && event.cost !== "Not specified" ? `<p><strong>Cost:</strong> ${event.cost}</p>` : ''}
+            ${event.registration && event.registration !== "Not specified" ? `<p><strong>Registration:</strong> ${event.registration}</p>` : ''}
+            ${event.contact && event.contact !== "Not specified" ? `<p><strong>Contact:</strong> ${event.contact}</p>` : ''}
+            ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+            ${event.eventUrl ? `<p class="more-info"><a href="${event.eventUrl}" target="_blank" rel="noopener noreferrer">More Information</a></p>` : ''}
+        `;
+        eventsContainer.appendChild(eventCard);
+    });
+});
