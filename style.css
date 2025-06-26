@@ -86,9 +86,13 @@ a:hover {
     font-size: 0.9em; /* Smaller base font for card content */
 }
 
-.event-card p {
-    margin-bottom: 5px; /* Reduced margin */
-    font-size: 0.9em; /* Smaller font for paragraph content */
+/* More compact event card content */
+.event-card p,
+.event-card h3 {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    line-height: 1.25; /* Tighter line height */
+    margin-bottom: 4px; /* Small margin between lines */
 }
 
 .event-card p strong {
@@ -98,17 +102,17 @@ a:hover {
 .event-description {
     font-size: 0.85em; /* Even smaller for description */
     color: #555;
-    margin-top: 8px; /* Reduced margin */
-    margin-bottom: 10px; /* Reduced margin */
+    margin-top: 8px; /* Slight margin above description */
+    margin-bottom: 0; /* Ensure no extra space below description */
 }
 
 /* Adjusted: "More Information" link styling */
 .event-card .more-info {
-    margin-top: 3px; /* Further reduced space above */
+    margin-top: 5px; /* Space above info link */
     margin-bottom: 0;
     text-align: left;
     font-size: 0.85em; /* Smaller font for info link */
-    padding-top: 3px;
+    padding-top: 0; /* Remove padding from here, margin handles space */
 }
 
 /* Specific styling for organization name and event title in card view */
@@ -121,9 +125,7 @@ a:hover {
 .event-card h3 {
     font-size: 0.95em; /* Even smaller for event title */
     margin-top: 0;
-    margin-bottom: 8px; /* Reduced margin */
-    color: #333; /* Make event titles black */
-    line-height: 1.3; /* Tighter line height */
+    margin-bottom: 8px; /* Slightly more space below title */
 }
 
 
@@ -172,137 +174,4 @@ a:hover {
     padding-bottom: 0;
 }
 
-.diary-event-list p, .diary-event-list h4 {
-    margin: 0;
-    line-height: 1.25;
-}
-
-/* Specific styling for organization name and event title in diary view */
-.diary-event-list .event-org-name-diary {
-    font-size: 1.05em; /* Larger for organization name */
-    font-weight: bold;
-    margin-bottom: 1px;
-}
-
-.diary-event-list h4 {
-    font-size: 0.9em; /* Smaller for event title */
-    margin-bottom: 3px;
-    color: #333; /* Make event titles black */
-}
-
-.diary-event-list .event-time-diary,
-.diary-event-list .event-location-diary,
-.diary-event-list .event-description-diary,
-.diary-event-list .more-info-diary {
-    font-size: 0.8em; /* Smaller auxiliary text */
-    color: #666;
-}
-
-/* No events message */
-.no-events-message {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    padding: 50px;
-}
-
-.no-events-on-day {
-    font-style: italic;
-    color: #999;
-    font-size: 0.85em;
-    margin-top: 5px;
-}
-
-
-/* --- By Organization View Specific Styles (New Table-like Layout) --- */
-.organization-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Reduced space between organization rows */
-}
-
-.organization-row {
-    display: flex;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    overflow: hidden;
-}
-
-.organization-name-column {
-    flex-shrink: 0;
-    width: 180px; /* Slightly smaller fixed width for organization name */
-    padding: 15px; /* Reduced padding */
-    border-right: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #eef;
-}
-
-.organization-name-column h2 {
-    margin: 0;
-    font-size: 1.4em; /* Smaller font for organization name */
-    line-height: 1.2;
-}
-
-.organization-events-column {
-    flex-grow: 1;
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 15px; /* Reduced padding */
-    gap: 10px; /* Reduced space between event cards */
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc #f4f4f4;
-}
-
-/* Custom scrollbar for Webkit browsers */
-.organization-events-column::-webkit-scrollbar {
-    height: 8px;
-}
-
-.organization-events-column::-webkit-scrollbar-track {
-    background: #f4f4f4;
-    border-radius: 10px;
-}
-
-.organization-events-column::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
-
-.organization-events-column::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
-}
-
-
-/* Ensure event cards within the organization view behave correctly */
-.organization-events-column .event-card {
-    flex-shrink: 0;
-    width: 250px; /* Smaller fixed width for cards in this view */
-    min-height: 200px; /* Smaller min-height */
-    margin: 0;
-    padding: 12px; /* Reduced padding for cards within org view */
-}
-
-/* Column header for "By Organization" view */
-.organization-header {
-    display: flex;
-    font-weight: bold;
-    margin-bottom: 5px; /* Reduced margin */
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    align-items: center;
-}
-
-.organization-header .header-org-name {
-    width: 180px; /* Matches organization-name-column width */
-    text-align: center;
-    flex-shrink: 0;
-    font-size: 1.1em; /* Smaller font for header */
-}
-
-.organization-header .header-events {
+.diary-event-list p
