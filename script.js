@@ -1,5 +1,5 @@
 // This file contains the events data for the Edinburgh Anthroposophical Events Calendar.
-// Data last updated by AI using targeted Google Search queries on June 26, 2025.
+// Data last updated by AI using targeted Google Search queries and user feedback on June 26, 2025.
 // Please note: While AI attempted to find specific event URLs, some may be generic
 // or point to the main events page if a dedicated link was not clearly identifiable
 // through search. Always verify with the source.
@@ -42,30 +42,6 @@ const events = [
         eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/"
     },
     {
-        id: 4,
-        title: "Class 12 Play",
-        date: "29 - 30 June 2025",
-        time: "Not specified in snippet",
-        location: "Edinburgh Steiner School (Implied)",
-        cost: "Not specified",
-        registration: "Not specified",
-        contact: "Not specified",
-        description: "Class 12 will put on three performances of their final year play in the School Hall. (Duplicate entry found in search, combined description)",
-        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/" // Same link as above, as it's a duplicate event entry
-    },
-    {
-        id: 5,
-        title: "Parent & Teacher Association (PTA) – June Meeting",
-        date: "Monday, June 30, 2025",
-        time: "4:30 PM - 6:00 PM",
-        location: "Edinburgh Steiner School (Implied)",
-        cost: "Not specified",
-        registration: "Not specified",
-        contact: "Not specified",
-        description: "Edinburgh Steiner PTA meet monthly. Minutes of each meeting made available to the wider PTA members.",
-        eventUrl: "https://edinburghsteinerschool.org.uk/community/events/" // No specific page found, linking to main events page
-    },
-    {
         id: 6,
         title: "Whole School Field Day",
         date: "Tuesday, July 1, 2025",
@@ -80,14 +56,14 @@ const events = [
     {
         id: 7,
         title: "Summer Circus & Crafts Camps (Age 6+)",
-        date: "Wednesday, July 2, 2025",
+        date: "Wednesday, July 2, 2025", // This specific date might refer to a specific session, but the URL is for the general camp
         time: "1:45 PM - 3:15 PM",
         location: "Edinburgh Steiner School (Implied)",
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
         description: "Summer camps focusing on circus activities and crafts for children aged 6+.",
-        eventUrl: "https://www.edinburghsteinerschool.org.uk/community/events/" // No specific page found for this session, linking to main events page
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/summer-camp/"
     },
     {
         id: 8,
@@ -99,7 +75,7 @@ const events = [
         registration: "Not specified",
         contact: "Not specified",
         description: "Another entry for Summer Circus & Crafts Camps, possibly a different session or broader date range.",
-        eventUrl: "https://www.edinburghsteinerschool.org.uk/community/events/" // No specific page found, linking to main events page
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/summer-camp/"
     },
     {
         id: 9,
