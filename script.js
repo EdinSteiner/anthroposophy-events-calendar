@@ -1,7 +1,8 @@
 // This file contains the events data for the Edinburgh Anthroposophical Events Calendar.
-// Data last updated by AI using Google Search results on June 26, 2025.
-// Please note: Details are based on search snippets and may not be exhaustive or
-// reflect the absolute latest information. Always verify with the source.
+// Data last updated by AI using targeted Google Search queries on June 26, 2025.
+// Please note: While AI attempted to find specific event URLs, some may be generic
+// or point to the main events page if a dedicated link was not clearly identifiable
+// through search. Always verify with the source.
 
 const events = [
     {
@@ -13,7 +14,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "An event related to the Steiner Waldorf Olympic Games."
+        description: "An event related to the Steiner Waldorf Olympic Games.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/steiner-waldorf-olympics/"
     },
     {
         id: 2,
@@ -24,7 +26,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Ruth (Implied)",
-        description: "Ruth will be hosting a Waldorf Stationery Stall on the last Friday of the term for parents to buy next [items for school]."
+        description: "Ruth will be hosting a Waldorf Stationery Stall on the last Friday of the term for parents to buy next year's materials in-person, including Stockmar's giant pencils and beeswax block & stick crayons used in Classes 1-6, and Caran D'Ache watercolours and pastels from Classes 5 – 12. Full class sets, top-ups and replenishment items are available. Kindergarten families are also invited to purchase a 'home set' of beewax crayons.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/waldorf-stationery-stall/"
     },
     {
         id: 3,
@@ -35,7 +38,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Class 12 will put on three performances of their final year play."
+        description: "Class 12 will put on three performances of their final year play.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/"
     },
     {
         id: 4,
@@ -46,7 +50,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Class 12 will put on three performances of their final year play in the School Hall. (Duplicate entry found in search, combined description)"
+        description: "Class 12 will put on three performances of their final year play in the School Hall. (Duplicate entry found in search, combined description)",
+        eventUrl: "https://edinburghsteinerschool.org.uk/event/black-coffee-class-12-play/" // Same link as above, as it's a duplicate event entry
     },
     {
         id: 5,
@@ -57,29 +62,32 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Edinburgh Steiner PTA meet monthly. Minutes of each meeting made available to the wider PTA members."
+        description: "Edinburgh Steiner PTA meet monthly. Minutes of each meeting made available to the wider PTA members.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/community/events/" // No specific page found, linking to main events page
     },
     {
         id: 6,
         title: "Whole School Field Day",
-        date: "Tuesday, July 1, 2025", // Based on search snippet date sequence
+        date: "Tuesday, July 1, 2025",
         time: "4:00 PM",
         location: "Edinburgh Steiner School (Implied)",
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "General school field day event."
+        description: "General school field day event.",
+        eventUrl: "https://edinburghsteinerschool.org.uk/community/events/" // No specific page found, linking to main events page
     },
     {
         id: 7,
         title: "Summer Circus & Crafts Camps (Age 6+)",
-        date: "Wednesday, July 2, 2025", // Based on search snippet date sequence
+        date: "Wednesday, July 2, 2025",
         time: "1:45 PM - 3:15 PM",
         location: "Edinburgh Steiner School (Implied)",
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Summer camps focusing on circus activities and crafts for children aged 6+."
+        description: "Summer camps focusing on circus activities and crafts for children aged 6+.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/community/events/" // No specific page found for this session, linking to main events page
     },
     {
         id: 8,
@@ -90,7 +98,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Another entry for Summer Circus & Crafts Camps, possibly a different session or broader date range."
+        description: "Another entry for Summer Circus & Crafts Camps, possibly a different session or broader date range.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/community/events/" // No specific page found, linking to main events page
     },
     {
         id: 9,
@@ -101,7 +110,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "Summer camps specifically for Kindergarten age children."
+        description: "Summer camps specifically for Kindergarten age children.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
     },
     {
         id: 10,
@@ -112,7 +122,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "The academic Autumn Term period."
+        description: "The academic Autumn Term period.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/autumn-term/"
     },
     {
         id: 11,
@@ -123,7 +134,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "The academic Spring Term period."
+        description: "The academic Spring Term period.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/event/spring-start-of-term-assembly/" // Found a specific start-of-term assembly link
     },
     {
         id: 12,
@@ -134,7 +146,8 @@ const events = [
         cost: "Not specified",
         registration: "Not specified",
         contact: "Not specified",
-        description: "A school holiday in September."
+        description: "A school holiday in September.",
+        eventUrl: "https://www.edinburghsteinerschool.org.uk/parents/session-dates/" // Found on session dates page
     }
 ];
 
@@ -167,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${event.registration ? `<p><strong>Registration:</strong> ${event.registration}</p>` : ''}
             ${event.contact ? `<p><strong>Contact:</strong> ${event.contact}</p>` : ''}
             ${event.description ? `<p>${event.description}</p>` : ''}
+            ${event.eventUrl ? `<p class="more-info"><a href="${event.eventUrl}" target="_blank" rel="noopener noreferrer">More Information</a></p>` : ''}
         `;
         eventsContainer.appendChild(eventCard);
     });
