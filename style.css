@@ -19,7 +19,37 @@ h1 {
     font-size: 2.2em;
 }
 
-#events-container {
+/* View Controls */
+.view-controls {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.view-controls button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Card View Layout --- */
+#events-container.card-layout {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -44,7 +74,7 @@ h1 {
     justify-content: space-between;
 }
 
-/* Event Title Styling */
+/* Event Title Styling (Card View) */
 .event-card h3 {
     margin-top: 0;
     font-size: 1.3em;
@@ -54,7 +84,7 @@ h1 {
 
 .event-card h3 a {
     text-decoration: none;
-    color: inherit; /* Inherit from the class below */
+    color: inherit;
     display: block;
 }
 
@@ -62,7 +92,7 @@ h1 {
     text-decoration: underline;
 }
 
-/* Organization-specific Title Colors */
+/* Organization-specific Title Colors (Card View) */
 .title-steiner { color: #3498db; } /* Blue */
 .title-tiphereth { color: #27ae60; } /* Green */
 .title-garvald { color: #e67e22; } /* Orange */
@@ -73,7 +103,7 @@ h1 {
 .title-christian-community { color: #8e44ad; } /* Deeper Purple */
 
 
-/* General Event Card Text Styling */
+/* General Event Card Text Styling (Card View) */
 .event-card p {
     margin: 3px 0;
     font-size: 0.9em;
@@ -117,6 +147,124 @@ h1 {
     margin-bottom: 3px;
 }
 
+/* --- Diary View Layout --- */
+#events-container.diary-layout {
+    display: block; /* Stack day cards vertically */
+    padding: 15px;
+    max-width: 800px; /* Narrower for diary style */
+    margin: 0 auto;
+}
+
+.diary-day-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Space between days */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    padding: 15px;
+}
+
+.diary-day-card h4 { /* Date heading */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.5em;
+    border-bottom: 2px solid #3498db; /* Blue underline for date */
+    padding-bottom: 5px;
+}
+
+.diary-event-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.diary-event-list li {
+    border-top: 1px dotted #eee; /* Separator for events on the same day */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.diary-event-list li:first-child {
+    border-top: none; /* No top border for the first event of the day */
+    padding-top: 0;
+}
+
+.diary-event-list h4 { /* Event title within diary view */
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.3;
+    border-bottom: none; /* No underline for event titles here */
+    padding-bottom: 0;
+}
+
+.diary-event-list h4 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.diary-event-list h4 a:hover {
+    text-decoration: underline;
+}
+
+
+/* Organization-specific Title Colors (Diary View - reused classes) */
+/* .title-steiner, .title-tiphereth etc. are reused here */
+
+.event-org-name-diary {
+    font-size: 0.75em;
+    color: #999;
+    margin-bottom: 2px;
+}
+
+.event-time-diary {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.event-location-diary {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.event-description-diary {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.more-info-diary {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.more-info-diary a {
+    background-color: #5cb85c; /* A different color for diary view links */
+    padding: 4px 8px;
+    font-size: 0.75em;
+}
+
+.more-info-diary a:hover {
+    background-color: #4cae4c;
+}
+
+.no-events-on-day {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+
+.no-events-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    padding: 50px 0;
+}
+
 footer {
     text-align: center;
     margin-top: 30px;
@@ -132,10 +280,20 @@ footer {
     .event-card {
         flex: 1 1 calc(50% - 30px);
     }
+    .view-controls button {
+        padding: 8px 10px;
+        font-size: 0.9em;
+        margin: 5px 2px;
+    }
 }
 
 @media (max-width: 480px) {
     .event-card {
         flex: 1 1 100%;
+    }
+    .view-controls button {
+        display: block;
+        width: calc(100% - 10px);
+        margin: 5px auto;
     }
 }
