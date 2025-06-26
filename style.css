@@ -1,30 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 15px; /* Slightly reduced overall margin */
+    margin: 15px;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.4; /* Slightly tighter line height for more compactness */
+    line-height: 1.4;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px; /* Reduced margin below header */
-    padding: 15px 0; /* Reduced header padding */
+    margin-bottom: 20px;
+    padding: 15px 0;
     background-color: #fff;
     border-bottom: 1px solid #eee;
 }
 
 h1 {
     color: #2c3e50;
-    font-size: 2.2em; /* Slightly smaller heading */
+    font-size: 2.2em;
 }
 
 #events-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Reduced space between event cards */
-    padding: 15px; /* Reduced container padding */
+    gap: 15px;
+    padding: 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -33,28 +33,28 @@ h1 {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Slightly less pronounced shadow */
-    padding: 15px; /* Reduced internal padding of each card */
-    flex: 1 1 calc(33.333% - 30px); /* Adjusts width for 3 cards per row, considering the new 15px gap */
-    min-width: 250px; /* Slightly smaller minimum width before wrapping */
-    max-width: 350px; /* Slightly smaller maximum width */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 250px;
+    max-width: 350px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* Event Title Styling */
 .event-card h3 {
     margin-top: 0;
-    color: #3498db;
-    font-size: 1.3em; /* Smaller heading font size */
-    line-height: 1.2; /* Tighter line height for heading */
-    margin-bottom: 8px; /* Reduced margin below heading */
+    font-size: 1.3em;
+    line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 .event-card h3 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* Inherit from the class below */
     display: block;
 }
 
@@ -62,9 +62,21 @@ h1 {
     text-decoration: underline;
 }
 
+/* Organization-specific Title Colors */
+.title-steiner { color: #3498db; } /* Blue */
+.title-tiphereth { color: #27ae60; } /* Green */
+.title-garvald { color: #e67e22; } /* Orange */
+.title-columcille { color: #9b59b6; } /* Purple */
+.title-camphill-blair-drummond { color: #c0392b; } /* Red */
+.title-camphill-loch-arthur { color: #c0392b; } /* Same red as Blair Drummond for consistency */
+.title-ruskin-mill { color: #16a085; } /* Teal */
+.title-christian-community { color: #8e44ad; } /* Deeper Purple */
+
+
+/* General Event Card Text Styling */
 .event-card p {
-    margin: 3px 0; /* Reduced vertical spacing for paragraphs */
-    font-size: 0.9em; /* Slightly smaller general text */
+    margin: 3px 0;
+    font-size: 0.9em;
 }
 
 .event-card strong {
@@ -72,25 +84,25 @@ h1 {
 }
 
 .event-description {
-    font-size: 0.85em; /* Smaller description text */
+    font-size: 0.85em;
     color: #666;
-    margin-top: 8px; /* Reduced margin above description */
+    margin-top: 8px;
     flex-grow: 1;
 }
 
 .more-info {
     text-align: right;
-    margin-top: 10px; /* Reduced margin above "More Info" link */
+    margin-top: 10px;
 }
 
 .more-info a {
     display: inline-block;
-    background-color: #3498db;
+    background-color: #3498db; /* Default button color */
     color: #fff;
-    padding: 6px 12px; /* Reduced padding on the link button */
+    padding: 6px 12px;
     border-radius: 4px;
     text-decoration: none;
-    font-size: 0.85em; /* Smaller link button text */
+    font-size: 0.85em;
     transition: background-color 0.3s ease;
 }
 
@@ -98,32 +110,32 @@ h1 {
     background-color: #2980b9;
 }
 
-.event-school-name {
-    font-size: 0.8em; /* Smaller school name text */
+.event-org-name { /* Renamed from .event-school-name */
+    font-size: 0.8em;
     color: #888;
     text-align: right;
-    margin-bottom: 3px; /* Reduced margin below school name */
+    margin-bottom: 3px;
 }
 
 footer {
     text-align: center;
-    margin-top: 30px; /* Reduced margin above footer */
-    padding: 15px 0; /* Reduced footer padding */
+    margin-top: 30px;
+    padding: 15px 0;
     background-color: #fff;
     border-top: 1px solid #eee;
     color: #777;
-    font-size: 0.8em; /* Smaller footer text */
+    font-size: 0.8em;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .event-card {
-        flex: 1 1 calc(50% - 30px); /* 2 cards per row on medium screens, adjusted for new gap */
+        flex: 1 1 calc(50% - 30px);
     }
 }
 
 @media (max-width: 480px) {
     .event-card {
-        flex: 1 1 100%; /* 1 card per row on small screens */
+        flex: 1 1 100%;
     }
 }
