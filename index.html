@@ -10,9 +10,8 @@
 <body class="goetheanum-background">
     <header>
         <h1>Events at organizations inspired by Anthroposophy</h1>
-        <nav>
-            <button id="cardViewBtn" class="active">Card View</button>
-            <button id="diaryViewBtn">Diary View</button>
+        <p class="subtitle">In and beyond Edinburgh</p> <nav>
+            <button id="diaryViewBtn">Diary View</button> <button id="cardViewBtn">Card View</button>
             <button id="organizationViewBtn">By Organization</button>
         </nav>
     </header>
@@ -141,10 +140,8 @@
             // Add other organizations as needed
         };
 
-        // Your existing script.js content would follow here,
-        // but it's kept in a separate file for modularity.
-        // The script.js will need to be updated to inject these images dynamically
-        // when creating the organization view.
+        // These variables will be picked up by script.js after the DOMContentLoaded event
+        // The script.js will handle the actual rendering based on these data sources.
     </script>
 </body>
 </html>
