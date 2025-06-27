@@ -130,24 +130,20 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00 - 15:00",
             "location": "Garvald West Linton Workshops",
             "description": "Handmade gifts and produce from our workshops.",
-            "link": "https://www.garvaldwestlinton.org.uk/" // Placeholder, please update with actual link
+            "link": "https://www.garvaldwestlinton.org.uk/"
         }
     ];
 
-    // --- Organization Images (UPDATED to your latest local paths) ---
+    // --- Organization Images (UPDATED to your latest local paths, including Garvald Edinburgh) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
-        "Tiphereth": "images/Camphill Tiphereth Logo.png", // Corrected based on your provided filename
+        "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Ruskin Mill": "images/Ruskin Mill Logo.png",
-        // IMPORTANT: Assuming "Christian Community Logo" is a PNG. If not, please change `.png` to `.jpg` or `.avif` etc.
-        "Edinburgh Christian Community": "images/Christian Community Logo.png",
-        // If "Garvald Edinburgh" is a distinct organization from "Garvald West Linton"
-        // and has its own logo, you'll need to upload that and update this path.
-        // For now, it's using the West Linton logo as a placeholder.
-        "Garvald Edinburgh": "images/Garvald West Linton Logo.jpg",
+        "Edinburgh Christian Community": "images/Christian Community Logo.png", // Assuming .png, adjust if different
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // NEW: Added this based on your input
         "Camphill (Loch Arthur)": "https://www.locharthur.org.uk/wp-content/uploads/2018/06/LochArthurLogo.jpg" // Keeping this external as no local file provided
     };
     // --- End of Data Definitions ---
@@ -256,17 +252,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             groupedEvents[dateKey].forEach(event => {
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
-                    <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                    <p class="event-time-diary"><strong>Time:</strong> ${event.time}</p>
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
-                    <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
-                `;
-                eventList.appendChild(listItem);
-            });
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
+                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
+                        <p class="event-time-diary"><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
+                        <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
+                    `;
+                    eventList.appendChild(listItem);
+                });
             dayCard.appendChild(eventList);
             eventContainer.appendChild(dayCard);
         });
