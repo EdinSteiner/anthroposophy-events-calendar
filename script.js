@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data (KEEP YOUR EXISTING EVENT DATA HERE) ---
-    // If you've added new events for Camphill Corbenic, Garvald West Linton,
-    // or Ruskin Mill, ensure they are in this array.
+    // --- Event Data ---
     const allEvents = [
-        // Your existing event objects go here.
-        // Example:
         {
             "id": 1,
             "organization": "Edinburgh Steiner School",
@@ -17,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             "id": 2,
-            "organization": "Tiphereth", // Match this to your organization name in events
+            "organization": "Tiphereth",
             "title": "Summer Festival",
             "date": "2025-06-22",
             "time": "11:00 - 15:00",
@@ -25,7 +21,87 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "A celebration of summer with music, stalls, and garden tours.",
             "link": "https://www.tiphereth.org.uk/"
         },
-        // ... and so on for all your events, including any new ones
+        {
+            "id": 3,
+            "organization": "Garvald Edinburgh",
+            "title": "Open Studios Exhibition",
+            "date": "2025-07-05",
+            "time": "14:00 - 18:00",
+            "location": "Garvald Workshops, Orwell Arts Building",
+            "description": "Showcasing the creative work of Garvald service users.",
+            "link": "https://www.garvaldedinburgh.org.uk/"
+        },
+        {
+            "id": 4,
+            "organization": "Edinburgh Steiner School",
+            "title": "Michaelmas Festival",
+            "date": "2025-09-29",
+            "time": "15:00 - 17:00",
+            "location": "Edinburgh Steiner School Hall",
+            "description": "A traditional celebration of courage and inner strength.",
+            "link": "https://www.edinburghsteinerschool.org/"
+        },
+        {
+            "id": 5,
+            "organization": "Tiphereth",
+            "title": "Autumn Wreath Making Workshop",
+            "date": "2025-10-15",
+            "time": "18:00 - 20:00",
+            "location": "Tiphereth Workshop",
+            "description": "Learn to create beautiful autumn wreaths with natural materials.",
+            "link": "https://www.tiphereth.org.uk/"
+        },
+        {
+            "id": 6,
+            "organization": "Camphill Blair Drummond",
+            "title": "Farm Open Day",
+            "date": "2025-08-10",
+            "time": "10:00 - 16:00",
+            "location": "Camphill Blair Drummond Farm",
+            "description": "Explore our biodynamic farm, meet the animals, and enjoy fresh produce.",
+            "link": "https://www.camphillblairdrummond.org.uk/"
+        },
+         {
+            "id": 7,
+            "organization": "Camphill (Loch Arthur)",
+            "title": "Cheese & Bread Tasting",
+            "date": "2025-09-01",
+            "time": "14:00 - 16:00",
+            "location": "Loch Arthur Farm Shop",
+            "description": "Sample our award-winning organic cheeses and artisan breads.",
+            "link": "https://www.locharthur.org.uk/"
+        },
+        {
+            "id": 8,
+            "organization": "Edinburgh Christian Community",
+            "title": "Advent Garden",
+            "date": "2025-11-30",
+            "time": "17:00 - 18:30",
+            "location": "Edinburgh Christian Community Church",
+            "description": "A quiet contemplative walk into the heart of Advent.",
+            "link": "https://www.christiancommunity.org.uk/edinburgh/"
+        },
+        {
+            "id": 9,
+            "organization": "Edinburgh Steiner School",
+            "title": "Winter Fair",
+            "date": "2025-11-23",
+            "time": "10:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Handmade gifts, festive food, and cosy winter activities.",
+            "link": "https://www.edinburghsteinerschool.org/"
+        },
+        {
+            "id": 10,
+            "organization": "Garvald Edinburgh",
+            "title": "Christmas Market",
+            "date": "2025-12-07",
+            "time": "12:00 - 17:00",
+            "location": "Garvald Workshops, Orwell Arts Building",
+            "description": "Unique handcrafted gifts perfect for the festive season.",
+            "link": "https://www.garvaldedinburgh.org.uk/"
+        },
+        // --- Added example events for new organizations based on your logo list ---
         {
             "id": 11,
             "organization": "Camphill Corbenic",
@@ -58,23 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (UPDATED to your new local paths) ---
+    // --- Organization Images (UPDATED to your latest local paths) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
-        "Tiphereth": "images/Camphill Tiphereth Logo.png", // Updated based on your new name
+        "Tiphereth": "images/Camphill Tiphereth Logo.png", // Corrected based on your provided filename
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Ruskin Mill": "images/Ruskin Mill Logo.png",
-        // IMPORTANT: If "Christian Community Logo" is missing an extension, please add it (e.g., .png or .jpg)
-        // For example, if it's Christian Community Logo.png, use that.
-        "Edinburgh Christian Community": "images/Christian Community Logo", // ***Check filename extension***
-        "Garvald Edinburgh": "images/Garvald West Linton Logo.jpg", // If Garvald Edinburgh and Garvald West Linton are the same, use this. Otherwise, upload a distinct Garvald Edinburgh logo.
-        "Camphill (Loch Arthur)": "https://www.locharthur.org.uk/wp-content/uploads/2018/06/LochArthurLogo.jpg" // Keeping this external as no new local file provided
+        // IMPORTANT: Assuming "Christian Community Logo" is a PNG. If not, please change `.png` to `.jpg` or `.avif` etc.
+        "Edinburgh Christian Community": "images/Christian Community Logo.png",
+        // If "Garvald Edinburgh" is a distinct organization from "Garvald West Linton"
+        // and has its own logo, you'll need to upload that and update this path.
+        // For now, it's using the West Linton logo as a placeholder.
+        "Garvald Edinburgh": "images/Garvald West Linton Logo.jpg",
+        "Camphill (Loch Arthur)": "https://www.locharthur.org.uk/wp-content/uploads/2018/06/LochArthurLogo.jpg" // Keeping this external as no local file provided
     };
     // --- End of Data Definitions ---
 
-    // ... (rest of your script.js code remains the same) ...
 
     const eventContainer = document.getElementById('eventContainer');
     const cardViewBtn = document.getElementById('cardViewBtn');
@@ -173,4 +250,126 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Sort events within each day by time (simple string comparison for "HH:MM")
             groupedEvents[dateKey].sort((a, b) => {
-                const timeA = a.
+                const timeA = a.time.split(' ')[0];
+                const timeB = b.time.split(' ')[0];
+                return timeA.localeCompare(timeB);
+            });
+
+            groupedEvents[dateKey].forEach(event => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
+                    <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
+                    <p class="event-time-diary"><strong>Time:</strong> ${event.time}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
+                    ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
+                    <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
+                `;
+                eventList.appendChild(listItem);
+            });
+            dayCard.appendChild(eventList);
+            eventContainer.appendChild(dayCard);
+        });
+    };
+
+    // --- Render Organization View ---
+    const renderOrganizationView = (eventsToDisplay) => {
+        eventContainer.innerHTML = '';
+        eventContainer.className = 'organization-layout';
+
+        // Group events by organization and store their first event's link for the homepage URL
+        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
+            if (!acc[event.organization]) {
+                acc[event.organization] = [];
+            }
+            acc[event.organization].push(event);
+            return acc;
+        }, {});
+
+        // Add the column header
+        const headerRow = document.createElement('div');
+        headerRow.className = 'organization-header';
+        headerRow.innerHTML = `
+            <div class="header-org-name">Organization</div>
+            <div class="header-events">Upcoming Events</div>
+        `;
+        eventContainer.appendChild(headerRow);
+
+        // Sort organizations alphabetically for consistent display
+        const sortedOrgNames = Object.keys(groupedEvents).sort();
+
+        sortedOrgNames.forEach(orgName => {
+            const organizationRow = document.createElement('div');
+            organizationRow.className = 'organization-row';
+
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/100?text=Logo'; // Fallback to a placeholder
+            // Get the first event's link for the organization's homepage URL
+            const orgHomePageLink = groupedEvents[orgName].length > 0 ? groupedEvents[orgName][0].link : '#';
+
+            const organizationNameColumn = document.createElement('div');
+            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            organizationNameColumn.innerHTML = `
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
+            `;
+            organizationRow.appendChild(organizationNameColumn);
+
+            const organizationEventsColumn = document.createElement('div');
+            organizationEventsColumn.className = 'organization-events-column';
+
+            if (groupedEvents[orgName].length > 0) {
+                // Sort events by date within each organization
+                groupedEvents[orgName].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                groupedEvents[orgName].forEach(event => {
+                    const eventCard = document.createElement('div');
+                    eventCard.className = `event-card ${getOrgClass(event.organization)}`;
+                    eventCard.innerHTML = `
+                        <h3>${event.title}</h3>
+                        <p><strong>Date:</strong> ${formatDate(event.date)}</p>
+                        <p><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+                        <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
+                    `;
+                    organizationEventsColumn.appendChild(eventCard);
+                });
+            } else {
+                const noEvents = document.createElement('p');
+                noEvents.className = 'no-events-on-day';
+                noEvents.textContent = 'No upcoming events listed.';
+                organizationEventsColumn.appendChild(noEvents);
+            }
+
+            organizationRow.appendChild(organizationEventsColumn);
+            eventContainer.appendChild(organizationRow);
+        });
+    };
+
+    // --- View Switching Logic ---
+    const activateButton = (button) => {
+        document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    };
+
+    cardViewBtn.addEventListener('click', () => {
+        activateButton(cardViewBtn);
+        renderCardView(upcomingEvents);
+    });
+
+    diaryViewBtn.addEventListener('click', () => {
+        activateButton(diaryViewBtn);
+        renderDiaryView(upcomingEvents);
+    });
+
+    organizationViewBtn.addEventListener('click', () => {
+        activateButton(organizationViewBtn);
+        renderOrganizationView(upcomingEvents);
+    });
+
+    // Initial render on page load: Diary View as default
+    activateButton(diaryViewBtn); // Highlight Diary View button
+    renderDiaryView(upcomingEvents); // Render Diary View by default
+});
