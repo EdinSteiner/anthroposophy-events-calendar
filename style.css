@@ -5,44 +5,58 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Default text color */
-    background-color: #f4f4f4; /* Fallback background color */
-    background-image: url('images/goetheanum.jpg'); /* Goetheanum image as background */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center center; /* Center the image */
-    background-attachment: fixed; /* Keep background fixed when scrolling */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-color: #f4f4f4; /* Fallback body background */
 }
 
-/* Overlay to make text readable on the background image */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent white overlay */
-    z-index: -1; /* Place behind content */
-}
-
-
+/* Header Specific Styles */
 header {
-    background-color: rgba(51, 51, 51, 0.85); /* Slightly transparent header */
+    background-color: rgba(51, 51, 51, 0.85); /* Slightly transparent header background color */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative; /* Ensure it's above the overlay */
-    z-index: 1;
+
+    /* Goetheanum image as background for HEADER ONLY */
+    background-image: url('images/goetheanum.jpg');
+    background-size: cover; /* Cover the entire header area */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Needed for pseudo-element overlay */
+    z-index: 1; /* Ensure header is above any potential body overlay */
+}
+
+/* Overlay for header background to ensure text readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for header for text contrast */
+    z-index: -1; /* Place behind header content */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.2rem;
+    position: relative; /* Ensure text is above overlay */
+    z-index: 2;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #f0f0f0; /* Lighter color for subtitle on dark header */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    position: relative; /* Ensure text is above overlay */
+    z-index: 2;
 }
 
 nav {
     margin-top: 15px;
+    position: relative; /* Ensure nav is above overlay */
+    z-index: 2;
 }
 
 nav button {
@@ -65,10 +79,10 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent main content area */
+    background-color: #fff; /* Main content background remains solid for readability */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative; /* Ensure it's above the overlay */
+    position: relative;
     z-index: 1;
 }
 
@@ -78,7 +92,7 @@ footer {
     color: #777;
     font-size: 0.9em;
     margin-top: 30px;
-    position: relative; /* Ensure it's above the overlay */
+    position: relative;
     z-index: 1;
 }
 
@@ -137,12 +151,14 @@ a:hover {
     padding-top: 0;
 }
 
+/* Specific styling for organization name in card view */
 .event-card .event-org-name {
     font-size: 1.1em;
     font-weight: bold;
     margin-bottom: 3px;
 }
 
+/* Specific styling for event title in card view */
 .event-card h3 {
     font-size: 0.95em;
     margin-top: 0;
@@ -200,12 +216,14 @@ a:hover {
     line-height: 1.25;
 }
 
+/* Specific styling for organization name in diary view */
 .diary-event-list .event-org-name-diary {
     font-size: 1.05em;
     font-weight: bold;
     margin-bottom: 1px;
 }
 
+/* Specific styling for event title in diary view */
 .diary-event-list h4 {
     font-size: 0.9em;
     margin-bottom: 3px;
@@ -256,7 +274,7 @@ a:hover {
     padding: 15px;
     border-right: 1px solid #ddd;
     display: flex;
-    flex-direction: column; /* Allow image and text to stack */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -267,17 +285,17 @@ a:hover {
     margin: 0;
     font-size: 1.4em;
     line-height: 1.2;
-    margin-top: 5px; /* Space between image and text */
+    margin-top: 5px;
 }
 
 /* Style for organization images */
 .organization-name-column img {
-    max-width: 100px; /* Adjust as needed */
-    max-height: 100px; /* Adjust as needed */
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 50%; /* Make them circular */
     object-fit: cover;
-    margin-bottom: 10px; /* Space between image and text */
-    border: 2px solid #ddd; /* Light border around image */
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
 }
 
 
@@ -285,7 +303,7 @@ a:hover {
     flex-grow: 1;
     display: flex;
     overflow-x: auto;
-    padding: 15px;
+    padding: 15px; /* Matches the padding of the header-events */
     gap: 10px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
@@ -329,16 +347,16 @@ a:hover {
 }
 
 .organization-header .header-org-name {
-    width: 180px;
+    flex-shrink: 0; /* Prevents shrinking */
+    width: 180px; /* Matches organization-name-column width */
     text-align: center;
-    flex-shrink: 0;
     font-size: 1.1em;
 }
 
 .organization-header .header-events {
     flex-grow: 1;
-    /* Adjusted padding-left for precise alignment */
-    padding-left: 15px; /* This should match the .organization-events-column's padding-left */
+    /* Crucial for alignment: this padding should EXACTLY match the padding of the .organization-events-column */
+    padding-left: 15px; /* Adjust if .organization-events-column padding changes */
     font-size: 1.1em;
 }
 
