@@ -163,33 +163,33 @@ a:hover {
     margin: 0;
 }
 
-/* Compact diary event list items */
 .diary-event-list li {
-    margin: 0; /* Remove default margins */
-    padding: 4px 0; /* Reduced padding for compactness */
-    border-bottom: 1px dashed #eee; /* Light separator */
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #eee;
 }
 
 .diary-event-list li:last-child {
-    border-bottom: none; /* No separator for the last event of the day */
+    border-bottom: none;
+    margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .diary-event-list p, .diary-event-list h4 {
-    margin: 0; /* Remove default paragraph/heading margins for compactness */
-    line-height: 1.2; /* Tighter line height for all diary elements */
+    margin: 0;
+    line-height: 1.25; /* Restored more compact line-height for diary view */
 }
 
 /* Specific styling for organization name in diary view */
 .diary-event-list .event-org-name-diary {
-    font-size: 1.05em;
+    font-size: 1.05em; /* Larger for organization name */
     font-weight: bold;
     margin-bottom: 1px;
 }
 
 /* Specific styling for event title in diary view */
 .diary-event-list h4 {
-    font-size: 0.9em;
+    font-size: 0.9em; /* Smaller for event title */
     margin-bottom: 3px;
 }
 
@@ -199,11 +199,6 @@ a:hover {
 .diary-event-list .more-info-diary {
     font-size: 0.8em; /* Smaller auxiliary text */
     color: #666;
-    margin-bottom: 2px; /* Small margin for compactness */
-}
-
-.diary-event-list .more-info-diary {
-    margin-top: 5px; /* Small space above the info link */
 }
 
 /* No events message */
@@ -339,15 +334,4 @@ a:hover {
 .title-garvald { color: #DC3545; /* Vivid Red */ }
 .event-card.title-garvald h3, .diary-event-list .title-garvald h4 { color: #DC3545; }
 .event-card.title-garvald .event-org-name, .diary-event-list .title-garvald .event-org-name-diary { color: #DC3545; }
-.organization-name-column .title-garvald h2 { color: #DC3545; }
-
-/* Columcille (if added later) */
-.title-columcille { color: #FFC107; /* Amber */ }
-.event-card.title-columcille h3, .diary-event-list .title-columcille h4 { color: #FFC107; }
-.event-card.title-columcille .event-org-name, .diary-event-list .title-columcille .event-org-name-diary { color: #FFC107; }
-.organization-name-column .title-columcille h2 { color: #FFC107; }
-
-/* Camphill Blair Drummond */
-.title-camphill-blair-drummond { color: #6F42C1; /* Deep Purple */ }
-.event-card.title-camphill-blair-drummond h3, .diary-event-list .title-camphill-blair-drummond h4 { color: #6F42C1; }
-.event-card.title-camphill-blair-drummond .event-org-name, .diary-event-list .title-camphill-blair-drummond .
+.organization-name-column .title-garvald h2 { color: #
