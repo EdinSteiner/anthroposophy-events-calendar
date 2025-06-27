@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
                     <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
                     <p class="event-time-diary"><strong>Time:</strong> ${event.time}</p>
-                    <p class="event-location-diary"><strong>Location:</strong> ${event.location}</p>
+                    <p><strong>Location:</strong> ${event.location}</p>
                     ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
                     <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
                 `;
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'organization-layout';
 
-        // Group events by organization
+        // Group events by organization and store their first event's link for the homepage URL
         const groupedEvents = eventsToDisplay.reduce((acc, event) => {
             if (!acc[event.organization]) {
                 acc[event.organization] = [];
@@ -150,13 +150,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationRow = document.createElement('div');
             organizationRow.className = 'organization-row';
 
-            // Correctly access the image path from the organizationImages object
-            const orgImageSrc = organizationImages[orgName] || 'images/default_org.jpg';
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/100?text=Logo'; // Fallback to a placeholder
+            // Get the first event's link for the organization's homepage URL
+            const orgHomePageLink = groupedEvents[orgName].length > 0 ? groupedEvents[orgName][0].link : '#';
+
             const organizationNameColumn = document.createElement('div');
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
             organizationNameColumn.innerHTML = `
-                <img src="${orgImageSrc}" alt="${orgName} Logo">
-                <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
             `;
             organizationRow.appendChild(organizationNameColumn);
 
