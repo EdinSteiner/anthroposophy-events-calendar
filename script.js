@@ -1,13 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Event data and organization images mapping are now expected to be in the global scope
-    // from the <script> block in index.html, outside of DOMContentLoaded for accessibility.
-    // If you placed them inside DOMContentLoaded in index.html, move them outside.
-
-    // Using `allEvents` and `organizationImages` directly from the global scope/index.html
-    // Ensure these variables are defined in index.html's script tag before script.js is loaded.
-    const allEvents = window.events; // Access the events array from index.html
-    const organizationImages = window.organizationImages; // Access the organizationImages from index.html
-
+    // Event data and organization images mapping are expected to be in the global scope
+    // from the <script> block in index.html, before script.js is loaded.
+    const allEvents = window.events;
+    const organizationImages = window.organizationImages;
 
     const eventContainer = document.getElementById('eventContainer');
     const cardViewBtn = document.getElementById('cardViewBtn');
@@ -36,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper to generate CSS class from organization name
     const getOrgClass = (orgName) => {
+        // Ensure the class name is valid (lowercase, replace non-alphanumeric with hyphen)
         return `title-${orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
@@ -80,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Group events by date
         const groupedEvents = eventsToDisplay.reduce((acc, event) => {
-            // Use the full date string as a key for precise grouping
+            // Use the original date string for grouping, then format for display
             const dateKey = event.date;
             if (!acc[dateKey]) {
                 acc[dateKey] = [];
@@ -89,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return acc;
         }, {});
 
-        // Sort dates chronologically
+        // Sort dates chronologically based on the original date strings
         const sortedDateKeys = Object.keys(groupedEvents).sort((a, b) => new Date(a) - new Date(b));
 
         sortedDateKeys.forEach(dateKey => {
@@ -100,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventList = document.createElement('ul');
             eventList.className = 'diary-event-list';
 
-            // Sort events within each day by time
+            // Sort events within each day by time (simple string comparison for "HH:MM")
             groupedEvents[dateKey].sort((a, b) => {
-                const timeA = a.time.split(' ')[0]; // Assuming time starts like "HH:MM"
+                const timeA = a.time.split(' ')[0];
                 const timeB = b.time.split(' ')[0];
                 return timeA.localeCompare(timeB);
             });
@@ -154,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationRow = document.createElement('div');
             organizationRow.className = 'organization-row';
 
-            const orgImageSrc = organizationImages[orgName] || 'images/default_org.jpg'; // Use a default if no image is found
+            // Correctly access the image path from the organizationImages object
+            const orgImageSrc = organizationImages[orgName] || 'images/default_org.jpg';
             const organizationNameColumn = document.createElement('div');
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
             organizationNameColumn.innerHTML = `
@@ -216,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderOrganizationView(upcomingEvents);
     });
 
-    // Initial render on page load (defaults to Diary View)
+    // Initial render on page load: Diary View as default
     activateButton(diaryViewBtn); // Highlight Diary View button
     renderDiaryView(upcomingEvents); // Render Diary View by default
 });
