@@ -177,7 +177,7 @@ a:hover {
 
 .diary-event-list p, .diary-event-list h4 {
     margin: 0;
-    line-height: 1.25; /* Restored more compact line-height for diary view */
+    line-height: 1.25; /* Compact line-height for diary view */
 }
 
 /* Specific styling for organization name in diary view */
@@ -316,7 +316,7 @@ a:hover {
 }
 
 
-/* --- Color Coding for Organization Names and Titles (Restored and Applied consistently) --- */
+/* --- Color Coding for Organization Names and Titles (Distinct Colors for Each Org) --- */
 /* Edinburgh Steiner School */
 .title-steiner { color: #0056B3; /* Strong Blue */ }
 .event-card.title-steiner h3, .diary-event-list .title-steiner h4 { color: #0056B3; }
@@ -334,4 +334,85 @@ a:hover {
 .title-garvald { color: #DC3545; /* Vivid Red */ }
 .event-card.title-garvald h3, .diary-event-list .title-garvald h4 { color: #DC3545; }
 .event-card.title-garvald .event-org-name, .diary-event-list .title-garvald .event-org-name-diary { color: #DC3545; }
-.organization-name-column .title-garvald h2 { color: #
+.organization-name-column .title-garvald h2 { color: #DC3545; }
+
+/* Columcille (if added later) */
+.title-columcille { color: #FFC107; /* Amber - Ensure good contrast if used on dark backgrounds */ }
+.event-card.title-columcille h3, .diary-event-list .title-columcille h4 { color: #FFC107; }
+.event-card.title-columcille .event-org-name, .diary-event-list .title-columcille .event-org-name-diary { color: #FFC107; }
+.organization-name-column .title-columcille h2 { color: #FFC107; }
+
+/* Camphill Blair Drummond */
+.title-camphill-blair-drummond { color: #6F42C1; /* Deep Purple */ }
+.event-card.title-camphill-blair-drummond h3, .diary-event-list .title-camphill-blair-drummond h4 { color: #6F42C1; }
+.event-card.title-camphill-blair-drummond .event-org-name, .diary-event-list .title-camphill-blair-drummond .event-org-name-diary { color: #6F42C1; }
+.organization-name-column .title-camphill-blair-drummond h2 { color: #6F42C1; }
+
+/* Camphill (Loch Arthur) */
+.title-camphill-loch-arthur { color: #17A2B8; /* Teal Blue */ }
+.event-card.title-camphill-loch-arthur h3, .diary-event-list .title-camphill-loch-arthur h4 { color: #17A2B8; }
+.event-card.title-camphill-loch-arthur .event-org-name, .diary-event-list .title-camphill-loch-arthur .event-org-name-diary { color: #17A2B8; }
+.organization-name-column .title-camphill-loch-arthur h2 { color: #17A2B8; }
+
+/* Ruskin Mill (if added later) */
+.title-ruskin-mill { color: #FD7E14; /* Bright Orange */ }
+.event-card.title-ruskin-mill h3, .diary-event-list .title-ruskin-mill h4 { color: #FD7E14; }
+.event-card.title-ruskin-mill .event-org-name, .diary-event-list .title-ruskin-mill .event-org-name-diary { color: #FD7E14; }
+.organization-name-column .title-ruskin-mill h2 { color: #FD7E14; }
+
+/* Edinburgh Christian Community */
+.title-christian-community { color: #20C997; /* Mint Green */ }
+.event-card.title-christian-community h3, .diary-event-list .title-christian-community h4 { color: #20C997; }
+.event-card.title-christian-community .event-org-name, .diary-event-list .title-christian-community .event-org-name-diary { color: #20C997; }
+.organization-name-column .title-christian-community h2 { color: #20C997; }
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav button {
+        display: block;
+        width: calc(100% - 20px);
+        margin: 5px auto;
+    }
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .card-layout {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+    /* By Organization view on small screens */
+    .organization-row {
+        flex-direction: column; /* Stack name and events vertically */
+    }
+    .organization-name-column {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd; /* Add bottom border */
+        padding: 10px; /* Smaller padding */
+    }
+    .organization-events-column {
+        flex-direction: column; /* Stack events vertically */
+        overflow-x: hidden; /* No horizontal scroll if stacked */
+        padding: 15px; /* Adjust padding */
+    }
+    .organization-events-column .event-card {
+        width: auto; /* Let cards take full width */
+    }
+    .organization-header {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    .organization-header .header-org-name,
+    .organization-header .header-events {
+        width: auto;
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+}
