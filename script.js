@@ -1,8 +1,120 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Event data and organization images mapping are expected to be in the global scope
-    // from the <script> block in index.html, before script.js is loaded.
-    const allEvents = window.events;
-    const organizationImages = window.organizationImages;
+    // --- Event Data and Organization Images (Defined directly in script.js) ---
+    const allEvents = [
+        {
+            "id": 1,
+            "organization": "Edinburgh Steiner School",
+            "title": "Spring Fair",
+            "date": "2025-05-18",
+            "time": "10:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Our annual Spring Fair with crafts, food, and activities for all ages.",
+            "link": "https://www.edinburghsteinerschool.org/"
+        },
+        {
+            "id": 2,
+            "organization": "Tiphereth",
+            "title": "Summer Festival",
+            "date": "2025-06-22",
+            "time": "11:00 - 15:00",
+            "location": "Tiphereth Community Garden",
+            "description": "A celebration of summer with music, stalls, and garden tours.",
+            "link": "https://www.tiphereth.org.uk/"
+        },
+        {
+            "id": 3,
+            "organization": "Garvald Edinburgh",
+            "title": "Open Studios Exhibition",
+            "date": "2025-07-05", // This should be upcoming
+            "time": "14:00 - 18:00",
+            "location": "Garvald Workshops, Orwell Arts Building",
+            "description": "Showcasing the creative work of Garvald service users.",
+            "link": "https://www.garvaldedinburgh.org.uk/"
+        },
+        {
+            "id": 4,
+            "organization": "Edinburgh Steiner School",
+            "title": "Michaelmas Festival",
+            "date": "2025-09-29", // This should be upcoming
+            "time": "15:00 - 17:00",
+            "location": "Edinburgh Steiner School Hall",
+            "description": "A traditional celebration of courage and inner strength.",
+            "link": "https://www.edinburghsteinerschool.org/"
+        },
+        {
+            "id": 5,
+            "organization": "Tiphereth",
+            "title": "Autumn Wreath Making Workshop",
+            "date": "2025-10-15", // This should be upcoming
+            "time": "18:00 - 20:00",
+            "location": "Tiphereth Workshop",
+            "description": "Learn to create beautiful autumn wreaths with natural materials.",
+            "link": "https://www.tiphereth.org.uk/"
+        },
+        {
+            "id": 6,
+            "organization": "Camphill Blair Drummond",
+            "title": "Farm Open Day",
+            "date": "2025-08-10", // This should be upcoming
+            "time": "10:00 - 16:00",
+            "location": "Camphill Blair Drummond Farm",
+            "description": "Explore our biodynamic farm, meet the animals, and enjoy fresh produce.",
+            "link": "https://www.camphillblairdrummond.org.uk/"
+        },
+         {
+            "id": 7,
+            "organization": "Camphill (Loch Arthur)",
+            "title": "Cheese & Bread Tasting",
+            "date": "2025-09-01", // This should be upcoming
+            "time": "14:00 - 16:00",
+            "location": "Loch Arthur Farm Shop",
+            "description": "Sample our award-winning organic cheeses and artisan breads.",
+            "link": "https://www.locharthur.org.uk/"
+        },
+        {
+            "id": 8,
+            "organization": "Edinburgh Christian Community",
+            "title": "Advent Garden",
+            "date": "2025-11-30", // This should be upcoming
+            "time": "17:00 - 18:30",
+            "location": "Edinburgh Christian Community Church",
+            "description": "A quiet contemplative walk into the heart of Advent.",
+            "link": "https://www.christiancommunity.org.uk/edinburgh/"
+        },
+        {
+            "id": 9,
+            "organization": "Edinburgh Steiner School",
+            "title": "Winter Fair",
+            "date": "2025-11-23", // This should be upcoming
+            "time": "10:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Handmade gifts, festive food, and cosy winter activities.",
+            "link": "https://www.edinburghsteinerschool.org/"
+        },
+        {
+            "id": 10,
+            "organization": "Garvald Edinburgh",
+            "title": "Christmas Market",
+            "date": "2025-12-07", // This should be upcoming
+            "time": "12:00 - 17:00",
+            "location": "Garvald Workshops, Orwell Arts Building",
+            "description": "Unique handcrafted gifts perfect for the festive season.",
+            "link": "https://www.garvaldedinburgh.org.uk/"
+        }
+    ];
+
+    // Using direct URLs for organization logos
+    const organizationImages = {
+        "Edinburgh Steiner School": "https://www.edinburghsteinerschool.org/wp-content/uploads/2018/10/steiner-logo-e1539250481232.png",
+        "Tiphereth": "https://www.tiphereth.org.uk/wp-content/uploads/2021/04/Tiphereth_Logo_Main_RGB-1.png",
+        "Garvald Edinburgh": "https://www.garvaldedinburgh.org.uk/wp-content/uploads/2021/02/cropped-Garvald_Logo_Full_Colour-300x127.png",
+        "Camphill Blair Drummond": "https://www.camphillblairdrummond.org.uk/wp-content/themes/camphill/images/logo.png",
+        "Camphill (Loch Arthur)": "https://www.locharthur.org.uk/wp-content/uploads/2018/06/LochArthurLogo.jpg",
+        "Edinburgh Christian Community": "https://www.christiancommunity.org.uk/wp-content/uploads/2020/03/CC-Logo-square.png"
+        // Add other organizations as needed, searching for their logo URLs
+    };
+    // --- End of Data Definitions ---
+
 
     const eventContainer = document.getElementById('eventContainer');
     const cardViewBtn = document.getElementById('cardViewBtn');
@@ -22,6 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const upcomingEvents = filterUpcomingEvents(allEvents); // Filter events once
+
+    // This is the new debugging line:
+    console.log("Upcoming Events Array:", upcomingEvents);
+
 
     // Helper to format dates consistently
     const formatDate = (dateString) => {
