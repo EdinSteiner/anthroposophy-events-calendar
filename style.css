@@ -28,14 +28,16 @@ header h1 {
     margin: 0 0 10px;
     font-size: 2.8em; /* Larger heading */
     font-weight: 600;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for readability */
+    /* Adjusted text-shadow for better contrast on the Goetheanum background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 header .subtitle {
     font-size: 1.4em;
     font-style: italic;
     opacity: 0.9;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Adjusted text-shadow for better contrast */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     margin-top: 5px;
 }
 
