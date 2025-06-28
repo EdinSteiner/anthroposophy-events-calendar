@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Unique handcrafted gifts perfect for the festive season.",
             "link": "https://www.garvaldedinburgh.org.uk/"
         },
-        // --- Added example events for new organizations based on your logo list ---
         {
             "id": 11,
             "organization": "Camphill Corbenic",
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (UPDATED to your latest local paths, including Garvald Edinburgh) ---
+    // --- Organization Images (UPDATED with all local paths) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
@@ -142,9 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Ruskin Mill": "images/Ruskin Mill Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.png", // Assuming .png, adjust if different
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // NEW: Added this based on your input
-        "Camphill (Loch Arthur)": "https://www.locharthur.org.uk/wp-content/uploads/2018/06/LochArthurLogo.jpg" // Keeping this external as no local file provided
+        "Edinburgh Christian Community": "images/Christian Community Logo.png", // Please ensure this is the correct extension if not .png
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // NEW: Added this based on your input (assuming .png)
+        "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg" // NEW: Updated to local path
     };
     // --- End of Data Definitions ---
 
