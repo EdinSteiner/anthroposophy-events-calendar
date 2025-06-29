@@ -3,148 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events at organizations inspired by Anthroposophy</title>
+    <title>Anthroposophical Events Edinburgh & Surrounds</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600&display=swap" rel="stylesheet">
-    </head>
-<body class="goetheanum-background">
+</head>
+<body>
     <header>
-        <h1>Events at organizations inspired by Anthroposophy</h1>
+        <h1>Anthroposophical Events</h1>
+        <p>Edinburgh & Surrounding Areas</p>
         <nav>
-            <button id="cardViewBtn" class="active">Card View</button>
-            <button id="diaryViewBtn">Diary View</button>
-            <button id="organizationViewBtn">By Organization</button>
+            <button id="diary-view-btn">Diary View</button>
+            <button id="card-view-btn">Card View</button>
+            <button id="org-chrono-view-btn">By Organization</button>
         </nav>
     </header>
 
-    <main id="eventContainer">
+    <main id="events-container">
         </main>
 
     <footer>
-        <p>&copy; 2025 Anthroposophical Events. All rights reserved.</p>
+        <p>&copy; 2025 Anthroposophical Events Listing. All rights reserved.</p>
+        <p>Disclaimer: Event details are subject to change. Please verify with the respective organizations.</p>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Example structure for data - in a real app, this would come from a backend or separate JSON
-        const events = [
-            {
-                "id": 1,
-                "organization": "Edinburgh Steiner School",
-                "title": "Spring Fair",
-                "date": "2025-05-18",
-                "time": "10:00 - 16:00",
-                "location": "Edinburgh Steiner School Campus",
-                "description": "Our annual Spring Fair with crafts, food, and activities for all ages.",
-                "link": "https://www.edinburghsteinerschool.org/"
-            },
-            {
-                "id": 2,
-                "organization": "Tiphereth",
-                "title": "Summer Festival",
-                "date": "2025-06-22",
-                "time": "11:00 - 15:00",
-                "location": "Tiphereth Community Garden",
-                "description": "A celebration of summer with music, stalls, and garden tours.",
-                "link": "https://www.tiphereth.org.uk/"
-            },
-            {
-                "id": 3,
-                "organization": "Garvald Edinburgh",
-                "title": "Open Studios Exhibition",
-                "date": "2025-07-05",
-                "time": "14:00 - 18:00",
-                "location": "Garvald Workshops, Orwell Arts Building",
-                "description": "Showcasing the creative work of Garvald service users.",
-                "link": "https://www.garvaldedinburgh.org.uk/"
-            },
-            {
-                "id": 4,
-                "organization": "Edinburgh Steiner School",
-                "title": "Michaelmas Festival",
-                "date": "2025-09-29",
-                "time": "15:00 - 17:00",
-                "location": "Edinburgh Steiner School Hall",
-                "description": "A traditional celebration of courage and inner strength.",
-                "link": "https://www.edinburghsteinerschool.org/"
-            },
-            {
-                "id": 5,
-                "organization": "Tiphereth",
-                "title": "Autumn Wreath Making Workshop",
-                "date": "2025-10-15",
-                "time": "18:00 - 20:00",
-                "location": "Tiphereth Workshop",
-                "description": "Learn to create beautiful autumn wreaths with natural materials.",
-                "link": "https://www.tiphereth.org.uk/"
-            },
-            {
-                "id": 6,
-                "organization": "Camphill Blair Drummond",
-                "title": "Farm Open Day",
-                "date": "2025-08-10",
-                "time": "10:00 - 16:00",
-                "location": "Camphill Blair Drummond Farm",
-                "description": "Explore our biodynamic farm, meet the animals, and enjoy fresh produce.",
-                "link": "https://www.camphillblairdrummond.org.uk/"
-            },
-             {
-                "id": 7,
-                "organization": "Camphill (Loch Arthur)",
-                "title": "Cheese & Bread Tasting",
-                "date": "2025-09-01",
-                "time": "14:00 - 16:00",
-                "location": "Loch Arthur Farm Shop",
-                "description": "Sample our award-winning organic cheeses and artisan breads.",
-                "link": "https://www.locharthur.org.uk/"
-            },
-            {
-                "id": 8,
-                "organization": "Edinburgh Christian Community",
-                "title": "Advent Garden",
-                "date": "2025-11-30",
-                "time": "17:00 - 18:30",
-                "location": "Edinburgh Christian Community Church",
-                "description": "A quiet contemplative walk into the heart of Advent.",
-                "link": "https://www.christiancommunity.org.uk/edinburgh/"
-            },
-            {
-                "id": 9,
-                "organization": "Edinburgh Steiner School",
-                "title": "Winter Fair",
-                "date": "2025-11-23",
-                "time": "10:00 - 16:00",
-                "location": "Edinburgh Steiner School Campus",
-                "description": "Handmade gifts, festive food, and cosy winter activities.",
-                "link": "https://www.edinburghsteinerschool.org/"
-            },
-            {
-                "id": 10,
-                "organization": "Garvald Edinburgh",
-                "title": "Christmas Market",
-                "date": "2025-12-07",
-                "time": "12:00 - 17:00",
-                "location": "Garvald Workshops, Orwell Arts Building",
-                "description": "Unique handcrafted gifts perfect for the festive season.",
-                "link": "https://www.garvaldedinburgh.org.uk/"
-            }
-        ];
-
-        // Ensure this mapping covers all organizations you might have
-        const organizationImages = {
-            "Edinburgh Steiner School": "images/steiner_school.jpg",
-            "Tiphereth": "images/tiphereth.jpg",
-            "Garvald Edinburgh": "images/garvald.jpg",
-            "Camphill Blair Drummond": "images/camphill_blair_drummond.jpg",
-            "Camphill (Loch Arthur)": "images/loch_arthur.jpg",
-            "Edinburgh Christian Community": "images/christian_community.jpg"
-            // Add other organizations as needed
-        };
-
-        // Your existing script.js content would follow here,
-        // but it's kept in a separate file for modularity.
-        // The script.js will need to be updated to inject these images dynamically
-        // when creating the organization view.
-    </script>
 </body>
 </html>
