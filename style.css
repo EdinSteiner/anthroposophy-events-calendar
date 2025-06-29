@@ -8,59 +8,55 @@ body {
     color: #333;
 }
 
-/* Goetheanum Header Styling */
-body.goetheanum-background header {
-    background-image: url('images/Goetheanum.jpg'); /* Ensure this matches your filename and path */
-    background-size: cover;
-    background-position: center;
-    color: white; /* Text color for readability on image */
-    padding: 60px 20px;
+/* Header Styling - Now with a solid dark background for contrast */
+header {
+    background-color: #3a3a3a; /* Darker background for header */
+    color: white; /* Text color for readability */
+    padding: 40px 15px; /* Reduced padding */
     text-align: center;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px auto 0; /* Center header and add top margin */
+    margin: 15px auto 0; /* Reduced margin */
     max-width: 1200px; /* Max width for consistency */
-    position: relative; /* For subtitle positioning */
-    overflow: hidden; /* Ensures background image doesn't bleed */
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
-    margin: 0 0 10px;
-    font-size: 2.8em; /* Larger heading */
+    margin: 0 0 8px; /* Reduced margin */
+    font-size: 2.5em; /* Slightly adjusted size */
     font-weight: 600;
-    /* Adjusted text-shadow for better contrast on the Goetheanum background */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 header .subtitle {
-    font-size: 1.4em;
+    font-size: 1.2em; /* Slightly adjusted size */
     font-style: italic;
     opacity: 0.9;
-    /* Adjusted text-shadow for better contrast */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-    margin-top: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 3px; /* Reduced margin */
 }
 
 /* Navigation Bar */
 nav {
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for nav */
-    padding: 10px 20px;
+    padding: 8px 15px; /* Reduced padding */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 8px 8px; /* Rounded bottom corners */
     max-width: 1200px;
-    margin: 0 auto 20px; /* Aligns with header */
+    margin: 0 auto 15px; /* Aligns with header */
 }
 
 nav button {
     background-color: #a87e5b; /* Earthy tone */
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 8px 18px; /* Reduced padding */
+    margin: 4px; /* Reduced margin */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.95em; /* Slightly smaller font */
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -79,8 +75,8 @@ nav button.active {
 /* Main Content Area */
 main {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 15px auto; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -90,45 +86,47 @@ main {
     text-align: center;
     font-style: italic;
     color: #666;
-    padding: 40px 0;
-    font-size: 1.2em;
+    padding: 30px 0; /* Reduced padding */
+    font-size: 1.1em;
 }
 
 /* --- Card View Layout --- */
 .card-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Adjusted min-width for more cards per row */
+    gap: 15px; /* Reduced gap */
+    padding: 15px; /* Reduced padding */
 }
 
 .event-card {
     background-color: #fcfcfc;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 6px; /* Slightly smaller border-radius */
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07); /* Lighter shadow */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes more info to bottom */
+    justify-content: space-between;
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); /* Less dramatic hover effect */
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
 }
 
 .event-card h3 {
     margin-top: 0;
+    margin-bottom: 8px; /* Reduced margin */
     color: #4a4a4a;
-    font-size: 1.5em;
+    font-size: 1.4em; /* Slightly smaller font */
     line-height: 1.3;
 }
 
 .event-card p {
-    margin: 5px 0;
+    margin: 3px 0; /* Reduced margin */
     color: #555;
+    font-size: 0.9em; /* Slightly smaller font */
 }
 
 .event-card strong {
@@ -136,15 +134,16 @@ main {
 }
 
 .event-card .event-description {
-    font-size: 0.95em;
+    font-size: 0.85em; /* Smaller font */
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .event-card .more-info {
-    margin-top: auto; /* Pushes to the bottom */
+    margin-top: auto;
     text-align: right;
     font-weight: bold;
+    font-size: 0.9em; /* Smaller font */
 }
 
 .event-card .more-info a {
@@ -160,25 +159,25 @@ main {
 
 /* --- Diary View Layout --- */
 .diary-layout {
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
 }
 
 .diary-day-card {
     background-color: #fcfcfc;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 6px; /* Slightly smaller border-radius */
+    padding: 15px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
 }
 
 .diary-day-card h4 {
     margin-top: 0;
-    color: #a87e5b; /* Date heading color */
-    font-size: 1.6em;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    color: #a87e5b;
+    font-size: 1.5em; /* Slightly smaller font */
+    border-bottom: 1px solid #f0f0f0; /* Thinner border */
+    padding-bottom: 8px; /* Reduced padding */
+    margin-bottom: 12px; /* Reduced margin */
 }
 
 .diary-event-list {
@@ -190,10 +189,10 @@ main {
 .diary-event-list li {
     background-color: #fff;
     border: 1px solid #eee;
-    border-radius: 6px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px; /* Slightly smaller border-radius */
+    padding: 12px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     transition: background-color 0.2s ease;
 }
 
@@ -203,14 +202,15 @@ main {
 
 .diary-event-list h4 {
     margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 1.3em;
+    margin-bottom: 6px; /* Reduced margin */
+    font-size: 1.2em; /* Slightly smaller font */
     color: #4a4a4a;
 }
 
 .diary-event-list p {
-    margin: 4px 0;
+    margin: 3px 0; /* Reduced margin */
     color: #555;
+    font-size: 0.88em; /* Slightly smaller font */
 }
 
 .diary-event-list strong {
@@ -218,15 +218,16 @@ main {
 }
 
 .diary-event-list .event-description-diary {
-    font-size: 0.9em;
+    font-size: 0.8em; /* Smaller font */
     color: #666;
-    margin-top: 10px;
+    margin-top: 8px; /* Reduced margin */
 }
 
 .diary-event-list .more-info-diary {
     text-align: right;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 8px; /* Reduced margin */
+    font-size: 0.88em; /* Slightly smaller font */
 }
 
 .diary-event-list .more-info-diary a {
@@ -244,50 +245,50 @@ main {
 .organization-layout {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
 }
 
 .organization-header {
     display: flex;
     font-weight: bold;
-    font-size: 1.2em;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #a87e5b; /* A stronger border for header */
+    font-size: 1.1em; /* Slightly smaller font */
+    padding-bottom: 8px; /* Reduced padding */
+    margin-bottom: 12px; /* Reduced margin */
+    border-bottom: 1px solid #a87e5b; /* Thinner border */
 }
 
 .header-org-name {
-    flex: 0 0 250px; /* Fixed width for organization name column */
-    padding: 0 10px;
+    flex: 0 0 220px; /* Adjusted fixed width for organization name column */
+    padding: 0 8px; /* Reduced padding */
     color: #a87e5b;
 }
 
 .header-events {
     flex-grow: 1;
-    padding: 0 10px;
+    padding: 0 8px; /* Reduced padding */
     color: #a87e5b;
 }
 
 .organization-row {
     display: flex;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 6px; /* Slightly smaller border-radius */
+    margin-bottom: 15px; /* Reduced margin */
     background-color: #fcfcfc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
 }
 
 .organization-name-column {
-    flex: 0 0 250px; /* Fixed width */
-    padding: 20px;
+    flex: 0 0 220px; /* Adjusted fixed width */
+    padding: 15px; /* Reduced padding */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-right: 1px solid #e0e0e0;
-    background-color: #f5f5f5; /* Slight background for column */
-    border-radius: 8px 0 0 8px;
-    text-align: center; /* Center text */
+    background-color: #f5f5f5;
+    border-radius: 6px 0 0 6px; /* Adjusted border radius */
+    text-align: center;
 }
 
 .organization-name-column .org-link-wrapper {
@@ -300,77 +301,100 @@ main {
 }
 
 .organization-name-column img {
-    max-width: 120px; /* Increased logo size */
-    max-height: 120px;
+    max-width: 100px; /* Slightly reduced logo size for more compactness */
+    max-height: 100px;
     width: auto;
     height: auto;
-    border-radius: 50%; /* Make logos round */
-    object-fit: contain; /* Ensure logo fits without cropping awkwardly */
-    margin-bottom: 10px;
-    border: 2px solid #ddd; /* Subtle border around logo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 8px; /* Reduced margin */
+    border: 1px solid #ddd; /* Thinner border */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .organization-name-column h2 {
-    margin: 10px 0 0;
-    font-size: 1.8em;
+    margin: 8px 0 0; /* Reduced margin */
+    font-size: 1.6em; /* Slightly smaller font */
     color: #4a4a4a;
 }
 
 .organization-events-column {
     flex-grow: 1;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     display: flex;
-    flex-wrap: wrap; /* Allows events to wrap to next line if many */
-    gap: 15px; /* Space between event cards */
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap between event cards */
 }
 
 .organization-events-column .event-card {
-    flex: 1 1 calc(50% - 15px); /* Two cards per row, adjust for gap */
-    min-width: 280px; /* Minimum width for cards */
-    margin: 0; /* Remove margin as gap handles spacing */
+    flex: 1 1 calc(50% - 10px); /* Adjusted for new gap */
+    min-width: 250px; /* Adjusted min-width */
+    margin: 0;
 }
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     header .subtitle {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     nav button {
-        padding: 8px 15px;
-        font-size: 0.9em;
+        padding: 6px 12px;
+        font-size: 0.85em;
     }
 
     .card-layout {
-        grid-template-columns: 1fr; /* Single column on small screens */
+        grid-template-columns: 1fr;
+        padding: 10px; /* Reduced padding */
+        gap: 10px; /* Reduced gap */
+    }
+
+    .event-card {
+        padding: 12px; /* Reduced padding */
+    }
+
+    .diary-layout {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .diary-day-card {
+        padding: 12px; /* Reduced padding */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .diary-event-list li {
+        padding: 10px; /* Reduced padding */
+        margin-bottom: 8px; /* Reduced margin */
     }
 
     .organization-header {
-        display: none; /* Hide header on small screens for simplicity */
+        display: none;
     }
 
     .organization-row {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column;
+        margin-bottom: 15px; /* Keep consistent margin */
     }
 
     .organization-name-column {
-        flex: none; /* Remove fixed width */
-        width: 100%; /* Take full width */
+        flex: none;
+        width: 100%;
         border-right: none;
-        border-bottom: 1px solid #e0e0e0; /* Add border to bottom */
-        border-radius: 8px 8px 0 0; /* Adjust border radius */
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 6px 6px 0 0; /* Adjusted border radius */
+        padding: 12px; /* Reduced padding */
     }
 
     .organization-events-column {
-        flex-direction: column; /* Stack event cards */
+        flex-direction: column;
         width: 100%;
-        padding-top: 15px; /* Add some space after org name */
-        gap: 20px; /* Space between stacked events */
+        padding-top: 12px; /* Reduced padding */
+        gap: 10px; /* Reduced gap */
+        padding: 12px; /* Reduced padding */
     }
     .organization-events-column .event-card {
         flex: none;
-        width: 100%; /* Full width for cards */
+        width: 100%;
     }
 }
