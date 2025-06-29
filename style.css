@@ -86,13 +86,9 @@ a:hover {
     font-size: 0.9em; /* Smaller base font for card content */
 }
 
-/* More compact event card content - applies to both card and org views */
-.event-card p,
-.event-card h3 {
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    line-height: 1.25; /* Tighter line height */
-    margin-bottom: 4px; /* Small margin between lines */
+.event-card p {
+    margin-bottom: 5px; /* Reduced margin */
+    font-size: 0.9em; /* Smaller font for paragraph content */
 }
 
 .event-card p strong {
@@ -102,31 +98,32 @@ a:hover {
 .event-description {
     font-size: 0.85em; /* Even smaller for description */
     color: #555;
-    margin-top: 8px; /* Slight margin above description */
-    margin-bottom: 0; /* Ensure no extra space below description */
+    margin-top: 8px; /* Reduced margin */
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 /* Adjusted: "More Information" link styling */
 .event-card .more-info {
-    margin-top: 5px; /* Space above info link */
+    margin-top: 3px; /* Further reduced space above */
     margin-bottom: 0;
     text-align: left;
     font-size: 0.85em; /* Smaller font for info link */
-    padding-top: 0; /* Remove padding from here, margin handles space */
+    padding-top: 3px;
 }
 
-/* Specific styling for organization name in card view */
+/* Specific styling for organization name and event title in card view */
 .event-card .event-org-name {
     font-size: 1.1em; /* Smaller for organization name */
     font-weight: bold;
     margin-bottom: 3px; /* Reduced margin */
 }
 
-/* Specific styling for event title in card view */
 .event-card h3 {
     font-size: 0.95em; /* Even smaller for event title */
     margin-top: 0;
-    margin-bottom: 8px; /* Slightly more space below title */
+    margin-bottom: 8px; /* Reduced margin */
+    color: #333; /* Make event titles black */
+    line-height: 1.3; /* Tighter line height */
 }
 
 
@@ -163,34 +160,34 @@ a:hover {
     margin: 0;
 }
 
-/* Compact diary event list items */
 .diary-event-list li {
-    margin: 0; /* Remove default margins */
-    padding: 4px 0; /* Reduced padding for compactness */
-    border-bottom: 1px dashed #eee; /* Light separator */
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #eee;
 }
 
 .diary-event-list li:last-child {
-    border-bottom: none; /* No separator for the last event of the day */
+    border-bottom: none;
+    margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .diary-event-list p, .diary-event-list h4 {
-    margin: 0; /* Remove default paragraph/heading margins for compactness */
-    line-height: 1.2; /* Tighter line height for all diary elements */
+    margin: 0;
+    line-height: 1.25;
 }
 
-/* Specific styling for organization name in diary view */
+/* Specific styling for organization name and event title in diary view */
 .diary-event-list .event-org-name-diary {
-    font-size: 1.05em;
+    font-size: 1.05em; /* Larger for organization name */
     font-weight: bold;
     margin-bottom: 1px;
 }
 
-/* Specific styling for event title in diary view */
 .diary-event-list h4 {
-    font-size: 0.9em;
+    font-size: 0.9em; /* Smaller for event title */
     margin-bottom: 3px;
+    color: #333; /* Make event titles black */
 }
 
 .diary-event-list .event-time-diary,
@@ -199,11 +196,6 @@ a:hover {
 .diary-event-list .more-info-diary {
     font-size: 0.8em; /* Smaller auxiliary text */
     color: #666;
-    margin-bottom: 2px; /* Small margin for compactness */
-}
-
-.diary-event-list .more-info-diary {
-    margin-top: 5px; /* Small space above the info link */
 }
 
 /* No events message */
@@ -222,7 +214,7 @@ a:hover {
 }
 
 
-/* --- By Organization View Specific Styles --- */
+/* --- By Organization View Specific Styles (New Table-like Layout) --- */
 .organization-layout {
     display: flex;
     flex-direction: column;
@@ -240,7 +232,7 @@ a:hover {
 
 .organization-name-column {
     flex-shrink: 0;
-    width: 180px; /* Fixed width for organization name */
+    width: 180px; /* Slightly smaller fixed width for organization name */
     padding: 15px; /* Reduced padding */
     border-right: 1px solid #ddd;
     display: flex;
@@ -290,8 +282,8 @@ a:hover {
 /* Ensure event cards within the organization view behave correctly */
 .organization-events-column .event-card {
     flex-shrink: 0;
-    width: 250px; /* Fixed width for cards in this view */
-    min-height: 180px; /* Min-height for compactness */
+    width: 250px; /* Smaller fixed width for cards in this view */
+    min-height: 200px; /* Smaller min-height */
     margin: 0;
     padding: 12px; /* Reduced padding for cards within org view */
 }
@@ -315,61 +307,28 @@ a:hover {
 
 .organization-header .header-events {
     flex-grow: 1;
-    /* Crucial for alignment: this padding should match the padding of the .organization-events-column */
-    padding-left: 15px;
+    padding-left: 15px; /* Reduced padding to align with events column */
     font-size: 1.1em; /* Smaller font for header */
 }
 
 
-/* --- Color Coding for Organization Names and Titles (Restored and Applied consistently) --- */
+/* Color Coding for Organization Names and Titles */
 /* Edinburgh Steiner School */
 .title-steiner { color: #0056B3; /* Strong Blue */ }
-.event-card.title-steiner h3, .diary-event-list .title-steiner h4 { color: #0056B3; }
-.event-card.title-steiner .event-org-name, .diary-event-list .title-steiner .event-org-name-diary { color: #0056B3; }
-.organization-name-column .title-steiner { color: #0056B3; } /* For the H2 in org view */
-
-
 /* Tiphereth */
 .title-tiphereth { color: #28A745; /* Emerald Green */ }
-.event-card.title-tiphereth h3, .diary-event-list .title-tiphereth h4 { color: #28A745; }
-.event-card.title-tiphereth .event-org-name, .diary-event-list .title-tiphereth .event-org-name-diary { color: #28A745; }
-.organization-name-column .title-tiphereth { color: #28A745; }
-
 /* Garvald */
 .title-garvald { color: #DC3545; /* Vivid Red */ }
-.event-card.title-garvald h3, .diary-event-list .title-garvald h4 { color: #DC3545; }
-.event-card.title-garvald .event-org-name, .diary-event-list .title-garvald .event-org-name-diary { color: #DC3545; }
-.organization-name-column .title-garvald { color: #DC3545; }
-
 /* Columcille (if added later) */
-.title-columcille { color: #FFC107; /* Amber */ }
-.event-card.title-columcille h3, .diary-event-list .title-columcille h4 { color: #FFC107; }
-.event-card.title-columcille .event-org-name, .diary-event-list .title-columcille .event-org-name-diary { color: #FFC107; }
-.organization-name-column .title-columcille { color: #FFC107; }
-
+.title-columcille { color: #FFC107; /* Amber (use with dark background if text, or for border/icon) - for text, need good contrast */ }
 /* Camphill Blair Drummond */
 .title-camphill-blair-drummond { color: #6F42C1; /* Deep Purple */ }
-.event-card.title-camphill-blair-drummond h3, .diary-event-list .title-camphill-blair-drummond h4 { color: #6F42C1; }
-.event-card.title-camphill-blair-drummond .event-org-name, .diary-event-list .title-camphill-blair-drummond .event-org-name-diary { color: #6F42C1; }
-.organization-name-column .title-camphill-blair-drummond { color: #6F42C1; }
-
 /* Camphill (Loch Arthur) */
 .title-camphill-loch-arthur { color: #17A2B8; /* Teal Blue */ }
-.event-card.title-camphill-loch-arthur h3, .diary-event-list .title-camphill-loch-arthur h4 { color: #17A2B8; }
-.event-card.title-camphill-loch-arthur .event-org-name, .diary-event-list .title-camphill-loch-arthur .event-org-name-diary { color: #17A2B8; }
-.organization-name-column .title-camphill-loch-arthur { color: #17A2B8; }
-
 /* Ruskin Mill (if added later) */
 .title-ruskin-mill { color: #FD7E14; /* Bright Orange */ }
-.event-card.title-ruskin-mill h3, .diary-event-list .title-ruskin-mill h4 { color: #FD7E14; }
-.event-card.title-ruskin-mill .event-org-name, .diary-event-list .title-ruskin-mill .event-org-name-diary { color: #FD7E14; }
-.organization-name-column .title-ruskin-mill { color: #FD7E14; }
-
 /* Edinburgh Christian Community */
 .title-christian-community { color: #20C997; /* Mint Green */ }
-.event-card.title-christian-community h3, .diary-event-list .title-christian-community h4 { color: #20C997; }
-.event-card.title-christian-community .event-org-name, .diary-event-list .title-christian-community .event-org-name-diary { color: #20C997; }
-.organization-name-column .title-christian-community { color: #20C997; }
 
 
 /* Responsive Adjustments */
