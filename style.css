@@ -1,39 +1,19 @@
 /* General Body and Container Styles */
 body {
-    font-family: 'Spectral', serif; /* Changed font to a more Anthroposophical style */
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333; /* Default text color */
-    background-color: #f4f4f4; /* Fallback background color */
-    background-image: url('images/goetheanum.jpg'); /* Goetheanum image as background */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center center; /* Center the image */
-    background-attachment: fixed; /* Keep background fixed when scrolling */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-color: #f4f4f4;
+    color: #333;
 }
-
-/* Overlay to make text readable on the background image */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.75); /* Semi-transparent white overlay */
-    z-index: -1; /* Place behind content */
-}
-
 
 header {
-    background-color: rgba(51, 51, 51, 0.85); /* Slightly transparent header */
+    background-color: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative; /* Ensure it's above the overlay */
-    z-index: 1;
 }
 
 header h1 {
@@ -65,11 +45,9 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent main content area */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative; /* Ensure it's above the overlay */
-    z-index: 1;
 }
 
 footer {
@@ -78,8 +56,6 @@ footer {
     color: #777;
     font-size: 0.9em;
     margin-top: 30px;
-    position: relative; /* Ensure it's above the overlay */
-    z-index: 1;
 }
 
 a {
@@ -94,28 +70,29 @@ a:hover {
 /* --- Event Card Styles (Card View & By Organization View) --- */
 .card-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Slightly smaller min width */
+    gap: 15px; /* Reduced gap */
 }
 
 .event-card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px; /* Reduced padding */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: 0.9em; /* Smaller base font for card content */
 }
 
+/* More compact event card content - applies to both card and org views */
 .event-card p,
 .event-card h3 {
-    margin: 0;
-    padding: 0;
-    line-height: 1.25;
-    margin-bottom: 4px;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    line-height: 1.25; /* Tighter line height */
+    margin-bottom: 4px; /* Small margin between lines */
 }
 
 .event-card p strong {
@@ -123,36 +100,39 @@ a:hover {
 }
 
 .event-description {
-    font-size: 0.85em;
+    font-size: 0.85em; /* Even smaller for description */
     color: #555;
-    margin-top: 8px;
-    margin-bottom: 0;
+    margin-top: 8px; /* Slight margin above description */
+    margin-bottom: 0; /* Ensure no extra space below description */
 }
 
+/* Adjusted: "More Information" link styling */
 .event-card .more-info {
-    margin-top: 5px;
+    margin-top: 5px; /* Space above info link */
     margin-bottom: 0;
     text-align: left;
-    font-size: 0.85em;
-    padding-top: 0;
+    font-size: 0.85em; /* Smaller font for info link */
+    padding-top: 0; /* Remove padding from here, margin handles space */
 }
 
+/* Specific styling for organization name in card view */
 .event-card .event-org-name {
-    font-size: 1.1em;
+    font-size: 1.1em; /* Smaller for organization name */
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 3px; /* Reduced margin */
 }
 
+/* Specific styling for event title in card view */
 .event-card h3 {
-    font-size: 0.95em;
+    font-size: 0.95em; /* Even smaller for event title */
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Slightly more space below title */
 }
 
 
 /* --- Diary View Specific Styles --- */
 .diary-layout {
-    display: block;
+    display: block; /* Stack day cards vertically */
 }
 
 .diary-day-card {
@@ -161,7 +141,7 @@ a:hover {
     margin-bottom: 8px;
     padding: 8px 12px;
     background-color: #fcfcfc;
-    border-top: 1px solid #333;
+    border-top: 1px solid #333; /* Thin black line */
     padding-top: 15px;
 }
 
@@ -173,7 +153,7 @@ a:hover {
 .diary-day-card h4 {
     margin-top: 0;
     margin-bottom: 4px;
-    color: #333;
+    color: #333; /* Make date font black */
     font-size: 1.1em;
 }
 
@@ -183,29 +163,31 @@ a:hover {
     margin: 0;
 }
 
+/* Compact diary event list items */
 .diary-event-list li {
-    margin-bottom: 4px;
-    padding-bottom: 4px;
-    border-bottom: 1px dashed #eee;
+    margin: 0; /* Remove default margins */
+    padding: 4px 0; /* Reduced padding for compactness */
+    border-bottom: 1px dashed #eee; /* Light separator */
 }
 
 .diary-event-list li:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+    border-bottom: none; /* No separator for the last event of the day */
     padding-bottom: 0;
 }
 
 .diary-event-list p, .diary-event-list h4 {
-    margin: 0;
-    line-height: 1.25;
+    margin: 0; /* Remove default paragraph/heading margins for compactness */
+    line-height: 1.2; /* Tighter line height for all diary elements */
 }
 
+/* Specific styling for organization name in diary view */
 .diary-event-list .event-org-name-diary {
     font-size: 1.05em;
     font-weight: bold;
     margin-bottom: 1px;
 }
 
+/* Specific styling for event title in diary view */
 .diary-event-list h4 {
     font-size: 0.9em;
     margin-bottom: 3px;
@@ -215,10 +197,16 @@ a:hover {
 .diary-event-list .event-location-diary,
 .diary-event-list .event-description-diary,
 .diary-event-list .more-info-diary {
-    font-size: 0.8em;
+    font-size: 0.8em; /* Smaller auxiliary text */
     color: #666;
+    margin-bottom: 2px; /* Small margin for compactness */
 }
 
+.diary-event-list .more-info-diary {
+    margin-top: 5px; /* Small space above the info link */
+}
+
+/* No events message */
 .no-events-message {
     text-align: center;
     font-style: italic;
@@ -238,7 +226,7 @@ a:hover {
 .organization-layout {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Reduced space between organization rows */
 }
 
 .organization-row {
@@ -252,11 +240,10 @@ a:hover {
 
 .organization-name-column {
     flex-shrink: 0;
-    width: 180px;
-    padding: 15px;
+    width: 180px; /* Fixed width for organization name */
+    padding: 15px; /* Reduced padding */
     border-right: 1px solid #ddd;
     display: flex;
-    flex-direction: column; /* Allow image and text to stack */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -265,33 +252,22 @@ a:hover {
 
 .organization-name-column h2 {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.4em; /* Smaller font for organization name */
     line-height: 1.2;
-    margin-top: 5px; /* Space between image and text */
 }
-
-/* Style for organization images */
-.organization-name-column img {
-    max-width: 100px; /* Adjust as needed */
-    max-height: 100px; /* Adjust as needed */
-    border-radius: 50%; /* Make them circular */
-    object-fit: cover;
-    margin-bottom: 10px; /* Space between image and text */
-    border: 2px solid #ddd; /* Light border around image */
-}
-
 
 .organization-events-column {
     flex-grow: 1;
     display: flex;
-    overflow-x: auto;
-    padding: 15px;
-    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 15px; /* Reduced padding */
+    gap: 10px; /* Reduced space between event cards */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: #ccc #f4f4f4;
 }
 
+/* Custom scrollbar for Webkit browsers */
 .organization-events-column::-webkit-scrollbar {
     height: 8px;
 }
@@ -310,88 +286,90 @@ a:hover {
     background: #aaa;
 }
 
+
+/* Ensure event cards within the organization view behave correctly */
 .organization-events-column .event-card {
     flex-shrink: 0;
-    width: 250px;
-    min-height: 180px;
+    width: 250px; /* Fixed width for cards in this view */
+    min-height: 180px; /* Min-height for compactness */
     margin: 0;
-    padding: 12px;
+    padding: 12px; /* Reduced padding for cards within org view */
 }
 
 /* Column header for "By Organization" view */
 .organization-header {
     display: flex;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Reduced margin */
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
     align-items: center;
 }
 
 .organization-header .header-org-name {
-    width: 180px;
+    width: 180px; /* Matches organization-name-column width */
     text-align: center;
     flex-shrink: 0;
-    font-size: 1.1em;
+    font-size: 1.1em; /* Smaller font for header */
 }
 
 .organization-header .header-events {
     flex-grow: 1;
-    /* Adjusted padding-left for precise alignment */
-    padding-left: 15px; /* This should match the .organization-events-column's padding-left */
-    font-size: 1.1em;
+    /* Crucial for alignment: this padding should match the padding of the .organization-events-column */
+    padding-left: 15px;
+    font-size: 1.1em; /* Smaller font for header */
 }
 
 
-/* --- Color Coding for Organization Names and Titles (Distinct Colors for Each Org) --- */
+/* --- Color Coding for Organization Names and Titles (Restored and Applied consistently) --- */
 /* Edinburgh Steiner School */
 .title-steiner { color: #0056B3; /* Strong Blue */ }
 .event-card.title-steiner h3, .diary-event-list .title-steiner h4 { color: #0056B3; }
 .event-card.title-steiner .event-org-name, .diary-event-list .title-steiner .event-org-name-diary { color: #0056B3; }
-.organization-name-column .title-steiner h2 { color: #0056B3; }
+.organization-name-column .title-steiner { color: #0056B3; } /* For the H2 in org view */
 
 
 /* Tiphereth */
 .title-tiphereth { color: #28A745; /* Emerald Green */ }
 .event-card.title-tiphereth h3, .diary-event-list .title-tiphereth h4 { color: #28A745; }
 .event-card.title-tiphereth .event-org-name, .diary-event-list .title-tiphereth .event-org-name-diary { color: #28A745; }
-.organization-name-column .title-tiphereth h2 { color: #28A745; }
+.organization-name-column .title-tiphereth { color: #28A745; }
 
 /* Garvald */
 .title-garvald { color: #DC3545; /* Vivid Red */ }
 .event-card.title-garvald h3, .diary-event-list .title-garvald h4 { color: #DC3545; }
 .event-card.title-garvald .event-org-name, .diary-event-list .title-garvald .event-org-name-diary { color: #DC3545; }
-.organization-name-column .title-garvald h2 { color: #DC3545; }
+.organization-name-column .title-garvald { color: #DC3545; }
 
 /* Columcille (if added later) */
-.title-columcille { color: #FFC107; /* Amber - Ensure good contrast if used on dark backgrounds */ }
+.title-columcille { color: #FFC107; /* Amber */ }
 .event-card.title-columcille h3, .diary-event-list .title-columcille h4 { color: #FFC107; }
 .event-card.title-columcille .event-org-name, .diary-event-list .title-columcille .event-org-name-diary { color: #FFC107; }
-.organization-name-column .title-columcille h2 { color: #FFC107; }
+.organization-name-column .title-columcille { color: #FFC107; }
 
 /* Camphill Blair Drummond */
 .title-camphill-blair-drummond { color: #6F42C1; /* Deep Purple */ }
 .event-card.title-camphill-blair-drummond h3, .diary-event-list .title-camphill-blair-drummond h4 { color: #6F42C1; }
 .event-card.title-camphill-blair-drummond .event-org-name, .diary-event-list .title-camphill-blair-drummond .event-org-name-diary { color: #6F42C1; }
-.organization-name-column .title-camphill-blair-drummond h2 { color: #6F42C1; }
+.organization-name-column .title-camphill-blair-drummond { color: #6F42C1; }
 
 /* Camphill (Loch Arthur) */
 .title-camphill-loch-arthur { color: #17A2B8; /* Teal Blue */ }
 .event-card.title-camphill-loch-arthur h3, .diary-event-list .title-camphill-loch-arthur h4 { color: #17A2B8; }
 .event-card.title-camphill-loch-arthur .event-org-name, .diary-event-list .title-camphill-loch-arthur .event-org-name-diary { color: #17A2B8; }
-.organization-name-column .title-camphill-loch-arthur h2 { color: #17A2B8; }
+.organization-name-column .title-camphill-loch-arthur { color: #17A2B8; }
 
 /* Ruskin Mill (if added later) */
 .title-ruskin-mill { color: #FD7E14; /* Bright Orange */ }
 .event-card.title-ruskin-mill h3, .diary-event-list .title-ruskin-mill h4 { color: #FD7E14; }
 .event-card.title-ruskin-mill .event-org-name, .diary-event-list .title-ruskin-mill .event-org-name-diary { color: #FD7E14; }
-.organization-name-column .title-ruskin-mill h2 { color: #FD7E14; }
+.organization-name-column .title-ruskin-mill { color: #FD7E14; }
 
 /* Edinburgh Christian Community */
 .title-christian-community { color: #20C997; /* Mint Green */ }
 .event-card.title-christian-community h3, .diary-event-list .title-christian-community h4 { color: #20C997; }
 .event-card.title-christian-community .event-org-name, .diary-event-list .title-christian-community .event-org-name-diary { color: #20C997; }
-.organization-name-column .title-christian-community h2 { color: #20C997; }
+.organization-name-column .title-christian-community { color: #20C997; }
 
 
 /* Responsive Adjustments */
@@ -409,26 +387,26 @@ a:hover {
         margin: 10px auto;
     }
     .card-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack cards on small screens */
     }
 
     /* By Organization view on small screens */
     .organization-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack name and events vertically */
     }
     .organization-name-column {
         width: auto;
         border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
+        border-bottom: 1px solid #ddd; /* Add bottom border */
+        padding: 10px; /* Smaller padding */
     }
     .organization-events-column {
-        flex-direction: column;
-        overflow-x: hidden;
-        padding: 15px;
+        flex-direction: column; /* Stack events vertically */
+        overflow-x: hidden; /* No horizontal scroll if stacked */
+        padding: 15px; /* Adjust padding */
     }
     .organization-events-column .event-card {
-        width: auto;
+        width: auto; /* Let cards take full width */
     }
     .organization-header {
         flex-direction: column;
