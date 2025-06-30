@@ -130,7 +130,7 @@ main {
 .event-card .title-camphill-corbenic { color: #4b7b9e; } /* Bluish */
 .event-card .title-tiphereth { color: #d67a30; } /* Orangish */
 .event-card .title-garvald-west-linton { color: #a04040; } /* Reddish */
-.event-card .title-ruskin-mill { color: #4a6fa6; } /* Steel blue */
+.event-card .title-fairhill-rise { color: #4a6fa6; } /* Steel blue (was Ruskin Mill) */
 .event-card .title-garvald-edinburgh { color: #725d7c; } /* Muted purple */
 .event-card .title-camphill-loch-arthur { color: #5a9e9e; } /* Teal */
 
@@ -181,26 +181,26 @@ main {
     text-decoration: underline;
 }
 
-/* --- Diary View Layout (Minimal changes from previous) --- */
+/* --- Diary View Layout --- */
 .diary-layout {
-    padding: 10px;
+    padding: 5px; /* Reduced padding for more compactness */
 }
 
 .diary-day-card {
     background-color: #fcfcfc;
     border: 1px solid #e0e0e0;
     border-radius: 5px;
-    padding: 12px;
-    margin-bottom: 10px;
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 8px; /* Reduced margin */
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .diary-day-card h4 {
-    margin: 0 0 8px;
+    margin: 0 0 6px; /* Reduced margin */
     color: #a87e5b;
-    font-size: 1.4em;
+    font-size: 1.3em; /* Slightly smaller font */
     border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 6px;
+    padding-bottom: 4px; /* Reduced padding */
 }
 
 .diary-event-list {
@@ -213,10 +213,14 @@ main {
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 8px;
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 6px; /* Reduced margin */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
     transition: background-color 0.2s ease;
+}
+
+.diary-event-list li:last-child {
+    margin-bottom: 0; /* Remove margin from last item in list */
 }
 
 .diary-event-list li:hover {
@@ -224,37 +228,37 @@ main {
 }
 
 .diary-event-list .event-org-name-diary { /* For organization name in diary view */
-    font-size: 0.8em;
+    font-size: 0.75em; /* Smaller font */
     font-weight: bold;
     color: #888;
-    margin-bottom: 3px;
+    margin-bottom: 2px; /* Reduced margin */
     text-transform: uppercase;
 }
 
-/* Specific colors for organization names in diary view (example, adjust as desired) */
+/* Specific colors for organization names in diary view */
 .diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
 .diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
 .diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
 .diary-event-list .title-camphill-corbenic { color: #4b7b9e; }
 .diary-event-list .title-tiphereth { color: #d67a30; }
 .diary-event-list .title-garvald-west-linton { color: #a04040; }
-.diary-event-list .title-ruskin-mill { color: #4a6fa6; }
+.diary-event-list .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
 .diary-event-list .title-garvald-edinburgh { color: #725d7c; }
 .diary-event-list .title-camphill-loch-arthur { color: #5a9e9e; }
 
 
 .diary-event-list h4 {
-    margin: 0 0 5px;
-    font-size: 1.1em;
+    margin: 0 0 4px; /* Reduced margin */
+    font-size: 1.0em; /* Smaller font */
     color: #4a4a4a;
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .diary-event-list p {
-    margin: 2px 0;
+    margin: 1px 0; /* Reduced margin */
     color: #555;
-    font-size: 0.82em;
+    font-size: 0.78em; /* Smaller font */
 }
 
 .diary-event-list strong {
@@ -262,17 +266,21 @@ main {
 }
 
 .diary-event-list .event-description-diary {
-    font-size: 0.75em;
+    font-size: 0.7em; /* Even smaller font */
     color: #666;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 4px; /* Reduced margin */
+    margin-bottom: 4px;
+    max-height: 3em; /* Limit height for description */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .diary-event-list .more-info-diary {
     text-align: left;
     font-weight: bold;
-    margin-top: 5px;
-    font-size: 0.82em;
+    margin-top: 4px; /* Reduced margin */
+    font-size: 0.78em; /* Smaller font */
 }
 
 .diary-event-list .more-info-diary a {
@@ -300,25 +308,21 @@ main {
     padding: 5px; /* Reduced padding */
     margin-bottom: 8px; /* Reduced margin */
     border-bottom: 1px solid #a87e5b;
+    align-items: center; /* Vertically align content */
 }
 
 .header-org-name {
-    flex: 0 0 160px; /* Adjusted fixed width for organization name column */
+    flex: 0 0 170px; /* Slightly larger fixed width for organization name column */
     padding: 0 5px; /* Reduced padding */
     color: #a87e5b;
     text-align: center; /* Center align header text */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .header-events {
     flex-grow: 1;
     padding: 0 5px; /* Reduced padding */
     color: #a87e5b;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center align header text */
+    text-align: center; /* Center align header text */
 }
 
 .organization-row {
@@ -331,7 +335,7 @@ main {
 }
 
 .organization-name-column {
-    flex: 0 0 160px; /* Adjusted fixed width */
+    flex: 0 0 170px; /* Slightly larger fixed width */
     padding: 8px; /* Reduced padding */
     display: flex;
     flex-direction: column;
@@ -353,20 +357,20 @@ main {
 }
 
 .organization-name-column img {
-    max-width: 80px; /* Reduced logo size */
-    max-height: 80px;
+    max-width: 90px; /* Slightly increased logo size */
+    max-height: 90px; /* Slightly increased logo size */
     width: auto;
     height: auto;
     border-radius: 50%;
     object-fit: contain;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
     border: 1px solid #ddd;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .organization-name-column h2 {
-    margin: 5px 0 0; /* Reduced margin */
-    font-size: 1.2em; /* Smaller font */
+    margin: 5px 0 0;
+    font-size: 1.2em;
     color: #4a4a4a;
 }
 
@@ -377,7 +381,7 @@ main {
 .organization-name-column .title-camphill-corbenic { color: #4b7b9e; }
 .organization-name-column .title-tiphereth { color: #d67a30; }
 .organization-name-column .title-garvald-west-linton { color: #a04040; }
-.organization-name-column .title-ruskin-mill { color: #4a6fa6; }
+.organization-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
 .organization-name-column .title-garvald-edinburgh { color: #725d7c; }
 .organization-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
 
