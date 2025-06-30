@@ -393,8 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Edinburgh Christian Community": "images/christian community logo.jpg", // Confirmed correct
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Confirmed correct
+        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Confirmed correct
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Confirmed correct
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
