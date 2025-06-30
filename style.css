@@ -90,6 +90,39 @@ main {
     font-size: 1em;
 }
 
+/* Filter Buttons */
+#filter-buttons {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#filter-buttons .filter-btn {
+    background-color: #d1b49e; /* Lighter earthy tone */
+    color: #4a4a4a;
+    border: none;
+    padding: 6px 12px;
+    margin: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#filter-buttons .filter-btn:hover {
+    background-color: #a87e5b; /* Darker on hover */
+    color: white;
+}
+
+#filter-buttons .filter-btn.active {
+    background-color: #6a4a2f; /* Active state, darker brown */
+    color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 /* --- Card View Layout --- */
 .card-layout {
     display: grid;
@@ -133,6 +166,7 @@ main {
 .event-card .title-fairhill-rise { color: #4a6fa6; } /* Steel blue (was Ruskin Mill) */
 .event-card .title-garvald-edinburgh { color: #725d7c; } /* Muted purple */
 .event-card .title-camphill-loch-arthur { color: #5a9e9e; } /* Teal */
+.event-card .title-anthroposophy-in-edinburgh { color: #8C564B; } /* Example: earthy brown/red */
 
 
 .event-card h3 {
@@ -245,6 +279,7 @@ main {
 .diary-event-list .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
 .diary-event-list .title-garvald-edinburgh { color: #725d7c; }
 .diary-event-list .title-camphill-loch-arthur { color: #5a9e9e; }
+.diary-event-list .title-anthroposophy-in-edinburgh { color: #8C564B; } /* Example: earthy brown/red */
 
 
 .diary-event-list h4 {
@@ -361,11 +396,10 @@ main {
     max-height: 110px; /* Increased logo size further */
     width: auto;
     height: auto;
-    /* Removed the border-radius and border properties here to remove the oval and border */
-    /* border-radius: 50%; */
+    /* REMOVED: border-radius: 50%; to remove oval shape */
     object-fit: contain;
     margin-bottom: 5px;
-    /* border: 1px solid #ddd; */
+    /* REMOVED: border: 1px solid #ddd; to remove border */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -385,6 +419,7 @@ main {
 .organization-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
 .organization-name-column .title-garvald-edinburgh { color: #725d7c; }
 .organization-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
+.organization-name-column .title-anthroposophy-in-edinburgh { color: #8C564B; } /* Example: earthy brown/red */
 
 
 .organization-events-column {
@@ -422,6 +457,10 @@ main {
     nav button {
         padding: 5px 10px;
         font-size: 0.8em;
+    }
+    #filter-buttons .filter-btn {
+        padding: 5px 10px;
+        font-size: 0.75em;
     }
 
     .card-layout {
@@ -468,9 +507,8 @@ main {
     .organization-name-column img {
         max-width: 70px;
         max-height: 70px;
-        /* Ensure these are also removed/commented out for mobile view if you want consistency */
-        /* border-radius: 50%; */
-        /* border: 1px solid #ddd; */
+        /* REMOVED for consistency: border-radius: 50%; */
+        /* REMOVED for consistency: border: 1px solid #ddd; */
     }
     .organization-name-column h2 {
         font-size: 1.1em;
