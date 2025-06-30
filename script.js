@@ -11,15 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 1,
             "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps",
-            "date": "2025-07-07", // Plausible start date for future summer camp
+            "title": "Summer Circus and Craft Camp",
+            "date": "2025-07-07",
+            "endDate": "2025-07-11", // Example duration
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Engaging camp with circus skills and creative crafts.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
+        },
+        {
+            "id": 2,
+            "organization": "Edinburgh Steiner School",
+            "title": "Kindergarten Summer Camp",
+            "date": "2025-07-14",
+            "endDate": "2025-07-18", // Example duration
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Gentle summer camp for younger children.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
+        },
+        {
+            "id": 3,
+            "organization": "Edinburgh Steiner School",
+            "title": "Summer Holiday Camps (General)",
+            "date": "2025-07-21", // Placeholder, subsequent week
             "time": "Full Day",
             "location": "Edinburgh Steiner School Campus",
             "description": "Various summer holiday camps for children and young people.",
             "link": "https://www.edinburghsteinerschool.org.uk/community/events/" // General events page
         },
 
-        // --- Edinburgh Christian Community (from your direct input, extended, Facebook link) ---
+        // --- Edinburgh Christian Community (Facebook link) ---
         // Removed Study Group events. Link changed to Facebook.
         {
             "id": 4,
@@ -29,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 7,
@@ -39,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Edinburgh Christian Community Church",
             "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 8,
@@ -49,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 10,
@@ -59,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 11,
@@ -69,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 13,
@@ -79,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 14,
@@ -89,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Edinburgh Christian Community Church",
             "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 15,
@@ -99,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/christiancommunityedinburgh"
+            "link": "https://www.facebook.com/CCEdinburgh"
         },
         // Placeholder for future weekly events up to June 2026. These would typically be dynamically generated for a real calendar.
         // For now, these few examples are hardcoded. You can add more as needed following this pattern.
@@ -273,30 +295,40 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
-        // --- Ruskin Mill (from recent Google Search tool results, specific links where available) ---
+        // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
         {
             "id": 35,
-            "organization": "Ruskin Mill",
-            "title": "RMT Staff Events (Various Workshops)",
-            "date": "2025-07-05",
-            "time": "14:00 - 17:00",
-            "location": "Wool Barn, GL6 0QE",
-            "description": "Workshops on various topics (e.g., carving, baking, crafts). Note: These may be for staff only.",
-            "link": "https://www.tickettailor.com/events/ruskinmilltrust"
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
+            "title": "Open Day",
+            "date": "2025-07-31",
+            "time": "TBD",
+            "location": "Fairhill Rise, Gloucestershire",
+            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
+            "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
             "id": 36,
-            "organization": "Ruskin Mill",
-            "title": "Concert: Leveret",
-            "date": "2025-09-26",
-            "time": "19:30 - 21:30",
-            "location": "Ruskin Mill Gallery, GL6 0LA",
-            "description": "Concert by Leveret.",
-            "link": "https://www.tickettailor.com/events/ruskinmilltrust/3006422204" // Specific event link
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
+            "title": "Open Day",
+            "date": "2025-08-25",
+            "time": "TBD",
+            "location": "Fairhill Rise, Gloucestershire",
+            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
+            "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
             "id": 37,
-            "organization": "Ruskin Mill",
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
+            "title": "Open Day",
+            "date": "2025-09-29",
+            "time": "TBD",
+            "location": "Fairhill Rise, Gloucestershire",
+            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
+            "link": "https://rmt.org/rise/fairhill-rise/"
+        },
+        {
+            "id": 38,
+            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
             "time": "17:00 GMT",
@@ -305,8 +337,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
         {
-            "id": 38,
-            "organization": "Ruskin Mill",
+            "id": 39,
+            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
             "endDate": "2026-02-08", // Added end date for multi-day event
@@ -315,10 +347,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
+        // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
-        // --- Garvald Edinburgh (Re-added Grant's Robot Faces) ---
+        // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
-            "id": 39,
+            "id": 40,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -329,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
         {
-            "id": 40, // Re-using ID for a placeholder if needed
+            "id": 41, // Re-using ID for a placeholder if needed
             "organization": "Garvald Edinburgh",
             "title": "Check Garvald Edinburgh Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -341,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 41,
+            "id": 42,
             "organization": "Camphill (Loch Arthur)",
             "title": "Check Loch Arthur Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -352,16 +385,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (UPDATED with all local paths) ---
+    // --- Organization Images (UPDATED with correct paths and Fairhill Rise) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Ruskin Mill": "images/Ruskin Mill Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.png",
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png",
+        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
+        "Edinburgh Christian Community": "images/christian community logo.jpg", // Corrected filename
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Corrected filename
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
@@ -456,18 +489,34 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Group events by date (using start date for grouping key, but displaying full range)
-        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
-            const dateKey = event.date; // Use the original date string for grouping
-            if (!acc[dateKey]) {
-                acc[dateKey] = [];
-            }
-            acc[dateKey].push(event);
-            return acc;
-        }, {});
+        // Create a map to hold events for each day, including multi-day events on each day they span
+        const dailyEventsMap = new Map();
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Start of today
 
-        // Sort dates chronologically based on the original date strings
-        const sortedDateKeys = Object.keys(groupedEvents).sort((a, b) => new Date(a) - new Date(b));
+        eventsToDisplay.forEach(event => {
+            const startDate = new Date(event.date);
+            startDate.setHours(0, 0, 0, 0);
+            const endDate = event.endDate ? new Date(event.endDate) : startDate;
+            endDate.setHours(23, 59, 59, 999); // End of end day
+
+            // Iterate over each day the event is active
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                // Only add to map if the event date is today or in the future
+                if (currentDate >= today) {
+                    const dateKey = currentDate.toISOString().slice(0, 10); // YYYY-MM-DD
+                    if (!dailyEventsMap.has(dateKey)) {
+                        dailyEventsMap.set(dateKey, []);
+                    }
+                    dailyEventsMap.get(dateKey).push(event);
+                }
+                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
+            }
+        });
+
+        // Sort dates chronologically
+        const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
 
         sortedDateKeys.forEach(dateKey => {
             const dayCard = document.createElement('div');
@@ -478,13 +527,13 @@ document.addEventListener('DOMContentLoaded', () => {
             eventList.className = 'diary-event-list';
 
             // Sort events within each day by time (simple string comparison for "HH:MM")
-            groupedEvents[dateKey].sort((a, b) => {
+            dailyEventsMap.get(dateKey).sort((a, b) => {
                 const timeA = a.time.split(' ')[0];
                 const timeB = b.time.split(' ')[0];
                 return timeA.localeCompare(timeB);
             });
 
-            groupedEvents[dateKey].forEach(event => {
+            dailyEventsMap.get(dateKey).forEach(event => {
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `
                         <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
@@ -532,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationRow = document.createElement('div');
             organizationRow.className = 'organization-row';
 
-            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/80?text=Logo'; // Fallback to a placeholder
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/90?text=Logo'; // Fallback to a placeholder
             // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
             const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link ? groupedEvents[orgName][0].link : '#';
 
