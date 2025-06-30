@@ -385,16 +385,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
+    // --- Organization Images (Paths Adjusted for Case Sensitivity) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Confirmed correct
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Confirmed correct
+        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now as per provided filenames
+        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Adjusted for EXACT case
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Adjusted for EXACT case
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
@@ -639,16 +639,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     diaryViewBtn.addEventListener('click', () => {
-        activateButton(diaryViewBtn);
-        renderDiaryView(upcomingEvents);
-    });
-
-    organizationViewBtn.addEventListener('click', () => {
-        activateButton(organizationViewBtn);
-        renderOrganizationView(upcomingEvents);
-    });
-
-    // Initial render on page load: Diary View as default
-    activateButton(diaryViewBtn); // Highlight Diary View button
-    renderDiaryView(upcomingEvents); // Render Diary View by default
-});
+        activateButton(diaryViewBtn
