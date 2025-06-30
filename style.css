@@ -361,10 +361,11 @@ main {
     max-height: 110px; /* Increased logo size further */
     width: auto;
     height: auto;
-    border-radius: 50%;
+    /* Removed the border-radius and border properties here to remove the oval and border */
+    /* border-radius: 50%; */
     object-fit: contain;
     margin-bottom: 5px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -467,6 +468,9 @@ main {
     .organization-name-column img {
         max-width: 70px;
         max-height: 70px;
+        /* Ensure these are also removed/commented out for mobile view if you want consistency */
+        /* border-radius: 50%; */
+        /* border: 1px solid #ddd; */
     }
     .organization-name-column h2 {
         font-size: 1.1em;
