@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (UPDATED with correct paths and Fairhill Rise) ---
+    // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
@@ -393,8 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Edinburgh Christian Community": "images/christian community logo.jpg", // Corrected filename
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Corrected filename
+        "Edinburgh Christian Community": "images/christian community logo.jpg", // Confirmed correct
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Confirmed correct
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
             while (currentDate <= endDate) {
                 // Only add to map if the event date is today or in the future
                 if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 10); // YYYY-MM-DD
+                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
                     if (!dailyEventsMap.has(dateKey)) {
                         dailyEventsMap.set(dateKey, []);
                     }
@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationRow = document.createElement('div');
             organizationRow.className = 'organization-row';
 
-            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/90?text=Logo'; // Fallback to a placeholder
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
             // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
             const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link ? groupedEvents[orgName][0].link : '#';
 
