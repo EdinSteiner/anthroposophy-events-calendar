@@ -639,4 +639,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     diaryViewBtn.addEventListener('click', () => {
-        activateButton(diaryViewBtn
+        activateButton(diaryViewBtn);
+        renderDiaryView(upcomingEvents);
+    });
+
+    organizationViewBtn.addEventListener('click', () => {
+        activateButton(organizationViewBtn);
+        renderOrganizationView(upcomingEvents);
+    });
+
+    // Initial render on page load: Diary View as default
+    activateButton(diaryViewBtn); // Highlight Diary View button
+    renderDiaryView(upcomingEvents); // Render Diary View by default
+});
