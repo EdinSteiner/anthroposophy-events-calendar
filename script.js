@@ -1,5 +1,4 @@
-ddocument.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data ---
+dddocument.addEventListener('DOMContentLoaded', () => {    // --- Event Data ---
     // IMPORTANT: This array holds STATIC event data.
     // Events below are consolidated from previous search results and your direct input,
     // filtered and adjusted based on all your feedback.
