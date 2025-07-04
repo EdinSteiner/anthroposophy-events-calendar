@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events at organizations inspired by Anthroposophy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Anthroposophical Calendar Edinburgh</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
 <body>
     <header>
-        <h1>Events at organizations inspired by Anthroposophy</h1>
-        <p class="subtitle">In and beyond Edinburgh</p>
-        <nav>
-            <button id="diaryViewBtn">Diary View</button>
-            <button id="cardViewBtn">Card View</button>
-            <button id="organizationViewBtn">By Organization</button>
-        </nav>
+        <h1>Anthroposophical Calendar Edinburgh</h1>
+        <p class="subtitle">Events from Anthroposophical Initiatives in and around Edinburgh</p>
     </header>
 
-    <main id="eventContainer">
-        </main>
+    <nav>
+        <button id="card-view-btn">Card View</button>
+        <button id="diary-view-btn">Diary View</button>
+        <button id="organization-view-btn">Organization View</button>
+    </nav>
 
-    <footer>
-        <p>&copy; 2025 Anthroposophical Events. All rights reserved.</p>
-    </footer>
+    <main>
+        <div id="filter-buttons">
+            </div>
+
+        <div id="events-container">
+            </div>
+
+        <div id="no-events-message" class="no-events-message" style="display: none;">
+            No upcoming events match your selected criteria.
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
