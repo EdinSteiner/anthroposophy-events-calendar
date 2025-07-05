@@ -5,689 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // filtered and adjusted based on all your feedback.
     // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
     // You MUST verify the accuracy and currency of these events against official websites.
-    // Dates are set to be in the future (from current date July 03, 2025) or ongoing.
-    const allEvents = [
-        // --- Camphill Blair Drummond ---
-        {
-            "id": 18,
-            "organization": "Camphill Blair Drummond",
-            "title": "Vocal Recital: Un-Ravel-ing the Source Material",
-            "date": "2025-07-19",
-            "time": "TBD",
-            "location": "Camphill Blair Drummond, Stirling",
-            "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
-            "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
-        },
-
-        // --- Camphill Corbenic ---
-        {
-            "id": 19,
-            "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please visit the official Corbenic website for current information on events and activities.",
-            "link": "https://www.corbeniccamphill.co.uk/"
-        },
-
-        // --- Camphill Loch Arthur ---
-        {
-            "id": 40,
-            "organization": "Camphill Loch Arthur",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Camphill Loch Arthur",
-            "description": "Please visit the official Loch Arthur website for current information on events and activities.",
-            "link": "https://www.locharthur.org.uk/"
-        },
-
-        // --- Edinburgh Christian Community (Updated events) ---
-        {
-            "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 10,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-18",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 11,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-20",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 16, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Devotional Gathering",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A devotional gathering for the community.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 13,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-25",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 14,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-27",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 17, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-02",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A special service with Tom Revetz.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 20, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Congregational Meeting",
-            "date": "2025-08-02",
-            "time": "11:15",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A meeting for all members of the congregation.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-
-
-        // --- Edinburgh Steiner School ---
-        {
-            "id": 1,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 3,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
-        },
-
-        // --- Fairhill Rise (Was Ruskin Mill) ---
-        {
-            "id": 35,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 36,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise",
-            "title": "John Ruskin Prize 2026: Call for Entries",
-            "date": "2025-12-02",
-            "time": "17:00 GMT",
-            "location": "Online",
-            "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in a World of Noise'.",
-            "link": "https://www.ruskinprize.co.uk/"
-        },
-
-        // --- Garvald Edinburgh ---
-        {
-            "id": 39,
-            "organization": "Garvald Edinburgh",
-            "title": "Check Garvald Edinburgh Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Garvald Edinburgh",
-            "description": "Please visit the official Garvald Edinburgh website for current information on events and activities.",
-            "link": "https://www.garvaldedinburgh.org.uk/"
-        },
-
-        // --- Garvald West Linton ---
-        {
-            "id": 22,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-04",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 23,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 24,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-08-01",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 25,
-            "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 26,
-            "organization": "Garvald West Linton",
-            "title": "Halloween Party",
-            "date": "2025-10-31",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 27,
-            "organization": "Garvald West Linton",
-            "title": "Guy Fawkes Fireworks",
-            "date": "2025-11-05",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 28,
-            "organization": "Garvald West Linton",
-            "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 29,
-            "organization": "Garvald West Linton",
-            "title": "Advent Wreath Making",
-            "date": "2025-11-28",
-            "time": "TBD",
-            "location": "Garvald West Linton Dining Room",
-            "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 30,
-            "organization": "Garvald West Linton",
-            "title": "1st Advent Celebration",
-            "date": "2025-11-30",
-            "time": "TBD",
-            "location": "Garvald West Linton Main House",
-            "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 31,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
-            "date": "2025-12-06",
-            "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 32,
-            "organization": "Garvald West Linton",
-            "title": "Santa Lucia Event",
-            "date": "2025-12-13",
-            "time": "PM",
-            "location": "Garvald West Linton",
-            "description": "Celebration of Santa Lucia.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 33,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Eve Celebrations",
-            "date": "2025-12-24",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 34,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Day Lunch",
-            "date": "2025-12-25",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Christmas Day festive lunch.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-
-        // --- Tiphereth Edinburgh (Updated event) ---
-        {
-            "id": 21,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-11", // First Friday
-            "endDate": "2025-12-26", // Assuming it runs weekly till end of year for now
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/" // General link, if specific page for shop doesn't exist
-        },
-        {
-            "id": 210, // Additional entry for future Fridays, to be dynamic ideally
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-18",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        },
-        {
-            "id": 211,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-25",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        }
-    ];
-
-    // --- Organization Data ---
-    // This array defines the organizations and their associated logos/links.
-    // The 'name' must EXACTLY match the 'organization' field in the allEvents array.
-    // This array is now sorted alphabetically by name.
-    const allOrganizations = [
-        { name: "Camphill Blair Drummond", logo: "Camphill Blair Drummond Logo.jpeg", link: "https://www.camphillblairdrummond.org.uk/" },
-        { name: "Camphill Corbenic", logo: "Camphill Corbenic Logo.jpeg", link: "https://www.corbeniccamphill.co.uk/" },
-        { name: "Camphill Loch Arthur", logo: "Camphill Loch Arthur Logo.jpeg", link: "https://www.locharthur.org.uk/" },
-        { name: "Edinburgh Christian Community", logo: "Edinburgh Christian Community Logo.jpeg", link: "https://www.facebook.com/CCEdinburgh" },
-        { name: "Edinburgh Steiner School", logo: "Edinburgh Steiner School Logo.jpeg", link: "https://www.edinburghsteinerschool.org.uk/" },
-        { name: "Fairhill Rise", logo: "Fairhill Rise Logo.jpeg", link: "https://rmt.org/rise/fairhill-rise/" },
-        { name: "Garvald Edinburgh", logo: "Garvald Edinburgh Logo.jpeg", link: "https://www.garvaldedinburgh.org.uk/" },
-        { name: "Garvald West Linton", logo: "Garvald West Linton Logo.jpeg", link: "https://garvaldwestlinton.org.uk/" },
-        { name: "Tiphereth", logo: "Tiphereth Logo.jpeg", link: "https://www.tiphereth.org.uk/" }
-    ].sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
-
-
-    // --- Global Variables ---
-    let currentView = 'card'; // Default view
-    let currentFilter = 'all'; // Default filter
-
-    // --- DOM Elements ---
-    const eventsContainer = document.getElementById('events-container');
-    const cardViewBtn = document.getElementById('card-view-btn');
-    const diaryViewBtn = document.getElementById('diary-view-btn');
-    const organizationViewBtn = document.getElementById('organization-view-btn');
-    const filterButtonsContainer = document.getElementById('filter-buttons');
-    const noEventsMessage = document.getElementById('no-events-message');
-
-
-    // --- Utility Functions ---
-
-    // Function to format date for display
-    function formatDate(dateString) {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-GB', options);
-    }
-
-    // Function to generate a slug from organization name for CSS classes
-    function slugify(text) {
-        return text.toString().toLowerCase()
-            .replace(/\s+/g, '-')           // Replace spaces with -
-            .replace(/[^\w-]+/g, '')       // Remove all non-word chars
-            .replace(/--+/g, '-')          // Replace multiple - with single -
-            .replace(/^-+/, '')            // Trim - from start of text
-            .replace(/-+$/, '');           // Trim - from end of text
-    }
-
-    // --- Rendering Functions ---
-
-    // Renders event cards for 'card' view
-    function renderCardView(events) {
-        eventsContainer.className = 'card-layout'; // Set grid layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        events.forEach(event => {
-            const orgSlug = slugify(event.organization);
-            const card = document.createElement('div');
-            card.className = `event-card`;
-            card.innerHTML = `
-                <div class="event-org-name title-${orgSlug}">${event.organization}</div>
-                <h3>${event.title}</h3>
-                <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                <p class="event-description">${event.description}</p>
-                <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-
-    // Renders events for 'diary' view
-    function renderDiaryView(events) {
-        eventsContainer.className = 'diary-layout'; // Set diary layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        // Group events by date
-        const eventsByDate = {};
-        events.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort all events by date
-        events.forEach(event => {
-            const date = formatDate(event.date); // Use formatted date as key
-            if (!eventsByDate[date]) {
-                eventsByDate[date] = [];
-            }
-            eventsByDate[date].push(event);
-        });
-
-        // Render each day's card
-        for (const date in eventsByDate) {
-            const dayCard = document.createElement('div');
-            dayCard.className = 'diary-day-card';
-            dayCard.innerHTML = `<h4>${date}</h4><ul class="diary-event-list"></ul>`;
-
-            const eventList = dayCard.querySelector('.diary-event-list');
-            eventsByDate[date].forEach(event => {
-                const orgSlug = slugify(event.organization);
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <div class="event-org-name-diary title-${orgSlug}">${event.organization}</div>
-                    <h4>${event.title}</h4>
-                    <p><strong>Time:</strong> ${event.time}</p>
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    <p class="event-description-diary">${event.description}</p>
-                    <p class="more-info-diary"><a href="${event.link}" target="_blank">More Info</a></p>
-                `;
-                eventList.appendChild(listItem);
-            });
-            eventsContainer.appendChild(dayCard);
-        }
-    }
-
-    // Renders events for 'organization' view
-    function renderOrganizationView(events) {
-        eventsContainer.className = 'organization-layout';
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (allOrganizations.length === 0) {
-            noEventsMessage.textContent = 'No organizations available.';
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        // Add the fixed header for organization view
-        const header = document.createElement('div');
-        header.className = 'organization-header';
-        header.innerHTML = `
-            <div class="header-org-name">Organization</div>
-            <div class="header-events">Upcoming Events</div>
-        `;
-        eventsContainer.appendChild(header);
-
-
-        allOrganizations.forEach(org => {
-            const orgEvents = events.filter(event => event.organization === org.name)
-                                    .sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort events for each org
-
-            const orgSlug = slugify(org.name);
-
-            const row = document.createElement('div');
-            row.className = 'organization-row';
-            row.innerHTML = `
-                <div class="organization-name-column">
-                    <a href="${org.link}" target="_blank" class="org-link-wrapper">
-                        <img src="images/${org.logo}" alt="${org.name} Logo">
-                        <h2 class="title-${orgSlug}">${org.name}</h2>
-                    </a>
-                </div>
-                <div class="organization-events-column"></div>
-            `;
-
-            const eventsColumn = row.querySelector('.organization-events-column');
-
-            if (orgEvents.length === 0) {
-                const noEventsDiv = document.createElement('div');
-                noEventsDiv.className = 'no-events-on-day';
-                noEventsDiv.textContent = 'No upcoming events listed.';
-                eventsColumn.appendChild(noEventsDiv);
-            } else {
-                orgEvents.forEach(event => {
-                    const card = document.createElement('div');
-                    card.className = `event-card`; // Re-use event-card styling
-                    card.innerHTML = `
-                        <h3>${event.title}</h3>
-                        <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
-                        <p><strong>Time:</strong> ${event.time}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        <p class="event-description">${event.description}</p>
-                        <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
-                    `;
-                    eventsColumn.appendChild(card);
-                });
-            }
-            eventsContainer.appendChild(row);
-        });
-    }
-
-    // --- Filtering and Display Logic ---
-
-    // Filters events based on the current filter and current date
-    function getFilteredEvents() {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Normalize to start of day for comparison
-
-        return allEvents.filter(event => {
-            const eventDate = new Date(event.date);
-            eventDate.setHours(0, 0, 0, 0); // Normalize event date
-
-            // Filter by date: only show events today or in the future
-            if (eventDate < today) {
-                return false;
-            }
-
-            // Filter by organization if a specific filter is active
-            if (currentFilter === 'all') {
-                return true;
-            } else {
-                return slugify(event.organization) === currentFilter;
-            }
-        });
-    }
-
-    // Main function to update the display
-    function updateDisplay() {
-        const filteredEvents = getFilteredEvents();
-        if (currentView === 'card') {
-            renderCardView(filteredEvents);
-        } else if (currentView === 'diary') {
-            renderDiaryView(filteredEvents);
-        } else if (currentView === 'organization') {
-            // Organization view filters events *within* each organization's row
-            renderOrganizationView(filteredEvents); // Pass all filtered upcoming events to organization view
-        }
-    }
-
-    // --- Event Listeners for View Buttons ---
-    cardViewBtn.addEventListener('click', () => {
-        currentView = 'card';
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data ---
-    // IMPORTANT: This array holds STATIC event data.
-    // Events below are consolidated from previous search results and your direct input,
-    // filtered and adjusted based on all your feedback.
-    // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
-    // You MUST verify the accuracy and currency of these events against official websites.
     // Dates are set to be in the future (from current date June 30, 2025) or ongoing.
     const allEvents = [
         // --- Edinburgh Steiner School (from previous Google Search tool results) ---
         {
             "id": 1,
             "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11", // Example duration
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18", // Example duration
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 3,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21", // Placeholder, subsequent week
+            "title": "Summer Holiday Camps",
+            "date": "2025-07-07", // Plausible start date for future summer camp
             "time": "Full Day",
             "location": "Edinburgh Steiner School Campus",
             "description": "Various summer holiday camps for children and young people.",
             "link": "https://www.edinburghsteinerschool.org.uk/community/events/" // General events page
         },
 
-        // --- Edinburgh Christian Community (Facebook link) ---
+        // --- Edinburgh Christian Community (from your direct input, extended, Facebook link) ---
         // Removed Study Group events. Link changed to Facebook.
         {
             "id": 4,
@@ -697,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 7,
@@ -707,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Edinburgh Christian Community Church",
             "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 8,
@@ -717,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 10,
@@ -727,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 11,
@@ -737,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 13,
@@ -747,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 14,
@@ -757,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Edinburgh Christian Community Church",
             "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         {
             "id": 15,
@@ -767,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.facebook.com/christiancommunityedinburgh"
         },
         // Placeholder for future weekly events up to June 2026. These would typically be dynamically generated for a real calendar.
         // For now, these few examples are hardcoded. You can add more as needed following this pattern.
@@ -941,40 +273,30 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
-        // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
+        // --- Ruskin Mill (from recent Google Search tool results, specific links where available) ---
         {
             "id": 35,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "organization": "Ruskin Mill",
+            "title": "RMT Staff Events (Various Workshops)",
+            "date": "2025-07-05",
+            "time": "14:00 - 17:00",
+            "location": "Wool Barn, GL6 0QE",
+            "description": "Workshops on various topics (e.g., carving, baking, crafts). Note: These may be for staff only.",
+            "link": "https://www.tickettailor.com/events/ruskinmilltrust"
         },
         {
             "id": 36,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "organization": "Ruskin Mill",
+            "title": "Concert: Leveret",
+            "date": "2025-09-26",
+            "time": "19:30 - 21:30",
+            "location": "Ruskin Mill Gallery, GL6 0LA",
+            "description": "Concert by Leveret.",
+            "link": "https://www.tickettailor.com/events/ruskinmilltrust/3006422204" // Specific event link
         },
         {
             "id": 37,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
+            "organization": "Ruskin Mill",
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
             "time": "17:00 GMT",
@@ -983,8 +305,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
         {
-            "id": 39,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
+            "id": 38,
+            "organization": "Ruskin Mill",
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
             "endDate": "2026-02-08", // Added end date for multi-day event
@@ -993,11 +315,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
-        // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
-        // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
+        // --- Garvald Edinburgh (Re-added Grant's Robot Faces) ---
         {
-            "id": 40,
+            "id": 39,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -1008,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
         {
-            "id": 41, // Re-using ID for a placeholder if needed
+            "id": 40, // Re-using ID for a placeholder if needed
             "organization": "Garvald Edinburgh",
             "title": "Check Garvald Edinburgh Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -1020,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 42,
+            "id": 41,
             "organization": "Camphill (Loch Arthur)",
             "title": "Check Loch Arthur Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -1031,16 +352,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
+    // --- Organization Images (UPDATED with all local paths) ---
     const organizationImages = {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Edinburgh Christian Community": "images/christian community logo.jpg", // Confirmed correct
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Confirmed correct
+        "Ruskin Mill": "images/Ruskin Mill Logo.png",
+        "Edinburgh Christian Community": "images/Christian Community Logo.png",
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
@@ -1135,1766 +456,150 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Create a map to hold events for each day, including multi-day events on each day they span
-        const dailyEventsMap = new Map();
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Start of today
-
-        eventsToDisplay.forEach(event => {
-            const startDate = new Date(event.date);
-            startDate.setHours(0, 0, 0, 0);
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data ---
-    // IMPORTANT: This array holds STATIC event data.
-    // Events below are consolidated from previous search results and your direct input,
-    // filtered and adjusted based on all your feedback.
-    // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
-    // You MUST verify the accuracy and currency of these events against official websites.
-    // Dates are set to be in the future (from current date July 03, 2025) or ongoing.
-    const allEvents = [
-        // --- Camphill Blair Drummond ---
-        {
-            "id": 18,
-            "organization": "Camphill Blair Drummond",
-            "title": "Vocal Recital: Un-Ravel-ing the Source Material",
-            "date": "2025-07-19",
-            "time": "TBD",
-            "location": "Camphill Blair Drummond, Stirling",
-            "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
-            "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
-        },
-
-        // --- Camphill Corbenic ---
-        {
-            "id": 19,
-            "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please visit the official Corbenic website for current information on events and activities.",
-            "link": "https://www.corbeniccamphill.co.uk/"
-        },
-
-        // --- Camphill Loch Arthur ---
-        {
-            "id": 40,
-            "organization": "Camphill Loch Arthur",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Camphill Loch Arthur",
-            "description": "Please visit the official Loch Arthur website for current information on events and activities.",
-            "link": "https://www.locharthur.org.uk/"
-        },
-
-        // --- Edinburgh Christian Community (Updated events) ---
-        {
-            "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 10,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-18",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 11,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-20",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 16, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Devotional Gathering",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A devotional gathering for the community.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 13,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-25",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 14,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-27",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 17, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-02",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A special service with Tom Revetz.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 20, // NEW
-            "organization": "Edinburgh Christian Community",
-            "title": "Congregational Meeting",
-            "date": "2025-08-02",
-            "time": "11:15",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A meeting for all members of the congregation.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-
-
-        // --- Edinburgh Steiner School ---
-        {
-            "id": 1,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 3,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
-        },
-
-        // --- Fairhill Rise (Was Ruskin Mill) ---
-        {
-            "id": 35,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 36,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise",
-            "title": "John Ruskin Prize 2026: Call for Entries",
-            "date": "2025-12-02",
-            "time": "17:00 GMT",
-            "location": "Online",
-            "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in a World of Noise'.",
-            "link": "https://www.ruskinprize.co.uk/"
-        },
-
-        // --- Garvald Edinburgh ---
-        {
-            "id": 39,
-            "organization": "Garvald Edinburgh",
-            "title": "Check Garvald Edinburgh Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Garvald Edinburgh",
-            "description": "Please visit the official Garvald Edinburgh website for current information on events and activities.",
-            "link": "https://www.garvaldedinburgh.org.uk/"
-        },
-
-        // --- Garvald West Linton ---
-        {
-            "id": 22,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-04",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 23,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 24,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-08-01",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 25,
-            "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 26,
-            "organization": "Garvald West Linton",
-            "title": "Halloween Party",
-            "date": "2025-10-31",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 27,
-            "organization": "Garvald West Linton",
-            "title": "Guy Fawkes Fireworks",
-            "date": "2025-11-05",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 28,
-            "organization": "Garvald West Linton",
-            "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 29,
-            "organization": "Garvald West Linton",
-            "title": "Advent Wreath Making",
-            "date": "2025-11-28",
-            "time": "TBD",
-            "location": "Garvald West Linton Dining Room",
-            "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 30,
-            "organization": "Garvald West Linton",
-            "title": "1st Advent Celebration",
-            "date": "2025-11-30",
-            "time": "TBD",
-            "location": "Garvald West Linton Main House",
-            "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 31,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
-            "date": "2025-12-06",
-            "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 32,
-            "organization": "Garvald West Linton",
-            "title": "Santa Lucia Event",
-            "date": "2025-12-13",
-            "time": "PM",
-            "location": "Garvald West Linton",
-            "description": "Celebration of Santa Lucia.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 33,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Eve Celebrations",
-            "date": "2025-12-24",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 34,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Day Lunch",
-            "date": "2025-12-25",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Christmas Day festive lunch.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-
-        // --- Tiphereth Edinburgh (Updated event) ---
-        {
-            "id": 21,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-11", // First Friday
-            "endDate": "2025-12-26", // Assuming it runs weekly till end of year for now
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/" // General link, if specific page for shop doesn't exist
-        },
-        {
-            "id": 210, // Additional entry for future Fridays, to be dynamic ideally
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-18",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        },
-        {
-            "id": 211,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-25",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        }
-    ];
-
-    // --- Organization Data ---
-    // This array defines the organizations and their associated logos/links.
-    // The 'name' must EXACTLY match the 'organization' field in the allEvents array.
-    // This array is now sorted alphabetically by name.
-    const allOrganizations = [
-        { name: "Camphill Blair Drummond", logo: "Camphill Blair Drummond Logo.jpeg", link: "https://www.camphillblairdrummond.org.uk/" },
-        { name: "Camphill Corbenic", logo: "Camphill Corbenic Logo.jpeg", link: "https://www.corbeniccamphill.co.uk/" },
-        { name: "Camphill Loch Arthur", logo: "Camphill Loch Arthur Logo.jpeg", link: "https://www.locharthur.org.uk/" },
-        { name: "Edinburgh Christian Community", logo: "Edinburgh Christian Community Logo.jpeg", link: "https://www.facebook.com/CCEdinburgh" },
-        { name: "Edinburgh Steiner School", logo: "Edinburgh Steiner School Logo.jpeg", link: "https://www.edinburghsteinerschool.org.uk/" },
-        { name: "Fairhill Rise", logo: "Fairhill Rise Logo.jpeg", link: "https://rmt.org/rise/fairhill-rise/" },
-        { name: "Garvald Edinburgh", logo: "Garvald Edinburgh Logo.jpeg", link: "https://www.garvaldedinburgh.org.uk/" },
-        { name: "Garvald West Linton", logo: "Garvald West Linton Logo.jpeg", link: "https://garvaldwestlinton.org.uk/" },
-        { name: "Tiphereth", logo: "Tiphereth Logo.jpeg", link: "https://www.tiphereth.org.uk/" }
-    ].sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
-
-
-    // --- Global Variables ---
-    let currentView = 'card'; // Default view
-    let currentFilter = 'all'; // Default filter
-
-    // --- DOM Elements ---
-    const eventsContainer = document.getElementById('events-container');
-    const cardViewBtn = document.getElementById('card-view-btn');
-    const diaryViewBtn = document.getElementById('diary-view-btn');
-    const organizationViewBtn = document.getElementById('organization-view-btn');
-    const filterButtonsContainer = document.getElementById('filter-buttons');
-    const noEventsMessage = document.getElementById('no-events-message');
-
-
-    // --- Utility Functions ---
-
-    // Function to format date for display
-    function formatDate(dateString) {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-GB', options);
-    }
-
-    // Function to generate a slug from organization name for CSS classes
-    function slugify(text) {
-        return text.toString().toLowerCase()
-            .replace(/\s+/g, '-')           // Replace spaces with -
-            .replace(/[^\w-]+/g, '')       // Remove all non-word chars
-            .replace(/--+/g, '-')          // Replace multiple - with single -
-            .replace(/^-+/, '')            // Trim - from start of text
-            .replace(/-+$/, '');           // Trim - from end of text
-    }
-
-    // --- Rendering Functions ---
-
-    // Renders event cards for 'card' view
-    function renderCardView(events) {
-        eventsContainer.className = 'card-layout'; // Set grid layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        events.forEach(event => {
-            const orgSlug = slugify(event.organization);
-            const card = document.createElement('div');
-            card.className = `event-card`;
-            card.innerHTML = `
-                <div class="event-org-name title-${orgSlug}">${event.organization}</div>
-                <h3>${event.title}</h3>
-                <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                <p class="event-description">${event.description}</p>
-                <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-
-    // Renders events for 'diary' view
-    function renderDiaryView(events) {
-        eventsContainer.className = 'diary-layout'; // Set diary layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        // Group events by date
-        const eventsByDate = {};
-        events.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort all events by date
-        events.forEach(event => {
-            const date = formatDate(event.date); // Use formatted date as key
-            if (!eventsByDate[date]) {
-                eventsByDate[date] = [];
+        // Group events by date (using start date for grouping key, but displaying full range)
+        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
+            const dateKey = event.date; // Use the original date string for grouping
+            if (!acc[dateKey]) {
+                acc[dateKey] = [];
             }
-            eventsByDate[date].push(event);
-        });
+            acc[dateKey].push(event);
+            return acc;
+        }, {});
 
-        // Render each day's card
-        for (const date in eventsByDate) {
-            const dayCard = document.createElement('div');
-            dayCard.className = 'diary-day-card';
-            dayCard.innerHTML = `<h4>${date}</h4><ul class="diary-event-list"></ul>`;
-
-            const eventList = dayCard.querySelector('.diary-event-list');
-            eventsByDate[date].forEach(event => {
-                const orgSlug = slugify(event.organization);
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <div class="event-org-name-diary title-${orgSlug}">${event.organization}</div>
-                    <h4>${event.title}</h4>
-                    <p><strong>Time:</strong> ${event.time}</p>
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    <p class="event-description-diary">${event.description}</p>
-                    <p class="more-info-diary"><a href="${event.link}" target="_blank">More Info</a></p>
-                `;
-                eventList.appendChild(listItem);
-            });
-            eventsContainer.appendChild(dayCard);
-        }
-    }
-
-    // Renders events for 'organization' view
-    function renderOrganizationView(events) {
-        eventsContainer.className = 'organization-layout';
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (allOrganizations.length === 0) {
-            noEventsMessage.textContent = 'No organizations available.';
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        // Add the fixed header for organization view
-        const header = document.createElement('div');
-        header.className = 'organization-header';
-        header.innerHTML = `
-            <div class="header-org-name">Organization</div>
-            <div class="header-events">Upcoming Events</div>
-        `;
-        eventsContainer.appendChild(header);
-
-
-        allOrganizations.forEach(org => {
-            const orgEvents = events.filter(event => event.organization === org.name)
-                                    .sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort events for each org
-
-            const orgSlug = slugify(org.name);
-
-            const row = document.createElement('div');
-            row.className = 'organization-row';
-            row.innerHTML = `
-                <div class="organization-name-column">
-                    <a href="${org.link}" target="_blank" class="org-link-wrapper">
-                        <img src="images/${org.logo}" alt="${org.name} Logo">
-                        <h2 class="title-${orgSlug}">${org.name}</h2>
-                    </a>
-                </div>
-                <div class="organization-events-column"></div>
-            `;
-
-            const eventsColumn = row.querySelector('.organization-events-column');
-
-            if (orgEvents.length === 0) {
-                const noEventsDiv = document.createElement('div');
-                noEventsDiv.className = 'no-events-on-day';
-                noEventsDiv.textContent = 'No upcoming events listed.';
-                eventsColumn.appendChild(noEventsDiv);
-            } else {
-                orgEvents.forEach(event => {
-                    const card = document.createElement('div');
-                    card.className = `event-card`; // Re-use event-card styling
-                    card.innerHTML = `
-                        <h3>${event.title}</h3>
-                        <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
-                        <p><strong>Time:</strong> ${event.time}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        <p class="event-description">${event.description}</p>
-                        <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
-                    `;
-                    eventsColumn.appendChild(card);
-                });
-            }
-            eventsContainer.appendChild(row);
-        });
-    }
-
-    // --- Filtering and Display Logic ---
-
-    // Filters events based on the current filter and current date
-    function getFilteredEvents() {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Normalize to start of day for comparison
-
-        return allEvents.filter(event => {
-            const eventDate = new Date(event.date);
-            eventDate.setHours(0, 0, 0, 0); // Normalize event date
-
-            // Filter by date: only show events today or in the future
-            if (eventDate < today) {
-                return false;
-            }
-
-            // Filter by organization if a specific filter is active
-            if (currentFilter === 'all') {
-                return true;
-            } else {
-                return slugify(event.organization) === currentFilter;
-            }
-        });
-    }
-
-    // Main function to update the display
-    function updateDisplay() {
-        const filteredEvents = getFilteredEvents();
-        if (currentView === 'card') {
-            renderCardView(filteredEvents);
-        } else if (currentView === 'diary') {
-            renderDiaryView(filteredEvents);
-        } else if (currentView === 'organization') {
-            // Organization view filters events *within* each organization's row
-            renderOrganizationView(filteredEvents); // Pass all filtered upcoming events to organization view
-        }
-    }
-
-    // --- Event Listeners for View Buttons ---
-    cardViewBtn.addEventListener('click', () => {
-        currentView = 'card';
-        cardViewBtn.classList.add('active');
-        diaryViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
-        updateDisplay();
-    });
-
-    diaryViewBtn.addEventListener('click', () => {
-        currentView = 'diary';
-        diaryViewBtn.classList.add('active');
-        cardViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
-        updateDisplay();
-    });
-
-    organizationViewBtn.addEventListener('click', () => {
-        currentView = 'organization';
-        organizationViewBtn.classList.add('active');
-        cardViewBtn.classList.remove('active');
-        diaryViewBtn.classList.remove('active');
-        updateDisplay();
-    });
-
-    // --- Dynamic Filter Buttons ---
-    function renderFilterButtons() {
-        filterButtonsContainer.innerHTML = ''; // Clear existing buttons
-
-        // "All Events" button
-        const allBtn = document.createElement('button');
-        allBtn.textContent = 'All Events';
-        allBtn.classList.add('filter-btn');
-        if (currentFilter === 'all') {
-            allBtn.classList.add('active');
-        }
-        allBtn.addEventListener('click', () => {
-            currentFilter = 'all';
-            // Deactivate all filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            allBtn.classList.add('active'); // Activate "All Events" button
-            updateDisplay();
-        });
-        filterButtonsContainer.appendChild(allBtn);
-
-        // Individual organization buttons (now sorted alphabetically)
-        allOrganizations.forEach(org => {
-            const orgSlug = slugify(org.name);
-            const button = document.createElement('button');
-            button.textContent = org.name;
-            button.classList.add('filter-btn');
-            if (currentFilter === orgSlug) {
-                button.classList.add('active');
-            }
-            button.addEventListener('click', () => {
-                currentFilter = orgSlug;
-                // Deactivate all filter buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active'); // Activate clicked button
-                updateDisplay();
-            });
-            filterButtonsContainer.appendChild(button);
-        });
-    }
-
-    // --- Initial Load ---
-    renderFilterButtons(); // Create filter buttons on load
-    cardViewBtn.classList.add('active'); // Set card view as active by default
-    updateDisplay(); // Initial render
-});
-            const endDate = event.endDate ? new Date(event.endDate) : startDate;
-            endDate.setHours(23, 59, 59, 999); // End of end day
-
-            // Iterate over each day the event is active
-            let currentDate = new Date(startDate);
-            while (currentDate <= endDate) {
-                // Only add to map if the event date is today or in the future
-                if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
-                    if (!dailyEventsMap.has(dateKey)) {
-                        dailyEventsMap.set(dateKey, []);
-                    }
-                    dailyEventsMap.get(dateKey).push(event);
-                }
-                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
-            }
-        });
-
-        // Sort dates chronologically
-        const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
+        // Sort dates chronologically based on the original date strings
+        const sortedDateKeys = Object.keys(groupedEvents).sort((a, b) => new Date(a) - new Date(b));
 
         sortedDateKeys.forEach(dateKey => {
             const dayCard = document.createElement('div');
             dayCard.className = 'diary-day-card';
             dayCard.innerHTML = `<h4>${formatDate(dateKey)}</h4>`; // Format date for day header
-const allEvents = [
-        // --- Camphill Blair Drummond ---
-        {
-            "id": 18,
-            "organization": "Camphill Blair Drummond",
-            "title": "Vocal Recital: Un-Ravel-ing the Source Material",
-            "date": "2025-07-19",
-            "time": "TBD",
-            "location": "Camphill Blair Drummond, Stirling",
-            "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
-            "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
-        },
 
-        // --- Camphill Corbenic ---
-        {
-            "id": 19,
-            "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please visit the official Corbenic website for current information on events and activities.",
-            "link": "https://www.corbeniccamphill.co.uk/"
-        },
+            const eventList = document.createElement('ul');
+            eventList.className = 'diary-event-list';
 
-        // --- Camphill Loch Arthur ---
-        {
-            "id": 40,
-            "organization": "Camphill Loch Arthur",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Camphill Loch Arthur",
-            "description": "Please visit the official Loch Arthur website for current information on events and activities.",
-            "link": "https://www.locharthur.org.uk/"
-        },
-
-        // --- Edinburgh Christian Community ---
-        {
-            "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        // Removed Youth Group Events as they were not directly verifiable for this specific Christian Community
-        {
-            "id": 11,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-20",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 16,
-            "organization": "Edinburgh Christian Community",
-            "title": "Devotional Gathering",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A devotional gathering for the community.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 14,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-27",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 17,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-02",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A special service with Tom Revetz.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 20,
-            "organization": "Edinburgh Christian Community",
-            "title": "Congregational Meeting",
-            "date": "2025-08-02",
-            "time": "11:15",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A meeting for all members of the congregation.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-
-
-        // --- Edinburgh Steiner School ---
-        {
-            "id": 1,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 3,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
-        },
-
-        // --- Fairhill Rise (Was Ruskin Mill) ---
-        {
-            "id": 35,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 36,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise",
-            "title": "John Ruskin Prize 2026: Call for Entries",
-            "date": "2025-12-02",
-            "time": "17:00 GMT",
-            "location": "Online",
-            "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in a World of Noise'.",
-            "link": "https://www.ruskinprize.co.uk/"
-        },
-
-        // --- Garvald Edinburgh ---
-        {
-            "id": 39,
-            "organization": "Garvald Edinburgh",
-            "title": "Check Garvald Edinburgh Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Garvald Edinburgh",
-            "description": "Please visit the official Garvald Edinburgh website for current information on events and activities.",
-            "link": "https://www.garvaldedinburgh.org.uk/"
-        },
-
-        // --- Garvald West Linton ---
-        {
-            "id": 22,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-04",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 23,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 24,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-08-01",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 25,
-            "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 26,
-            "organization": "Garvald West Linton",
-            "title": "Halloween Party",
-            "date": "2025-10-31",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 27,
-            "organization": "Garvald West Linton",
-            "title": "Guy Fawkes Fireworks",
-            "date": "2025-11-05",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 28,
-            "organization": "Garvald West Linton",
-            "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 29,
-            "organization": "Garvald West Linton",
-            "title": "Advent Wreath Making",
-            "date": "2025-11-28",
-            "time": "TBD",
-            "location": "Garvald West Linton Dining Room",
-            "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 30,
-            "organization": "Garvald West Linton",
-            "title": "1st Advent Celebration",
-            "date": "2025-11-30",
-            "time": "TBD",
-            "location": "Garvald West Linton Main House",
-            "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 31,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
-            "date": "2025-12-06",
-            "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 32,
-            "organization": "Garvald West Linton",
-            "title": "Santa Lucia Event",
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data ---
-    // IMPORTANT: This array holds STATIC event data.
-    // Events below are consolidated based on your confirmed requirements.
-    // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
-    // You MUST verify the accuracy and currency of these events against official websites.
-    // Dates are set to be in the future (from current date July 04, 2025) or ongoing.
-    const allEvents = [
-        // --- Camphill Blair Drummond ---
-        {
-            "id": 18,
-            "organization": "Camphill Blair Drummond",
-            "title": "Vocal Recital: Un-Ravel-ing the Source Material",
-            "date": "2025-07-19",
-            "time": "TBD",
-            "location": "Camphill Blair Drummond, Stirling",
-            "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
-            "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
-        },
-
-        // --- Camphill Corbenic ---
-        {
-            "id": 19,
-            "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please visit the official Corbenic website for current information on events and activities.",
-            "link": "https://www.corbeniccamphill.co.uk/"
-        },
-
-        // --- Camphill Loch Arthur ---
-        {
-            "id": 40,
-            "organization": "Camphill Loch Arthur",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Camphill Loch Arthur",
-            "description": "Please visit the official Loch Arthur website for current information on events and activities.",
-            "link": "https://www.locharthur.org.uk/"
-        },
-
-        // --- Edinburgh Christian Community ---
-        {
-            "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        // Removed Christian Community Youth Group events as they were not directly verifiable.
-        {
-            "id": 11,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-20",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 16,
-            "organization": "Edinburgh Christian Community",
-            "title": "Devotional Gathering",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A devotional gathering for the community.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 14,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-27",
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 17,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-02",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A special service with Tom Revetz.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 20,
-            "organization": "Edinburgh Christian Community",
-            "title": "Congregational Meeting",
-            "date": "2025-08-02",
-            "time": "11:15",
-            "location": "Edinburgh Christian Community Church",
-            "description": "A meeting for all members of the congregation.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-
-
-        // --- Edinburgh Steiner School ---
-        {
-            "id": 1,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 3,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21",
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
-        },
-
-        // --- Fairhill Rise (Was Ruskin Mill) ---
-        {
-            "id": 35,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 36,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise",
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise",
-            "title": "John Ruskin Prize 2026: Call for Entries",
-            "date": "2025-12-02",
-            "time": "17:00 GMT",
-            "location": "Online",
-            "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in a World of Noise'.",
-            "link": "https://www.ruskinprize.co.uk/"
-        },
-
-        // --- Garvald Edinburgh ---
-        {
-            "id": 39,
-            "organization": "Garvald Edinburgh",
-            "title": "Check Garvald Edinburgh Website for Events",
-            "date": "2025-08-01",
-            "time": "Ongoing",
-            "location": "Garvald Edinburgh",
-            "description": "Please visit the official Garvald Edinburgh website for current information on events and activities.",
-            "link": "https://www.garvaldedinburgh.org.uk/"
-        },
-
-        // --- Garvald West Linton ---
-        {
-            "id": 22,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-04",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 23,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 24,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-08-01",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 25,
-            "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 26,
-            "organization": "Garvald West Linton",
-            "title": "Halloween Party",
-            "date": "2025-10-31",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 27,
-            "organization": "Garvald West Linton",
-            "title": "Guy Fawkes Fireworks",
-            "date": "2025-11-05",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 28,
-            "organization": "Garvald West Linton",
-            "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 29,
-            "organization": "Garvald West Linton",
-            "title": "Advent Wreath Making",
-            "date": "2025-11-28",
-            "time": "TBD",
-            "location": "Garvald West Linton Dining Room",
-            "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 30,
-            "organization": "Garvald West Linton",
-            "title": "1st Advent Celebration",
-            "date": "2025-11-30",
-            "time": "TBD",
-            "location": "Garvald West Linton Main House",
-            "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 31,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
-            "date": "2025-12-06",
-            "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 32,
-            "organization": "Garvald West Linton",
-            "title": "Santa Lucia Event",
-            "date": "2025-12-13",
-            "time": "PM",
-            "location": "Garvald West Linton",
-            "description": "Celebration of Santa Lucia.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 33,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Eve Celebrations",
-            "date": "2025-12-24",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 34,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Day Lunch",
-            "date": "2025-12-25",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Christmas Day festive lunch.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-
-        // --- Tiphereth Edinburgh ---
-        {
-            "id": 21,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-11", // First Friday
-            "endDate": "2025-12-26", // Assuming it runs weekly till end of year for now
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/" // General link, if specific page for shop doesn't exist
-        },
-        {
-            "id": 210,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-18",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        },
-        {
-            "id": 211,
-            "organization": "Tiphereth",
-            "title": "Pop Up Shop",
-            "date": "2025-07-25",
-            "time": "09:30 - 16:00",
-            "location": "Tiphereth Community",
-            "description": "Weekly Pop Up Shop offering various items.",
-            "link": "https://www.tiphereth.org.uk/"
-        }
-    ];
-
-    // --- Organization Data ---
-    // This array defines the organizations and their associated logos/links.
-    // The 'name' must EXACTLY match the 'organization' field in the allEvents array.
-    // This array is now sorted alphabetically by name.
-    const allOrganizations = [
-        { name: "Camphill Blair Drummond", logo: "Camphill Blair Drummond Logo.jpeg", link: "https://www.camphillblairdrummond.org.uk/" },
-        { name: "Camphill Corbenic", logo: "Camphill Corbenic Logo.jpeg", link: "https://www.corbeniccamphill.co.uk/" },
-        { name: "Camphill Loch Arthur", logo: "Camphill Loch Arthur Logo.jpeg", link: "https://www.locharthur.org.uk/" },
-        { name: "Edinburgh Christian Community", logo: "Edinburgh Christian Community Logo.jpeg", link: "https://www.facebook.com/CCEdinburgh" },
-        { name: "Edinburgh Steiner School", logo: "Edinburgh Steiner School Logo.jpeg", link: "https://www.edinburghsteinerschool.org.uk/" },
-        { name: "Fairhill Rise", logo: "Fairhill Rise Logo.jpeg", link: "https://rmt.org/rise/fairhill-rise/" },
-        { name: "Garvald Edinburgh", logo: "Garvald Edinburgh Logo.jpeg", link: "https://www.garvaldedinburgh.org.uk/" },
-        { name: "Garvald West Linton", logo: "Garvald West Linton Logo.jpeg", link: "https://garvaldwestlinton.org.uk/" },
-        { name: "Tiphereth", logo: "Tiphereth Logo.jpeg", link: "https://www.tiphereth.org.uk/" }
-    ].sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
-
-
-    // --- Global Variables ---
-    let currentView = 'card'; // Default view
-    let currentFilter = 'all'; // Default filter
-
-    // --- DOM Elements ---
-    const eventsContainer = document.getElementById('events-container');
-    const cardViewBtn = document.getElementById('card-view-btn');
-    const diaryViewBtn = document.getElementById('diary-view-btn');
-    const organizationViewBtn = document.getElementById('organization-view-btn');
-    const filterButtonsContainer = document.getElementById('filter-buttons');
-    const noEventsMessage = document.getElementById('no-events-message');
-
-
-    // --- Utility Functions ---
-
-    // Function to format date for display
-    function formatDate(dateString) {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('en-GB', options);
-    }
-
-    // Function to generate a slug from organization name for CSS classes
-    function slugify(text) {
-        return text.toString().toLowerCase()
-            .replace(/\s+/g, '-')           // Replace spaces with -
-            .replace(/[^\w-]+/g, '')       // Remove all non-word chars
-            .replace(/--+/g, '-')          // Replace multiple - with single -
-            .replace(/^-+/, '')            // Trim - from start of text
-            .replace(/-+$/, '');           // Trim - from end of text
-    }
-
-    // --- Rendering Functions ---
-
-    // Renders event cards for 'card' view
-    function renderCardView(events) {
-        eventsContainer.className = 'card-layout'; // Set grid layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        events.forEach(event => {
-            const orgSlug = slugify(event.organization);
-            const card = document.createElement('div');
-            card.className = `event-card`;
-            card.innerHTML = `
-                <div class="event-org-name title-${orgSlug}">${event.organization}</div>
-                <h3>${event.title}</h3>
-                <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                <p class="event-description">${event.description}</p>
-                <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
-            `;
-            eventsContainer.appendChild(card);
-        });
-    }
-
-    // Renders events for 'diary' view
-    function renderDiaryView(events) {
-        eventsContainer.className = 'diary-layout'; // Set diary layout
-        eventsContainer.innerHTML = ''; // Clear previous content
-
-        if (events.length === 0) {
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
-
-        // Group events by date
-        const eventsByDate = {};
-        events.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort all events by date
-        events.forEach(event => {
-            const date = formatDate(event.date); // Use formatted date as key
-            if (!eventsByDate[date]) {
-                eventsByDate[date] = [];
-            }
-            eventsByDate[date].push(event);
-        });
-
-        // Render each day's card
-        for (const date in eventsByDate) {
-            const dayCard = document.createElement('div');
-            dayCard.className = 'diary-day-card';
-            dayCard.innerHTML = `<h4>${date}</h4><ul class="diary-event-list"></ul>`;
-
-            const eventList = dayCard.querySelector('.diary-event-list');
-            eventsByDate[date].forEach(event => {
-                const orgSlug = slugify(event.organization);
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `
-                    <div class="event-org-name-diary title-${orgSlug}">${event.organization}</div>
-                    <h4>${event.title}</h4>
-                    <p><strong>Time:</strong> ${event.time}</p>
-                    <p><strong>Location:</strong> ${event.location}</p>
-                    <p class="event-description-diary">${event.description}</p>
-                    <p class="more-info-diary"><a href="${event.link}" target="_blank">More Info</a></p>
-                `;
-                eventList.appendChild(listItem);
+            // Sort events within each day by time (simple string comparison for "HH:MM")
+            groupedEvents[dateKey].sort((a, b) => {
+                const timeA = a.time.split(' ')[0];
+                const timeB = b.time.split(' ')[0];
+                return timeA.localeCompare(timeB);
             });
-            eventsContainer.appendChild(dayCard);
-        }
-    }
 
-    // Renders events for 'organization' view
-    function renderOrganizationView(events) {
-        eventsContainer.className = 'organization-layout';
-        eventsContainer.innerHTML = ''; // Clear previous content
+            groupedEvents[dateKey].forEach(event => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
+                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
+                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                        <p><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
+                        <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
+                    `;
+                    eventList.appendChild(listItem);
+                });
+            dayCard.appendChild(eventList);
+            eventContainer.appendChild(dayCard);
+        });
+    };
 
-        if (allOrganizations.length === 0) {
-            noEventsMessage.textContent = 'No organizations available.';
-            noEventsMessage.style.display = 'block';
-            return;
-        } else {
-            noEventsMessage.style.display = 'none';
-        }
+    // --- Render Organization View ---
+    const renderOrganizationView = (eventsToDisplay) => {
+        eventContainer.innerHTML = '';
+        eventContainer.className = 'organization-layout';
 
-        // Add the fixed header for organization view
-        const header = document.createElement('div');
-        header.className = 'organization-header';
-        header.innerHTML = `
+        // Group events by organization and store their first event's link for the homepage URL
+        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
+            if (!acc[event.organization]) {
+                acc[event.organization] = [];
+            }
+            acc[event.organization].push(event);
+            return acc;
+        }, {});
+
+        // Add the column header
+        const headerRow = document.createElement('div');
+        headerRow.className = 'organization-header';
+        headerRow.innerHTML = `
             <div class="header-org-name">Organization</div>
             <div class="header-events">Upcoming Events</div>
         `;
-        eventsContainer.appendChild(header);
+        eventContainer.appendChild(headerRow);
 
+        // Sort organizations alphabetically for consistent display
+        const sortedOrgNames = Object.keys(groupedEvents).sort();
 
-        allOrganizations.forEach(org => {
-            const orgEvents = events.filter(event => event.organization === org.name)
-                                    .sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort events for each org
+        sortedOrgNames.forEach(orgName => {
+            const organizationRow = document.createElement('div');
+            organizationRow.className = 'organization-row';
 
-            const orgSlug = slugify(org.name);
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/80?text=Logo'; // Fallback to a placeholder
+            // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
+            const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link ? groupedEvents[orgName][0].link : '#';
 
-            const row = document.createElement('div');
-            row.className = 'organization-row';
-            row.innerHTML = `
-                <div class="organization-name-column">
-                    <a href="${org.link}" target="_blank" class="org-link-wrapper">
-                        <img src="images/${org.logo}" alt="${org.name} Logo">
-                        <h2 class="title-${orgSlug}">${org.name}</h2>
-                    </a>
-                </div>
-                <div class="organization-events-column"></div>
+            const organizationNameColumn = document.createElement('div');
+            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            organizationNameColumn.innerHTML = `
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
             `;
+            organizationRow.appendChild(organizationNameColumn);
 
-            const eventsColumn = row.querySelector('.organization-events-column');
+            const organizationEventsColumn = document.createElement('div');
+            organizationEventsColumn.className = 'organization-events-column';
 
-            if (orgEvents.length === 0) {
-                const noEventsDiv = document.createElement('div');
-                noEventsDiv.className = 'no-events-on-day';
-                noEventsDiv.textContent = 'No upcoming events listed.';
-                eventsColumn.appendChild(noEventsDiv);
-            } else {
-                orgEvents.forEach(event => {
-                    const card = document.createElement('div');
-                    card.className = `event-card`; // Re-use event-card styling
-                    card.innerHTML = `
+            if (groupedEvents[orgName].length > 0) {
+                // Sort events by date within each organization
+                groupedEvents[orgName].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                groupedEvents[orgName].forEach(event => {
+                    const eventCard = document.createElement('div');
+                    eventCard.className = `event-card ${getOrgClass(event.organization)}`;
+                    eventCard.innerHTML = `
                         <h3>${event.title}</h3>
-                        <p><strong>Date:</strong> ${formatDate(event.date)} ${event.endDate ? ` - ${formatDate(event.endDate)}` : ''}</p>
+                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
                         <p><strong>Time:</strong> ${event.time}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
-                        <p class="event-description">${event.description}</p>
-                        <p class="more-info"><a href="${event.link}" target="_blank">More Info</a></p>
+                        ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+                        <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
                     `;
-                    eventsColumn.appendChild(card);
+                    organizationEventsColumn.appendChild(eventCard);
                 });
-            }
-            eventsContainer.appendChild(row);
-        });
-    }
-
-    // --- Filtering and Display Logic ---
-
-    // Filters events based on the current filter and current date
-    function getFilteredEvents() {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Normalize to start of day for comparison
-
-        return allEvents.filter(event => {
-            const eventDate = new Date(event.date);
-            eventDate.setHours(0, 0, 0, 0); // Normalize event date
-
-            // Filter by date: only show events today or in the future
-            if (eventDate < today) {
-                return false;
-            }
-
-            // Filter by organization if a specific filter is active
-            if (currentFilter === 'all') {
-                return true;
             } else {
-                return slugify(event.organization) === currentFilter;
+                const noEvents = document.createElement('p');
+                noEvents.className = 'no-events-on-day';
+                noEvents.textContent = 'No upcoming events listed.';
+                organizationEventsColumn.appendChild(noEvents);
             }
+
+            organizationRow.appendChild(organizationEventsColumn);
+            eventContainer.appendChild(organizationRow);
         });
-    }
+    };
 
-    // Main function to update the display
-    function updateDisplay() {
-        const filteredEvents = getFilteredEvents();
-        if (currentView === 'card') {
-            renderCardView(filteredEvents);
-        } else if (currentView === 'diary') {
-            renderDiaryView(filteredEvents);
-        } else if (currentView === 'organization') {
-            // Organization view filters events *within* each organization's row
-            renderOrganizationView(filteredEvents); // Pass all filtered upcoming events to organization view
-        }
-    }
+    // --- View Switching Logic ---
+    const activateButton = (button) => {
+        document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    };
 
-    // --- Event Listeners for View Buttons ---
     cardViewBtn.addEventListener('click', () => {
-        currentView = 'card';
-        cardViewBtn.classList.add('active');
-        diaryViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
-        updateDisplay();
+        activateButton(cardViewBtn);
+        renderCardView(upcomingEvents);
     });
 
     diaryViewBtn.addEventListener('click', () => {
-        currentView = 'diary';
-        diaryViewBtn.classList.add('active');
-        cardViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
-        updateDisplay();
+        activateButton(diaryViewBtn);
+        renderDiaryView(upcomingEvents);
     });
 
     organizationViewBtn.addEventListener('click', () => {
-        currentView = 'organization';
-        organizationViewBtn.classList.add('active');
-        cardViewBtn.classList.remove('active');
-        diaryViewBtn.classList.remove('active');
-        updateDisplay();
+        activateButton(organizationViewBtn);
+        renderOrganizationView(upcomingEvents);
     });
 
-    // --- Dynamic Filter Buttons ---
-    function renderFilterButtons() {
-        filterButtonsContainer.innerHTML = ''; // Clear existing buttons
-
-        // "All Events" button
-        const allBtn = document.createElement('button');
-        allBtn.textContent = 'All Events';
-        allBtn.classList.add('filter-btn');
-        if (currentFilter === 'all') {
-            allBtn.classList.add('active');
-        }
-        allBtn.addEventListener('click', () => {
-            currentFilter = 'all';
-            // Deactivate all filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            allBtn.classList.add('active'); // Activate "All Events" button
-            updateDisplay();
-        });
-        filterButtonsContainer.appendChild(allBtn);
-
-        // Individual organization buttons (now sorted alphabetically)
-        allOrganizations.forEach(org => {
-            const orgSlug = slugify(org.name);
-            const button = document.createElement('button');
-            button.textContent = org.name;
-            button.classList.add('filter-btn');
-            if (currentFilter === orgSlug) {
-                button.classList.add('active');
-            }
-            button.addEventListener('click', () => {
-                currentFilter = orgSlug;
-                // Deactivate all filter buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active'); // Activate clicked button
-                updateDisplay();
-            });
-            filterButtonsContainer.appendChild(button);
-        });
-    }
-
-    // --- Initial Load ---
-    renderFilterButtons(); // Create filter buttons on load
-    cardViewBtn.classList.add('active'); // Set card view as active by default
-    updateDisplay(); // Initial render
+    // Initial render on page load: Diary View as default
+    activateButton(diaryViewBtn); // Highlight Diary View button
+    renderDiaryView(upcomingEvents); // Render Diary View by default
 });
