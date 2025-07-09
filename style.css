@@ -124,7 +124,6 @@ main {
 }
 
 /* Specific colors for organization names in cards (example, adjust as desired) */
-.event-card .title-anthroposophy-in-edinburgh { color: #fc8803; } /* Orange */
 .event-card .title-edinburgh-steiner-school { color: #5a8d40; } /* Greenish */
 .event-card .title-edinburgh-christian-community { color: #8e6b3b; } /* Brownish */
 .event-card .title-camphill-blair-drummond { color: #6e4e8e; } /* Purplish */
@@ -237,7 +236,6 @@ main {
 }
 
 /* Specific colors for organization names in diary view */
-.diary-event-list .title-anthroposophy-in-edinburgh { color: #fc8803; }
 .diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
 .diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
 .diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
@@ -378,7 +376,6 @@ main {
 }
 
 /* Specific colors for organization names in organization view */
-.organization-name-column .title-anthroposophy-in-edinburgh { color: #fc8803; }
 .organization-name-column .title-edinburgh-steiner-school { color: #5a8d40; }
 .organization-name-column .title-edinburgh-christian-community { color: #8e6b3b; }
 .organization-name-column .title-camphill-blair-drummond { color: #6e4e8e; }
@@ -551,7 +548,6 @@ main {
 }
 
 /* Specific colors for organization names in cards (example, adjust as desired) */
-.event-card .title-anthroposophy-in-edinburgh { color: #fc8803; }
 .event-card .title-edinburgh-steiner-school { color: #5a8d40; } /* Greenish */
 .event-card .title-edinburgh-christian-community { color: #8e6b3b; } /* Brownish */
 .event-card .title-camphill-blair-drummond { color: #6e4e8e; } /* Purplish */
@@ -660,7 +656,6 @@ main {
 }
 
 /* Specific colors for organization names in diary view (example, adjust as desired) */
-.diary-event-list .title-anthroposophy-in-edinburgh { color:#fc8803; }
 .diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
 .diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
 .diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
@@ -800,7 +795,6 @@ main {
 }
 
 /* Specific colors for organization names in organization view */
-.organization-name-column .title-anthroposophy-in-edinburgh { color: #fc8803; } 
 .organization-name-column .title-edinburgh-steiner-school { color: #5a8d40; }
 .organization-name-column .title-edinburgh-christian-community { color: #8e6b3b; }
 .organization-name-column .title-camphill-blair-drummond { color: #6e4e8e; }
