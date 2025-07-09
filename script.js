@@ -354,14 +354,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Organization Images (UPDATED with all local paths) ---
     const organizationImages = {
-        "Anthroposophy in Edinburgh": "images/Anthroposophy in Edinburgh Logo.jpg",
-"Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
+        "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Ruskin Mill": "images/Ruskin Mill Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg",
+        "Edinburgh Christian Community": "images/Christian Community Logo.png",
         "Garvald Edinburgh": "images/garvald edinburgh logo.png",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
