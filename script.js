@@ -115,27 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
 
-        // --- Anthroposophy in Edinburgh (NEW) ---
-        {
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Introduction to Anthroposophy",
-            "date": "2025-09-10",
-            "time": "19:00",
-            "location": "Online (Zoom)",
-            "description": "An introductory session to the core principles of Anthroposophy.",
-            "link": "https://www.example.com/anthro-intro" // Placeholder link
-        },
-        {
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Eurythmy Workshop",
-            "date": "2025-10-05",
-            "time": "14:00",
-            "location": "Edinburgh Centre for Eurythmy",
-            "description": "Explore the art of Eurythmy in this practical workshop.",
-            "link": "https://www.example.com/eurythmy-workshop" // Placeholder link
-        },
-
-
         // --- Camphill Blair Drummond ---
         {
             "id": 18,
@@ -373,15 +352,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
     const organizationImages = {
-        "Anthroposophy in Edinburgh": "images/Anthroposophy in Edinburgh Logo.jpg", // NEW
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Fairhill Rise": "images/Ruskin Mill Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Corrected filename
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected filename
+        "Edinburgh Christian Community": "images/Christian Community Logo.jpg",
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
@@ -452,4 +430,190 @@ document.addEventListener('DOMContentLoaded', () => {
 
         eventsToDisplay.forEach(event => {
             const eventCard = document.createElement('div');
-            event
+            eventCard.className = `event-card ${getOrgClass(event.organization)}`;
+            eventCard.innerHTML = `
+                <p class="event-org-name ${getOrgClass(event.organization)}">${event.organization}</p>
+                <h3>${event.title}</h3>
+                <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                <p><strong>Time:</strong> ${event.time}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+                <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
+            `;
+            eventContainer.appendChild(eventCard);
+        });
+    };
+
+    // --- Render Diary View ---
+    const renderDiaryView = (eventsToDisplay) => {
+        eventContainer.innerHTML = '';
+        eventContainer.className = 'diary-layout'; // Set class for diary layout
+
+        if (eventsToDisplay.length === 0) {
+            eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Diary View.</p>';
+            return;
+        }
+
+        // Create a map to hold events for each day, including multi-day events on each day they span
+        const dailyEventsMap = new Map();
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Start of today
+
+        eventsToDisplay.forEach(event => {
+            const startDate = new Date(event.date);
+            startDate.setHours(0, 0, 0, 0);
+            const endDate = event.endDate ? new Date(event.endDate) : startDate;
+            endDate.setHours(23, 59, 59, 999); // End of end day
+
+            // Iterate over each day the event is active
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                // Only add to map if the event date is today or in the future
+                if (currentDate >= today) {
+                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
+                    if (!dailyEventsMap.has(dateKey)) {
+                        dailyEventsMap.set(dateKey, []);
+                    }
+                    dailyEventsMap.get(dateKey).push(event);
+                }
+                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
+            }
+        });
+
+        // Sort dates chronologically
+        const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
+
+        sortedDateKeys.forEach(dateKey => {
+            const dayCard = document.createElement('div');
+            dayCard.className = 'diary-day-card';
+            dayCard.innerHTML = `<h4>${formatDate(dateKey)}</h4>`; // Format date for day header
+
+            const eventList = document.createElement('ul');
+            eventList.className = 'diary-event-list';
+
+            // Sort events within each day by time (simple string comparison for "HH:MM")
+            dailyEventsMap.get(dateKey).sort((a, b) => {
+                const timeA = a.time.split(' ')[0];
+                const timeB = b.time.split(' ')[0];
+                return timeA.localeCompare(timeB);
+            });
+
+            dailyEventsMap.get(dateKey).forEach(event => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
+                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
+                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                        <p><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
+                        <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
+                    `;
+                    eventList.appendChild(listItem);
+                });
+            dayCard.appendChild(eventList);
+            eventContainer.appendChild(dayCard);
+        });
+    };
+
+    // --- Render Organization View ---
+    const renderOrganizationView = (eventsToDisplay) => {
+        eventContainer.innerHTML = '';
+        eventContainer.className = 'organization-layout';
+
+        // Group events by organization and store their first event's link for the homepage URL
+        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
+            if (!acc[event.organization]) {
+                acc[event.organization] = [];
+            }
+            acc[event.organization].push(event);
+            return acc;
+        }, {});
+
+        // Add the column header
+        const headerRow = document.createElement('div');
+        headerRow.className = 'organization-header';
+        headerRow.innerHTML = `
+            <div class="header-org-name">Organization</div>
+            <div class="header-events">Upcoming Events</div>
+        `;
+        eventContainer.appendChild(headerRow);
+
+        // Sort organizations alphabetically for consistent display
+        const sortedOrgNames = Object.keys(groupedEvents).sort();
+
+        sortedOrgNames.forEach(orgName => {
+            const organizationRow = document.createElement('div');
+            organizationRow.className = 'organization-row';
+
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
+            // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
+            const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link ? groupedEvents[orgName][0].link : '#';
+
+            const organizationNameColumn = document.createElement('div');
+            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            organizationNameColumn.innerHTML = `
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
+            `;
+            organizationRow.appendChild(organizationNameColumn);
+
+            const organizationEventsColumn = document.createElement('div');
+            organizationEventsColumn.className = 'organization-events-column';
+
+            if (groupedEvents[orgName].length > 0) {
+                // Sort events by date within each organization
+                groupedEvents[orgName].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                groupedEvents[orgName].forEach(event => {
+                    const eventCard = document.createElement('div');
+                    eventCard.className = `event-card ${getOrgClass(event.organization)}`;
+                    eventCard.innerHTML = `
+                        <h3>${event.title}</h3>
+                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                        <p><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+                        <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
+                    `;
+                    organizationEventsColumn.appendChild(eventCard);
+                });
+            } else {
+                const noEvents = document.createElement('p');
+                noEvents.className = 'no-events-on-day';
+                noEvents.textContent = 'No upcoming events listed.';
+                organizationEventsColumn.appendChild(noEvents);
+            }
+
+            organizationRow.appendChild(organizationEventsColumn);
+            eventContainer.appendChild(organizationRow);
+        });
+    };
+
+    // --- View Switching Logic ---
+    const activateButton = (button) => {
+        document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    };
+
+    cardViewBtn.addEventListener('click', () => {
+        activateButton(cardViewBtn);
+        renderCardView(upcomingEvents);
+    });
+
+    diaryViewBtn.addEventListener('click', () => {
+        activateButton(diaryViewBtn);
+        renderDiaryView(upcomingEvents);
+    });
+
+    organizationViewBtn.addEventListener('click', () => {
+        activateButton(organizationViewBtn);
+        renderOrganizationView(upcomingEvents);
+    });
+
+    // Initial render on page load: Diary View as default
+    activateButton(diaryViewBtn); // Highlight Diary View button
+    renderDiaryView(upcomingEvents); // Render Diary View by default
+});

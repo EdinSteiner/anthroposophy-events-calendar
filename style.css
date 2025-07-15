@@ -285,9 +285,9 @@ nav button.active {
     width: auto;
     object-fit: contain; /* Ensures the whole image is visible */
     margin-bottom: 10px;
-    border-radius: 0; /* Ensures no oval/circle shape */
-    border: none; /* Ensures no border is present */
-    box-shadow: none; /* Ensures no shadow is present */
+    border-radius: 50%; /* This creates the oval/circle shape */
+    border: 2px solid #ccc; /* Example border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .organization-name-column h2 {
