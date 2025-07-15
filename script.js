@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // You MUST verify the accuracy and currency of these events against official websites.
     // Dates are set to be in the future (from current date June 30, 2025) or ongoing.
     const allEvents = [
-        // --- Edinburgh Steiner School ---
+        // --- Edinburgh Steiner School (from previous Google Search tool results) ---
         {
             "id": 1,
             "organization": "Edinburgh Steiner School",
@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // --- Edinburgh Christian Community (Facebook link) ---
+        // Removed Study Group events. Link changed to Facebook.
         {
+            "id": 4,
             "organization": "Edinburgh Christian Community",
             "title": "Sunday Service",
             "date": "2025-07-06",
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 7,
             "organization": "Edinburgh Christian Community",
             "title": "Children's Service",
             "date": "2025-07-13", // 2nd Sunday
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 8,
             "organization": "Edinburgh Christian Community",
             "title": "Sunday Service",
             "date": "2025-07-13",
@@ -70,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 10,
             "organization": "Edinburgh Christian Community",
             "title": "Youth Group",
             "date": "2025-07-18",
@@ -79,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 11,
             "organization": "Edinburgh Christian Community",
             "title": "Sunday Service",
             "date": "2025-07-20",
@@ -88,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 13,
             "organization": "Edinburgh Christian Community",
             "title": "Youth Group",
             "date": "2025-07-25",
@@ -97,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 14,
             "organization": "Edinburgh Christian Community",
             "title": "Children's Service",
             "date": "2025-07-27", // 4th Sunday
@@ -106,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
+            "id": 15,
             "organization": "Edinburgh Christian Community",
             "title": "Sunday Service",
             "date": "2025-07-27",
@@ -114,8 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Weekly service.",
             "link": "https://www.facebook.com/CCEdinburgh"
         },
+        // Placeholder for future weekly events up to June 2026. These would typically be dynamically generated for a real calendar.
+        // For now, these few examples are hardcoded. You can add more as needed following this pattern.
 
-        // --- Camphill Blair Drummond ---
+        // --- Camphill Blair Drummond (from recent Google Search tool results) ---
+        // Bike Safari (2025-06-14) removed as it was a past event.
         {
             "id": 18,
             "organization": "Camphill Blair Drummond",
@@ -127,8 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
         },
 
-        // --- Camphill Corbenic ---
+        // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
         {
+            "id": 19, // Re-using ID for a placeholder if needed
             "organization": "Camphill Corbenic",
             "title": "Check Corbenic Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -138,8 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.corbeniccamphill.co.uk/"
         },
 
-        // --- Tiphereth Edinburgh ---
+        // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
         {
+            "id": 21,
             "organization": "Tiphereth",
             "title": "Check Tiphereth Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -149,8 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.tiphereth.org.uk/"
         },
 
-        // --- Garvald West Linton ---
+        // --- Garvald West Linton (from recent Google Search tool results) ---
         {
+            "id": 22,
             "organization": "Garvald West Linton",
             "title": "Community Gathering & Project",
             "date": "2025-07-04",
@@ -160,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 23,
             "organization": "Garvald West Linton",
             "title": "Community Gathering & Project",
             "date": "2025-07-18",
@@ -169,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 24,
             "organization": "Garvald West Linton",
             "title": "Community Gathering & Project",
             "date": "2025-08-01",
@@ -178,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 25,
             "organization": "Garvald West Linton",
             "title": "Michaelmas/Harvest Lunch & Event",
             "date": "2025-09-29",
@@ -187,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 26,
             "organization": "Garvald West Linton",
             "title": "Halloween Party",
             "date": "2025-10-31",
@@ -196,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 27,
             "organization": "Garvald West Linton",
             "title": "Guy Fawkes Fireworks",
             "date": "2025-11-05",
@@ -205,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 28,
             "organization": "Garvald West Linton",
             "title": "St Martin – Lantern Walk",
             "date": "2025-11-11",
@@ -214,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 29,
             "organization": "Garvald West Linton",
             "title": "Advent Wreath Making",
             "date": "2025-11-28",
@@ -223,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 30,
             "organization": "Garvald West Linton",
             "title": "1st Advent Celebration",
             "date": "2025-11-30",
@@ -232,6 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 31,
             "organization": "Garvald West Linton",
             "title": "Christmas Fair",
             "date": "2025-12-06",
@@ -241,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 32,
             "organization": "Garvald West Linton",
             "title": "Santa Lucia Event",
             "date": "2025-12-13",
@@ -250,6 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 33,
             "organization": "Garvald West Linton",
             "title": "Christmas Eve Celebrations",
             "date": "2025-12-24",
@@ -259,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
+            "id": 34,
             "organization": "Garvald West Linton",
             "title": "Christmas Day Lunch",
             "date": "2025-12-25",
@@ -268,9 +295,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
-        // --- Fairhill Rise ---
+        // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
         {
-            "organization": "Fairhill Rise",
+            "id": 35,
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-07-31",
             "time": "TBD",
@@ -279,7 +307,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "organization": "Fairhill Rise",
+            "id": 36,
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-08-25",
             "time": "TBD",
@@ -288,7 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "organization": "Fairhill Rise",
+            "id": 37,
+            "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-09-29",
             "time": "TBD",
@@ -297,7 +327,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "organization": "Fairhill Rise",
+            "id": 38,
+            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
             "time": "17:00 GMT",
@@ -306,7 +337,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
         {
-            "organization": "Fairhill Rise",
+            "id": 39,
+            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
             "endDate": "2026-02-08", // Added end date for multi-day event
@@ -317,8 +349,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
-        // --- Garvald Edinburgh ---
+        // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
+            "id": 40,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -329,6 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
         {
+            "id": 41, // Re-using ID for a placeholder if needed
             "organization": "Garvald Edinburgh",
             "title": "Check Garvald Edinburgh Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -338,8 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events"
         },
 
-        // --- Camphill (Loch Arthur) ---
+        // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
+            "id": 42,
             "organization": "Camphill (Loch Arthur)",
             "title": "Check Loch Arthur Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -357,9 +392,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg",
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png",
+        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
+        "Edinburgh Christian Community": "images/christian community logo.jpg", // Confirmed correct
+        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Confirmed correct
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
