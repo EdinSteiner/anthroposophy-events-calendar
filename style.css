@@ -285,9 +285,9 @@ nav button.active {
     width: auto;
     object-fit: contain; /* Ensures the whole image is visible */
     margin-bottom: 10px;
-    /* REMOVED: border-radius: 50%; and any border properties here */
-    border: none; /* Explicitly remove any default border */
-    box-shadow: none; /* Explicitly remove any default shadow */
+    border-radius: 0; /* Ensures no oval/circle shape */
+    border: none; /* Ensures no border is present */
+    box-shadow: none; /* Ensures no shadow is present */
 }
 
 .organization-name-column h2 {
@@ -297,4 +297,96 @@ nav button.active {
 }
 
 .organization-name-column .org-link-wrapper {
-    text-decoration: none; /*
+    text-decoration: none; /* Remove underline from the link wrapping the image and title */
+    color: inherit; /* Inherit color from parent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.organization-events-column {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between event cards within the column */
+}
+
+.organization-events-column .event-card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.organization-events-column .event-card h3 {
+    font-size: 1.2em;
+    color: #4a7d4a;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.organization-events-column .event-card p {
+    font-size: 0.88em;
+    margin: 3px 0;
+}
+
+.organization-events-column .no-events-on-day {
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+
+/* No Events Message */
+.no-events-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        margin: 0 5px;
+    }
+
+    .card-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .organization-header,
+    .organization-row {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .organization-name-column {
+        border-right: none;
+        border-bottom: 1px solid #eee; /* Add separator when stacked */
+        border-radius: 8px 8px 0 0;
+        padding-bottom: 10px;
+    }
+
+    .organization-events-column {
+        padding-top: 10px;
+    }
+
+    .organization-header {
+        border-radius: 8px; /* Full border radius for header on small screens */
+        text-align: center;
+    }
+    .organization-header .header-events {
+        padding-top: 5px; /* Add space between stacked header columns */
+    }
+}
