@@ -382,19 +382,31 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Loch Arthur Camphill Community",
             "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
             "link": "https://locharthur.org.uk/news-and-events/calendar/"
+        },
+        // --- Anthroposophy in Edinburgh ---
+        {
+            "id": 43,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Study Group Meeting",
+            "date": "2025-09-10",
+            "time": "19:00",
+            "location": "The Salisbury Centre, Edinburgh",
+            "description": "Regular study group on anthroposophical topics.",
+            "link": "https://www.anthroposophyinedinburgh.org.uk/" // Example link
         }
     ];
 
     // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
     const organizationImages = {
+        "Anthroposophy in Edinburgh": "images/Anthroposophy in Edinburgh Logo.jpg",
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
+        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Corrected file name
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
-        "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Edinburgh Christian Community": "images/christian community logo.jpg", // Confirmed correct
-        "Garvald Edinburgh": "images/garvald edinburgh logo.png", // Confirmed correct
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
+        "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
     // --- End of Data Definitions ---
