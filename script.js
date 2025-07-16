@@ -194,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://hopecityedinburgh.org/whats-on"
         },
 
-
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         {
             "id": 19,
@@ -373,75 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
-        // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
+        // --- Fairhill Rise (Part of Ruskin Mill Trust) ---
         {
             "id": 36,
             "organization": "Fairhill Rise",
-            "title": "Fairhill Adventures (Various themed days)",
-            "date": "2025-06-01",
-            "endDate": "2025-09-29",
-            "time": "08:30 - 15:30",
-            "location": "Fairhill Native Botanical Gardens & Nursery",
-            "description": "Various themed days including Fairy, Magic, Merry, and Nature days with activities like egg collecting, seed planting, and scavenger hunts.",
-            "link": "https://www.fairhill.com.au/events"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise",
-            "title": "Fairhill Original Chill",
-            "date": "2025-07-13",
-            "endDate": "2025-12-28",
-            "time": "11:00 - 14:00",
-            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
-            "description": "Relax and enjoy the Fairhill environment.",
-            "link": "https://www.fairhill.com.au/events"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise",
-            "title": "Fairhill Fellowship of the Gardens",
-            "date": "2025-07-14",
-            "endDate": "2025-12-29",
-            "time": "08:00 - 12:00",
-            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
-            "description": "A regular gathering for the Fairhill community.",
-            "link": "https://www.fairhill.com.au/events"
-        },
-        {
-            "id": 39,
-            "organization": "Fairhill Rise",
-            "title": "Fairhill Bird Group Meetup",
-            "date": "2025-07-31",
-            "endDate": "2025-12-18",
-            "time": "07:00 - 12:00",
-            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
-            "description": "Monthly meetup for bird enthusiasts.",
-            "link": "https://www.fairhill.com.au/events"
-        },
-        {
-            "id": 40,
-            "organization": "Fairhill Rise",
-            "title": "Fairhill Group of Friends & Neighbours monthly breakfast",
-            "date": "2025-08-03",
-            "endDate": "2025-12-07",
-            "time": "08:00 - 12:00",
-            "location": "Fairhill Native Botanical Gardens & Nursery",
-            "description": "Monthly breakfast for friends and neighbours.",
-            "link": "https://www.fairhill.com.au/events"
-        },
-        {
-            "id": 41,
-            "organization": "Fairhill Rise",
-            "title": "Races at Fair Hill",
-            "date": "2025-08-30",
-            "time": "Full Day",
-            "location": "Fair Hill Natural Resources Management Area, Cecil County",
-            "description": "Free, family-friendly open house celebrating the return of live horse racing to Fair Hill.",
-            "link": "https://thebaynet.com/horse-racing-to-return-at-fair-hill-turf-track/"
-        },
-        {
-            "id": 42,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
             "time": "17:00 GMT",
@@ -450,8 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
         {
-            "id": 43,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
+            "id": 37,
+            "organization": "Fairhill Rise",
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
             "endDate": "2026-02-08", // Added end date for multi-day event
@@ -460,10 +394,31 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
+        {
+            "id": 38,
+            "organization": "Fairhill Rise",
+            "title": "Ruskin Mill Trust: Summer Open Days",
+            "date": "2025-07-26",
+            "time": "10:00 - 16:00",
+            "location": "Ruskin Mill College, Nailsworth",
+            "description": "Discover life at Ruskin Mill, meet staff and students, and learn about their unique approach.",
+            "link": "https://rmt.org/events/"
+        },
+        {
+            "id": 39,
+            "organization": "Fairhill Rise",
+            "title": "Ruskin Mill Trust: Open Day at Glasshouse College",
+            "date": "2025-10-18",
+            "time": "10:00 - 16:00",
+            "location": "Glasshouse College, Stourbridge",
+            "description": "Explore the facilities and educational programs at Glasshouse College.",
+            "link": "https://rmt.org/events/"
+        },
+
 
         // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
-            "id": 44,
+            "id": 40,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -474,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
         },
         {
-            "id": 45,
+            "id": 41,
             "organization": "Garvald Edinburgh",
             "title": "Garvald Gorgie Workshops Open Day 2025",
             "date": "2025-08-30",
@@ -484,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
         },
         {
-            "id": 46, // Re-using ID for a placeholder if needed
+            "id": 42, // Re-using ID for a placeholder if needed
             "organization": "Garvald Edinburgh",
             "title": "Check Garvald Edinburgh Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -496,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 47,
+            "id": 43,
             "organization": "Camphill (Loch Arthur)",
             "title": "Check Loch Arthur Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -507,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Anthroposophy in Edinburgh ---
         {
-            "id": 48,
+            "id": 44,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Study Group Meeting",
             "date": "2025-09-10",
