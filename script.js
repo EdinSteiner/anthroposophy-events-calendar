@@ -11,78 +11,108 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 1,
             "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11", // Example duration
+            "title": "Summer Circus & Crafts Camps (Age 6+)",
+            "date": "2025-07-28",
+            "endDate": "2025-08-08",
             "time": "Full Day",
             "location": "Edinburgh Steiner School Campus",
             "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
         {
             "id": 2,
             "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18", // Example duration
-            "time": "Full Day",
+            "title": "Kindergarten Summer Camps",
+            "date": "2025-08-04",
+            "endDate": "2025-08-15",
+            "time": "9:00 - 13:00",
             "location": "Edinburgh Steiner School Campus",
             "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
         {
             "id": 3,
             "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21", // Placeholder, subsequent week
-            "time": "Full Day",
+            "title": "Autumn Term Starts",
+            "date": "2025-08-26",
+            "endDate": "2025-12-19",
+            "time": "Full Term",
             "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/" // General events page
+            "description": "Start of the Autumn Term.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
-
-        // --- Edinburgh Christian Community (Facebook link) ---
-        // Removed Study Group events. Link changed to Facebook.
         {
             "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "organization": "Edinburgh Steiner School",
+            "title": "Early Years Parent Education Evening: Rhythm, Repetition, Reverence",
+            "date": "2025-09-09",
+            "time": "18:30",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Education evening for parents focusing on rhythm, repetition, and reverence in early years.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
+        },
+        {
+            "id": 5,
+            "organization": "Edinburgh Steiner School",
+            "title": "September Holiday",
+            "date": "2025-09-15",
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "School holiday.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
+        },
+        {
+            "id": 6,
+            "organization": "Edinburgh Steiner School",
+            "title": "Anniversary of first Waldorf school",
+            "date": "2025-09-19",
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Celebration of the anniversary of the first Waldorf school.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
         {
             "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13", // 2nd Sunday
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "organization": "Edinburgh Steiner School",
+            "title": "El Mercado Market",
+            "date": "2025-10-04",
+            "time": "11:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Market event at the school.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
         {
             "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "organization": "Edinburgh Steiner School",
+            "title": "World Mental Health Day",
+            "date": "2025-10-10",
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Observance of World Mental Health Day.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
+        },
+        {
+            "id": 9,
+            "organization": "Edinburgh Steiner School",
+            "title": "Christmas Market",
+            "date": "2025-11-22",
+            "time": "11:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Annual Christmas Market.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
         {
             "id": 10,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-18",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "organization": "Edinburgh Steiner School",
+            "title": "Spring Start-of-Term Assembly",
+            "date": "2026-01-07",
+            "time": "09:00 - 09:30",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Assembly to mark the start of the Spring Term.",
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/"
         },
+
+        // --- Edinburgh Christian Community (Facebook link) ---
         {
             "id": 11,
             "organization": "Edinburgh Christian Community",
@@ -94,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 13,
+            "id": 12,
             "organization": "Edinburgh Christian Community",
             "title": "Youth Group",
             "date": "2025-07-25",
@@ -104,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 14,
+            "id": 13,
             "organization": "Edinburgh Christian Community",
             "title": "Children's Service",
             "date": "2025-07-27", // 4th Sunday
@@ -114,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 15,
+            "id": 14,
             "organization": "Edinburgh Christian Community",
             "title": "Sunday Service",
             "date": "2025-07-27",
@@ -123,13 +153,51 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Weekly service.",
             "link": "https://www.facebook.com/CCEdinburgh"
         },
-        // Placeholder for future weekly events up to June 2026. These would typically be dynamically generated for a real calendar.
-        // For now, these few examples are hardcoded. You can add more as needed following this pattern.
-
-        // --- Camphill Blair Drummond (from recent Google Search tool results) ---
-        // Bike Safari (2025-06-14) removed as it was a past event.
+        {
+            "id": 15,
+            "organization": "Edinburgh Christian Community",
+            "title": "YAP July",
+            "date": "2025-07-18",
+            "time": "19:00 - 23:30",
+            "location": "Hope City Church Edinburgh",
+            "description": "An evening of food, community, and fun, while worshiping together! (For over 18s).",
+            "link": "https://hopecityedinburgh.org/whats-on"
+        },
+        {
+            "id": 16,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Corner Room x The Fringe: Alma / Juliette Lemoine and Chris Amer",
+            "date": "2025-08-15",
+            "time": "20:00 - 22:00",
+            "location": "The Corner Room, Hope City Church Edinburgh",
+            "description": "An evening of exceptional new Scottish music featuring Juliette Lemoine and Chris Amer, and Alma.",
+            "link": "https://www.edfringe.com/tickets/whats-on/the-corner-room-at-the-fringe-alma-juliette-lemoine-and-chris-amer"
+        },
+        {
+            "id": 17,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Corner Room x The Fringe: The Black Denims and Quick",
+            "date": "2025-08-16",
+            "time": "20:00 - 22:00",
+            "location": "The Corner Room, Hope City Church Edinburgh",
+            "description": "Scotland's newest country supergroup, The Black Denims, and newgrass band Quick.",
+            "link": "https://www.edfringe.com/tickets/whats-on/the-corner-room-at-the-fringe-the-black-denims-quick"
+        },
         {
             "id": 18,
+            "organization": "Edinburgh Christian Community",
+            "title": "Suffering & Lament",
+            "date": "2025-09-06",
+            "time": "10:00 - 12:30",
+            "location": "Hope City Church Edinburgh",
+            "description": "Exploring God's purpose in suffering and the grace of lament.",
+            "link": "https://hopecityedinburgh.org/whats-on"
+        },
+
+
+        // --- Camphill Blair Drummond (from recent Google Search tool results) ---
+        {
+            "id": 19,
             "organization": "Camphill Blair Drummond",
             "title": "Vocal Recital: Un-Ravel-ing the Source Material",
             "date": "2025-07-19",
@@ -141,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
         {
-            "id": 19, // Re-using ID for a placeholder if needed
+            "id": 20, // Re-using ID for a placeholder if needed
             "organization": "Camphill Corbenic",
             "title": "Check Corbenic Website for Events",
             "date": "2025-08-01", // Placeholder date
@@ -168,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 22,
             "organization": "Garvald West Linton",
             "title": "Community Gathering & Project",
-            "date": "2025-07-04",
+            "date": "2025-07-18",
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
@@ -177,18 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 23,
             "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
+            "title": "Community Gathering & Project (with BBQ lunch)",
+            "date": "2025-08-01",
+            "time": "09:45 - 14:00",
             "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
+            "description": "Regular community gathering and project work followed by a BBQ lunch.",
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 24,
             "organization": "Garvald West Linton",
             "title": "Community Gathering & Project",
-            "date": "2025-08-01",
+            "date": "2025-08-15",
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
@@ -197,15 +265,25 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 25,
             "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
+            "title": "Community Gathering & Project (with BBQ lunch)",
+            "date": "2025-08-29",
+            "time": "09:45 - 14:00",
+            "location": "Garvald West Linton Hall",
+            "description": "Regular community gathering and project work followed by a BBQ lunch.",
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 26,
+            "organization": "Garvald West Linton",
+            "title": "Michaelmas/Harvest Lunch & Event",
+            "date": "2025-09-29",
+            "time": "Afternoon",
+            "location": "Garvald West Linton",
+            "description": "Annual Michaelmas/Harvest celebration with an event/play and singing around the bonfire.",
+            "link": "https://garvaldwestlinton.org.uk/events/"
+        },
+        {
+            "id": 27,
             "organization": "Garvald West Linton",
             "title": "Halloween Party",
             "date": "2025-10-31",
@@ -215,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 27,
+            "id": 28,
             "organization": "Garvald West Linton",
             "title": "Guy Fawkes Fireworks",
             "date": "2025-11-05",
@@ -225,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 28,
+            "id": 29,
             "organization": "Garvald West Linton",
             "title": "St Martin – Lantern Walk",
             "date": "2025-11-11",
@@ -235,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 29,
+            "id": 30,
             "organization": "Garvald West Linton",
             "title": "Advent Wreath Making",
             "date": "2025-11-28",
@@ -245,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 30,
+            "id": 31,
             "organization": "Garvald West Linton",
             "title": "1st Advent Celebration",
             "date": "2025-11-30",
@@ -255,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 31,
+            "id": 32,
             "organization": "Garvald West Linton",
             "title": "Christmas Fair",
             "date": "2025-12-06",
@@ -265,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 32,
+            "id": 33,
             "organization": "Garvald West Linton",
             "title": "Santa Lucia Event",
             "date": "2025-12-13",
@@ -275,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 33,
+            "id": 34,
             "organization": "Garvald West Linton",
             "title": "Christmas Eve Celebrations",
             "date": "2025-12-24",
@@ -285,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
-            "id": 34,
+            "id": 35,
             "organization": "Garvald West Linton",
             "title": "Christmas Day Lunch",
             "date": "2025-12-25",
@@ -297,37 +375,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
         {
-            "id": 35,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
             "id": 36,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "organization": "Fairhill Rise",
+            "title": "Fairhill Adventures (Various themed days)",
+            "date": "2025-06-01",
+            "endDate": "2025-09-29",
+            "time": "08:30 - 15:30",
+            "location": "Fairhill Native Botanical Gardens & Nursery",
+            "description": "Various themed days including Fairy, Magic, Merry, and Nature days with activities like egg collecting, seed planting, and scavenger hunts.",
+            "link": "https://www.fairhill.com.au/events"
         },
         {
             "id": 37,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "organization": "Fairhill Rise",
+            "title": "Fairhill Original Chill",
+            "date": "2025-07-13",
+            "endDate": "2025-12-28",
+            "time": "11:00 - 14:00",
+            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
+            "description": "Relax and enjoy the Fairhill environment.",
+            "link": "https://www.fairhill.com.au/events"
         },
         {
             "id": 38,
+            "organization": "Fairhill Rise",
+            "title": "Fairhill Fellowship of the Gardens",
+            "date": "2025-07-14",
+            "endDate": "2025-12-29",
+            "time": "08:00 - 12:00",
+            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
+            "description": "A regular gathering for the Fairhill community.",
+            "link": "https://www.fairhill.com.au/events"
+        },
+        {
+            "id": 39,
+            "organization": "Fairhill Rise",
+            "title": "Fairhill Bird Group Meetup",
+            "date": "2025-07-31",
+            "endDate": "2025-12-18",
+            "time": "07:00 - 12:00",
+            "location": "Fairhill Gardens, Nursery, Farm Shop, & Courtyard Cafe Bar Restaurant",
+            "description": "Monthly meetup for bird enthusiasts.",
+            "link": "https://www.fairhill.com.au/events"
+        },
+        {
+            "id": 40,
+            "organization": "Fairhill Rise",
+            "title": "Fairhill Group of Friends & Neighbours monthly breakfast",
+            "date": "2025-08-03",
+            "endDate": "2025-12-07",
+            "time": "08:00 - 12:00",
+            "location": "Fairhill Native Botanical Gardens & Nursery",
+            "description": "Monthly breakfast for friends and neighbours.",
+            "link": "https://www.fairhill.com.au/events"
+        },
+        {
+            "id": 41,
+            "organization": "Fairhill Rise",
+            "title": "Races at Fair Hill",
+            "date": "2025-08-30",
+            "time": "Full Day",
+            "location": "Fair Hill Natural Resources Management Area, Cecil County",
+            "description": "Free, family-friendly open house celebrating the return of live horse racing to Fair Hill.",
+            "link": "https://thebaynet.com/horse-racing-to-return-at-fair-hill-turf-track/"
+        },
+        {
+            "id": 42,
             "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
@@ -337,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
         {
-            "id": 39,
+            "id": 43,
             "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
@@ -347,11 +460,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
             "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
         },
-        // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
         // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
-            "id": 40,
+            "id": 44,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -359,22 +471,32 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Varies (check link)",
             "location": "Garvald Makers, Edinburgh",
             "description": "An exhibition of unique robot faces created by artist Grant. Continues through July.",
-            "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
+            "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
         },
         {
-            "id": 41, // Re-using ID for a placeholder if needed
+            "id": 45,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Gorgie Workshops Open Day 2025",
+            "date": "2025-08-30",
+            "time": "TBD",
+            "location": "Garvald Gorgie Workshops",
+            "description": "Open Day at Garvald's Gorgie Workshops.",
+            "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
+        },
+        {
+            "id": 46, // Re-using ID for a placeholder if needed
             "organization": "Garvald Edinburgh",
             "title": "Check Garvald Edinburgh Website for Events",
             "date": "2025-08-01", // Placeholder date
             "time": "Ongoing",
             "location": "Garvald Edinburgh",
             "description": "Please visit the official Garvald Edinburgh website for the most current information on upcoming events and exhibitions.",
-            "link": "https://www.garvaldedinburgh.org.uk/events"
+            "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
         },
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 42,
+            "id": 47,
             "organization": "Camphill (Loch Arthur)",
             "title": "Check Loch Arthur Website for Events",
             "date": "2025-08-01", // Placeholder
@@ -385,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Anthroposophy in Edinburgh ---
         {
-            "id": 43,
+            "id": 48,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Study Group Meeting",
             "date": "2025-09-10",
@@ -605,6 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
                 </a>
             `;
+            organizationNameColumn.appendChild(document.createTextNode(' ')); // Add a space
             organizationRow.appendChild(organizationNameColumn);
 
             const organizationEventsColumn = document.createElement('div');
