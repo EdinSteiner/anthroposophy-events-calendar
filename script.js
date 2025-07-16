@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // filtered and adjusted based on all your feedback.
     // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
     // You MUST verify the accuracy and currency of these events against official websites.
-    // Dates are set to be in the future (from current date June 30, 2025) or ongoing.
+    // Dates are set to be in the future (from current date July 16, 2025) or ongoing.
     const allEvents = [
         // --- Edinburgh Steiner School (from previous Google Search tool results) ---
         {
@@ -153,9 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Weekly service.",
             "link": "https://www.facebook.com/CCEdinburgh"
         },
+        // Hope City Church Edinburgh events, now separate and clarified
         {
             "id": 15,
-            "organization": "Edinburgh Christian Community",
+            "organization": "Hope City Church Edinburgh",
             "title": "YAP July",
             "date": "2025-07-18",
             "time": "19:00 - 23:30",
@@ -165,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             "id": 16,
-            "organization": "Edinburgh Christian Community",
+            "organization": "The Corner Room at Hope City Church Edinburgh",
             "title": "The Corner Room x The Fringe: Alma / Juliette Lemoine and Chris Amer",
             "date": "2025-08-15",
             "time": "20:00 - 22:00",
@@ -175,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             "id": 17,
-            "organization": "Edinburgh Christian Community",
+            "organization": "The Corner Room at Hope City Church Edinburgh",
             "title": "The Corner Room x The Fringe: The Black Denims and Quick",
             "date": "2025-08-16",
             "time": "20:00 - 22:00",
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             "id": 18,
-            "organization": "Edinburgh Christian Community",
+            "organization": "Hope City Church Edinburgh",
             "title": "Suffering & Lament",
             "date": "2025-09-06",
             "time": "10:00 - 12:30",
@@ -480,9 +481,11 @@ document.addEventListener('DOMContentLoaded', () => {
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
         "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Corrected file name
+        "Hope City Church Edinburgh": "images/Hope City Church Edinburgh Logo.jpg", // Added logo for Hope City
+        "The Corner Room at Hope City Church Edinburgh": "images/Corner Room Hope City Logo.jpg", // Added logo for Corner Room
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
+        "Fairhill Rise": "images/Ruskin Mill Logo.png",
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
     };
