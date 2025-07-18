@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const eventContainer = document.getElementById('eventContainer');
-    const cardViewBtn = document.getElementById('cardViewBtn');
+    // Removed: const cardViewBtn = document.getElementById('cardViewBtn');
     const diaryViewBtn = document.getElementById('diaryViewBtn');
     const organizationViewBtn = document.getElementById('organizationViewBtn');
 
@@ -463,6 +463,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- Render Card View ---
+    // Removed: The entire renderCardView function is removed.
+    /*
     const renderCardView = (eventsToDisplay) => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'card-layout'; // Set class for grid layout
@@ -490,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
             eventContainer.appendChild(eventCard);
         });
     };
+    */
 
     // --- Render Diary View ---
     const renderDiaryView = (eventsToDisplay) => {
@@ -614,19 +617,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Sort events by date within each organization
                 groupedEvents[orgName].sort((a, b) => new Date(a.date) - new Date(b.date));
 
+                const eventList = document.createElement('ul');
+                eventList.className = 'organization-event-list';
+
                 groupedEvents[orgName].forEach(event => {
-                    const eventCard = document.createElement('div');
-                    eventCard.className = `event-card ${getOrgClass(event.organization)}`;
-                    eventCard.innerHTML = `
-                        <h3>${event.title}</h3>
+                    const listItem = document.createElement('li'); // Changed to li for list format
+                    listItem.innerHTML = `
+                        <h4>${event.title}</h4>
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
                         <p><strong>Time:</strong> ${event.time}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
                         <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
                     `;
-                    organizationEventsColumn.appendChild(eventCard);
+                    eventList.appendChild(listItem); // Append li to ul
                 });
+                organizationEventsColumn.appendChild(eventList); // Append ul to column
             } else {
                 const noEvents = document.createElement('p');
                 noEvents.className = 'no-events-on-day';
@@ -645,10 +651,13 @@ document.addEventListener('DOMContentLoaded', () => {
         button.classList.add('active');
     };
 
+    // Removed: cardViewBtn.addEventListener('click', () => { ... });
+    /*
     cardViewBtn.addEventListener('click', () => {
         activateButton(cardViewBtn);
         renderCardView(upcomingEvents);
     });
+    */
 
     diaryViewBtn.addEventListener('click', () => {
         activateButton(diaryViewBtn);
