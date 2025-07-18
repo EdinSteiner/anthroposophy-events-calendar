@@ -227,11 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 55, // New ID for pop-up shop
             "organization": "Tiphereth",
-            "title": "New Pop-up Shop Opening",
-            "date": "2025-07-11",
-            "time": "TBD", // Assuming time not specified, or can be added if known
+            "title": "Tiphereth Pop-up Shop",
+            "date": "2025-07-18", // Setting to this Friday as per current date
+            "time": "09:30 - 16:00",
             "location": "37-39 Torphin Road, Edinburgh, EH13 0PG",
-            "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
+            "description": "A variety of handcrafted items made in their workshops, including print studio products. Open every Friday.",
             "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
         },
 
@@ -705,133 +705,118 @@ document.addEventListener('DOMContentLoaded', () => {
             return acc;
         }, {});
 
-        // Add the column header
-        const headerRow = document.createElement('div');
-        headerRow.className = 'organization-header';
-        headerRow.innerHTML = `
-            <div class="header-org-name">Organization</div>
-            <div class="header-events">Upcoming Events</div>
-        `;
-        eventContainer.appendChild(headerRow);
+        const sortedOrganizations = Object.keys(groupedEvents).sort();
 
-        // Sort organizations alphabetically for consistent display
-        const sortedOrgNames = Object.keys(groupedEvents).sort();
+        if (sortedOrganizations.length === 0) {
+            eventContainer.innerHTML = '<p class="no-events-message">No organizations to display.</p>';
+            return;
+        }
 
-        sortedOrgNames.forEach(orgName => {
-            const organizationRow = document.createElement('div');
-            organizationRow.className = 'organization-row';
+        sortedOrganizations.forEach(orgName => {
+            const orgSection = document.createElement('div');
+            orgSection.className = `organization-section ${getOrgClass(orgName)}`;
 
-            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
+            const orgImage = organizationImages[orgName] ? `<img src="${organizationImages[orgName]}" alt="${orgName} Logo" class="organization-logo">` : '';
 
-            // Find the primary link for the organization. Prefer a non-event specific link if available.
-            let orgHomePageLink = '#';
-            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
-            if (organizationDetailEvent) {
-                orgHomePageLink = organizationDetailEvent.link;
-            } else {
-                // As a fallback, use the link from the first available event that has a link
-                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
-                if (firstEventWithLink) {
-                    orgHomePageLink = firstEventWithLink.link;
-                }
-            }
-
-
-            const organizationNameColumn = document.createElement('div');
-            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
-            organizationNameColumn.innerHTML = `
-                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
-                    <img src="${orgImageSrc}" alt="${orgName} Logo">
-                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
-                </a>
+            orgSection.innerHTML = `
+                <div class="organization-header">
+                    ${orgImage}
+                    <h2>${orgName}</h2>
+                </div>
+                <ul class="organization-event-list">
+                </ul>
             `;
-            organizationRow.appendChild(organizationNameColumn);
 
-            const organizationEventsColumn = document.createElement('div');
-            organizationEventsColumn.className = 'organization-events-column';
+            const eventList = orgSection.querySelector('.organization-event-list');
 
-            // Filter for actual upcoming events for this organization (not organization detail entries)
-            const upcomingOrgEvents = groupedEvents[orgName].filter(event =>
-                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
-            );
+            // Separate and sort events for this organization
+            const orgSpecificEvents = groupedEvents[orgName].filter(event => !event.isOrganizationDetail);
+            const orgDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
 
-            // Add the special organization detail event if it exists for this organization
-            if (organizationDetailEvent) {
-                upcomingOrgEvents.unshift(organizationDetailEvent); // Add to the beginning
-            }
+            // Sort regular events by date
+            orgSpecificEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            if (upcomingOrgEvents.length > 0) {
-                // Sort events by date, but keep "isOrganizationDetail" events at the top
-                upcomingOrgEvents.sort((a, b) => {
-                    if (a.isOrganizationDetail) return -1;
-                    if (b.isOrganizationDetail) return 1;
-                    return new Date(a.date) - new Date(b.date);
-                });
+            // Display "organization detail" events first if they exist
+            orgDetails.forEach(detail => {
+                const listItem = document.createElement('li');
+                let linkContent = detail.link;
+                if (detail.link && detail.link.startsWith('http')) {
+                    linkContent = `<a href="${detail.link}" target="_blank">Visit Shop</a>`;
+                } else if (detail.link && detail.link.startsWith('Contact')) {
+                    linkContent = detail.link;
+                }
+                listItem.innerHTML = `
+                    <p class="organization-detail-item"><strong>${detail.title}:</strong> ${detail.description} ${linkContent}</p>
+                `;
+                eventList.appendChild(listItem);
+            });
 
-                const eventList = document.createElement('ul');
-                eventList.className = 'organization-event-list';
+            // Then display regular upcoming events
+            orgSpecificEvents.forEach(event => {
+                // Ensure events are still upcoming/ongoing for this view as well
+                const now = new Date();
+                now.setHours(0, 0, 0, 0);
+                const startDate = new Date(event.date);
+                startDate.setHours(0, 0, 0, 0);
+                const endDate = event.endDate ? new Date(event.endDate) : startDate;
+                endDate.setHours(23, 59, 59, 999);
 
-                upcomingOrgEvents.forEach(event => {
-                    const listItem = document.createElement('li'); // Changed to li for list format
+                if (endDate >= now) {
+                    const listItem = document.createElement('li');
                     let linkContent = event.link;
                     if (event.link && event.link.startsWith('http')) {
                         linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
                     } else if (event.link && event.link.startsWith('Contact')) {
-                        linkContent = event.link; // Display as is if it's contact info
+                        linkContent = event.link;
                     }
-
-                    // For organization-specific details, we might want a slightly different display
-                    if (event.isOrganizationDetail) {
-                        listItem.innerHTML = `
-                            <h4>${event.title}</h4>
-                            ${event.description ? `<p>${event.description}</p>` : ''}
-                            <p class="more-info-diary">${linkContent}</p>
-                        `;
-                    } else {
-                        listItem.innerHTML = `
-                            <h4>${event.title}</h4>
-                            <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                            <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
-                            <p><strong>Location:</strong> ${event.location}</p>
-                            ${event.description ? `<p>${event.description}</p>` : ''}
-                            <p class="more-info-diary">${linkContent}</p>
-                        `;
-                    }
+                    listItem.innerHTML = `
+                        <h4>${event.title}</h4>
+                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
+                        <p><strong>Location:</strong> ${event.location}</p>
+                        ${event.description ? `<p>${event.description}</p>` : ''}
+                        <p class="more-info-org">${linkContent}</p>
+                    `;
                     eventList.appendChild(listItem);
-                });
-                organizationEventsColumn.appendChild(eventList);
-            } else {
-                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed.</p>';
-            }
-            organizationRow.appendChild(organizationEventsColumn);
-            eventContainer.appendChild(organizationRow);
+                }
+            });
+
+            eventContainer.appendChild(orgSection);
         });
     };
 
-
-    // --- View Mode Management ---
+    // --- View Switching Logic ---
     let currentView = 'diary'; // Default view
 
-    const setView = (view) => {
-        currentView = view;
-        // cardViewBtn.classList.remove('active'); // Removed cardViewBtn
+    const updateView = () => {
+        // Removed: cardViewBtn.classList.remove('active');
         diaryViewBtn.classList.remove('active');
         organizationViewBtn.classList.remove('active');
 
-        if (view === 'diary') {
+        if (currentView === 'diary') {
             renderDiaryView(upcomingEvents);
             diaryViewBtn.classList.add('active');
-        } else if (view === 'organization') {
-            renderOrganizationView(allEvents); // Organization view shows all organization entries, not just upcoming events
+        } else if (currentView === 'organization') {
+            renderOrganizationView(upcomingEvents);
             organizationViewBtn.classList.add('active');
         }
     };
 
-    // Event Listeners for view buttons
-    // Removed: cardViewBtn.addEventListener('click', () => setView('card'));
-    diaryViewBtn.addEventListener('click', () => setView('diary'));
-    organizationViewBtn.addEventListener('click', () => setView('organization'));
+    // Removed: cardViewBtn.addEventListener('click', () => {
+    //     currentView = 'card';
+    //     updateView();
+    // });
+
+    diaryViewBtn.addEventListener('click', () => {
+        currentView = 'diary';
+        updateView();
+    });
+
+    organizationViewBtn.addEventListener('click', () => {
+        currentView = 'organization';
+        updateView();
+    });
 
     // Initial render based on default view
-    setView(currentView);
+    updateView();
 });
