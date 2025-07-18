@@ -628,24 +628,54 @@ document.addEventListener('DOMContentLoaded', () => {
         const today = new Date();
         today.setHours(0, 0, 0, 0); // Start of today
 
+        // To handle the "every Friday" requirement for Tiphereth Pop-up Shop
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth();
+        const currentDay = now.getDate();
+
         diaryEvents.forEach(event => {
             const startDate = new Date(event.date);
             startDate.setHours(0, 0, 0, 0);
             const endDate = event.endDate ? new Date(event.endDate) : startDate;
             endDate.setHours(23, 59, 59, 999); // End of end day
 
-            // Iterate over each day the event is active
-            let currentDate = new Date(startDate);
-            while (currentDate <= endDate) {
-                // Only add to map if the event date is today or in the future
-                if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
-                    if (!dailyEventsMap.has(dateKey)) {
-                        dailyEventsMap.set(dateKey, []);
-                    }
-                    dailyEventsMap.get(dateKey).push(event);
+            // Special handling for Tiphereth Pop-up Shop to appear every Friday
+            if (event.organization === "Tiphereth" && event.title === "Tiphereth Pop-up Shop") {
+                let currentFriday = new Date(now); // Start from today
+                currentFriday.setHours(0, 0, 0, 0);
+
+                // Find the next Friday if today isn't Friday or if it's already past Friday's time
+                while (currentFriday.getDay() !== 5 || (currentFriday.getDay() === 5 && now.getHours() > 16 && now.getDate() === currentFriday.getDate())) {
+                    currentFriday.setDate(currentFriday.getDate() + 1);
                 }
-                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
+
+                // Add the event for Fridays for the next year
+                for (let i = 0; i < 52; i++) { // Add for approximately one year
+                    const futureFriday = new Date(currentFriday);
+                    futureFriday.setDate(currentFriday.getDate() + (i * 7));
+                    if (futureFriday >= today) {
+                        const dateKey = futureFriday.toISOString().slice(0, 10); //YYYY-MM-DD
+                        if (!dailyEventsMap.has(dateKey)) {
+                            dailyEventsMap.set(dateKey, []);
+                        }
+                        dailyEventsMap.get(dateKey).push(event);
+                    }
+                }
+            } else {
+                // Iterate over each day the event is active
+                let currentDate = new Date(startDate);
+                while (currentDate <= endDate) {
+                    // Only add to map if the event date is today or in the future
+                    if (currentDate >= today) {
+                        const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
+                        if (!dailyEventsMap.has(dateKey)) {
+                            dailyEventsMap.set(dateKey, []);
+                        }
+                        dailyEventsMap.get(dateKey).push(event);
+                    }
+                    currentDate.setDate(currentDate.getDate() + 1); // Move to next day
+                }
             }
         });
 
@@ -699,12 +729,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Group ALL events by organization, including those for organization details
         const groupedEvents = allEvents.reduce((acc, event) => {
             if (!acc[event.organization]) {
-                acc[event.organization] = [];
+                acc[event.organization] = {
+                    image: organizationImages[event.organization] || 'images/placeholder.png',
+                    events: [],
+                    facebookLink: '' // Initialize for Facebook link
+                };
             }
-            acc[event.organization].push(event);
+            // Add Facebook link specifically for Tiphereth in organization view
+            if (event.organization === "Tiphereth" && event.link === "https://www.facebook.com/tiphereth.camphilledinburgh") {
+                acc[event.organization].facebookLink = event.link;
+            } else if (!event.isOrganizationDetail) { // Only add non-detail events to the list
+                acc[event.organization].events.push(event);
+            } else if (event.isOrganizationDetail && event.organization === "Tiphereth" && event.title === "Tiphereth Etsy Shop") {
+                // Keep Etsy shop specifically as an 'organization detail' for Tiphereth
+                acc[event.organization].etsyLink = event.link;
+            }
             return acc;
         }, {});
 
+        // Sort organizations alphabetically
         const sortedOrganizations = Object.keys(groupedEvents).sort();
 
         if (sortedOrganizations.length === 0) {
@@ -713,110 +756,71 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         sortedOrganizations.forEach(orgName => {
-            const orgSection = document.createElement('div');
-            orgSection.className = `organization-section ${getOrgClass(orgName)}`;
+            const orgData = groupedEvents[orgName];
+            const organizationCard = document.createElement('div');
+            organizationCard.className = `organization-card ${getOrgClass(orgName)}`;
 
-            const orgImage = organizationImages[orgName] ? `<img src="${organizationImages[orgName]}" alt="${orgName} Logo" class="organization-logo">` : '';
+            let eventsHtml = '';
+            // Sort events within each organization by date
+            orgData.events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            orgSection.innerHTML = `
-                <div class="organization-header">
-                    ${orgImage}
-                    <h2>${orgName}</h2>
-                </div>
-                <ul class="organization-event-list">
-                </ul>
-            `;
-
-            const eventList = orgSection.querySelector('.organization-event-list');
-
-            // Separate and sort events for this organization
-            const orgSpecificEvents = groupedEvents[orgName].filter(event => !event.isOrganizationDetail);
-            const orgDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
-
-            // Sort regular events by date
-            orgSpecificEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-            // Display "organization detail" events first if they exist
-            orgDetails.forEach(detail => {
-                const listItem = document.createElement('li');
-                let linkContent = detail.link;
-                if (detail.link && detail.link.startsWith('http')) {
-                    linkContent = `<a href="${detail.link}" target="_blank">Visit Shop</a>`;
-                } else if (detail.link && detail.link.startsWith('Contact')) {
-                    linkContent = detail.link;
-                }
-                listItem.innerHTML = `
-                    <p class="organization-detail-item"><strong>${detail.title}:</strong> ${detail.description} ${linkContent}</p>
-                `;
-                eventList.appendChild(listItem);
-            });
-
-            // Then display regular upcoming events
-            orgSpecificEvents.forEach(event => {
-                // Ensure events are still upcoming/ongoing for this view as well
-                const now = new Date();
-                now.setHours(0, 0, 0, 0);
-                const startDate = new Date(event.date);
-                startDate.setHours(0, 0, 0, 0);
-                const endDate = event.endDate ? new Date(event.endDate) : startDate;
-                endDate.setHours(23, 59, 59, 999);
-
-                if (endDate >= now) {
-                    const listItem = document.createElement('li');
+            if (orgData.events.length > 0) {
+                eventsHtml = '<h5>Upcoming Events:</h5><ul>';
+                orgData.events.forEach(event => {
                     let linkContent = event.link;
                     if (event.link && event.link.startsWith('http')) {
                         linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
                     } else if (event.link && event.link.startsWith('Contact')) {
                         linkContent = event.link;
                     }
-                    listItem.innerHTML = `
-                        <h4>${event.title}</h4>
-                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p>${event.description}</p>` : ''}
-                        <p class="more-info-org">${linkContent}</p>
+                    eventsHtml += `
+                        <li>
+                            <strong>${event.title}</strong> (${formatDate(event.date, event.endDate)}) at ${event.time || 'TBD'} - ${event.location}
+                            ${event.description ? `<br><small>${event.description}</small>` : ''}
+                            ${linkContent ? `<br><small>${linkContent}</small>` : ''}
+                        </li>
                     `;
-                    eventList.appendChild(listItem);
-                }
-            });
+                });
+                eventsHtml += '</ul>';
+            } else {
+                eventsHtml = '<p>No specific upcoming events listed.</p>';
+            }
 
-            eventContainer.appendChild(orgSection);
+            // Add Facebook link if available for the organization
+            let facebookLinkHtml = '';
+            if (orgData.facebookLink) {
+                facebookLinkHtml = `<p class="org-facebook-link"><a href="${orgData.facebookLink}" target="_blank">Visit us on Facebook</a></p>`;
+            }
+
+            // Add Etsy link if available for Tiphereth
+            let etsyLinkHtml = '';
+            if (orgName === "Tiphereth" && orgData.etsyLink) {
+                etsyLinkHtml = `<p class="org-etsy-link"><a href="${orgData.etsyLink}" target="_blank">Visit Tiphereth Etsy Shop</a></p>`;
+            }
+
+
+            organizationCard.innerHTML = `
+                <img src="${orgData.image}" alt="${orgName} Logo" class="organization-logo">
+                <h3>${orgName}</h3>
+                ${facebookLinkHtml}
+                ${etsyLinkHtml}
+                ${eventsHtml}
+            `;
+            eventContainer.appendChild(organizationCard);
         });
     };
 
-    // --- View Switching Logic ---
-    let currentView = 'diary'; // Default view
 
-    const updateView = () => {
-        // Removed: cardViewBtn.classList.remove('active');
-        diaryViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
-
-        if (currentView === 'diary') {
-            renderDiaryView(upcomingEvents);
-            diaryViewBtn.classList.add('active');
-        } else if (currentView === 'organization') {
-            renderOrganizationView(upcomingEvents);
-            organizationViewBtn.classList.add('active');
-        }
-    };
-
-    // Removed: cardViewBtn.addEventListener('click', () => {
-    //     currentView = 'card';
-    //     updateView();
-    // });
-
+    // --- Event Listeners for View Buttons ---
+    // Removed: cardViewBtn listener
     diaryViewBtn.addEventListener('click', () => {
-        currentView = 'diary';
-        updateView();
+        renderDiaryView(upcomingEvents);
     });
 
     organizationViewBtn.addEventListener('click', () => {
-        currentView = 'organization';
-        updateView();
+        renderOrganizationView(allEvents); // Organization view shows ALL relevant organization info, not just upcoming events
     });
 
-    // Initial render based on default view
-    updateView();
+    // Initial render based on default view (Diary View)
+    renderDiaryView(upcomingEvents);
 });
