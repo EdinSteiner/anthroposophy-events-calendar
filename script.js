@@ -22,31 +22,52 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 2,
             "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp",
-            "date": "2025-07-14",
-            "endDate": "2025-07-18", // Example duration
+            "title": "Kindergarten Summer Camp: Week 1",
+            "date": "2025-08-04",
+            "endDate": "2025-08-08", // Corrected duration
             "time": "Full Day",
             "location": "Edinburgh Steiner School Campus",
             "description": "Gentle summer camp for younger children.",
             "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
         },
         {
-            "id": 3,
+            "id": 44, // New ID
             "organization": "Edinburgh Steiner School",
-            "title": "Summer Holiday Camps (General)",
-            "date": "2025-07-21", // Placeholder, subsequent week
+            "title": "Kindergarten Summer Camp: Week 2",
+            "date": "2025-08-11",
+            "endDate": "2025-08-15", // Corrected duration
             "time": "Full Day",
             "location": "Edinburgh Steiner School Campus",
-            "description": "Various summer holiday camps for children and young people.",
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/" // General events page
+            "description": "Gentle summer camp for younger children.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
+        },
+        {
+            "id": 45, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Early Years Parent Education Evening: Rhythm, Repetition, Reverence",
+            "date": "2025-09-18",
+            "time": "19:00 - 21:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "An evening for parents focusing on rhythm, repetition, and reverence in early years education.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/early-years-parent-education-evening-rhythm-repetition-reverence/"
+        },
+        {
+            "id": 46, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "El Mercado Market",
+            "date": "2025-11-22",
+            "time": "10:00 - 15:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "A vibrant market featuring various stalls.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
         },
 
         // --- Edinburgh Christian Community (Facebook link) ---
-        // Removed Study Group events. Link changed to Facebook.
+        // Removed Study Group events, Youth Group listings and Children Service listings.
         {
             "id": 4,
             "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
+            "title": "Act of Consecration of Man",
             "date": "2025-07-06",
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
@@ -54,19 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 7,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-13", // 2nd Sunday
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
             "id": 8,
             "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
+            "title": "Act of Consecration of Man",
             "date": "2025-07-13",
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
@@ -74,19 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 10,
-            "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-18",
-            "time": "19:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
             "id": 11,
             "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
+            "title": "Act of Consecration of Man",
             "date": "2025-07-20",
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
@@ -94,37 +95,85 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
-            "id": 13,
+            "id": 16, // New ID
             "organization": "Edinburgh Christian Community",
-            "title": "Youth Group",
-            "date": "2025-07-25",
-            "time": "19:00",
+            "title": "Devotional Gathering",
+            "date": "2025-07-27",
+            "time": "10:00",
             "location": "Edinburgh Christian Community Church",
-            "description": "Weekly youth group.",
-            "link": "https://www.facebook.com/CCEdinburgh"
-        },
-        {
-            "id": 14,
-            "organization": "Edinburgh Christian Community",
-            "title": "Children's Service",
-            "date": "2025-07-27", // 4th Sunday
-            "time": "TBD",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Service for children (every 2nd and 4th Sunday).",
+            "description": "Devotional Gathering.",
             "link": "https://www.facebook.com/CCEdinburgh"
         },
         {
             "id": 15,
             "organization": "Edinburgh Christian Community",
-            "title": "Sunday Service",
+            "title": "Act of Consecration of Man",
             "date": "2025-07-27",
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
             "link": "https://www.facebook.com/CCEdinburgh"
         },
-        // Placeholder for future weekly events up to June 2026. These would typically be dynamically generated for a real calendar.
-        // For now, these few examples are hardcoded. You can add more as needed following this pattern.
+        {
+            "id": 17, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Tom Ravetz's Visit and Congregational Meeting",
+            "date": "2025-08-02",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Act of Consecration of Man at 10am followed by a short break and the congregational meeting.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
+        {
+            "id": 47, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-08-03",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
+        {
+            "id": 48, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-08-10",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
+        {
+            "id": 49, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-08-17",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
+        {
+            "id": 50, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-08-24",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
+        {
+            "id": 51, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-08-31",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.facebook.com/CCEdinburgh"
+        },
 
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         // Bike Safari (2025-06-14) removed as it was a past event.
@@ -155,11 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 21,
             "organization": "Tiphereth",
-            "title": "Check Tiphereth Website for Events",
-            "date": "2025-08-01", // Placeholder
-            "time": "Ongoing",
+            "title": "Open Morning",
+            "date": "2025-07-30",
+            "time": "TBD",
             "location": "Tiphereth Community",
-            "description": "Please visit the official Tiphereth website for the most current information on upcoming events and activities.",
+            "description": "Open Morning at Tiphereth.",
             "link": "https://www.tiphereth.org.uk/"
         },
 
@@ -172,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 23,
@@ -182,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 24,
@@ -192,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 25,
@@ -202,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Afternoon",
             "location": "Garvald West Linton",
             "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 26,
@@ -212,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 27,
@@ -222,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 28,
@@ -232,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 29,
@@ -242,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Dining Room",
             "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 30,
@@ -252,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Main House",
             "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 31,
@@ -262,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:30 - 13:00",
             "location": "Garvald West Linton Workshops",
             "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 32,
@@ -272,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "PM",
             "location": "Garvald West Linton",
             "description": "Celebration of Santa Lucia.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 33,
@@ -282,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
         {
             "id": 34,
@@ -292,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Christmas Day festive lunch.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+            "link": "" // Link removed
         },
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
@@ -334,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "17:00 GMT",
             "location": "Online",
             "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in Looking, Truth in Making'. Exhibition Jan 29 – Feb 8, 2026.",
-            "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
+            "link": "https://www.ruskinprize.co.uk/" // Corrected link
         },
         {
             "id": 39,
@@ -345,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Varies",
             "location": "Trinity Buoy Wharf, London",
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
-            "link": "https://www.johnruskinprize.co.uk/" // Specific prize website
+            "link": "https://www.ruskinprize.co.uk/" // Corrected link
         },
         // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
@@ -362,15 +411,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
         {
-            "id": 41, // Re-using ID for a placeholder if needed
+            "id": 52, // New ID
             "organization": "Garvald Edinburgh",
-            "title": "Check Garvald Edinburgh Website for Events",
-            "date": "2025-08-01", // Placeholder date
-            "time": "Ongoing",
-            "location": "Garvald Edinburgh",
-            "description": "Please visit the official Garvald Edinburgh website for the most current information on upcoming events and exhibitions.",
-            "link": "https://www.garvaldedinburgh.org.uk/events"
+            "title": "Garvald Gorgie Workshops Open Day",
+            "date": "2025-08-30",
+            "time": "10:30-13:30",
+            "location": "Garvald Gorgie Workshops, Edinburgh",
+            "description": "An open day at Garvald Gorgie Workshops.",
+            "link": "https://www.garvaldedinburgh.org.uk/events/garvald-gorgie-workshops-open-day-2025"
         },
+
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
@@ -383,16 +433,27 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
             "link": "https://locharthur.org.uk/news-and-events/calendar/"
         },
+        {
+            "id": 53, // New ID
+            "organization": "Camphill (Loch Arthur)",
+            "title": "Concert: Anna Massie",
+            "date": "2025-10-29",
+            "time": "19:30 - 21:00",
+            "location": "Loch Arthur Camphill Community",
+            "description": "Concert by Anna Massie.",
+            "link": "https://locharthur.org.uk/event/concert-anna-massie/"
+        },
         // --- Anthroposophy in Edinburgh ---
+        // Removed 'Study Group Meeting' listings.
         {
             "id": 43,
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Study Group Meeting",
-            "date": "2025-09-10",
-            "time": "19:00",
+            "title": "Monday Study Group",
+            "date": "2025-08-18",
+            "time": "13:45-15:15",
             "location": "The Salisbury Centre, Edinburgh",
-            "description": "Regular study group on anthroposophical topics.",
-            "link": "https://www.anthroposophyinedinburgh.org.uk/" // Example link
+            "description": "Monday Study Group, which resumes on 18 August 1:45-3:15pm studying Riddles of Philosophy by Rudolf Steiner. This group meets fortnightly on Mondays.",
+            "link": "Contact :ioberskigmail.com" // Changed to contact info
         }
     ];
 
@@ -549,18 +610,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             dailyEventsMap.get(dateKey).forEach(event => {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `
+                const listItem = document.createElement('li');
+                let linkContent = event.link;
+                if (event.link && event.link.startsWith('http')) {
+                    linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                }
+                listItem.innerHTML = `
                         <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
                         <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
                         <p><strong>Time:</strong> ${event.time}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
-                        <p class="more-info-diary"><a href="${event.link}" target="_blank">More Information</a></p>
+                        <p class="more-info-diary">${linkContent}</p>
                     `;
-                    eventList.appendChild(listItem);
-                });
+                eventList.appendChild(listItem);
+            });
             dayCard.appendChild(eventList);
             eventContainer.appendChild(dayCard);
         });
@@ -598,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
             // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
-            const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link ? groupedEvents[orgName][0].link : '#';
+            const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link && groupedEvents[orgName][0].link.startsWith('http') ? groupedEvents[orgName][0].link : '#'; // Ensure it's a valid http link
 
             const organizationNameColumn = document.createElement('div');
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
@@ -622,13 +687,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 groupedEvents[orgName].forEach(event => {
                     const listItem = document.createElement('li'); // Changed to li for list format
+                    let linkContent = event.link;
+                    if (event.link && event.link.startsWith('http')) {
+                        linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                    }
                     listItem.innerHTML = `
                         <h4>${event.title}</h4>
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
                         <p><strong>Time:</strong> ${event.time}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                        <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
+                        <p class="more-info">${linkContent}</p>
                     `;
                     eventList.appendChild(listItem); // Append li to ul
                 });
@@ -652,24 +721,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Removed: cardViewBtn.addEventListener('click', () => { ... });
-    /*
-    cardViewBtn.addEventListener('click', () => {
-        activateButton(cardViewBtn);
-        renderCardView(upcomingEvents);
-    });
-    */
 
     diaryViewBtn.addEventListener('click', () => {
-        activateButton(diaryViewBtn);
         renderDiaryView(upcomingEvents);
+        activateButton(diaryViewBtn);
     });
 
     organizationViewBtn.addEventListener('click', () => {
-        activateButton(organizationViewBtn);
         renderOrganizationView(upcomingEvents);
+        activateButton(organizationViewBtn);
     });
 
-    // Initial render on page load: Diary View as default
-    activateButton(diaryViewBtn); // Highlight Diary View button
-    renderDiaryView(upcomingEvents); // Render Diary View by default
+    // Initial render based on default view (e.g., Diary View)
+    renderDiaryView(upcomingEvents);
+    activateButton(diaryViewBtn); // Activate diary button on load
 });
