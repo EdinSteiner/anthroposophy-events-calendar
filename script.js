@@ -211,6 +211,29 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Open Morning at Tiphereth.",
             "link": "https://www.tiphereth.org.uk/"
         },
+        // ADDITION 1.1: Tiphereth Etsy Shop for Organization view
+        {
+            "id": 54, // New ID for Etsy shop
+            "organization": "Tiphereth",
+            "title": "Tiphereth Etsy Shop",
+            "date": null, // This does not go in Diary view, so no specific date
+            "time": null,
+            "location": "Online",
+            "description": "Browse and purchase handcrafted items made in Tiphereth workshops.",
+            "link": "https://www.etsy.com/uk/shop/printstudiotiphereth",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        // ADDITION 1.2: Tiphereth Pop-up Shop
+        {
+            "id": 55, // New ID for pop-up shop
+            "organization": "Tiphereth",
+            "title": "New Pop-up Shop Opening",
+            "date": "2025-07-11",
+            "time": "TBD", // Assuming time not specified, or can be added if known
+            "location": "37-39 Torphin Road, Edinburgh, EH13 0PG",
+            "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
+            "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
+        },
 
         // --- Garvald West Linton (from recent Google Search tool results) ---
         {
@@ -454,6 +477,29 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "The Salisbury Centre, Edinburgh",
             "description": "Monday Study Group, which resumes on 18 August 1:45-3:15pm studying Riddles of Philosophy by Rudolf Steiner. This group meets fortnightly on Mondays.",
             "link": "Contact :ioberskigmail.com" // Changed to contact info
+        },
+        // ADDITION 2: Anthroposophy in Edinburgh - Online Study Group
+        {
+            "id": 56, // New ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Online Study Group of the Leading Thoughts",
+            "date": "2025-08-26",
+            "time": "19:00-20:00",
+            "location": "Online",
+            "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        // ADDITION 3: Anthroposophy in Edinburgh and Edinburgh Steiner School - Fire in the Temple
+        {
+            "id": 57, // New ID
+            "organization": "Anthroposophy in Edinburgh", // Primary organization
+            "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
+            "title": "Fire in the Temple: A Staged Reading",
+            "date": "2025-11-09",
+            "time": "14:00-16:30",
+            "location": "Edinburgh Steiner School",
+            "description": "A staged reading of the play by Glen Williamson.",
+            "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
         }
     ];
 
@@ -484,6 +530,11 @@ document.addEventListener('DOMContentLoaded', () => {
         now.setHours(0, 0, 0, 0); // Set to start of today for comparison
 
         return eventsArray.filter(event => {
+            // Events marked as 'isOrganizationDetail' are for the organization view only and should not appear in Diary
+            if (event.isOrganizationDetail) {
+                return false;
+            }
+
             const startDate = new Date(event.date);
             startDate.setHours(0, 0, 0, 0);
 
@@ -508,6 +559,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper to format dates consistently
     const formatDate = (dateString, endDateString = null) => {
         const options = { day: 'numeric', month: 'short', year: 'numeric' };
+        // Handle null dateString for events like Etsy shop that don't have a date
+        if (!dateString) {
+            return '';
+        }
         const startDate = new Date(dateString).toLocaleDateString('en-GB', options);
 
         if (endDateString && dateString !== endDateString) {
@@ -560,7 +615,10 @@ document.addEventListener('DOMContentLoaded', () => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'diary-layout'; // Set class for diary layout
 
-        if (eventsToDisplay.length === 0) {
+        // Filter out events that are specifically marked for organization view only
+        const diaryEvents = eventsToDisplay.filter(event => !event.isOrganizationDetail);
+
+        if (diaryEvents.length === 0) {
             eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Diary View.</p>';
             return;
         }
@@ -570,7 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const today = new Date();
         today.setHours(0, 0, 0, 0); // Start of today
 
-        eventsToDisplay.forEach(event => {
+        diaryEvents.forEach(event => {
             const startDate = new Date(event.date);
             startDate.setHours(0, 0, 0, 0);
             const endDate = event.endDate ? new Date(event.endDate) : startDate;
@@ -604,8 +662,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Sort events within each day by time (simple string comparison for "HH:MM")
             dailyEventsMap.get(dateKey).sort((a, b) => {
-                const timeA = a.time.split(' ')[0];
-                const timeB = b.time.split(' ')[0];
+                const timeA = a.time ? a.time.split(' ')[0] : 'ZZZZ'; // Handle cases with no time, push to end
+                const timeB = b.time ? b.time.split(' ')[0] : 'ZZZZ';
                 return timeA.localeCompare(timeB);
             });
 
@@ -614,12 +672,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 let linkContent = event.link;
                 if (event.link && event.link.startsWith('http')) {
                     linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                } else if (event.link && event.link.startsWith('Contact')) {
+                    linkContent = event.link; // Display as is if it's contact info
                 }
                 listItem.innerHTML = `
                         <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
                         <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time}</p>
+                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
                         <p class="more-info-diary">${linkContent}</p>
@@ -636,8 +696,8 @@ document.addEventListener('DOMContentLoaded', () => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'organization-layout';
 
-        // Group events by organization and store their first event's link for the homepage URL
-        const groupedEvents = eventsToDisplay.reduce((acc, event) => {
+        // Group ALL events by organization, including those for organization details
+        const groupedEvents = allEvents.reduce((acc, event) => {
             if (!acc[event.organization]) {
                 acc[event.organization] = [];
             }
@@ -662,8 +722,20 @@ document.addEventListener('DOMContentLoaded', () => {
             organizationRow.className = 'organization-row';
 
             const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
-            // Get the first event's link for the organization's homepage URL, or a general org link if events are just placeholders
-            const orgHomePageLink = groupedEvents[orgName].length > 0 && groupedEvents[orgName][0].link && groupedEvents[orgName][0].link.startsWith('http') ? groupedEvents[orgName][0].link : '#'; // Ensure it's a valid http link
+
+            // Find the primary link for the organization. Prefer a non-event specific link if available.
+            let orgHomePageLink = '#';
+            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
+            if (organizationDetailEvent) {
+                orgHomePageLink = organizationDetailEvent.link;
+            } else {
+                // As a fallback, use the link from the first available event that has a link
+                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
+                if (firstEventWithLink) {
+                    orgHomePageLink = firstEventWithLink.link;
+                }
+            }
+
 
             const organizationNameColumn = document.createElement('div');
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
@@ -678,61 +750,88 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationEventsColumn = document.createElement('div');
             organizationEventsColumn.className = 'organization-events-column';
 
-            if (groupedEvents[orgName].length > 0) {
-                // Sort events by date within each organization
-                groupedEvents[orgName].sort((a, b) => new Date(a.date) - new Date(b.date));
+            // Filter for actual upcoming events for this organization (not organization detail entries)
+            const upcomingOrgEvents = groupedEvents[orgName].filter(event =>
+                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
+            );
+
+            // Add the special organization detail event if it exists for this organization
+            if (organizationDetailEvent) {
+                upcomingOrgEvents.unshift(organizationDetailEvent); // Add to the beginning
+            }
+
+            if (upcomingOrgEvents.length > 0) {
+                // Sort events by date, but keep "isOrganizationDetail" events at the top
+                upcomingOrgEvents.sort((a, b) => {
+                    if (a.isOrganizationDetail) return -1;
+                    if (b.isOrganizationDetail) return 1;
+                    return new Date(a.date) - new Date(b.date);
+                });
 
                 const eventList = document.createElement('ul');
                 eventList.className = 'organization-event-list';
 
-                groupedEvents[orgName].forEach(event => {
+                upcomingOrgEvents.forEach(event => {
                     const listItem = document.createElement('li'); // Changed to li for list format
                     let linkContent = event.link;
                     if (event.link && event.link.startsWith('http')) {
                         linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                    } else if (event.link && event.link.startsWith('Contact')) {
+                        linkContent = event.link; // Display as is if it's contact info
                     }
-                    listItem.innerHTML = `
-                        <h4>${event.title}</h4>
-                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                        <p class="more-info">${linkContent}</p>
-                    `;
-                    eventList.appendChild(listItem); // Append li to ul
-                });
-                organizationEventsColumn.appendChild(eventList); // Append ul to column
-            } else {
-                const noEvents = document.createElement('p');
-                noEvents.className = 'no-events-on-day';
-                noEvents.textContent = 'No upcoming events listed.';
-                organizationEventsColumn.appendChild(noEvents);
-            }
 
+                    // For organization-specific details, we might want a slightly different display
+                    if (event.isOrganizationDetail) {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
+                        `;
+                    } else {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                            <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
+                            <p><strong>Location:</strong> ${event.location}</p>
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
+                        `;
+                    }
+                    eventList.appendChild(listItem);
+                });
+                organizationEventsColumn.appendChild(eventList);
+            } else {
+                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed.</p>';
+            }
             organizationRow.appendChild(organizationEventsColumn);
             eventContainer.appendChild(organizationRow);
         });
     };
 
-    // --- View Switching Logic ---
-    const activateButton = (button) => {
-        document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+
+    // --- View Mode Management ---
+    let currentView = 'diary'; // Default view
+
+    const setView = (view) => {
+        currentView = view;
+        // cardViewBtn.classList.remove('active'); // Removed cardViewBtn
+        diaryViewBtn.classList.remove('active');
+        organizationViewBtn.classList.remove('active');
+
+        if (view === 'diary') {
+            renderDiaryView(upcomingEvents);
+            diaryViewBtn.classList.add('active');
+        } else if (view === 'organization') {
+            renderOrganizationView(allEvents); // Organization view shows all organization entries, not just upcoming events
+            organizationViewBtn.classList.add('active');
+        }
     };
 
-    // Removed: cardViewBtn.addEventListener('click', () => { ... });
+    // Event Listeners for view buttons
+    // Removed: cardViewBtn.addEventListener('click', () => setView('card'));
+    diaryViewBtn.addEventListener('click', () => setView('diary'));
+    organizationViewBtn.addEventListener('click', () => setView('organization'));
 
-    diaryViewBtn.addEventListener('click', () => {
-        renderDiaryView(upcomingEvents);
-        activateButton(diaryViewBtn);
-    });
-
-    organizationViewBtn.addEventListener('click', () => {
-        renderOrganizationView(upcomingEvents);
-        activateButton(organizationViewBtn);
-    });
-
-    // Initial render based on default view (e.g., Diary View)
-    renderDiaryView(upcomingEvents);
-    activateButton(diaryViewBtn); // Activate diary button on load
+    // Initial render based on default view
+    setView(currentView);
 });
