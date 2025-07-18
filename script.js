@@ -223,18 +223,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.etsy.com/uk/shop/printstudiotiphereth",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
-        // ADDITION 1.2: Tiphereth Pop-up Shop for Diary and Organization view
+        // ADDITION 1.2: Tiphereth Pop-up Shop
         {
             "id": 55, // New ID for pop-up shop
             "organization": "Tiphereth",
-            "title": "Pop-up Shop",
-            "date": "2025-07-18", // Setting an initial Friday date for the diary view
-            "time": "9:00 - 16:30",
+            "title": "New Pop-up Shop Opening",
+            "date": "2025-07-11",
+            "time": "TBD", // Assuming time not specified, or can be added if known
             "location": "37-39 Torphin Road, Edinburgh, EH13 0PG",
-            "description": "Tiphereth's new pop-up shop offers a variety of handcrafted items made in their workshops, including print studio products. The shop is open every Friday.",
-            "link": "https://www.tiphereth.org.uk/", // Link to Tiphereth's main site for general info
-            "isRecurringWeekly": true, // Custom property to signify weekly recurrence
-            "dayOfWeek": 5 // Friday (0=Sunday, 1=Monday... 5=Friday)
+            "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
+            "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
         },
 
         // --- Garvald West Linton (from recent Google Search tool results) ---
@@ -531,17 +529,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date();
         now.setHours(0, 0, 0, 0); // Set to start of today for comparison
 
-        const filtered = eventsArray.filter(event => {
+        return eventsArray.filter(event => {
             // Events marked as 'isOrganizationDetail' are for the organization view only and should not appear in Diary
             if (event.isOrganizationDetail) {
                 return false;
-            }
-
-            // Handle recurring weekly events
-            if (event.isRecurringWeekly) {
-                // If it's a recurring event, it should always be considered upcoming for diary view
-                // We'll handle the specific date generation in renderDiaryView
-                return true;
             }
 
             const startDate = new Date(event.date);
@@ -558,41 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return startDate >= now;
             }
         });
-
-        // Add recurring events for a reasonable future period (e.g., next 6 months)
-        const recurringEventsToAdd = [];
-        const sixMonthsFromNow = new Date();
-        sixMonthsFromNow.setMonth(today.getMonth() + 6);
-
-        eventsArray.forEach(event => {
-            if (event.isRecurringWeekly && event.dayOfWeek !== undefined && event.time) {
-                let currentDate = new Date(today);
-                // Find the first upcoming occurrence of the recurring event
-                while (currentDate.getDay() !== event.dayOfWeek) {
-                    currentDate.setDate(currentDate.getDate() + 1);
-                }
-                // If the first occurrence is today, and the time has passed, move to next week
-                const [eventHour, eventMinute] = event.time.split(':').map(Number);
-                const eventTimeToday = new Date(currentDate);
-                eventTimeToday.setHours(eventHour, eventMinute, 0, 0);
-
-                if (eventTimeToday < new Date() && currentDate.toDateString() === new Date().toDateString()) {
-                    currentDate.setDate(currentDate.getDate() + 7); // Move to next week
-                }
-
-
-                while (currentDate <= sixMonthsFromNow) {
-                    const newRecurringEvent = { ...event };
-                    newRecurringEvent.date = currentDate.toISOString().slice(0, 10);
-                    newRecurringEvent.id = `${event.id}-${newRecurringEvent.date}`; // Unique ID for each occurrence
-                    recurringEventsToAdd.push(newRecurringEvent);
-                    currentDate.setDate(currentDate.getDate() + 7); // Move to next week
-                }
-            }
-        });
-        return filtered.concat(recurringEventsToAdd);
     };
-
 
     const upcomingEvents = filterUpcomingEvents(allEvents); // Filter events once
 
@@ -672,37 +629,23 @@ document.addEventListener('DOMContentLoaded', () => {
         today.setHours(0, 0, 0, 0); // Start of today
 
         diaryEvents.forEach(event => {
-            if (event.isRecurringWeekly) {
-                // Recurring events have already been expanded by filterUpcomingEvents,
-                // so we treat each instance as a single-day event here.
-                const eventDate = new Date(event.date);
-                eventDate.setHours(0, 0, 0, 0);
-                if (eventDate >= today) {
-                    const dateKey = eventDate.toISOString().slice(0, 10); //YYYY-MM-DD
+            const startDate = new Date(event.date);
+            startDate.setHours(0, 0, 0, 0);
+            const endDate = event.endDate ? new Date(event.endDate) : startDate;
+            endDate.setHours(23, 59, 59, 999); // End of end day
+
+            // Iterate over each day the event is active
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                // Only add to map if the event date is today or in the future
+                if (currentDate >= today) {
+                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
                     if (!dailyEventsMap.has(dateKey)) {
                         dailyEventsMap.set(dateKey, []);
                     }
                     dailyEventsMap.get(dateKey).push(event);
                 }
-            } else {
-                const startDate = new Date(event.date);
-                startDate.setHours(0, 0, 0, 0);
-                const endDate = event.endDate ? new Date(event.endDate) : startDate;
-                endDate.setHours(23, 59, 59, 999); // End of end day
-
-                // Iterate over each day the event is active
-                let currentDate = new Date(startDate);
-                while (currentDate <= endDate) {
-                    // Only add to map if the event date is today or in the future
-                    if (currentDate >= today) {
-                        const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
-                        if (!dailyEventsMap.has(dateKey)) {
-                            dailyEventsMap.set(dateKey, []);
-                        }
-                        dailyEventsMap.get(dateKey).push(event);
-                    }
-                    currentDate.setDate(currentDate.getDate() + 1); // Move to next day
-                }
+                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
             }
         });
 
@@ -754,124 +697,141 @@ document.addEventListener('DOMContentLoaded', () => {
         eventContainer.className = 'organization-layout';
 
         // Group ALL events by organization, including those for organization details
-        const groupedEvents = new Map();
-        allEvents.forEach(event => { // Use allEvents here to include isOrganizationDetail events
-            if (!groupedEvents.has(event.organization)) {
-                groupedEvents.set(event.organization, []);
+        const groupedEvents = allEvents.reduce((acc, event) => {
+            if (!acc[event.organization]) {
+                acc[event.organization] = [];
             }
-            groupedEvents.get(event.organization).push(event);
-        });
+            acc[event.organization].push(event);
+            return acc;
+        }, {});
 
-        // Sort organizations alphabetically
-        const sortedOrganizations = Array.from(groupedEvents.keys()).sort();
+        // Add the column header
+        const headerRow = document.createElement('div');
+        headerRow.className = 'organization-header';
+        headerRow.innerHTML = `
+            <div class="header-org-name">Organization</div>
+            <div class="header-events">Upcoming Events</div>
+        `;
+        eventContainer.appendChild(headerRow);
 
-        sortedOrganizations.forEach(orgName => {
-            const orgSection = document.createElement('div');
-            orgSection.className = 'organization-section';
+        // Sort organizations alphabetically for consistent display
+        const sortedOrgNames = Object.keys(groupedEvents).sort();
 
-            const orgImage = organizationImages[orgName];
-            if (orgImage) {
-                orgSection.innerHTML += `<img src="${orgImage}" alt="${orgName} Logo" class="organization-logo">`;
+        sortedOrgNames.forEach(orgName => {
+            const organizationRow = document.createElement('div');
+            organizationRow.className = 'organization-row';
+
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
+
+            // Find the primary link for the organization. Prefer a non-event specific link if available.
+            let orgHomePageLink = '#';
+            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
+            if (organizationDetailEvent) {
+                orgHomePageLink = organizationDetailEvent.link;
+            } else {
+                // As a fallback, use the link from the first available event that has a link
+                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
+                if (firstEventWithLink) {
+                    orgHomePageLink = firstEventWithLink.link;
+                }
             }
 
-            orgSection.innerHTML += `<h2>${orgName}</h2>`;
 
-            const orgEventList = document.createElement('ul');
-            orgEventList.className = 'organization-event-list';
+            const organizationNameColumn = document.createElement('div');
+            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            organizationNameColumn.innerHTML = `
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
+            `;
+            organizationRow.appendChild(organizationNameColumn);
 
-            // Filter for events relevant to the organization view (not past events unless they are recurring or 'isOrganizationDetail')
-            const relevantOrgEvents = groupedEvents.get(orgName).filter(event => {
-                if (event.isOrganizationDetail) {
-                    return true; // Always show organization details
-                }
-                if (event.isRecurringWeekly) {
-                    return true; // Always show recurring weekly events in org view description
-                }
-                const now = new Date();
-                now.setHours(0, 0, 0, 0);
-                const startDate = new Date(event.date);
-                startDate.setHours(0, 0, 0, 0);
-                return event.endDate ? new Date(event.endDate).setHours(23,59,59,999) >= now : startDate >= now;
-            });
+            const organizationEventsColumn = document.createElement('div');
+            organizationEventsColumn.className = 'organization-events-column';
 
+            // Filter for actual upcoming events for this organization (not organization detail entries)
+            const upcomingOrgEvents = groupedEvents[orgName].filter(event =>
+                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
+            );
 
-            // Sort events within the organization by date
-            relevantOrgEvents.sort((a, b) => {
-                // Push undated events (like Etsy shop) to the end
-                if (!a.date && b.date) return 1;
-                if (a.date && !b.date) return -1;
-                if (!a.date && !b.date) return 0;
-                return new Date(a.date) - new Date(b.date);
-            });
+            // Add the special organization detail event if it exists for this organization
+            if (organizationDetailEvent) {
+                upcomingOrgEvents.unshift(organizationDetailEvent); // Add to the beginning
+            }
 
-            relevantOrgEvents.forEach(event => {
-                const listItem = document.createElement('li');
-                let eventDetails = '';
+            if (upcomingOrgEvents.length > 0) {
+                // Sort events by date, but keep "isOrganizationDetail" events at the top
+                upcomingOrgEvents.sort((a, b) => {
+                    if (a.isOrganizationDetail) return -1;
+                    if (b.isOrganizationDetail) return 1;
+                    return new Date(a.date) - new Date(b.date);
+                });
 
-                if (event.isOrganizationDetail) {
-                    // For organization-specific details like Etsy shop
-                    eventDetails = `
-                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                        ${event.description ? `<p>${event.description}</p>` : ''}
-                    `;
-                } else if (event.isRecurringWeekly) {
-                    // For recurring weekly events, state it's "Every Friday" etc.
-                    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                    const day = dayNames[event.dayOfWeek];
-                    eventDetails = `
-                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                        <p><strong>Frequency:</strong> Every ${day}</p>
-                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p>${event.description}</p>` : ''}
-                    `;
-                }
-                else {
-                    // For regular upcoming events
-                    eventDetails = `
-                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p>${event.description}</p>` : ''}
-                    `;
-                }
+                const eventList = document.createElement('ul');
+                eventList.className = 'organization-event-list';
 
-                let linkContent = event.link;
-                if (event.link && event.link.startsWith('http')) {
-                    linkContent = `<p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>`;
-                } else if (event.link && event.link.startsWith('Contact')) {
-                    linkContent = `<p class="more-info">${event.link}</p>`; // Display as is if it's contact info
-                } else {
-                    linkContent = ''; // No link provided
-                }
+                upcomingOrgEvents.forEach(event => {
+                    const listItem = document.createElement('li'); // Changed to li for list format
+                    let linkContent = event.link;
+                    if (event.link && event.link.startsWith('http')) {
+                        linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                    } else if (event.link && event.link.startsWith('Contact')) {
+                        linkContent = event.link; // Display as is if it's contact info
+                    }
 
-                listItem.innerHTML = `${eventDetails}${linkContent}`;
-                orgEventList.appendChild(listItem);
-            });
-
-            orgSection.appendChild(orgEventList);
-            eventContainer.appendChild(orgSection);
+                    // For organization-specific details, we might want a slightly different display
+                    if (event.isOrganizationDetail) {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
+                        `;
+                    } else {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                            <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
+                            <p><strong>Location:</strong> ${event.location}</p>
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
+                        `;
+                    }
+                    eventList.appendChild(listItem);
+                });
+                organizationEventsColumn.appendChild(eventList);
+            } else {
+                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed.</p>';
+            }
+            organizationRow.appendChild(organizationEventsColumn);
+            eventContainer.appendChild(organizationRow);
         });
     };
 
 
-    // Event Listeners for view buttons
-    diaryViewBtn.addEventListener('click', () => {
-        renderDiaryView(upcomingEvents);
-        diaryViewBtn.classList.add('active');
-        organizationViewBtn.classList.remove('active');
-        // Removed: cardViewBtn.classList.remove('active');
-    });
+    // --- View Mode Management ---
+    let currentView = 'diary'; // Default view
 
-    organizationViewBtn.addEventListener('click', () => {
-        renderOrganizationView(allEvents); // Organization view displays ALL relevant org data, not just upcoming events
-        organizationViewBtn.classList.add('active');
+    const setView = (view) => {
+        currentView = view;
+        // cardViewBtn.classList.remove('active'); // Removed cardViewBtn
         diaryViewBtn.classList.remove('active');
-        // Removed: cardViewBtn.classList.remove('active');
-    });
+        organizationViewBtn.classList.remove('active');
 
-    // Initial render based on default view (e.g., Diary View)
-    renderDiaryView(upcomingEvents);
-    diaryViewBtn.classList.add('active'); // Set initial active state for Diary View
+        if (view === 'diary') {
+            renderDiaryView(upcomingEvents);
+            diaryViewBtn.classList.add('active');
+        } else if (view === 'organization') {
+            renderOrganizationView(allEvents); // Organization view shows all organization entries, not just upcoming events
+            organizationViewBtn.classList.add('active');
+        }
+    };
+
+    // Event Listeners for view buttons
+    // Removed: cardViewBtn.addEventListener('click', () => setView('card'));
+    diaryViewBtn.addEventListener('click', () => setView('diary'));
+    organizationViewBtn.addEventListener('click', () => setView('organization'));
+
+    // Initial render based on default view
+    setView(currentView);
 });
