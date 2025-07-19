@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 8,
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 11,
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 16, // New ID
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Devotional Gathering.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 15,
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 17, // New ID
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Act of Consecration of Man at 10am followed by a short break and the congregational meeting.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 47, // New ID
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 48, // New ID
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 49, // New ID
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 50, // New ID
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 51, // New ID
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:00",
             "location": "Edinburgh Christian Community Church",
             "description": "Weekly service.",
-            "link": "https://www.facebook.com/CCEdinburgh"
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
 
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
@@ -196,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "date": "2025-08-01", // Placeholder date
             "time": "Ongoing",
             "location": "Corbenic Camphill Community",
-            "description": "Please visit the official Corbenic website for current information on events and activities.",
-            "link": "https://www.corbeniccamphill.co.uk/"
+            "description": "Please check the newsletter or website for current information on events and activities.",
+            "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
         },
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 23,
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 24,
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 25,
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Afternoon",
             "location": "Garvald West Linton",
             "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 26,
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Residents and staff to dress up for Halloween.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 27,
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Fireworks display with hot chocolate.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 28,
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 29,
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Dining Room",
             "description": "Advent wreath making for all.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 30,
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Main House",
             "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 31,
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:30 - 13:00",
             "location": "Garvald West Linton Workshops",
             "description": "Workshops selling handmade items.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 32,
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "PM",
             "location": "Garvald West Linton",
             "description": "Celebration of Santa Lucia.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 33,
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 34,
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Christmas Day festive lunch.",
-            "link": "" // Link removed
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
@@ -471,18 +471,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 43,
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Monday Study Group",
+            "title": "Monday Fortnightly Study Group: Riddles of Philosophy",
             "date": "2025-08-18",
             "time": "13:45-15:15",
-            "location": "The Salisbury Centre, Edinburgh",
-            "description": "Monday Study Group, which resumes on 18 August 1:45-3:15pm studying Riddles of Philosophy by Rudolf Steiner. This group meets fortnightly on Mondays.",
-            "link": "Contact :ioberskigmail.com" // Changed to contact info
+            "location": "Library of Edinburgh Chrisitian Community",
+            "description": "Resumes on 18 August 1:45-3:15pm and meets fortnightly on Mondays.",
+            "link": "Contact :ioberski[at]gmail.com" // Changed to contact info
         },
         // ADDITION 2: Anthroposophy in Edinburgh - Online Study Group
         {
             "id": 56, // New ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Online Study Group of the Leading Thoughts",
+            "title": "Tueaday Weekly Online Study Group of the Leading Thoughts",
             "date": "2025-08-26",
             "time": "19:00-20:00",
             "location": "Online",
