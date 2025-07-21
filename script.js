@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Open Day",
             "date": "2025-07-31",
             "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
+            "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Open Day",
             "date": "2025-08-25",
             "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
+            "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Open Day",
             "date": "2025-09-29",
             "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
+            "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
