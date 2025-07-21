@@ -1,847 +1,487 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Event Data ---
-    // IMPORTANT: This array holds STATIC event data.
-    // Events below are consolidated from previous search results and your direct input,
-    // filtered and adjusted based on all your feedback.
-    // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
-    // You MUST verify the accuracy and currency of these events against official websites.
-    // Dates are set to be in the future (from current date June 30, 2025) or ongoing.
-    const allEvents = [
-        // --- Edinburgh Steiner School (from previous Google Search tool results) ---
-        {
-            "id": 1,
-            "organization": "Edinburgh Steiner School",
-            "title": "Summer Circus and Craft Camp",
-            "date": "2025-07-07",
-            "endDate": "2025-07-11", // Example duration
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Engaging camp with circus skills and creative crafts.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
-        },
-        {
-            "id": 2,
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp: Week 1",
-            "date": "2025-08-04",
-            "endDate": "2025-08-08", // Corrected duration
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 44, // New ID
-            "organization": "Edinburgh Steiner School",
-            "title": "Kindergarten Summer Camp: Week 2",
-            "date": "2025-08-11",
-            "endDate": "2025-08-15", // Corrected duration
-            "time": "Full Day",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "Gentle summer camp for younger children.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
-        },
-        {
-            "id": 45, // New ID
-            "organization": "Edinburgh Steiner School",
-            "title": "Early Years Parent Education Evening: Rhythm, Repetition, Reverence",
-            "date": "2025-09-18",
-            "time": "19:00 - 21:00",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "An evening for parents focusing on rhythm, repetition, and reverence in early years education.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/early-years-parent-education-evening-rhythm-repetition-reverence/"
-        },
-        {
-            "id": 46, // New ID
-            "organization": "Edinburgh Steiner School",
-            "title": "El Mercado Market",
-            "date": "2025-11-22",
-            "time": "10:00 - 15:00",
-            "location": "Edinburgh Steiner School Campus",
-            "description": "A vibrant market featuring various stalls.",
-            "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
-        },
+/* General Body and Font Styles */
+body {
+    font-family: 'Spectral', serif; /* Using Spectral, change to 'Cormorant Garamond' if preferred */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333;
+}
 
-        // --- Edinburgh Christian Community (Facebook link) ---
-        // Removed Study Group events, Youth Group listings and Children Service listings.
-        {
-            "id": 4,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-07-06",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 8,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-07-13",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 11,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-07-20",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 16, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Devotional Gathering",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Devotional Gathering.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 17, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Tom Ravetz's Visit and Congregational Meeting",
-            "date": "2025-08-02",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Act of Consecration of Man at 10am followed by a short break and the congregational meeting.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 47, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-03",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 48, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-10",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 49, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-17",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 50, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-24",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 51, // New ID
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-08-31",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
+/* Header Styling - Solid dark background */
+header {
+    background-color: #3a3a3a; /* Darker background for header */
+    color: white; /* Text color for readability */
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px auto 0;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
 
-        // --- Camphill Blair Drummond (from recent Google Search tool results) ---
-        // Bike Safari (2025-06-14) removed as it was a past event.
-        {
-            "id": 18,
-            "organization": "Camphill Blair Drummond",
-            "title": "Vocal Recital: Un-Ravel-ing the Source Material",
-            "date": "2025-07-19",
-            "time": "TBD",
-            "location": "Camphill Blair Drummond, Stirling",
-            "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
-            "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
-        },
+header h1 {
+    margin: 0 0 5px;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
-        // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
-        {
-            "id": 19, // Re-using ID for a placeholder if needed
-            "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01", // Placeholder date
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please check the newsletter or website for current information on events and activities.",
-            "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
-        },
+header .subtitle {
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.9;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 2px;
+}
 
-        // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
-        {
-            "id": 21,
-            "organization": "Tiphereth",
-            "title": "Open Morning",
-            "date": "2025-07-30",
-            "time": "TBD",
-            "location": "Tiphereth Community",
-            "description": "Open Morning at Tiphereth.",
-            "link": "https://www.tiphereth.org.uk/"
-        },
-        // ADDITION 1.1: Tiphereth Etsy Shop for Organization view
-        {
-            "id": 54, // New ID for Etsy shop
-            "organization": "Tiphereth",
-            "title": "Tiphereth Etsy Shop",
-            "date": null, // This does not go in Diary view, so no specific date
-            "time": null,
-            "location": "Online",
-            "description": "Browse and purchase handcrafted items made in Tiphereth workshops.",
-            "link": "https://www.etsy.com/uk/shop/printstudiotiphereth",
-            "isOrganizationDetail": true // Custom property to signify it's for org view only
-        },
-        // ADDITION 1.2: Tiphereth Pop-up Shop
-        {
-            "id": 55, // New ID for pop-up shop
-            "organization": "Tiphereth",
-            "title": "New Pop-up Shop Opening",
-            "date": "2025-07-11",
-            "time": "TBD", // Assuming time not specified, or can be added if known
-            "location": "37-39 Torphin Road, Edinburgh, EH13 0PG",
-            "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
-            "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
-        },
+/* Navigation Bar */
+nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for nav */
+    padding: 6px 10px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    max-width: 1200px;
+    margin: 0 auto 10px; /* Aligns with header */
+}
 
-        // --- Garvald West Linton (from recent Google Search tool results) ---
-        {
-            "id": 22,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-04",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 23,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-07-18",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 24,
-            "organization": "Garvald West Linton",
-            "title": "Community Gathering & Project",
-            "date": "2025-08-01",
-            "time": "09:45 - 12:30",
-            "location": "Garvald West Linton Hall",
-            "description": "Regular community gathering and project work.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 25,
-            "organization": "Garvald West Linton",
-            "title": "Michaelmas/Harvest Lunch & Event",
-            "date": "2025-09-29",
-            "time": "Afternoon",
-            "location": "Garvald West Linton",
-            "description": "Annual Michaelmas/Harvest celebration.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 26,
-            "organization": "Garvald West Linton",
-            "title": "Halloween Party",
-            "date": "2025-10-31",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Residents and staff to dress up for Halloween.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 27,
-            "organization": "Garvald West Linton",
-            "title": "Guy Fawkes Fireworks",
-            "date": "2025-11-05",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Fireworks display with hot chocolate.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 28,
-            "organization": "Garvald West Linton",
-            "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Lantern walk with a story about St Martin and the Beggar.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 29,
-            "organization": "Garvald West Linton",
-            "title": "Advent Wreath Making",
-            "date": "2025-11-28",
-            "time": "TBD",
-            "location": "Garvald West Linton Dining Room",
-            "description": "Advent wreath making for all.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 30,
-            "organization": "Garvald West Linton",
-            "title": "1st Advent Celebration",
-            "date": "2025-11-30",
-            "time": "TBD",
-            "location": "Garvald West Linton Main House",
-            "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 31,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
-            "date": "2025-12-06",
-            "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 32,
-            "organization": "Garvald West Linton",
-            "title": "Santa Lucia Event",
-            "date": "2025-12-13",
-            "time": "PM",
-            "location": "Garvald West Linton",
-            "description": "Celebration of Santa Lucia.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 33,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Eve Celebrations",
-            "date": "2025-12-24",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
-        {
-            "id": 34,
-            "organization": "Garvald West Linton",
-            "title": "Christmas Day Lunch",
-            "date": "2025-12-25",
-            "time": "TBD",
-            "location": "Garvald West Linton",
-            "description": "Christmas Day festive lunch.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
-        },
+nav button {
+    background-color: #a87e5b; /* Earthy tone */
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    margin: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
 
-        // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
-        {
-            "id": 35,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-07-31",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 36,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-08-25",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 37,
-            "organization": "Fairhill Rise", // Updated from Ruskin Mill
-            "title": "Open Day",
-            "date": "2025-09-29",
-            "time": "TBD",
-            "location": "Fairhill Rise, Gloucestershire",
-            "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
-        },
-        {
-            "id": 38,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
-            "title": "John Ruskin Prize 2026: Call for Entries",
-            "date": "2025-12-02", // Deadline for entries
-            "time": "17:00 GMT",
-            "location": "Online",
-            "description": "Call for entries for the prestigious John Ruskin Prize 2026, theme 'Patience in Looking, Truth in Making'. Exhibition Jan 29 – Feb 8, 2026.",
-            "link": "https://www.ruskinprize.co.uk/" // Corrected link
-        },
-        {
-            "id": 39,
-            "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
-            "title": "John Ruskin Prize 2026: Exhibition",
-            "date": "2026-01-29",
-            "endDate": "2026-02-08", // Added end date for multi-day event
-            "time": "Varies",
-            "location": "Trinity Buoy Wharf, London",
-            "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
-            "link": "https://www.ruskinprize.co.uk/" // Corrected link
-        },
-        // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
+nav button:hover {
+    background-color: #8c6a4e; /* Darker on hover */
+    transform: translateY(-1px);
+}
 
-        // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
-        {
-            "id": 40,
-            "organization": "Garvald Edinburgh",
-            "title": "Grant's Robot Faces Exhibition",
-            "date": "2025-06-02", // Start date in the past
-            "endDate": "2025-07-31", // End date in the future
-            "time": "Varies (check link)",
-            "location": "Garvald Makers, Edinburgh",
-            "description": "An exhibition of unique robot faces created by artist Grant. Continues through July.",
-            "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
-        },
-        {
-            "id": 52, // New ID
-            "organization": "Garvald Edinburgh",
-            "title": "Garvald Gorgie Workshops Open Day",
-            "date": "2025-08-30",
-            "time": "10:30-13:30",
-            "location": "Garvald Gorgie Workshops, Edinburgh",
-            "description": "An open day at Garvald Gorgie Workshops.",
-            "link": "https://www.garvaldedinburgh.org.uk/events/garvald-gorgie-workshops-open-day-2025"
-        },
+nav button.active {
+    background-color: #6a4a2f; /* Even darker for active state */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-events-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    padding: 20px 0;
+    font-size: 1em;
+}
+
+/* --- Card View Layout --- */
+.card-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* More compact cards */
+    gap: 8px; /* Reduced gap */
+    padding: 5px; /* Reduced padding */
+}
+
+.event-card {
+    background-color: #fcfcfc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 6px; /* Reduced padding further */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+}
+
+.event-card .event-org-name { /* For organization name within card view */
+    font-size: 0.75em; /* Smaller font */
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 2px; /* Reduced margin */
+    text-transform: uppercase;
+}
+
+/* Specific colors for organization names in cards (example, adjust as desired) */
+.event-card .title-edinburgh-steiner-school { color: #5a8d40; } /* Greenish */
+.event-card .title-edinburgh-christian-community { color: #8e6b3b; } /* Brownish */
+.event-card .title-camphill-blair-drummond { color: #6e4e8e; } /* Purplish */
+.event-card .title-camphill-corbenic { color: #4b7b9e; } /* Bluish */
+.event-card .title-tiphereth { color: #d67a30; } /* Orangish */
+.event-card .title-garvald-west-linton { color: #a04040; } /* Reddish */
+.event-card .title-fairhill-rise { color: #4a6fa6; } /* Steel blue (was Ruskin Mill) */
+.event-card .title-garvald-edinburgh { color: #725d7c; } /* Muted purple */
+.event-card .title-camphill-loch-arthur { color: #5a9e9e; } /* Teal */
 
 
-        // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
-        {
-            "id": 42,
-            "organization": "Camphill (Loch Arthur)",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01", // Placeholder
-            "time": "Ongoing",
-            "location": "Loch Arthur Camphill Community",
-            "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
-            "link": "https://locharthur.org.uk/news-and-events/calendar/"
-        },
-        {
-            "id": 53, // New ID
-            "organization": "Camphill (Loch Arthur)",
-            "title": "Concert: Anna Massie",
-            "date": "2025-10-29",
-            "time": "19:30 - 21:00",
-            "location": "Loch Arthur Camphill Community",
-            "description": "Concert by Anna Massie.",
-            "link": "https://locharthur.org.uk/event/concert-anna-massie/"
-        },
-        // --- Anthroposophy in Edinburgh ---
-        // Removed 'Study Group Meeting' listings.
-        {
-            "id": 43,
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Monday Fortnightly Study Group: Riddles of Philosophy",
-            "date": "2025-08-18",
-            "time": "13:45-15:15",
-            "location": "Library of Edinburgh Chrisitian Community",
-            "description": "Resumes on 18 August 1:45-3:15pm and meets fortnightly on Mondays.",
-            "link": "Contact :ioberski[at]gmail.com" // Changed to contact info
-        },
-        // ADDITION 2: Anthroposophy in Edinburgh - Online Study Group
-        {
-            "id": 56, // New ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Tueaday Weekly Online Study Group of the Leading Thoughts",
-            "date": "2025-08-26",
-            "time": "19:00-20:00",
-            "location": "Online",
-            "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        // ADDITION 3: Anthroposophy in Edinburgh and Edinburgh Steiner School - Fire in the Temple
-        {
-            "id": 57, // New ID
-            "organization": "Anthroposophy in Edinburgh", // Primary organization
-            "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
-            "title": "Fire in the Temple: A Staged Reading",
-            "date": "2025-11-09",
-            "time": "14:00-16:30",
-            "location": "Edinburgh Steiner School",
-            "description": "A staged reading of the play by Glen Williamson.",
-            "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
-        }
-    ];
+.event-card h3 {
+    margin: 0 0 3px; /* Reduced margin */
+    color: #4a4a4a;
+    font-size: 1.05em; /* Slightly smaller font */
+    line-height: 1.2;
+}
 
-    // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
-    const organizationImages = {
-        "Anthroposophy in Edinburgh": "images/Anthroposophy in Edinburgh Logo.jpg",
-        "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
-        "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
-        "Tiphereth": "images/Camphill Tiphereth Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Corrected file name
-        "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
-        "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
-    };
-    // --- End of Data Definitions ---
+.event-card p {
+    margin: 0; /* Removed margin for all paragraphs */
+    color: #555;
+    font-size: 0.75em; /* Smaller font */
+}
 
+.event-card strong {
+    color: #333;
+}
 
-    const eventContainer = document.getElementById('eventContainer');
-    // Removed: const cardViewBtn = document.getElementById('cardViewBtn');
-    const diaryViewBtn = document.getElementById('diaryViewBtn');
-    const organizationViewBtn = document.getElementById('organizationViewBtn');
+.event-card .event-description {
+    font-size: 0.7em; /* Even smaller font */
+    color: #666;
+    margin-top: 3px; /* Reduced margin */
+    margin-bottom: 3px;
+    max-height: 3.5em; /* Limit height for description */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow wrap */
+}
 
-    // Filter out past events, including events that started in the past but are ongoing
-    const filterUpcomingEvents = (eventsArray) => {
-        const now = new Date();
-        now.setHours(0, 0, 0, 0); // Set to start of today for comparison
+.event-card .more-info {
+    margin-top: 3px; /* Reduced margin */
+    text-align: left; /* Aligned left as requested */
+    font-weight: bold;
+    font-size: 0.75em; /* Smaller font */
+}
 
-        return eventsArray.filter(event => {
-            // Events marked as 'isOrganizationDetail' are for the organization view only and should not appear in Diary
-            if (event.isOrganizationDetail) {
-                return false;
-            }
+.event-card .more-info a {
+    color: #a87e5b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-            const startDate = new Date(event.date);
-            startDate.setHours(0, 0, 0, 0);
+.event-card .more-info a:hover {
+    color: #6a4a2f;
+    text-decoration: underline;
+}
 
-            if (event.endDate) {
-                const endDate = new Date(event.endDate);
-                endDate.setHours(23, 59, 59, 999); // Set to end of end day
+/* --- Diary View Layout --- */
+.diary-layout {
+    padding: 5px; /* Reduced padding for more compactness */
+}
 
-                // An event is upcoming/ongoing if its end date is today or in the future
-                return endDate >= now;
-            } else {
-                // For single-day events, check if the date is today or in the future
-                return startDate >= now;
-            }
-        });
-    };
+.diary-day-card {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 7px; /* Reduced padding */
+    margin-bottom: 7px; /* Reduced margin */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
 
-    const upcomingEvents = filterUpcomingEvents(allEvents); // Filter events once
+.diary-day-card h4 {
+    margin: 0 0 5px; /* Reduced margin */
+    color: #a87e5b;
+    font-size: 1.2em; /* Slightly smaller font */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 3px; /* Reduced padding */
+}
 
-    console.log("Upcoming Events Array:", upcomingEvents);
+.diary-event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.diary-event-list li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 6px; /* Reduced padding */
+    margin-bottom: 5px; /* Reduced margin */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    transition: background-color 0.2s ease;
+}
 
-    // Helper to format dates consistently
-    const formatDate = (dateString, endDateString = null) => {
-        const options = { day: 'numeric', month: 'short', year: 'numeric' };
-        // Handle null dateString for events like Etsy shop that don't have a date
-        if (!dateString) {
-            return '';
-        }
-        const startDate = new Date(dateString).toLocaleDateString('en-GB', options);
+.diary-event-list li:last-child {
+    margin-bottom: 0; /* Remove margin from last item in list */
+}
 
-        if (endDateString && dateString !== endDateString) {
-            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options);
-            return `${startDate} - ${endDate}`;
-        }
-        return startDate;
-    };
+.diary-event-list li:hover {
+    background-color: #f9f9f9;
+}
 
-    // Helper to generate CSS class from organization name for color coding
-    const getOrgClass = (orgName) => {
-        // Ensure the class name is valid (lowercase, replace non-alphanumeric with hyphen)
-        return `title-${orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-    };
+.diary-event-list .event-org-name-diary { /* For organization name in diary view */
+    font-size: 0.7em; /* Smaller font */
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 1px; /* Reduced margin */
+    text-transform: uppercase;
+}
 
-    // --- Render Card View ---
-    // Removed: The entire renderCardView function is removed.
-    /*
-    const renderCardView = (eventsToDisplay) => {
-        eventContainer.innerHTML = '';
-        eventContainer.className = 'card-layout'; // Set class for grid layout
-
-        if (eventsToDisplay.length === 0) {
-            eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Card View.</p>';
-            return;
-        }
-
-        // Sort events by date for card view
-        eventsToDisplay.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-        eventsToDisplay.forEach(event => {
-            const eventCard = document.createElement('div');
-            eventCard.className = `event-card ${getOrgClass(event.organization)}`;
-            eventCard.innerHTML = `
-                <p class="event-org-name ${getOrgClass(event.organization)}">${event.organization}</p>
-                <h3>${event.title}</h3>
-                <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
-            `;
-            eventContainer.appendChild(eventCard);
-        });
-    };
-    */
-
-    // --- Render Diary View ---
-    const renderDiaryView = (eventsToDisplay) => {
-        eventContainer.innerHTML = '';
-        eventContainer.className = 'diary-layout'; // Set class for diary layout
-
-        // Filter out events that are specifically marked for organization view only
-        const diaryEvents = eventsToDisplay.filter(event => !event.isOrganizationDetail);
-
-        if (diaryEvents.length === 0) {
-            eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Diary View.</p>';
-            return;
-        }
-
-        // Create a map to hold events for each day, including multi-day events on each day they span
-        const dailyEventsMap = new Map();
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Start of today
-
-        diaryEvents.forEach(event => {
-            const startDate = new Date(event.date);
-            startDate.setHours(0, 0, 0, 0);
-            const endDate = event.endDate ? new Date(event.endDate) : startDate;
-            endDate.setHours(23, 59, 59, 999); // End of end day
-
-            // Iterate over each day the event is active
-            let currentDate = new Date(startDate);
-            while (currentDate <= endDate) {
-                // Only add to map if the event date is today or in the future
-                if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
-                    if (!dailyEventsMap.has(dateKey)) {
-                        dailyEventsMap.set(dateKey, []);
-                    }
-                    dailyEventsMap.get(dateKey).push(event);
-                }
-                currentDate.setDate(currentDate.getDate() + 1); // Move to next day
-            }
-        });
-
-        // Sort dates chronologically
-        const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
-
-        sortedDateKeys.forEach(dateKey => {
-            const dayCard = document.createElement('div');
-            dayCard.className = 'diary-day-card';
-            dayCard.innerHTML = `<h4>${formatDate(dateKey)}</h4>`; // Format date for day header
-
-            const eventList = document.createElement('ul');
-            eventList.className = 'diary-event-list';
-
-            // Sort events within each day by time (simple string comparison for "HH:MM")
-            dailyEventsMap.get(dateKey).sort((a, b) => {
-                const timeA = a.time ? a.time.split(' ')[0] : 'ZZZZ'; // Handle cases with no time, push to end
-                const timeB = b.time ? b.time.split(' ')[0] : 'ZZZZ';
-                return timeA.localeCompare(timeB);
-            });
-
-            dailyEventsMap.get(dateKey).forEach(event => {
-                const listItem = document.createElement('li');
-                let linkContent = event.link;
-                if (event.link && event.link.startsWith('http')) {
-                    linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
-                } else if (event.link && event.link.startsWith('Contact')) {
-                    linkContent = event.link; // Display as is if it's contact info
-                }
-                listItem.innerHTML = `
-                        <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
-                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
-                        <p class="more-info-diary">${linkContent}</p>
-                    `;
-                eventList.appendChild(listItem);
-            });
-            dayCard.appendChild(eventList);
-            eventContainer.appendChild(dayCard);
-        });
-    };
-
-    // --- Render Organization View ---
-    const renderOrganizationView = () => {
-        eventContainer.innerHTML = '';
-        eventContainer.className = 'organization-layout';
-
-        // Group ALL events by organization, including those for organization details
-        const groupedEvents = allEvents.reduce((acc, event) => {
-            if (!acc[event.organization]) {
-                acc[event.organization] = [];
-            }
-            acc[event.organization].push(event);
-            return acc;
-        }, {});
-
-        // Add the column header
-        const headerRow = document.createElement('div');
-        headerRow.className = 'organization-header';
-        headerRow.innerHTML = `
-            <div class="header-org-name">Organization</div>
-            <div class="header-events">Upcoming Events</div>
-        `;
-        eventContainer.appendChild(headerRow);
-
-        // Sort organizations alphabetically for consistent display
-        const sortedOrgNames = Object.keys(groupedEvents).sort();
-
-        sortedOrgNames.forEach(orgName => {
-            const organizationRow = document.createElement('div');
-            organizationRow.className = 'organization-row';
-
-            const orgImageSrc = organizationImages[orgName] || 'https://placehold.co/110x110/cccccc/333333?text=Logo'; // Fallback to a placeholder
-
-            // Find the primary link for the organization. Prefer a non-event specific link if available.
-            let orgHomePageLink = '#';
-            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
-            if (organizationDetailEvent) {
-                orgHomePageLink = organizationDetailEvent.link;
-            } else {
-                // As a fallback, use the link from the first available event that has a link
-                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
-                if (firstEventWithLink) {
-                    orgHomePageLink = firstEventWithLink.link;
-                }
-            }
+/* Specific colors for organization names in diary view */
+.diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
+.diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
+.diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
+.diary-event-list .title-camphill-corbenic { color: #4b7b9e; }
+.diary-event-list .title-tiphereth { color: #d67a30; }
+.diary-event-list .title-garvald-west-linton { color: #a04040; }
+.diary-event-list .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
+.diary-event-list .title-garvald-edinburgh { color: #725d7c; }
+.diary-event-list .title-camphill-loch-arthur { color: #5a9e9e; }
 
 
-            const organizationNameColumn = document.createElement('div');
-            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
-            organizationNameColumn.innerHTML = `
-                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
-                    <img src="${orgImageSrc}" alt="${orgName} Logo" class="organization-logo-fixed-size">
-                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
-                </a>
-            `;
-            organizationRow.appendChild(organizationNameColumn);
+.diary-event-list h4 {
+    margin: 0 0 3px; /* Reduced margin */
+    font-size: 0.95em; /* Smaller font */
+    color: #4a4a4a;
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
-            const organizationEventsColumn = document.createElement('div');
-            organizationEventsColumn.className = 'organization-events-column';
+.diary-event-list p {
+    margin: 0; /* Removed margin */
+    color: #555;
+    font-size: 0.72em; /* Smaller font */
+}
 
-            // Filter for actual upcoming events for this organization (not organization detail entries)
-            const upcomingOrgEvents = groupedEvents[orgName].filter(event =>
-                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
-            );
+.diary-event-list strong {
+    color: #333;
+}
 
-            // Add the special organization detail event if it exists for this organization
-            if (organizationDetailEvent) {
-                upcomingOrgEvents.unshift(organizationDetailEvent); // Add to the beginning
-            }
+.diary-event-list .event-description-diary {
+    font-size: 0.65em; /* Even smaller font */
+    color: #666;
+    margin-top: 3px; /* Reduced margin */
+    margin-bottom: 3px;
+    max-height: 2.8em; /* Limit height for description */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
 
-            if (upcomingOrgEvents.length > 0) {
-                // Sort events by date, but keep "isOrganizationDetail" events at the top
-                upcomingOrgEvents.sort((a, b) => {
-                    if (a.isOrganizationDetail) return -1;
-                    if (b.isOrganizationDetail) return 1;
-                    // Handle cases where date might be null for organization details
-                    if (!a.date && b.date) return 1;
-                    if (a.date && !b.date) return -1;
-                    if (!a.date && !b.date) return 0; // Both no date, maintain relative order
-                    return new Date(a.date) - new Date(b.date);
-                });
+.diary-event-list .more-info-diary {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 3px; /* Reduced margin */
+    font-size: 0.72em; /* Smaller font */
+}
 
-                const eventList = document.createElement('ul');
-                eventList.className = 'organization-event-list';
+.diary-event-list .more-info-diary a {
+    color: #a87e5b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-                upcomingOrgEvents.forEach(event => {
-                    const listItem = document.createElement('li');
-                    let linkContent = event.link;
-                    if (event.link && event.link.startsWith('http')) {
-                        linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
-                    } else if (event.link && event.link.startsWith('Contact')) {
-                        linkContent = event.link; // Display as is if it's contact info
-                    }
+.diary-event-list .more-info-diary a:hover {
+    color: #6a4a2f;
+    text-decoration: underline;
+}
 
-                    // Conditionally add elements to remove blank lines
-                    const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
-                    const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
-                    const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
-                    const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
-                    const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
+/* --- Organization View Layout --- */
+.organization-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 5px; /* Reduced padding */
+}
+
+.organization-header {
+    display: flex;
+    font-weight: bold;
+    font-size: 0.9em; /* Smaller font */
+    padding: 5px; /* Reduced padding */
+    margin-bottom: 8px; /* Reduced margin */
+    border-bottom: 1px solid #a87e5b;
+    align-items: center; /* Vertically align content */
+}
+
+.header-org-name {
+    flex: 0 0 170px; /* Fixed width for organization name column */
+    padding: 0 5px; /* Reduced padding */
+    color: #a87e5b;
+    text-align: center; /* Center align header text */
+}
+
+.header-events {
+    flex-grow: 1;
+    padding: 0 5px; /* Reduced padding */
+    color: #a87e5b;
+    text-align: center; /* Center align header text */
+}
+
+.organization-row {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 7px; /* Reduced margin */
+    background-color: #fcfcfc;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.organization-name-column {
+    flex: 0 0 170px; /* Fixed width */
+    padding: 8px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+}
+
+.organization-name-column .org-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.organization-name-column img {
+    max-width: 110px; /* Increased logo size further */
+    max-height: 110px; /* Increased logo size further */
+    width: auto;
+    height: auto;
+    /* Removed: border-radius: 50%; */
+    object-fit: contain;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.organization-name-column h2 {
+    margin: 5px 0 0;
+    font-size: 1.15em; /* Slightly smaller font */
+    color: #4a4a4a;
+}
+
+/* Specific colors for organization names in organization view */
+.organization-name-column .title-edinburgh-steiner-school { color: #5a8d40; }
+.organization-name-column .title-edinburgh-christian-community { color: #8e6b3b; }
+.organization-name-column .title-camphill-blair-drummond { color: #6e4e8e; }
+.organization-name-column .title-camphill-corbenic { color: #4b7b9e; }
+.organization-name-column .title-tiphereth { color: #d67a30; }
+.organization-name-column .title-garvald-west-linton { color: #a04040; }
+.organization-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
+.organization-name-column .title-garvald-edinburgh { color: #725d7c; }
+.organization-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
 
 
-                    // For organization-specific details, we might want a slightly different display
-                    if (event.isOrganizationDetail) {
-                        listItem.innerHTML = `
-                            <h4>${event.title}</h4>
-                            ${eventDescriptionHtml}
-                            ${eventLinkHtml}
-                        `;
-                    } else {
-                        listItem.innerHTML = `
-                            <h4>${event.title}</h4>
-                            ${eventDateHtml}
-                            ${eventTimeHtml}
-                            ${eventLocationHtml}
-                            ${eventDescriptionHtml}
-                            ${eventLinkHtml}
-                        `;
-                    }
-                    eventList.appendChild(listItem);
-                });
-                organizationEventsColumn.appendChild(eventList);
-            } else {
-                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed at this time.</p>';
-            }
-            organizationRow.appendChild(organizationEventsColumn);
-            eventContainer.appendChild(organizationRow);
-        });
-    };
+.organization-events-column {
+    flex-grow: 1;
+    padding: 6px; /* Reduced padding */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Reduced gap between event cards */
+    align-items: flex-start; /* Align events to the top */
+}
+
+.organization-events-column .event-card {
+    flex: 1 1 calc(33.333% - 5px); /* 3 cards per row by default, adjusted for gap */
+    min-width: 180px; /* Even smaller min-width for more compactness */
+    margin: 0;
+    padding: 6px; /* Keep padding consistent for cards within this view */
+}
+
+.organization-events-column .no-events-on-day {
+    font-style: italic;
+    color: #777;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
 
 
-    // --- View Mode Management ---
-    let currentView = 'diary'; // Default view
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    header .subtitle {
+        font-size: 0.9em;
+    }
+    nav button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
 
-    const setView = (view) => {
-        currentView = view;
-        diaryViewBtn.classList.remove('active');
-        organizationViewBtn.classList.remove('active');
+    .card-layout {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        gap: 8px;
+    }
 
-        if (view === 'diary') {
-            renderDiaryView(upcomingEvents);
-            diaryViewBtn.classList.add('active');
-        } else if (view === 'organization') {
-            renderOrganizationView(); // Call without argument to use allEvents directly
-            organizationViewBtn.classList.add('active');
-        }
-    };
+    .event-card {
+        padding: 10px;
+    }
 
-    // Event Listeners for view buttons
-    diaryViewBtn.addEventListener('click', () => setView('diary'));
-    organizationViewBtn.addEventListener('click', () => setView('organization'));
+    .diary-layout {
+        padding: 8px;
+    }
 
-    // Initial render based on default view
-    setView(currentView);
-});
+    .diary-day-card {
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    .diary-event-list li {
+        padding: 8px;
+        margin-bottom: 6px;
+    }
+
+    .organization-header {
+        display: none; /* Hide header on small screens */
+    }
+
+    .organization-row {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .organization-name-column {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 5px 5px 0 0;
+        padding: 10px;
+    }
+    .organization-name-column img {
+        max-width: 70px;
+        max-height: 70px;
+    }
+    .organization-name-column h2 {
+        font-size: 1.1em;
+    }
+
+
+    .organization-events-column {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+        gap: 8px;
+        padding: 10px;
+    }
+    .organization-events-column .event-card {
+        flex: none;
+        width: 100%;
+    }
+}

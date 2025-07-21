@@ -692,7 +692,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- Render Organization View ---
-    const renderOrganizationView = () => {
+    const renderOrganizationView = (eventsToDisplay) => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'organization-layout';
 
@@ -721,7 +721,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const organizationRow = document.createElement('div');
             organizationRow.className = 'organization-row';
 
-            const orgImageSrc = organizationImages[orgName] || 'https://placehold.co/110x110/cccccc/333333?text=Logo'; // Fallback to a placeholder
+            const orgImageSrc = organizationImages[orgName] || 'https://via.placeholder.com/110?text=Logo'; // Fallback to a placeholder, larger
 
             // Find the primary link for the organization. Prefer a non-event specific link if available.
             let orgHomePageLink = '#';
@@ -741,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
             organizationNameColumn.innerHTML = `
                 <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
-                    <img src="${orgImageSrc}" alt="${orgName} Logo" class="organization-logo-fixed-size">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo">
                     <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
                 </a>
             `;
@@ -765,10 +765,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 upcomingOrgEvents.sort((a, b) => {
                     if (a.isOrganizationDetail) return -1;
                     if (b.isOrganizationDetail) return 1;
-                    // Handle cases where date might be null for organization details
-                    if (!a.date && b.date) return 1;
-                    if (a.date && !b.date) return -1;
-                    if (!a.date && !b.date) return 0; // Both no date, maintain relative order
                     return new Date(a.date) - new Date(b.date);
                 });
 
@@ -776,7 +772,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 eventList.className = 'organization-event-list';
 
                 upcomingOrgEvents.forEach(event => {
-                    const listItem = document.createElement('li');
+                    const listItem = document.createElement('li'); // Changed to li for list format
                     let linkContent = event.link;
                     if (event.link && event.link.startsWith('http')) {
                         linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
@@ -784,36 +780,28 @@ document.addEventListener('DOMContentLoaded', () => {
                         linkContent = event.link; // Display as is if it's contact info
                     }
 
-                    // Conditionally add elements to remove blank lines
-                    const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
-                    const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
-                    const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
-                    const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
-                    const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
-
-
                     // For organization-specific details, we might want a slightly different display
                     if (event.isOrganizationDetail) {
                         listItem.innerHTML = `
                             <h4>${event.title}</h4>
-                            ${eventDescriptionHtml}
-                            ${eventLinkHtml}
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
                         `;
                     } else {
                         listItem.innerHTML = `
                             <h4>${event.title}</h4>
-                            ${eventDateHtml}
-                            ${eventTimeHtml}
-                            ${eventLocationHtml}
-                            ${eventDescriptionHtml}
-                            ${eventLinkHtml}
+                            <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                            <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
+                            <p><strong>Location:</strong> ${event.location}</p>
+                            ${event.description ? `<p>${event.description}</p>` : ''}
+                            <p class="more-info-diary">${linkContent}</p>
                         `;
                     }
                     eventList.appendChild(listItem);
                 });
                 organizationEventsColumn.appendChild(eventList);
             } else {
-                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed at this time.</p>';
+                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed.</p>';
             }
             organizationRow.appendChild(organizationEventsColumn);
             eventContainer.appendChild(organizationRow);
@@ -826,6 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setView = (view) => {
         currentView = view;
+        // cardViewBtn.classList.remove('active'); // Removed cardViewBtn
         diaryViewBtn.classList.remove('active');
         organizationViewBtn.classList.remove('active');
 
@@ -833,12 +822,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderDiaryView(upcomingEvents);
             diaryViewBtn.classList.add('active');
         } else if (view === 'organization') {
-            renderOrganizationView(); // Call without argument to use allEvents directly
+            renderOrganizationView(allEvents); // Organization view shows all organization entries, not just upcoming events
             organizationViewBtn.classList.add('active');
         }
     };
 
     // Event Listeners for view buttons
+    // Removed: cardViewBtn.addEventListener('click', () => setView('card'));
     diaryViewBtn.addEventListener('click', () => setView('diary'));
     organizationViewBtn.addEventListener('click', () => setView('organization'));
 
