@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 23,
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 24,
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "09:45 - 12:30",
             "location": "Garvald West Linton Hall",
             "description": "Regular community gathering and project work.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 25,
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Afternoon",
             "location": "Garvald West Linton",
             "description": "Annual Michaelmas/Harvest celebration.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 26,
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Residents and staff to dress up for Halloween.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 27,
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Fireworks display with hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 28,
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Lantern walk with a story about St Martin and the Beggar.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 29,
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Dining Room",
             "description": "Advent wreath making for all.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 30,
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton Main House",
             "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 31,
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:30 - 13:00",
             "location": "Garvald West Linton Workshops",
             "description": "Workshops selling handmade items.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 32,
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "PM",
             "location": "Garvald West Linton",
             "description": "Celebration of Santa Lucia.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 33,
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
         {
             "id": 34,
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Christmas Day festive lunch.",
-            "link": "https://garvaldwestlinton.org.uk/events/"
+             "link": "https://garvaldwestlinton.org.uk/events/"
         },
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
@@ -520,6 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const eventContainer = document.getElementById('eventContainer');
+    // Removed: const cardViewBtn = document.getElementById('cardViewBtn');
     const diaryViewBtn = document.getElementById('diaryViewBtn');
     const organizationViewBtn = document.getElementById('organizationViewBtn');
 
@@ -577,6 +578,38 @@ document.addEventListener('DOMContentLoaded', () => {
         return `title-${orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
+    // --- Render Card View ---
+    // Removed: The entire renderCardView function is removed.
+    /*
+    const renderCardView = (eventsToDisplay) => {
+        eventContainer.innerHTML = '';
+        eventContainer.className = 'card-layout'; // Set class for grid layout
+
+        if (eventsToDisplay.length === 0) {
+            eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Card View.</p>';
+            return;
+        }
+
+        // Sort events by date for card view
+        eventsToDisplay.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+        eventsToDisplay.forEach(event => {
+            const eventCard = document.createElement('div');
+            eventCard.className = `event-card ${getOrgClass(event.organization)}`;
+            eventCard.innerHTML = `
+                <p class="event-org-name ${getOrgClass(event.organization)}">${event.organization}</p>
+                <h3>${event.title}</h3>
+                <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
+                <p><strong>Time:</strong> ${event.time}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
+                <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
+            `;
+            eventContainer.appendChild(eventCard);
+        });
+    };
+    */
+
     // --- Render Diary View ---
     const renderDiaryView = (eventsToDisplay) => {
         eventContainer.innerHTML = '';
@@ -606,7 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
             while (currentDate <= endDate) {
                 // Only add to map if the event date is today or in the future
                 if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 0); //YYYY-MM-DD
+                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
                     if (!dailyEventsMap.has(dateKey)) {
                         dailyEventsMap.set(dateKey, []);
                     }
@@ -648,9 +681,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
                         <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
-                        ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                        ${linkContent ? `<p class="more-info-diary">${linkContent}</p>` : ''}
-                `;
+                        ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
+                        <p class="more-info-diary">${linkContent}</p>
+                    `;
                 eventList.appendChild(listItem);
             });
             dayCard.appendChild(eventList);
@@ -661,112 +694,154 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Render Organization View ---
     const renderOrganizationView = () => {
         eventContainer.innerHTML = '';
-        eventContainer.className = 'organization-layout'; // Set class for organization layout
+        eventContainer.className = 'organization-layout';
 
-        // Get unique organizations and sort them alphabetically
-        const organizations = Array.from(new Set(allEvents.map(event => event.organization))).sort();
+        // Group ALL events by organization, including those for organization details
+        const groupedEvents = allEvents.reduce((acc, event) => {
+            if (!acc[event.organization]) {
+                acc[event.organization] = [];
+            }
+            acc[event.organization].push(event);
+            return acc;
+        }, {});
 
-        if (organizations.length === 0) {
-            eventContainer.innerHTML = '<p class="no-organizations-message">No organizations to display.</p>';
-            return;
-        }
+        // Add the column header
+        const headerRow = document.createElement('div');
+        headerRow.className = 'organization-header';
+        headerRow.innerHTML = `
+            <div class="header-org-name">Organization</div>
+            <div class="header-events">Upcoming Events</div>
+        `;
+        eventContainer.appendChild(headerRow);
 
-        organizations.forEach(orgName => {
-            const orgSection = document.createElement('div');
-            orgSection.className = 'organization-section';
+        // Sort organizations alphabetically for consistent display
+        const sortedOrgNames = Object.keys(groupedEvents).sort();
 
-            const orgHeader = document.createElement('div');
-            orgHeader.className = 'organization-header';
+        sortedOrgNames.forEach(orgName => {
+            const organizationRow = document.createElement('div');
+            organizationRow.className = 'organization-row';
 
-            const logoPath = organizationImages[orgName];
-            if (logoPath) {
-                const logoImg = document.createElement('img');
-                logoImg.src = logoPath;
-                logoImg.alt = `${orgName} Logo`;
-                logoImg.className = 'organization-logo';
+            const orgImageSrc = organizationImages[orgName] || 'https://placehold.co/110x110/cccccc/333333?text=Logo'; // Fallback to a placeholder
 
-                // Add specific class for larger logos
-                const largeLogoOrgs = [
-                    "Garvald Edinburgh",
-                    "Fairhill Rise", // Previously Ruskin Mill
-                    "Edinburgh Steiner School",
-                    "Edinburgh Christian Community", // Previously The Christian Community
-                    "Camphill Corbenic", // Previously Corbenic
-                    "Camphill (Loch Arthur)", // Previously Loch Arthur
-                    "Camphill Blair Drummond"
-                ];
-                if (largeLogoOrgs.includes(orgName)) {
-                    logoImg.classList.add('large-logo');
+            // Find the primary link for the organization. Prefer a non-event specific link if available.
+            let orgHomePageLink = '#';
+            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
+            if (organizationDetailEvent) {
+                orgHomePageLink = organizationDetailEvent.link;
+            } else {
+                // As a fallback, use the link from the first available event that has a link
+                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
+                if (firstEventWithLink) {
+                    orgHomePageLink = firstEventWithLink.link;
                 }
-                orgHeader.appendChild(logoImg);
             }
 
-            const orgTitle = document.createElement('h3');
-            orgTitle.textContent = orgName;
-            orgHeader.appendChild(orgTitle);
-            orgSection.appendChild(orgHeader);
 
-            const orgEventsList = document.createElement('ul');
-            orgEventsList.className = 'organization-events-list';
+            const organizationNameColumn = document.createElement('div');
+            organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            organizationNameColumn.innerHTML = `
+                <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
+                    <img src="${orgImageSrc}" alt="${orgName} Logo" class="organization-logo-fixed-size">
+                    <h2 class="${getOrgClass(orgName)}">${orgName}</h2>
+                </a>
+            `;
+            organizationRow.appendChild(organizationNameColumn);
 
-            // Filter events for the current organization, including those marked as 'isOrganizationDetail'
-            const eventsForOrg = allEvents.filter(event => event.organization === orgName)
-                .sort((a, b) => {
-                    // Sort by date, then by time. Events without dates (like Etsy shop) go to the end.
-                    if (a.date === null && b.date === null) return 0;
-                    if (a.date === null) return 1;
-                    if (b.date === null) return -1;
-                    const dateComparison = new Date(a.date) - new Date(b.date);
-                    if (dateComparison !== 0) return dateComparison;
-                    const timeA = a.time || '';
-                    const timeB = b.time || '';
-                    return timeA.localeCompare(timeB);
+            const organizationEventsColumn = document.createElement('div');
+            organizationEventsColumn.className = 'organization-events-column';
+
+            // Filter for actual upcoming events for this organization (not organization detail entries)
+            const upcomingOrgEvents = groupedEvents[orgName].filter(event =>
+                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
+            );
+
+            // Add the special organization detail event if it exists for this organization
+            if (organizationDetailEvent) {
+                upcomingOrgEvents.unshift(organizationDetailEvent); // Add to the beginning
+            }
+
+            if (upcomingOrgEvents.length > 0) {
+                // Sort events by date, but keep "isOrganizationDetail" events at the top
+                upcomingOrgEvents.sort((a, b) => {
+                    if (a.isOrganizationDetail) return -1;
+                    if (b.isOrganizationDetail) return 1;
+                    // Handle cases where date might be null for organization details
+                    if (!a.date && b.date) return 1;
+                    if (a.date && !b.date) return -1;
+                    if (!a.date && !b.date) return 0; // Both no date, maintain relative order
+                    return new Date(a.date) - new Date(b.date);
                 });
 
-            eventsForOrg.forEach(event => {
-                const listItem = document.createElement('li');
-                let linkContent = event.link;
-                if (event.link && event.link.startsWith('http')) {
-                    linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
-                } else if (event.link && event.link.startsWith('Contact')) {
-                    linkContent = event.link; // Display as is if it's contact info
-                }
+                const eventList = document.createElement('ul');
+                eventList.className = 'organization-event-list';
 
-                const eventDate = event.date ? `<strong>Date:</strong> ${formatDate(event.date, event.endDate)}` : '';
-                const eventTime = event.time ? `<strong>Time:</strong> ${event.time}` : '';
-                const eventLocation = event.location ? `<strong>Location:</strong> ${event.location}` : '';
+                upcomingOrgEvents.forEach(event => {
+                    const listItem = document.createElement('li');
+                    let linkContent = event.link;
+                    if (event.link && event.link.startsWith('http')) {
+                        linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                    } else if (event.link && event.link.startsWith('Contact')) {
+                        linkContent = event.link; // Display as is if it's contact info
+                    }
 
-                listItem.innerHTML = `
-                    <h4>${event.title}</h4>
-                    ${eventDate ? `<p>${eventDate}</p>` : ''}
-                    ${eventTime ? `<p>${eventTime}</p>` : ''}
-                    ${eventLocation ? `<p>${eventLocation}</p>` : ''}
-                    ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                    ${linkContent ? `<p class="more-info-org">${linkContent}</p>` : ''}
-                `;
-                orgEventsList.appendChild(listItem);
-            });
-            orgSection.appendChild(orgEventsList);
-            eventContainer.appendChild(orgSection);
+                    // Conditionally add elements to remove blank lines
+                    const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
+                    const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
+                    const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
+                    const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
+                    const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
+
+
+                    // For organization-specific details, we might want a slightly different display
+                    if (event.isOrganizationDetail) {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            ${eventDescriptionHtml}
+                            ${eventLinkHtml}
+                        `;
+                    } else {
+                        listItem.innerHTML = `
+                            <h4>${event.title}</h4>
+                            ${eventDateHtml}
+                            ${eventTimeHtml}
+                            ${eventLocationHtml}
+                            ${eventDescriptionHtml}
+                            ${eventLinkHtml}
+                        `;
+                    }
+                    eventList.appendChild(listItem);
+                });
+                organizationEventsColumn.appendChild(eventList);
+            } else {
+                organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed at this time.</p>';
+            }
+            organizationRow.appendChild(organizationEventsColumn);
+            eventContainer.appendChild(organizationRow);
         });
     };
 
 
-    // --- Initial View Load and Event Listeners ---
-    // Removed renderCardView and associated event listener
-    diaryViewBtn.addEventListener('click', () => {
-        renderDiaryView(upcomingEvents);
-        diaryViewBtn.classList.add('active');
-        organizationViewBtn.classList.remove('active');
-    });
+    // --- View Mode Management ---
+    let currentView = 'diary'; // Default view
 
-    organizationViewBtn.addEventListener('click', () => {
-        renderOrganizationView();
-        organizationViewBtn.classList.add('active');
+    const setView = (view) => {
+        currentView = view;
         diaryViewBtn.classList.remove('active');
-    });
+        organizationViewBtn.classList.remove('active');
 
-    // Default view on page load
-    renderDiaryView(upcomingEvents);
-    diaryViewBtn.classList.add('active');
+        if (view === 'diary') {
+            renderDiaryView(upcomingEvents);
+            diaryViewBtn.classList.add('active');
+        } else if (view === 'organization') {
+            renderOrganizationView(); // Call without argument to use allEvents directly
+            organizationViewBtn.classList.add('active');
+        }
+    };
+
+    // Event Listeners for view buttons
+    diaryViewBtn.addEventListener('click', () => setView('diary'));
+    organizationViewBtn.addEventListener('click', () => setView('organization'));
+
+    // Initial render based on default view
+    setView(currentView);
 });
