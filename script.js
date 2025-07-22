@@ -210,6 +210,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Please check the newsletter or website for current information on events and activities.",
             "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
         },
+        {
+            "id": 61, // New ID for Corbenic Community Shop & Café
+            "organization": "Camphill Corbenic",
+            "title": "Corbenic Community Shop & Café",
+            "date": null, // This does not go in Diary view
+            "time": "Monday – Sunday, 9:30 AM – 4:00 PM",
+            "location": "Corbenic Camphill Community",
+            "description": "Visit our community shop and café for local produce and a warm welcome.",
+            "link": "https://www.corbeniccamphill.co.uk/corbenic-shop",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
         {
