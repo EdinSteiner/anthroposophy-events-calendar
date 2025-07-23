@@ -561,6 +561,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // --- End of Data Definitions ---
 
+    // --- Organization Details (for home page links and potentially other org-specific info) ---
+    // Added a dedicated object for organization homepages to ensure correct linking for logos.
+    const organizationDetails = {
+        "Edinburgh Steiner School": { homepage: "https://www.edinburghsteinerschool.org.uk/" },
+        "Edinburgh Christian Community": { homepage: "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/" },
+        "Camphill Blair Drummond": { homepage: "https://camphillblairdrummond.org.uk/" },
+        "Camphill Corbenic": { homepage: "https://www.corbeniccamphill.co.uk/" },
+        "Tiphereth": { homepage: "https://www.tiphereth.org.uk/" },
+        "Garvald West Linton": { homepage: "https://garvaldwestlinton.org.uk/" },
+        "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
+        "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
+        "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
+        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" } // Assuming a general homepage for this group
+    };
+
+
     // --- Seasonal Color Palettes ---
     // Each palette defines CSS custom property values for a season
     const seasonalPalettes = {
@@ -795,30 +811,30 @@ document.addEventListener('DOMContentLoaded', () => {
             '--diary-event-list-item-shadow': 'rgba(0, 0, 0, 0.03)',
             '--diary-event-list-item-hover-bg': '#f9f9f9',
 
-            '--org-header-bg': '#e0e0e0',
-            '--org-header-text-color': '#333',
-            '--org-header-border': '#6a8aab', /* Muted blue */
-            '--org-row-bg': '#fdfdfd',
-            '--org-row-border': '#ddd',
-            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
-            '--org-name-column-bg': '#f0f0f0',
-            '--org-name-column-border-right': '#e0e0e0',
-            '--org-logo-bg': '#fff',
-            '--org-logo-border': '#ccc',
-            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
-            '--org-event-list-item-bg': '#fff',
-            '--org-event-list-item-border': '#eee',
-            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
-            '--org-event-list-item-title-color': '#506070',
-            '--org-event-list-item-detail-color': '#708090',
-            '--org-event-list-item-strong-color': '#405060',
-            '--org-event-list-item-link-color': '#6a8aab', /* Muted blue */
-            '--org-event-list-item-link-hover-color': '#5a7a9a',
-            '--org-no-events-message-color': '#777',
+            '--org-header-bg': '#e0e0e0;
+            --org-header-text-color: #333;
+            --org-header-border: #6a8aab; /* Muted blue */
+            --org-row-bg: #fdfdfd;
+            --org-row-border: #ddd;
+            --org-row-shadow: rgba(0, 0, 0, 0.08);
+            --org-name-column-bg: #f0f0f0;
+            --org-name-column-border-right: #e0e0e0;
+            --org-logo-bg: #fff;
+            --org-logo-border: #ccc;
+            --org-logo-shadow: rgba(0, 0, 0, 0.1);
+            --org-event-list-item-bg: #fff;
+            --org-event-list-item-border: #eee;
+            --org-event-list-item-shadow: rgba(0, 0, 0, 0.07);
+            --org-event-list-item-title-color: #506070;
+            --org-event-list-item-detail-color: #708090;
+            --org-event-list-item-strong-color: #405060;
+            --org-event-list-item-link-color: #6a8aab; /* Muted blue */
+            --org-event-list-item-link-hover-color: #5a7a9a;
+            --org-no-events-message-color: #777;
 
-            '--footer-bg': '#e9e9e9',
-            '--footer-text-color': '#777',
-            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
+            --footer-bg: #e9e9e9;
+            --footer-text-color: #777;
+            --footer-shadow: rgba(0, 0, 0, 0.05);
         }
     };
 
@@ -1067,18 +1083,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const orgImageSrc = organizationImages[orgName] || 'https://placehold.co/110x110/cccccc/333333?text=Logo'; // Fallback to a placeholder
 
-            // Find the primary link for the organization. Prefer a non-event specific link if available.
-            let orgHomePageLink = '#';
-            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
-            if (organizationDetailEvent) {
-                orgHomePageLink = organizationDetailEvent.link;
-            } else {
-                // As a fallback, use the link from the first available event that has a link
-                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
-                if (firstEventWithLink) {
-                    orgHomePageLink = firstEventWithLink.link;
-                }
-            }
+            // Find the primary link for the organization's homepage
+            // This now uses the dedicated organizationDetails object
+            let orgHomePageLink = organizationDetails[orgName]?.homepage || '#';
 
 
             const organizationNameColumn = document.createElement('div');
