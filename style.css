@@ -464,14 +464,13 @@ main {
 
 /* Apply fixed size and remove border for all logos in organization view */
 .organization-name-column img {
-    width: 150px; /* Increased width to be as big as possible within column */
-    height: 150px; /* Increased height to be as big as possible within column */
+    width: 110px; /* Fixed width, same as Tiphereth logo size */
+    height: 110px; /* Fixed height, same as Tiphereth logo size */
     object-fit: contain; /* Ensures the image scales within the bounds without cropping */
     margin-bottom: 5px;
     border: none; /* Removed border/rectangle around logos */
     box-shadow: none; /* Removed any shadow that might look like a border */
 }
-
 
 .organization-name-column h2 {
     margin: 5px 0 0;
@@ -547,13 +546,13 @@ main {
 }
 
 .organization-event-list li .more-info-org a {
-    color: var(--link-color); /* Using variable */
+    color: var(--org-event-list-item-link-color); /* Using variable */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .organization-event-list li .more-info-org a:hover {
-    color: var(--link-hover-color); /* Using variable */
+    color: var(--org-event-list-item-link-hover-color); /* Using variable */
     text-decoration: underline;
 }
 
