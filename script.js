@@ -561,6 +561,306 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // --- End of Data Definitions ---
 
+    // --- Seasonal Color Palettes ---
+    // Each palette defines CSS custom property values for a season
+    const seasonalPalettes = {
+        spring: {
+            '--body-bg': '#f8f5ed', /* Light cream */
+            '--text-color': '#4a4a4a',
+            '--strong-text-color': '#333',
+            '--link-color': '#7a9e7f', /* Soft green */
+            '--link-hover-color': '#5e7c63',
+
+            '--header-bg': '#7a9e7f', /* Soft green */
+            '--header-text-color': '#f8f5ed',
+            '--header-subtitle-opacity': '0.95',
+
+            '--nav-bg': 'rgba(248, 245, 237, 0.95)',
+            '--nav-button-bg': '#a87e5b', /* Earthy tone */
+            '--nav-button-text-color': 'white',
+            '--nav-button-hover-bg': '#8c6a4e',
+            '--nav-button-active-bg': '#6a4a2f',
+
+            '--main-bg': '#fff',
+            '--main-shadow': 'rgba(0, 0, 0, 0.08)',
+
+            '--card-bg': '#fcfcfc',
+            '--card-border': '#e0e0e0',
+            '--card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--card-title-color': '#4a4a4a',
+            '--card-detail-color': '#555',
+            '--card-description-color': '#666',
+            '--card-org-name-color': '#888',
+
+            '--diary-day-card-bg': '#fcfcfc',
+            '--diary-day-card-border': '#e0e0e0',
+            '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--diary-day-header-color': '#7a9e7f', /* Soft green */
+            '--diary-day-header-border': '#f0f0f0',
+            '--diary-event-list-item-bg': '#fff',
+            '--diary-event-list-item-border': '#eee',
+            '--diary-event-list-item-shadow': 'rgba(0, 0, 0, 0.03)',
+            '--diary-event-list-item-hover-bg': '#f9f9f9',
+
+            '--org-header-bg': '#e0e0e0',
+            '--org-header-text-color': '#333',
+            '--org-header-border': '#7a9e7f', /* Soft green */
+            '--org-row-bg': '#fdfdfd',
+            '--org-row-border': '#ddd',
+            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
+            '--org-name-column-bg': '#f0f0f0',
+            '--org-name-column-border-right': '#e0e0e0',
+            '--org-logo-bg': '#fff',
+            '--org-logo-border': '#ccc',
+            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--org-event-list-item-bg': '#fff',
+            '--org-event-list-item-border': '#eee',
+            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
+            '--org-event-list-item-title-color': '#3a3a3a',
+            '--org-event-list-item-detail-color': '#555',
+            '--org-event-list-item-strong-color': '#333',
+            '--org-event-list-item-link-color': '#7a9e7f', /* Soft green */
+            '--org-event-list-item-link-hover-color': '#5e7c63',
+            '--org-no-events-message-color': '#777',
+
+            '--footer-bg': '#e9e9e9',
+            '--footer-text-color': '#777',
+            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
+        },
+        summer: {
+            '--body-bg': '#fefdf8', /* Lighter, warmer cream */
+            '--text-color': '#3a3a3a',
+            '--strong-text-color': '#2a2a2a',
+            '--link-color': '#d67a30', /* Warm orange */
+            '--link-hover-color': '#b86224',
+
+            '--header-bg': '#d67a30', /* Warm orange */
+            '--header-text-color': '#fefdf8',
+            '--header-subtitle-opacity': '0.95',
+
+            '--nav-bg': 'rgba(254, 253, 248, 0.95)',
+            '--nav-button-bg': '#7a9e7f', /* Complementary green */
+            '--nav-button-text-color': 'white',
+            '--nav-button-hover-bg': '#5e7c63',
+            '--nav-button-active-bg': '#4a624f',
+
+            '--main-bg': '#fff',
+            '--main-shadow': 'rgba(0, 0, 0, 0.08)',
+
+            '--card-bg': '#fcfcfc',
+            '--card-border': '#e0e0e0',
+            '--card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--card-title-color': '#3a3a3a',
+            '--card-detail-color': '#555',
+            '--card-description-color': '#666',
+            '--card-org-name-color': '#888',
+
+            '--diary-day-card-bg': '#fcfcfc',
+            '--diary-day-card-border': '#e0e0e0',
+            '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--diary-day-header-color': '#d67a30', /* Warm orange */
+            '--diary-day-header-border': '#f0f0f0',
+            '--diary-event-list-item-bg': '#fff',
+            '--diary-event-list-item-border': '#eee',
+            '--diary-event-list-item-shadow': 'rgba(0, 0, 0, 0.03)',
+            '--diary-event-list-item-hover-bg': '#f9f9f9',
+
+            '--org-header-bg': '#e0e0e0',
+            '--org-header-text-color': '#333',
+            '--org-header-border': '#d67a30', /* Warm orange */
+            '--org-row-bg': '#fdfdfd',
+            '--org-row-border': '#ddd',
+            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
+            '--org-name-column-bg': '#f0f0f0',
+            '--org-name-column-border-right': '#e0e0e0',
+            '--org-logo-bg': '#fff',
+            '--org-logo-border': '#ccc',
+            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--org-event-list-item-bg': '#fff',
+            '--org-event-list-item-border': '#eee',
+            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
+            '--org-event-list-item-title-color': '#3a3a3a',
+            '--org-event-list-item-detail-color': '#555',
+            '--org-event-list-item-strong-color': '#333',
+            '--org-event-list-item-link-color': '#d67a30', /* Warm orange */
+            '--org-event-list-item-link-hover-color': '#b86224',
+            '--org-no-events-message-color': '#777',
+
+            '--footer-bg': '#e9e9e9',
+            '--footer-text-color': '#777',
+            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
+        },
+        autumn: {
+            '--body-bg': '#f2e8d9', /* Muted orange-brown background */
+            '--text-color': '#5c4033', /* Darker brown text */
+            '--strong-text-color': '#4a3226',
+            '--link-color': '#a04040', /* Deep red */
+            '--link-hover-color': '#7c3030',
+
+            '--header-bg': '#a04040', /* Deep red */
+            '--header-text-color': '#f2e8d9',
+            '--header-subtitle-opacity': '0.95',
+
+            '--nav-bg': 'rgba(242, 232, 217, 0.95)',
+            '--nav-button-bg': '#8e6b3b', /* Earthy brown */
+            '--nav-button-text-color': 'white',
+            '--nav-button-hover-bg': '#6e4e2f',
+            '--nav-button-active-bg': '#5a3e22',
+
+            '--main-bg': '#fff',
+            '--main-shadow': 'rgba(0, 0, 0, 0.08)',
+
+            '--card-bg': '#fcfcfc',
+            '--card-border': '#e0e0e0',
+            '--card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--card-title-color': '#5c4033',
+            '--card-detail-color': '#6e5a4e',
+            '--card-description-color': '#7a6a60',
+            '--card-org-name-color': '#9b8e83',
+
+            '--diary-day-card-bg': '#fcfcfc',
+            '--diary-day-card-border': '#e0e0e0',
+            '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--diary-day-header-color': '#a04040', /* Deep red */
+            '--diary-day-header-border': '#f0f0f0',
+            '--diary-event-list-item-bg': '#fff',
+            '--diary-event-list-item-border': '#eee',
+            '--diary-event-list-item-shadow': 'rgba(0, 0, 0, 0.03)',
+            '--diary-event-list-item-hover-bg': '#f9f9f9',
+
+            '--org-header-bg': '#e0e0e0',
+            '--org-header-text-color': '#333',
+            '--org-header-border': '#a04040', /* Deep red */
+            '--org-row-bg': '#fdfdfd',
+            '--org-row-border': '#ddd',
+            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
+            '--org-name-column-bg': '#f0f0f0',
+            '--org-name-column-border-right': '#e0e0e0',
+            '--org-logo-bg': '#fff',
+            '--org-logo-border': '#ccc',
+            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--org-event-list-item-bg': '#fff',
+            '--org-event-list-item-border': '#eee',
+            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
+            '--org-event-list-item-title-color': '#5c4033',
+            '--org-event-list-item-detail-color': '#6e5a4e',
+            '--org-event-list-item-strong-color': '#4a3226',
+            '--org-event-list-item-link-color': '#a04040', /* Deep red */
+            '--org-event-list-item-link-hover-color': '#7c3030',
+            '--org-no-events-message-color': '#777',
+
+            '--footer-bg': '#e9e9e9',
+            '--footer-text-color': '#777',
+            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
+        },
+        winter: {
+            '--body-bg': '#eef2f5', /* Cool light blue-grey */
+            '--text-color': '#4a5a6a', /* Muted blue-grey text */
+            '--strong-text-color': '#3a4a5a',
+            '--link-color': '#4a6fa6', /* Steel blue */
+            '--link-hover-color': '#3a5a8a',
+
+            '--header-bg': '#4a6fa6', /* Steel blue */
+            '--header-text-color': '#eef2f5',
+            '--header-subtitle-opacity': '0.95',
+
+            '--nav-bg': 'rgba(238, 242, 245, 0.95)',
+            '--nav-button-bg': '#725d7c', /* Muted purple */
+            '--nav-button-text-color': 'white',
+            '--nav-button-hover-bg': '#5a4a6a',
+            '--nav-button-active-bg': '#4a3a5a',
+
+            '--main-bg': '#fff',
+            '--main-shadow': 'rgba(0, 0, 0, 0.08)',
+
+            '--card-bg': '#fcfcfc',
+            '--card-border': '#e0e0e0',
+            '--card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--card-title-color': '#4a5a6a',
+            '--card-detail-color': '#6a7a8a',
+            '--card-description-color': '#7a8a9a',
+            '--card-org-name-color': '#9babc0',
+
+            '--diary-day-card-bg': '#fcfcfc',
+            '--diary-day-card-border': '#e0e0e0',
+            '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
+            '--diary-day-header-color': '#4a6fa6', /* Steel blue */
+            '--diary-day-header-border': '#f0f0f0',
+            '--diary-event-list-item-bg': '#fff',
+            '--diary-event-list-item-border': '#eee',
+            '--diary-event-list-item-shadow': 'rgba(0, 0, 0, 0.03)',
+            '--diary-event-list-item-hover-bg': '#f9f9f9',
+
+            '--org-header-bg': '#e0e0e0',
+            '--org-header-text-color': '#333',
+            '--org-header-border': '#4a6fa6', /* Steel blue */
+            '--org-row-bg': '#fdfdfd',
+            '--org-row-border': '#ddd',
+            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
+            '--org-name-column-bg': '#f0f0f0',
+            '--org-name-column-border-right': '#e0e0e0',
+            '--org-logo-bg': '#fff',
+            '--org-logo-border': '#ccc',
+            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--org-event-list-item-bg': '#fff',
+            '--org-event-list-item-border': '#eee',
+            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
+            '--org-event-list-item-title-color': '#4a5a6a',
+            '--org-event-list-item-detail-color': '#6a7a8a',
+            '--org-event-list-item-strong-color': '#3a4a5a',
+            '--org-event-list-item-link-color': '#4a6fa6', /* Steel blue */
+            '--org-event-list-item-link-hover-color': '#3a5a8a',
+            '--org-no-events-message-color': '#777',
+
+            '--footer-bg': '#e9e9e9',
+            '--footer-text-color': '#777',
+            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
+        }
+    };
+
+    // Function to get the current week number (1-52/53)
+    // Source: https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
+    Date.prototype.getWeek = function() {
+        var date = new Date(this.getTime());
+        date.setHours(0, 0, 0, 0);
+        // Thursday in current week decides the year.
+        date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+        // January 4 is always in week 1.
+        var week1 = new Date(date.getFullYear(), 0, 4);
+        // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+        return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+    }
+
+    // Function to apply the seasonal palette
+    const applySeasonalPalette = () => {
+        const currentWeek = new Date().getWeek();
+        let season = 'spring'; // Default to spring
+
+        // Simple mapping of weeks to seasons (approx. 13 weeks per season)
+        if (currentWeek >= 10 && currentWeek < 23) { // Roughly March to May
+            season = 'spring';
+        } else if (currentWeek >= 23 && currentWeek < 36) { // Roughly June to August
+            season = 'summer';
+        } else if (currentWeek >= 36 && currentWeek < 49) { // Roughly September to November
+            season = 'autumn';
+        } else { // Roughly December to February
+            season = 'winter';
+        }
+
+        const palette = seasonalPalettes[season];
+        for (const property in palette) {
+            document.documentElement.style.setProperty(property, palette[property]);
+        }
+        console.log(`Applying ${season} palette (Week ${currentWeek})`);
+    };
+
+    // Apply palette on page load
+    applySeasonalPalette();
+
 
     const eventContainer = document.getElementById('eventContainer');
     // Removed: const cardViewBtn = document.getElementById('cardViewBtn');
