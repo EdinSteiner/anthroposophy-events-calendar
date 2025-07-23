@@ -561,37 +561,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // --- End of Data Definitions ---
 
-    // --- Organization Details (for home page links and potentially other org-specific info) ---
-    // Added a dedicated object for organization homepages to ensure correct linking for logos.
-    const organizationDetails = {
-        "Edinburgh Steiner School": { homepage: "https://www.edinburghsteinerschool.org.uk/" },
-        "Edinburgh Christian Community": { homepage: "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/" },
-        "Camphill Blair Drummond": { homepage: "https://camphillblairdrummond.org.uk/" },
-        "Camphill Corbenic": { homepage: "https://www.corbeniccamphill.co.uk/" },
-        "Tiphereth": { homepage: "https://www.tiphereth.org.uk/" },
-        "Garvald West Linton": { homepage: "https://garvaldwestlinton.org.uk/" },
-        "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
-        "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
-        "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
-        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" } // Assuming a general homepage for this group
-    };
-
-
     // --- Seasonal Color Palettes ---
     // Each palette defines CSS custom property values for a season
     const seasonalPalettes = {
         spring: {
-            '--body-bg': '#f5f2eb', /* Soft, warm cream */
-            '--text-color': '#4c4c4c',
-            '--strong-text-color': '#3a3a3a',
-            '--link-color': '#6b8e6b', /* Sage green */
-            '--link-hover-color': '#5a7a5a',
+            '--body-bg': '#f8f5ed', /* Light cream */
+            '--text-color': '#4a4a4a',
+            '--strong-text-color': '#333',
+            '--link-color': '#7a9e7f', /* Soft green */
+            '--link-hover-color': '#5e7c63',
 
-            '--header-bg': '#6b8e6b', /* Sage green */
-            '--header-text-color': '#f5f2eb',
+            '--header-bg': '#7a9e7f', /* Soft green */
+            '--header-text-color': '#f8f5ed',
             '--header-subtitle-opacity': '0.95',
 
-            '--nav-bg': 'rgba(245, 242, 235, 0.95)',
+            '--nav-bg': 'rgba(248, 245, 237, 0.95)',
             '--nav-button-bg': '#a87e5b', /* Earthy tone */
             '--nav-button-text-color': 'white',
             '--nav-button-hover-bg': '#8c6a4e',
@@ -604,15 +588,15 @@ document.addEventListener('DOMContentLoaded', () => {
             '--card-border': '#e0e0e0',
             '--card-shadow': 'rgba(0, 0, 0, 0.05)',
             '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
-            '--card-title-color': '#4c4c4c',
-            '--card-detail-color': '#666',
-            '--card-description-color': '#777',
-            '--card-org-name-color': '#999',
+            '--card-title-color': '#4a4a4a',
+            '--card-detail-color': '#555',
+            '--card-description-color': '#666',
+            '--card-org-name-color': '#888',
 
             '--diary-day-card-bg': '#fcfcfc',
             '--diary-day-card-border': '#e0e0e0',
             '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
-            '--diary-day-header-color': '#6b8e6b', /* Sage green */
+            '--diary-day-header-color': '#7a9e7f', /* Soft green */
             '--diary-day-header-border': '#f0f0f0',
             '--diary-event-list-item-bg': '#fff',
             '--diary-event-list-item-border': '#eee',
@@ -621,7 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             '--org-header-bg': '#e0e0e0',
             '--org-header-text-color': '#333',
-            '--org-header-border': '#6b8e6b', /* Sage green */
+            '--org-header-border': '#7a9e7f', /* Soft green */
             '--org-row-bg': '#fdfdfd',
             '--org-row-border': '#ddd',
             '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -633,11 +617,11 @@ document.addEventListener('DOMContentLoaded', () => {
             '--org-event-list-item-bg': '#fff',
             '--org-event-list-item-border': '#eee',
             '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
-            '--org-event-list-item-title-color': '#4c4c4c',
-            '--org-event-list-item-detail-color': '#666',
-            '--org-event-list-item-strong-color': '#3a3a3a',
-            '--org-event-list-item-link-color': '#6b8e6b', /* Sage green */
-            '--org-event-list-item-link-hover-color': '#5a7a5a',
+            '--org-event-list-item-title-color': '#3a3a3a',
+            '--org-event-list-item-detail-color': '#555',
+            '--org-event-list-item-strong-color': '#333',
+            '--org-event-list-item-link-color': '#7a9e7f', /* Soft green */
+            '--org-event-list-item-link-hover-color': '#5e7c63',
             '--org-no-events-message-color': '#777',
 
             '--footer-bg': '#e9e9e9',
@@ -645,21 +629,21 @@ document.addEventListener('DOMContentLoaded', () => {
             '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
         },
         summer: {
-            '--body-bg': '#fcf9ed', /* Lighter, sun-kissed cream */
-            '--text-color': '#403a30', /* Soft, warm brown */
-            '--strong-text-color': '#302a20',
-            '--link-color': '#e09a50', /* Golden orange */
-            '--link-hover-color': '#c2813c',
+            '--body-bg': '#fefdf8', /* Lighter, warmer cream */
+            '--text-color': '#3a3a3a',
+            '--strong-text-color': '#2a2a2a',
+            '--link-color': '#d67a30', /* Warm orange */
+            '--link-hover-color': '#b86224',
 
-            '--header-bg': '#e09a50', /* Golden orange */
-            '--header-text-color': '#fcf9ed',
+            '--header-bg': '#d67a30', /* Warm orange */
+            '--header-text-color': '#fefdf8',
             '--header-subtitle-opacity': '0.95',
 
-            '--nav-bg': 'rgba(252, 249, 237, 0.95)',
-            '--nav-button-bg': '#85a37f', /* Muted olive green */
+            '--nav-bg': 'rgba(254, 253, 248, 0.95)',
+            '--nav-button-bg': '#7a9e7f', /* Complementary green */
             '--nav-button-text-color': 'white',
-            '--nav-button-hover-bg': '#6e8a6a',
-            '--nav-button-active-bg': '#5a7056',
+            '--nav-button-hover-bg': '#5e7c63',
+            '--nav-button-active-bg': '#4a624f',
 
             '--main-bg': '#fff',
             '--main-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -668,15 +652,15 @@ document.addEventListener('DOMContentLoaded', () => {
             '--card-border': '#e0e0e0',
             '--card-shadow': 'rgba(0, 0, 0, 0.05)',
             '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
-            '--card-title-color': '#403a30',
-            '--card-detail-color': '#605a50',
-            '--card-description-color': '#706a60',
-            '--card-org-name-color': '#908a80',
+            '--card-title-color': '#3a3a3a',
+            '--card-detail-color': '#555',
+            '--card-description-color': '#666',
+            '--card-org-name-color': '#888',
 
             '--diary-day-card-bg': '#fcfcfc',
             '--diary-day-card-border': '#e0e0e0',
             '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
-            '--diary-day-header-color': '#e09a50', /* Golden orange */
+            '--diary-day-header-color': '#d67a30', /* Warm orange */
             '--diary-day-header-border': '#f0f0f0',
             '--diary-event-list-item-bg': '#fff',
             '--diary-event-list-item-border': '#eee',
@@ -685,7 +669,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             '--org-header-bg': '#e0e0e0',
             '--org-header-text-color': '#333',
-            '--org-header-border': '#e09a50', /* Golden orange */
+            '--org-header-border': '#d67a30', /* Warm orange */
             '--org-row-bg': '#fdfdfd',
             '--org-row-border': '#ddd',
             '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -697,11 +681,11 @@ document.addEventListener('DOMContentLoaded', () => {
             '--org-event-list-item-bg': '#fff',
             '--org-event-list-item-border': '#eee',
             '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
-            '--org-event-list-item-title-color': '#403a30',
-            '--org-event-list-item-detail-color': '#605a50',
-            '--org-event-list-item-strong-color': '#302a20',
-            '--org-event-list-item-link-color': '#e09a50', /* Golden orange */
-            '--org-event-list-item-link-hover-color': '#c2813c',
+            '--org-event-list-item-title-color': '#3a3a3a',
+            '--org-event-list-item-detail-color': '#555',
+            '--org-event-list-item-strong-color': '#333',
+            '--org-event-list-item-link-color': '#d67a30', /* Warm orange */
+            '--org-event-list-item-link-hover-color': '#b86224',
             '--org-no-events-message-color': '#777',
 
             '--footer-bg': '#e9e9e9',
@@ -709,21 +693,21 @@ document.addEventListener('DOMContentLoaded', () => {
             '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
         },
         autumn: {
-            '--body-bg': '#e8d9c6', /* Muted terracotta */
-            '--text-color': '#6b4e3a', /* Deep brown */
-            '--strong-text-color': '#5a3e2c',
-            '--link-color': '#b05a3a', /* Burnt orange/terracotta */
-            '--link-hover-color': '#904a2a',
+            '--body-bg': '#f2e8d9', /* Muted orange-brown background */
+            '--text-color': '#5c4033', /* Darker brown text */
+            '--strong-text-color': '#4a3226',
+            '--link-color': '#a04040', /* Deep red */
+            '--link-hover-color': '#7c3030',
 
-            '--header-bg': '#b05a3a', /* Burnt orange/terracotta */
-            '--header-text-color': '#e8d9c6',
+            '--header-bg': '#a04040', /* Deep red */
+            '--header-text-color': '#f2e8d9',
             '--header-subtitle-opacity': '0.95',
 
-            '--nav-bg': 'rgba(232, 217, 198, 0.95)',
-            '--nav-button-bg': '#7e6b5a', /* Muted brown */
+            '--nav-bg': 'rgba(242, 232, 217, 0.95)',
+            '--nav-button-bg': '#8e6b3b', /* Earthy brown */
             '--nav-button-text-color': 'white',
-            '--nav-button-hover-bg': '#6a5a4a',
-            '--nav-button-active-bg': '#5a4a3a',
+            '--nav-button-hover-bg': '#6e4e2f',
+            '--nav-button-active-bg': '#5a3e22',
 
             '--main-bg': '#fff',
             '--main-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -732,15 +716,15 @@ document.addEventListener('DOMContentLoaded', () => {
             '--card-border': '#e0e0e0',
             '--card-shadow': 'rgba(0, 0, 0, 0.05)',
             '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
-            '--card-title-color': '#6b4e3a',
-            '--card-detail-color': '#8a7a6a',
-            '--card-description-color': '#9a8a7a',
-            '--card-org-name-color': '#b0a090',
+            '--card-title-color': '#5c4033',
+            '--card-detail-color': '#6e5a4e',
+            '--card-description-color': '#7a6a60',
+            '--card-org-name-color': '#9b8e83',
 
             '--diary-day-card-bg': '#fcfcfc',
             '--diary-day-card-border': '#e0e0e0',
             '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
-            '--diary-day-header-color': '#b05a3a', /* Burnt orange/terracotta */
+            '--diary-day-header-color': '#a04040', /* Deep red */
             '--diary-day-header-border': '#f0f0f0',
             '--diary-event-list-item-bg': '#fff',
             '--diary-event-list-item-border': '#eee',
@@ -749,7 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             '--org-header-bg': '#e0e0e0',
             '--org-header-text-color': '#333',
-            '--org-header-border': '#b05a3a', /* Burnt orange/terracotta */
+            '--org-header-border': '#a04040', /* Deep red */
             '--org-row-bg': '#fdfdfd',
             '--org-row-border': '#ddd',
             '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -761,11 +745,11 @@ document.addEventListener('DOMContentLoaded', () => {
             '--org-event-list-item-bg': '#fff',
             '--org-event-list-item-border': '#eee',
             '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
-            '--org-event-list-item-title-color': '#6b4e3a',
-            '--org-event-list-item-detail-color': '#8a7a6a',
-            '--org-event-list-item-strong-color': '#5a3e2c',
-            '--org-event-list-item-link-color': '#b05a3a', /* Burnt orange/terracotta */
-            '--org-event-list-item-link-hover-color': '#904a2a',
+            '--org-event-list-item-title-color': '#5c4033',
+            '--org-event-list-item-detail-color': '#6e5a4e',
+            '--org-event-list-item-strong-color': '#4a3226',
+            '--org-event-list-item-link-color': '#a04040', /* Deep red */
+            '--org-event-list-item-link-hover-color': '#7c3030',
             '--org-no-events-message-color': '#777',
 
             '--footer-bg': '#e9e9e9',
@@ -773,21 +757,21 @@ document.addEventListener('DOMContentLoaded', () => {
             '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
         },
         winter: {
-            '--body-bg': '#e0e8f0', /* Soft, cool blue-grey */
-            '--text-color': '#506070', /* Muted cool grey */
-            '--strong-text-color': '#405060',
-            '--link-color': '#6a8aab', /* Muted blue */
-            '--link-hover-color': '#5a7a9a',
+            '--body-bg': '#eef2f5', /* Cool light blue-grey */
+            '--text-color': '#4a5a6a', /* Muted blue-grey text */
+            '--strong-text-color': '#3a4a5a',
+            '--link-color': '#4a6fa6', /* Steel blue */
+            '--link-hover-color': '#3a5a8a',
 
-            '--header-bg': '#6a8aab', /* Muted blue */
-            '--header-text-color': '#e0e8f0',
+            '--header-bg': '#4a6fa6', /* Steel blue */
+            '--header-text-color': '#eef2f5',
             '--header-subtitle-opacity': '0.95',
 
-            '--nav-bg': 'rgba(224, 232, 240, 0.95)',
-            '--nav-button-bg': '#80708a', /* Muted plum */
+            '--nav-bg': 'rgba(238, 242, 245, 0.95)',
+            '--nav-button-bg': '#725d7c', /* Muted purple */
             '--nav-button-text-color': 'white',
-            '--nav-button-hover-bg': '#6a5a7a',
-            '--nav-button-active-bg': '#5a4a6a',
+            '--nav-button-hover-bg': '#5a4a6a',
+            '--nav-button-active-bg': '#4a3a5a',
 
             '--main-bg': '#fff',
             '--main-shadow': 'rgba(0, 0, 0, 0.08)',
@@ -796,15 +780,15 @@ document.addEventListener('DOMContentLoaded', () => {
             '--card-border': '#e0e0e0',
             '--card-shadow': 'rgba(0, 0, 0, 0.05)',
             '--card-hover-shadow': 'rgba(0, 0, 0, 0.1)',
-            '--card-title-color': '#506070',
-            '--card-detail-color': '#708090',
-            '--card-description-color': '#8090a0',
-            '--card-org-name-color': '#a0b0c0',
+            '--card-title-color': '#4a5a6a',
+            '--card-detail-color': '#6a7a8a',
+            '--card-description-color': '#7a8a9a',
+            '--card-org-name-color': '#9babc0',
 
             '--diary-day-card-bg': '#fcfcfc',
             '--diary-day-card-border': '#e0e0e0',
             '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
-            '--diary-day-header-color': '#6a8aab', /* Muted blue */
+            '--diary-day-header-color': '#4a6fa6', /* Steel blue */
             '--diary-day-header-border': '#f0f0f0',
             '--diary-event-list-item-bg': '#fff',
             '--diary-event-list-item-border': '#eee',
@@ -812,29 +796,29 @@ document.addEventListener('DOMContentLoaded', () => {
             '--diary-event-list-item-hover-bg': '#f9f9f9',
 
             '--org-header-bg': '#e0e0e0',
-            --org-header-text-color: #333;
-            --org-header-border: #6a8aab; /* Muted blue */
-            --org-row-bg: #fdfdfd;
-            --org-row-border: #ddd;
-            --org-row-shadow: rgba(0, 0, 0, 0.08);
-            --org-name-column-bg: #f0f0f0;
-            --org-name-column-border-right: #e0e0e0;
-            --org-logo-bg: #fff;
-            --org-logo-border: #ccc;
-            --org-logo-shadow: rgba(0, 0, 0, 0.1);
-            --org-event-list-item-bg: #fff;
-            --org-event-list-item-border: #eee;
-            --org-event-list-item-shadow: rgba(0, 0, 0, 0.07);
-            --org-event-list-item-title-color: #506070;
-            --org-event-list-item-detail-color: #708090;
-            --org-event-list-item-strong-color: #405060;
-            --org-event-list-item-link-color: #6a8aab; /* Muted blue */
-            --org-event-list-item-link-hover-color: #5a7a9a;
-            --org-no-events-message-color: #777;
+            '--org-header-text-color': '#333',
+            '--org-header-border': '#4a6fa6', /* Steel blue */
+            '--org-row-bg': '#fdfdfd',
+            '--org-row-border': '#ddd',
+            '--org-row-shadow': 'rgba(0, 0, 0, 0.08)',
+            '--org-name-column-bg': '#f0f0f0',
+            '--org-name-column-border-right': '#e0e0e0',
+            '--org-logo-bg': '#fff',
+            '--org-logo-border': '#ccc',
+            '--org-logo-shadow': 'rgba(0, 0, 0, 0.1)',
+            '--org-event-list-item-bg': '#fff',
+            '--org-event-list-item-border': '#eee',
+            '--org-event-list-item-shadow': 'rgba(0, 0, 0, 0.07)',
+            '--org-event-list-item-title-color': '#4a5a6a',
+            '--org-event-list-item-detail-color': '#6a7a8a',
+            '--org-event-list-item-strong-color': '#3a4a5a',
+            '--org-event-list-item-link-color': '#4a6fa6', /* Steel blue */
+            '--org-event-list-item-link-hover-color': '#3a5a8a',
+            '--org-no-events-message-color': '#777',
 
-            --footer-bg: #e9e9e9;
-            --footer-text-color: #777;
-            --footer-shadow: rgba(0, 0, 0, 0.05);
+            '--footer-bg': '#e9e9e9',
+            '--footer-text-color': '#777',
+            '--footer-shadow': 'rgba(0, 0, 0, 0.05)',
         }
     };
 
@@ -857,14 +841,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let season = 'spring'; // Default to spring
 
         // Simple mapping of weeks to seasons (approx. 13 weeks per season)
-        // Adjust these ranges based on your desired seasonal transitions
-        if (currentWeek >= 10 && currentWeek < 23) { // Roughly March (week 10) to May (week 22)
+        if (currentWeek >= 10 && currentWeek < 23) { // Roughly March to May
             season = 'spring';
-        } else if (currentWeek >= 23 && currentWeek < 36) { // Roughly June (week 23) to August (week 35)
+        } else if (currentWeek >= 23 && currentWeek < 36) { // Roughly June to August
             season = 'summer';
-        } else if (currentWeek >= 36 && currentWeek < 49) { // Roughly September (week 36) to November (week 48)
+        } else if (currentWeek >= 36 && currentWeek < 49) { // Roughly September to November
             season = 'autumn';
-        } else { // Roughly December (week 49) to February (week 9)
+        } else { // Roughly December to February
             season = 'winter';
         }
 
@@ -1083,9 +1066,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const orgImageSrc = organizationImages[orgName] || 'https://placehold.co/110x110/cccccc/333333?text=Logo'; // Fallback to a placeholder
 
-            // Find the primary link for the organization's homepage
-            // This now uses the dedicated organizationDetails object
-            let orgHomePageLink = organizationDetails[orgName]?.homepage || '#';
+            // Find the primary link for the organization. Prefer a non-event specific link if available.
+            let orgHomePageLink = '#';
+            const organizationDetailEvent = groupedEvents[orgName].find(event => event.isOrganizationDetail && event.link);
+            if (organizationDetailEvent) {
+                orgHomePageLink = organizationDetailEvent.link;
+            } else {
+                // As a fallback, use the link from the first available event that has a link
+                const firstEventWithLink = groupedEvents[orgName].find(event => event.link && event.link.startsWith('http'));
+                if (firstEventWithLink) {
+                    orgHomePageLink = firstEventWithLink.link;
+                }
+            }
 
 
             const organizationNameColumn = document.createElement('div');
