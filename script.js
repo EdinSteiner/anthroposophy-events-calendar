@@ -104,16 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Devotional Gathering.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
-        {
-            "id": 15,
-            "organization": "Edinburgh Christian Community",
-            "title": "Act of Consecration of Man",
-            "date": "2025-07-27",
-            "time": "10:00",
-            "location": "Edinburgh Christian Community Church",
-            "description": "Weekly service.",
-            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
+        // Removed: {
+        //     "id": 15,
+        //     "organization": "Edinburgh Christian Community",
+        //     "title": "Act of Consecration of Man",
+        //     "date": "2025-07-27",
+        //     "time": "10:00",
+        //     "location": "Edinburgh Christian Community Church",
+        //     "description": "Weekly service.",
+        //     "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        // },
         {
             "id": 17, // New ID
             "organization": "Edinburgh Christian Community",
@@ -573,7 +573,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
         "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
         "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
-        "Anthroposophy in Edinburgh": { homepage: "https://anthroscot.wordpress.com/" } // Assuming a general homepage for this group
+        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" } // Assuming a general homepage for this group
     };
 
 
