@@ -659,6 +659,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": null,
             "link": "https://www.edinburghsteinerschool.org.uk/community/events/",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        // --- Garvald Home Farm (new organization) ---
+        {
+            "id": 72, // New ID for Garvald Home Farm generic link
+            "organization": "Garvald Home Farm",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
         }
     ];
 
@@ -673,7 +685,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
         "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
-        "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg"
+        "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg",
+        "Garvald Home Farm": "https://placehold.co/110x110/cccccc/333333?text=Garvald+Home+Farm+Logo" // Placeholder for new organization
     };
     // --- End of Data Definitions ---
 
@@ -689,7 +702,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
         "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
         "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
-        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" } // Assuming a general homepage for this group
+        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" }, // Assuming a general homepage for this group
+        "Garvald Home Farm": { homepage: "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB" } // New organization homepage
     };
 
 
