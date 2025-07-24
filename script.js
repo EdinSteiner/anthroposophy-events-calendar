@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 28,
             "organization": "Garvald West Linton",
             "title": "St Martin – Lantern Walk",
-            "date": "2025-11-11",
+            "date": "225-11-11",
             "time": "TBD",
             "location": "Garvald West Linton",
             "description": "Lantern walk with a story about St Martin and the Beggar.",
@@ -886,7 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter out past events, including events that started in the past but are ongoing
     const filterUpcomingEvents = (eventsArray) => {
         const now = new Date();
-        now.setHours(0, 0, 0, 0); // Set to start of today for comparison
+        now.setHours(0, 0, 0, 0); // Set to start of today for comparison in local time
 
         return eventsArray.filter(event => {
             // Events marked as 'isOrganizationDetail' are for the organization view only and should not appear in Diary
@@ -895,11 +895,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const startDate = new Date(event.date);
-            startDate.setHours(0, 0, 0, 0);
+            startDate.setHours(0, 0, 0, 0); // Normalize to start of day in local time
 
             if (event.endDate) {
                 const endDate = new Date(event.endDate);
-                endDate.setHours(23, 59, 59, 999); // Set to end of end day
+                endDate.setHours(23, 59, 59, 999); // Normalize to end of day in local time
 
                 // An event is upcoming/ongoing if its end date is today or in the future
                 return endDate >= now;
@@ -953,20 +953,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a map to hold events for each day, including multi-day events on each day they span
         const dailyEventsMap = new Map();
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // Start of today
+        today.setHours(0, 0, 0, 0); // Start of today in local time
 
         diaryEvents.forEach(event => {
             const startDate = new Date(event.date);
-            startDate.setHours(0, 0, 0, 0);
+            startDate.setHours(0, 0, 0, 0); // Normalize to start of day in local time
             const endDate = event.endDate ? new Date(event.endDate) : startDate;
-            endDate.setHours(23, 59, 59, 999); // End of end day
+            endDate.setHours(23, 59, 59, 999); // Normalize to end of end day in local time
 
             // Iterate over each day the event is active
             let currentDate = new Date(startDate);
             while (currentDate <= endDate) {
                 // Only add to map if the event date is today or in the future
                 if (currentDate >= today) {
-                    const dateKey = currentDate.toISOString().slice(0, 10); //YYYY-MM-DD
+                    // Correctly generate dateKey in YYYY-MM-DD format based on local date
+                    const year = currentDate.getFullYear();
+                    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Month is 0-indexed
+                    const day = currentDate.getDate().toString().padStart(2, '0');
+                    const dateKey = `${year}-${month}-${day}`;
+
                     if (!dailyEventsMap.has(dateKey)) {
                         dailyEventsMap.set(dateKey, []);
                     }
@@ -981,6 +986,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let firstUpcomingDayCard = null; // To store the element for the first upcoming day
 
+        // Get today's date in YYYY-MM-DD local format for accurate comparison
+        const todayYear = today.getFullYear();
+        const todayMonth = (today.getMonth() + 1).toString().padStart(2, '0');
+        const todayDay = today.getDate().toString().padStart(2, '0');
+        const todayKey = `${todayYear}-${todayMonth}-${todayDay}`;
+
+
         sortedDateKeys.forEach(dateKey => {
             const dayCard = document.createElement('div');
             dayCard.className = 'diary-day-card';
@@ -990,9 +1002,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dayCard.dataset.date = dateKey;
 
             // Check if this is the current day or the first upcoming day
-            if (dateKey === today.toISOString().slice(0, 10) && !firstUpcomingDayCard) {
+            if (dateKey === todayKey && !firstUpcomingDayCard) {
                 firstUpcomingDayCard = dayCard;
             } else if (new Date(dateKey) > today && !firstUpcomingDayCard) {
+                // This condition correctly identifies the first future day with events
                 firstUpcomingDayCard = dayCard;
             }
 
