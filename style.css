@@ -361,8 +361,9 @@ main {
 
 .diary-event-list p {
     margin: 0; /* Removed margin */
+    padding: 0; /* Ensure no padding adds to spacing */
+    font-size: 0.72em;
     color: var(--card-detail-color); /* Using variable */
-    font-size: 0.72em; /* Smaller font */
 }
 
 .diary-event-list strong {
@@ -384,7 +385,7 @@ main {
     text-align: left;
     font-weight: bold;
     margin-top: 3px; /* Small margin above the link */
-    font-size: 0.72em; /* Smaller font */
+    font-size: 0.72em;
 }
 
 .diary-event-list .more-info-diary a {
@@ -438,6 +439,7 @@ main {
     margin-bottom: 7px; /* Reduced margin */
     background-color: var(--org-row-bg); /* Using variable */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* More diffused shadow */
+    align-items: flex-start; /* Align content to the top of the row */
 }
 
 .organization-name-column {
@@ -446,7 +448,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the top */
     border-right: 1px solid var(--org-name-column-border-right); /* Using variable */
     background-color: var(--org-name-column-bg); /* Using variable */
     border-radius: 8px 0 0 8px; /* Increased border-radius */
