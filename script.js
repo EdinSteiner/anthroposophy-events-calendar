@@ -538,7 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 68, // New ID for the second generic link
             "organization": "Garvald Edinburgh",
-            "title": "Visit our Facebook page for more",
+            "title": "Visit our Facebook page for more ", // Added space here
             "date": null,
             "time": null,
             "location": null,
@@ -1252,10 +1252,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const listItem = document.createElement('li');
                     let linkContent = event.link;
                     // Special handling for the "For current information, please click here" title
-                    if (event.title === "For current information, please click here" || event.title === "Visit our Facebook page for more") {
+                    if (event.title.includes("For current information, please click here") || event.title.includes("Visit our Facebook page for more")) { // Use .includes for robustness
                         linkContent = `<a href="${event.link}" target="_blank">here</a>`;
+                        // Replace 'here' with ' ' to ensure a space before the link
                         listItem.innerHTML = `
-                            <h4>${event.title.replace('here', '')}<span class="link-placeholder">${linkContent}</span></h4>
+                            <h4>${event.title.replace('here', ' ')}<span class="link-placeholder">${linkContent}</span></h4>
                         `;
                     } else {
                         if (event.link && event.link.startsWith('http')) {
