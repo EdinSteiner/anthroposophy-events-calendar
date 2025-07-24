@@ -686,7 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg",
-        "Garvald Home Farm": "https://placehold.co/110x110/cccccc/333333?text=Garvald+Home+Farm+Logo" // Placeholder for new organization
+        "Garvald Home Farm": "images/Garvald Home Farm Logo.jpg" // Updated to the correct image file
     };
     // --- End of Data Definitions ---
 
