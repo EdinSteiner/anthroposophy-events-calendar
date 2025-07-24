@@ -880,7 +880,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const eventContainer = document.getElementById('eventContainer');
-    // Removed: const cardViewBtn = document.getElementById('cardViewBtn');
     const diaryViewBtn = document.getElementById('diaryViewBtn');
     const organizationViewBtn = document.getElementById('organizationViewBtn');
 
@@ -938,38 +937,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return `title-${orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
-    // --- Render Card View ---
-    // Removed: The entire renderCardView function is removed.
-    /*
-    const renderCardView = (eventsToDisplay) => {
-        eventContainer.innerHTML = '';
-        eventContainer.className = 'card-layout'; // Set class for grid layout
-
-        if (eventsToDisplay.length === 0) {
-            eventContainer.innerHTML = '<p class="no-events-message">No upcoming events to display in Card View.</p>';
-            return;
-        }
-
-        // Sort events by date for card view
-        eventsToDisplay.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-        eventsToDisplay.forEach(event => {
-            const eventCard = document.createElement('div');
-            eventCard.className = `event-card ${getOrgClass(event.organization)}`;
-            eventCard.innerHTML = `
-                <p class="event-org-name ${getOrgClass(event.organization)}">${event.organization}</p>
-                <h3>${event.title}</h3>
-                <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                ${event.description ? `<p class="event-description">${event.description}</p>` : ''}
-                <p class="more-info"><a href="${event.link}" target="_blank">More Information</a></p>
-            `;
-            eventContainer.appendChild(eventCard);
-        });
-    };
-    */
-
     // --- Render Diary View ---
     const renderDiaryView = (eventsToDisplay) => {
         eventContainer.innerHTML = '';
@@ -1012,10 +979,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sort dates chronologically
         const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
 
+        let firstUpcomingDayCard = null; // To store the element for the first upcoming day
+
         sortedDateKeys.forEach(dateKey => {
             const dayCard = document.createElement('div');
             dayCard.className = 'diary-day-card';
             dayCard.innerHTML = `<h4>${formatDate(dateKey)}</h4>`; // Format date for day header
+
+            // Add a data attribute to easily find this card later
+            dayCard.dataset.date = dateKey;
+
+            // Check if this is the current day or the first upcoming day
+            if (dateKey === today.toISOString().slice(0, 10) && !firstUpcomingDayCard) {
+                firstUpcomingDayCard = dayCard;
+            } else if (new Date(dateKey) > today && !firstUpcomingDayCard) {
+                firstUpcomingDayCard = dayCard;
+            }
 
             const eventList = document.createElement('ul');
             eventList.className = 'diary-event-list';
@@ -1049,6 +1028,11 @@ document.addEventListener('DOMContentLoaded', () => {
             dayCard.appendChild(eventList);
             eventContainer.appendChild(dayCard);
         });
+
+        // Scroll to the first upcoming day card
+        if (firstUpcomingDayCard) {
+            firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     // --- Render Organization View ---
@@ -1120,8 +1104,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         return new Date(a.date) - new Date(b.date);
                     }
                     // Handle cases where one or both might not have a date (e.g., isOrganizationDetail)
-                    if (a.date && !b.date) return -1; // Event with date comes before event without date
-                    if (!a.date && b.date) return 1;
+                    if (a.date && !b.date) return 1; // Event with date comes before event without date
+                    if (!a.date && b.date) return -1;
                     return 0; // Maintain order if both have no date or dates are equal
                 });
 
