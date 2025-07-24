@@ -177,6 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         // Bike Safari (2025-06-14) removed as it was a past event.
+        // This event is now transformed into the generic "For current information..." link.
+        {
+            "id": 62, // New ID for the generic link
+            "organization": "Camphill Blair Drummond",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://camphillblairdrummond.org.uk/news",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
         {
             "id": 18,
             "organization": "Camphill Blair Drummond",
@@ -187,28 +199,30 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
             "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
         },
-        {
-            "id": 58, // New ID for Camphill Blair Drummond main events page
-            "organization": "Camphill Blair Drummond",
-            "title": "Visit Camphill Blair Drummond Events Page",
-            "date": null, // This does not go in Diary view
-            "time": null,
-            "location": "Online",
-            "description": "For the most up-to-date information on events, please visit our official news and events page.",
-            "link": "https://camphillblairdrummond.org.uk/news",
-            "isOrganizationDetail": true // Custom property to signify it's for org view only
-        },
+        // Removed the old id 58 as it's replaced by id 62
+        // {
+        //     "id": 58, // New ID for Camphill Blair Drummond main events page
+        //     "organization": "Camphill Blair Drummond",
+        //     "title": "Visit Camphill Blair Drummond Events Page",
+        //     "date": null, // This does not go in Diary view
+        //     "time": null,
+        //     "location": "Online",
+        //     "description": "For the most up-to-date information on events, please visit our official news and events page.",
+        //     "link": "https://camphillblairdrummond.org.uk/news",
+        //     "isOrganizationDetail": true // Custom property to signify it's for org view only
+        // },
 
         // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
         {
-            "id": 19, // Re-using ID for a placeholder if needed
+            "id": 63, // New ID for the generic link
             "organization": "Camphill Corbenic",
-            "title": "Check Corbenic Website for Events",
-            "date": "2025-08-01", // Placeholder date
-            "time": "Ongoing",
-            "location": "Corbenic Camphill Community",
-            "description": "Please check the newsletter or website for current information on events and activities.",
-            "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.corbeniccamphill.co.uk/newsletter",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
             "id": 61, // New ID for Corbenic Community Shop & Café
@@ -221,16 +235,39 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.corbeniccamphill.co.uk/corbenic-shop",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
+        // Removed old id 19 as it's replaced by id 63
+        // {
+        //     "id": 19, // Re-using ID for a placeholder if needed
+        //     "organization": "Camphill Corbenic",
+        //     "title": "Check Corbenic Website for Events",
+        //     "date": "2025-08-01", // Placeholder date
+        //     "time": "Ongoing",
+        //     "location": "Corbenic Camphill Community",
+        //     "description": "Please check the newsletter or website for current information on events and activities.",
+        //     "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
+        // },
+
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
+        {
+            "id": 64, // New ID for the generic link
+            "organization": "Tiphereth",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.facebook.com/tiphereth.camphilledinburgh",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
         {
             "id": 21,
             "organization": "Tiphereth",
             "title": "Open Morning",
             "date": "2025-07-30",
-            "time": "TBD",
+            "time": "10:00 - 13:00", // Updated time
             "location": "Tiphereth Community",
-            "description": "Open Morning at Tiphereth.",
+            "description": "Open Morning at Tiphereth. To book your place, please contact Lucy.Robertson@tiphereth.org.uk", // Updated description
             "link": "https://www.tiphereth.org.uk/"
         },
         // ADDITION 1.1: Tiphereth Etsy Shop for Organization view
@@ -258,6 +295,17 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // --- Garvald West Linton (from recent Google Search tool results) ---
+        {
+            "id": 65, // New ID for the generic link
+            "organization": "Garvald West Linton",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://garvaldwestlinton.org.uk/events/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
         {
             "id": 22,
             "organization": "Garvald West Linton",
@@ -412,6 +460,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
         {
+            "id": 66, // New ID for the generic link
+            "organization": "Fairhill Rise",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://rmt.org/rise/fairhill-rise/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        {
             "id": 35,
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
@@ -466,6 +525,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
+            "id": 67, // New ID for the generic link
+            "organization": "Garvald Edinburgh",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.garvaldedinburgh.org.uk/news-and-events",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        {
+            "id": 68, // New ID for the second generic link
+            "organization": "Garvald Edinburgh",
+            "title": "Visit our Facebook page for more",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.facebook.com/GarvaldEdinburgh",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        {
             "id": 40,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
@@ -490,15 +571,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 42,
+            "id": 69, // New ID for the generic link
             "organization": "Camphill (Loch Arthur)",
-            "title": "Check Loch Arthur Website for Events",
-            "date": "2025-08-01", // Placeholder
-            "time": "Ongoing",
-            "location": "Loch Arthur Camphill Community",
-            "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
-            "link": "https://locharthur.org.uk/news-and-events/calendar/"
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://locharthur.org.uk/news-and-events/calendar/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
+        // Removed old id 42 as it's replaced by id 69
+        // {
+        //     "id": 42,
+        //     "organization": "Camphill (Loch Arthur)",
+        //     "title": "Check Loch Arthur Website for Events",
+        //     "date": "2025-08-01", // Placeholder
+        //     "time": "Ongoing",
+        //     "location": "Loch Arthur Camphill Community",
+        //     "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
+        //     "link": "https://locharthur.org.uk/news-and-events/calendar/"
+        // },
         {
             "id": 53, // New ID
             "organization": "Camphill (Loch Arthur)",
@@ -510,6 +603,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://locharthur.org.uk/event/concert-anna-massie/"
         },
         // --- Anthroposophy in Edinburgh ---
+        {
+            "id": 70, // New ID for the generic link
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.facebook.com/anthroposophyscotland",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
         // Removed 'Study Group Meeting' listings.
         {
             "id": 43,
@@ -543,6 +647,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Edinburgh Steiner School",
             "description": "A staged reading of the play by Glen Williamson.",
             "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
+        },
+        // --- Edinburgh Steiner School (generic link for organization view) ---
+        {
+            "id": 71, // New ID for the generic link
+            "organization": "Edinburgh Steiner School",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://www.edinburghsteinerschool.org.uk/community/events/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
         }
     ];
 
@@ -564,8 +680,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Organization Details (for home page links and potentially other org-specific info) ---
     // Added a dedicated object for organization homepages to ensure correct linking for logos.
     const organizationDetails = {
-        "Edinburgh Steiner School": { homepage: "https://www.edinburghsteinerschool.org.uk/" },
-        "Edinburgh Christian Community": { homepage: "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/" },
+        "Edinburgh Steiner School": { homepage: "https://www.edinburghsteinerschool.org.uk/community/events/" }, // Updated link
+        "Edinburgh Christian Community": { homepage: "https://www.thechristiancommunity.co.uk/topic/congregations/north/edinburgh/" }, // Updated link
         "Camphill Blair Drummond": { homepage: "https://camphillblairdrummond.org.uk/" },
         "Camphill Corbenic": { homepage: "https://www.corbeniccamphill.co.uk/" },
         "Tiphereth": { homepage: "https://www.tiphereth.org.uk/" },
@@ -1105,52 +1221,56 @@ document.addEventListener('DOMContentLoaded', () => {
             // Combine them, with organization-specific details first
             let eventsToDisplayInColumn = [...orgSpecificDetails, ...regularUpcomingEvents];
 
-            if (eventsToDisplayInColumn.length > 0) {
-                // Sort regular upcoming events by date. Org details remain at the top.
+            // Specific sorting for Corbenic to ensure generic link comes first
+            if (orgName === "Camphill Corbenic") {
                 eventsToDisplayInColumn.sort((a, b) => {
-                    // Keep isOrganizationDetail events at the top
+                    if (a.id === 63) return -1; // Ensure id 63 (generic link) is first
+                    if (b.id === 63) return 1;
+                    return 0; // Maintain existing order for others
+                });
+            } else {
+                // Default sort: Keep isOrganizationDetail events at the top, then sort by date
+                eventsToDisplayInColumn.sort((a, b) => {
                     if (a.isOrganizationDetail && !b.isOrganizationDetail) return -1;
                     if (!a.isOrganizationDetail && b.isOrganizationDetail) return 1;
 
-                    // For events of the same type (both detail or both regular), sort by date
                     if (a.date && b.date) {
                         return new Date(a.date) - new Date(b.date);
                     }
-                    // Handle cases where one or both might not have a date (e.g., isOrganizationDetail)
                     if (a.date && !b.date) return 1; // Event with date comes before event without date
                     if (!a.date && b.date) return -1;
                     return 0; // Maintain order if both have no date or dates are equal
                 });
+            }
 
 
+            if (eventsToDisplayInColumn.length > 0) {
                 const eventList = document.createElement('ul');
                 eventList.className = 'organization-event-list';
 
                 eventsToDisplayInColumn.forEach(event => { // Use eventsToDisplayInColumn
                     const listItem = document.createElement('li');
                     let linkContent = event.link;
-                    if (event.link && event.link.startsWith('http')) {
-                        linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
-                    } else if (event.link && event.link.startsWith('Contact')) {
-                        linkContent = event.link; // Display as is if it's contact info
-                    }
-
-                    // Conditionally add elements to remove blank lines
-                    const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
-                    const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
-                    const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
-                    const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
-                    const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
-
-
-                    // For organization-specific details, we might want a slightly different display
-                    if (event.isOrganizationDetail) {
+                    // Special handling for the "For current information, please click here" title
+                    if (event.title === "For current information, please click here" || event.title === "Visit our Facebook page for more") {
+                        linkContent = `<a href="${event.link}" target="_blank">here</a>`;
                         listItem.innerHTML = `
-                            <h4>${event.title}</h4>
-                            ${eventDescriptionHtml}
-                            ${eventLinkHtml}
+                            <h4>${event.title.replace('here', '')}<span class="link-placeholder">${linkContent}</span></h4>
                         `;
                     } else {
+                        if (event.link && event.link.startsWith('http')) {
+                            linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
+                        } else if (event.link && event.link.startsWith('Contact')) {
+                            linkContent = event.link; // Display as is if it's contact info
+                        }
+
+                        // Conditionally add elements to remove blank lines
+                        const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
+                        const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
+                        const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
+                        const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
+                        const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
+
                         listItem.innerHTML = `
                             <h4>${event.title}</h4>
                             ${eventDateHtml}
