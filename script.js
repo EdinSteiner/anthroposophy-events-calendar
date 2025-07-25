@@ -55,11 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 46, // New ID
             "organization": "Edinburgh Steiner School",
             "title": "El Mercado Market",
-            "date": "2025-11-22",
-            "time": "10:00 - 15:00",
+            "date": "2025-10-4",
+            "time": "11:00 - 16:00",
             "location": "Edinburgh Steiner School Campus",
             "description": "A vibrant market featuring various stalls.",
             "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
+        },
+        {
+            "id": 72, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Christmas Market",
+            "date": "2025-11-22",
+            "time": "11:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "A vibrant market featuring various stalls.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/christmas-market-2024/"
         },
 
         // --- Edinburgh Christian Community (Facebook link) ---
