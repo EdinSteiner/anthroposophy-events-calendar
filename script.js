@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Camphill Blair Drummond",
             "title": "Vocal Recital: Un-Ravel-ing the Source Material",
             "date": "2025-07-19",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Camphill Blair Drummond, Stirling",
             "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
             "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Tiphereth",
             "title": "New Pop-up Shop Opening",
             "date": "2025-07-11",
-            "time": "TBD", // Assuming time not specified, or can be added if known
+            "time": "To be confirmed", // Assuming time not specified, or can be added if known
             "location": "37-39 Torphin Road, Edinburgh, EH13 0PG",
             "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
             "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "Halloween Party",
             "date": "2025-10-31",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton",
             "description": "Residents and staff to dress up for Halloween.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "Guy Fawkes Fireworks",
             "date": "2025-11-05",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton",
             "description": "Fireworks display with hot chocolate.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "St Martin – Lantern Walk",
             "date": "225-11-11",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton",
             "description": "Lantern walk with a story about St Martin and the Beggar.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "Advent Wreath Making",
             "date": "2025-11-28",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton Dining Room",
             "description": "Advent wreath making for all.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "1st Advent Celebration",
             "date": "2025-11-30",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton Main House",
             "description": "Advent celebration with lighting candles, bell ringing, singing, hot chocolate.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "Christmas Eve Celebrations",
             "date": "2025-12-24",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton",
             "description": "Gathering around Christmas tree, singing, gospel reading, candlelit dinner.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Garvald West Linton",
             "title": "Christmas Day Lunch",
             "date": "2025-12-25",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Garvald West Linton",
             "description": "Christmas Day festive lunch.",
              "link": "https://garvaldwestlinton.org.uk/events/"
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-07-31",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-08-25",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
@@ -480,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-09-29",
-            "time": "TBD",
+            "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
             "link": "https://rmt.org/rise/fairhill-rise/"
@@ -697,9 +697,9 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum: Michaelmas",
             "date": "2025-10-05",
-            "time": "TBD",
+            "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum on Michaelmas.",
+            "description": "Michaelmas Celebration",
             "link": "Contact :ioberski[at]gmail.com"
         },
         // NEW ITEM: Easter Preparation event
@@ -708,8 +708,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Anthroposophy in Edinburgh",
             "title": "Easter Preparation event",
             "date": "2026-03-14",
-            "time": "TBD",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "time": "To be confirmed",
+            "location": "To be confirmed",
             "description": "Details to be confirmed.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -1248,7 +1248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
                         <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
                         <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time || 'TBD'}</p>
+                        <p><strong>Time:</strong> ${event.time || 'To be confirmed'}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
                         <p class="more-info-diary">${linkContent}</p>
