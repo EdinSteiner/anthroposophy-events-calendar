@@ -593,10 +593,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": null, // Not for Diary View
-            "time": null, // Not for Diary View
-            "location": "Library of Edinburgh Christian Community / TBD",
-            "description": "Forum Meetings (2-3:15pm): 2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.",
+            "date": "2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.", // Dates for organization view
+            "time": "2-3:15pm (for Forum Meetings)",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Regular forum meetings and a special Michaelmas forum. Contact :ioberski[at]gmail.com for details.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true // Only for Organization View
         },
@@ -607,7 +607,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-09-07",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -617,7 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-12-14",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-01-11",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -637,7 +637,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-02-01",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -647,7 +647,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-03-08",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -657,7 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-04-12",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -667,7 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-05-10",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -677,7 +677,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-06-07",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -687,7 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-07-12",
             "time": "14:00-15:15",
-            "location": "Library of Edinburgh Christian Community",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -698,7 +698,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Forum: Michaelmas",
             "date": "2025-10-05",
             "time": "TBD",
-            "location": "TBD",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum on Michaelmas.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Easter Preparation event",
             "date": "2026-03-14",
             "time": "TBD",
-            "location": "TBD",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Details to be confirmed.",
             "link": "Contact :ioberski[at]gmail.com"
         },
@@ -1200,7 +1200,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sort dates chronologically
         const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
 
-        let firstUpcomingDayCard = null; // To store the element for the first upcoming day
+        // Removed the automatic scroll to the first upcoming day card
+        // let firstUpcomingDayCard = null; // To store the element for the first upcoming day
 
         // Get today's date in YYYY-MM-DD local format for accurate comparison
         const todayYear = today.getFullYear();
@@ -1217,13 +1218,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add a data attribute to easily find this card later
             dayCard.dataset.date = dateKey;
 
-            // Check if this is the current day or the first upcoming day
-            if (dateKey === todayKey && !firstUpcomingDayCard) {
-                firstUpcomingDayCard = dayCard;
-            } else if (new Date(dateKey) > today && !firstUpcomingDayCard) {
-                // This condition correctly identifies the first future day with events
-                firstUpcomingDayCard = dayCard;
-            }
+            // Removed the automatic scroll to the first upcoming day card
+            // if (dateKey === todayKey && !firstUpcomingDayCard) {
+            //     firstUpcomingDayCard = dayCard;
+            // } else if (new Date(dateKey) > today && !firstUpcomingDayCard) {
+            //     // This condition correctly identifies the first future day with events
+            //     firstUpcomingDayCard = dayCard;
+            // }
 
             const eventList = document.createElement('ul');
             eventList.className = 'diary-event-list';
@@ -1258,10 +1259,10 @@ document.addEventListener('DOMContentLoaded', () => {
             eventContainer.appendChild(dayCard);
         });
 
-        // Scroll to the first upcoming day card
-        if (firstUpcomingDayCard) {
-            firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        // Removed the automatic scroll to the first upcoming day card
+        // if (firstUpcomingDayCard) {
+        //     firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // }
     };
 
     // --- Render Organization View ---
@@ -1378,7 +1379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
 
                         // Conditionally add elements to remove blank lines
-                        const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>` : '';
+                        const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${event.date}</p>` : ''; // Display raw date string for consolidated forum
                         const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
                         const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
                         const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
