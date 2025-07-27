@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 97, // New unique ID
             "organization": "Edinburgh Steiner School",
-            "title": "Edinburgh Steiner Education Course. Nine weekends and two full weeks immersion into the practice and philosophy of Steiner-Waldorf Education. More information",
+            "title": "Edinburgh Steiner Education Course. More information", // Sentence removed as requested
             "date": "2025-09-12",
             "time": "Starts",
             "location": "Edinburgh Steiner School",
-            "description": null, // Description is part of the title as requested
+            "description": null, // Description is now null as the relevant sentence was removed from the title
             "link": "https://www.edinburghsteinerschool.org.uk/teacher-development/"
         },
 
@@ -588,9 +588,21 @@ document.addEventListener('DOMContentLoaded', () => {
             "secondaryLink": "https://forms.gle/8jWbkYaGNq76kscE7", // New secondary link for newsletter
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
-        // NEW ITEM: Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)
+        // NEW CONSOLIDATED ITEM: Forum Meetings for Organization View
         {
-            "id": 86, // New unique ID
+            "id": 98, // New unique ID for the consolidated forum event
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
+            "date": null, // Not for Diary View
+            "time": null, // Not for Diary View
+            "location": "Library of Edinburgh Christian Community / TBD",
+            "description": "Forum Meetings (2-3:15pm): 2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "isOrganizationDetail": true // Only for Organization View
+        },
+        // Individual Forum Meeting events (for Diary View)
+        {
+            "id": 86, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-09-07",
@@ -600,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 87, // New unique ID
+            "id": 87, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-12-14",
@@ -610,7 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 88, // New unique ID
+            "id": 88, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-01-11",
@@ -620,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 89, // New unique ID
+            "id": 89, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-02-01",
@@ -630,7 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 90, // New unique ID
+            "id": 90, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-03-08",
@@ -640,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 91, // New unique ID
+            "id": 91, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-04-12",
@@ -650,7 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 92, // New unique ID
+            "id": 92, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-05-10",
@@ -660,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 93, // New unique ID
+            "id": 93, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-06-07",
@@ -670,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 94, // New unique ID
+            "id": 94, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-07-12",
@@ -681,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW ITEM: Forum on 5 October: Michaelmas
         {
-            "id": 95, // New unique ID
+            "id": 95, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum: Michaelmas",
             "date": "2025-10-05",
@@ -692,7 +704,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW ITEM: Easter Preparation event
         {
-            "id": 96, // New unique ID
+            "id": 96, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Easter Preparation event",
             "date": "2026-03-14",
@@ -1301,10 +1313,18 @@ document.addEventListener('DOMContentLoaded', () => {
             organizationEventsColumn.className = 'organization-events-column';
 
             // Separate events into two categories for this organization
-            const orgSpecificDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
-            const regularUpcomingEvents = groupedEvents[orgName].filter(event =>
+            let orgSpecificDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
+            let regularUpcomingEvents = groupedEvents[orgName].filter(event =>
                 !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
             );
+
+            // Handle consolidation for "Anthroposophy in Edinburgh" Forum events
+            const consolidatedForumEvent = orgSpecificDetails.find(event => event.id === 98);
+            if (orgName === "Anthroposophy in Edinburgh" && consolidatedForumEvent) {
+                // IDs of individual forum events that should be excluded from regularUpcomingEvents
+                const individualForumIds = [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96];
+                regularUpcomingEvents = regularUpcomingEvents.filter(event => !individualForumIds.includes(event.id));
+            }
 
             // Combine them, with organization-specific details first
             let eventsToDisplayInColumn = [...orgSpecificDetails, ...regularUpcomingEvents];
