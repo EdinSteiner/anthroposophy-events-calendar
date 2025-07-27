@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 46, // New ID
             "organization": "Edinburgh Steiner School",
             "title": "El Mercado Market",
-            "date": "2025-10-4",
-            "time": "11:00 - 16:00",
+            "date": "2025-10-04", // Corrected date format
+            "time": "11:00 - 16:00", // Corrected time
             "location": "Edinburgh Steiner School Campus",
             "description": "A vibrant market featuring various stalls.",
             "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
         },
         {
-            "id": 72, // New ID
+            "id": 73, // New ID for Christmas Market
             "organization": "Edinburgh Steiner School",
             "title": "Christmas Market",
             "date": "2025-11-22",
@@ -71,9 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "A vibrant market featuring various stalls.",
             "link": "https://www.edinburghsteinerschool.org.uk/event/christmas-market-2024/"
         },
+        // NEW ITEM: Edinburgh Steiner Education Course
+        {
+            "id": 97, // New unique ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Edinburgh Steiner Education Course. Nine weekends and two full weeks immersion into the practice and philosophy of Steiner-Waldorf Education. More information",
+            "date": "2025-09-12",
+            "time": "Starts",
+            "location": "Edinburgh Steiner School",
+            "description": null, // Description is part of the title as requested
+            "link": "https://www.edinburghsteinerschool.org.uk/teacher-development/"
+        },
 
         // --- Edinburgh Christian Community (Facebook link) ---
-        // Removed Study Group events, Youth Group listings and Children Service listings.
         {
             "id": 4,
             "organization": "Edinburgh Christian Community",
@@ -114,16 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Devotional Gathering.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
-        // Removed: {
-        //     "id": 15,
-        //     "organization": "Edinburgh Christian Community",
-        //     "title": "Act of Consecration of Man",
-        //     "date": "2025-07-27",
-        //     "time": "10:00",
-        //     "location": "Edinburgh Christian Community Church",
-        //     "description": "Weekly service.",
-        //     "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        // },
         {
             "id": 17, // New ID
             "organization": "Edinburgh Christian Community",
@@ -186,8 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
-        // Bike Safari (2025-06-14) removed as it was a past event.
-        // This event is now transformed into the generic "For current information..." link.
         {
             "id": 62, // New ID for the generic link
             "organization": "Camphill Blair Drummond",
@@ -209,18 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Vocal recital by Claire Haslin and Phil Gault. Check Ticketsource for details.",
             "link": "https://www.ticketsource.co.uk/whats-on/stirling/camphill-blair-drummond"
         },
-        // Removed the old id 58 as it's replaced by id 62
-        // {
-        //     "id": 58, // New ID for Camphill Blair Drummond main events page
-        //     "organization": "Camphill Blair Drummond",
-        //     "title": "Visit Camphill Blair Drummond Events Page",
-        //     "date": null, // This does not go in Diary view
-        //     "time": null,
-        //     "location": "Online",
-        //     "description": "For the most up-to-date information on events, please visit our official news and events page.",
-        //     "link": "https://camphillblairdrummond.org.uk/news",
-        //     "isOrganizationDetail": true // Custom property to signify it's for org view only
-        // },
 
         // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
         {
@@ -245,17 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.corbeniccamphill.co.uk/corbenic-shop",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
-        // Removed old id 19 as it's replaced by id 63
-        // {
-        //     "id": 19, // Re-using ID for a placeholder if needed
-        //     "organization": "Camphill Corbenic",
-        //     "title": "Check Corbenic Website for Events",
-        //     "date": "2025-08-01", // Placeholder date
-        //     "time": "Ongoing",
-        //     "location": "Corbenic Camphill Community",
-        //     "description": "Please check the newsletter or website for current information on events and activities.",
-        //     "link": "https://preview.mailerlite.io/preview/643751/emails/154201102433126078"
-        // },
 
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
@@ -531,7 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Exhibition of selected works for the John Ruskin Prize 2026.",
             "link": "https://www.ruskinprize.co.uk/" // Corrected link
         },
-        // Removing specific Ruskin Mill events like Leveret concert if not directly under Fairhill Rise
 
         // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
@@ -591,17 +565,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://locharthur.org.uk/news-and-events/calendar/",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
-        // Removed old id 42 as it's replaced by id 69
-        // {
-        //     "id": 42,
-        //     "organization": "Camphill (Loch Arthur)",
-        //     "title": "Check Loch Arthur Website for Events",
-        //     "date": "2025-08-01", // Placeholder
-        //     "time": "Ongoing",
-        //     "location": "Loch Arthur Camphill Community",
-        //     "description": "Please visit the official Loch Arthur website for the most current information on upcoming events and concerts.",
-        //     "link": "https://locharthur.org.uk/news-and-events/calendar/"
-        // },
         {
             "id": 53, // New ID
             "organization": "Camphill (Loch Arthur)",
@@ -614,30 +577,132 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Anthroposophy in Edinburgh ---
         {
-            "id": 70, // New ID for the generic link
+            "id": 70, // Existing ID for generic link
             "organization": "Anthroposophy in Edinburgh",
-            "title": "For current information, please click here",
+            "title": "For current information, please click here or sign up for the local newsletter", // Modified title
             "date": null,
             "time": null,
             "location": null,
             "description": null,
-            "link": "https://www.facebook.com/anthroposophyscotland",
+            "link": "https://www.facebook.com/anthroposophyscotland", // Existing link
+            "secondaryLink": "https://forms.gle/8jWbkYaGNq76kscE7", // New secondary link for newsletter
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
-        // Removed 'Study Group Meeting' listings.
+        // NEW ITEM: Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)
         {
-            "id": 43,
+            "id": 86, // New unique ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Monday Fortnightly Study Group: Riddles of Philosophy",
-            "date": "2025-08-18",
-            "time": "13:45-15:15",
-            "location": "Library of Edinburgh Chrisitian Community",
-            "description": "Resumes on 18 August 1:45-3:15pm and meets fortnightly on Mondays.",
-            "link": "Contact :ioberski[at]gmail.com" // Changed to contact info
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2025-09-07",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
         },
-        // ADDITION 2: Anthroposophy in Edinburgh - Online Study Group
         {
-            "id": 56, // New ID
+            "id": 87, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2025-12-14",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 88, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-01-11",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 89, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-02-01",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 90, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-03-08",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 91, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-04-12",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 92, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-05-10",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 93, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-06-07",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 94, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "date": "2026-07-12",
+            "time": "14:00-15:15",
+            "location": "Library of Edinburgh Christian Community",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        // NEW ITEM: Forum on 5 October: Michaelmas
+        {
+            "id": 95, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum: Michaelmas",
+            "date": "2025-10-05",
+            "time": "TBD",
+            "location": "TBD",
+            "description": "Forum on Michaelmas.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        // NEW ITEM: Easter Preparation event
+        {
+            "id": 96, // New unique ID
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Easter Preparation event",
+            "date": "2026-03-14",
+            "time": "TBD",
+            "location": "TBD",
+            "description": "Details to be confirmed.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 56, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Tueaday Weekly Online Study Group of the Leading Thoughts",
             "date": "2025-08-26",
@@ -646,9 +711,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65.",
             "link": "Contact :ioberski[at]gmail.com"
         },
-        // ADDITION 3: Anthroposophy in Edinburgh and Edinburgh Steiner School - Fire in the Temple
         {
-            "id": 57, // New ID
+            "id": 57, // Existing ID
             "organization": "Anthroposophy in Edinburgh", // Primary organization
             "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
             "title": "Fire in the Temple: A Staged Reading",
@@ -712,7 +776,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
         "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
         "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
-        "Anthroposophy in Edinburgh": { homepage: "https://anthroposophyinedinburgh.wordpress.com/" }, // Assuming a general homepage for this group
+        "Anthroposophy in Edinburgh": { homepage: "https://www.facebook.com/anthroposophyscotland" }, // Updated to the Facebook link as the primary homepage
         "Garvald Home Farm": { homepage: "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB" } // New organization homepage
     };
 
@@ -1275,12 +1339,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 eventsToDisplayInColumn.forEach(event => { // Use eventsToDisplayInColumn
                     const listItem = document.createElement('li');
                     let linkContent = event.link;
-                    // Special handling for the "For current information, please click here" title
-                    if (event.title.includes("For current information, please click here") || event.title.includes("Visit our Facebook page for more")) { // Use .includes for robustness
-                        linkContent = `<a href="${event.link}" target="_blank">here</a>`;
-                        // Replace 'here' with ' ' to ensure a space before the link
+
+                    // Special handling for the "For current information, please click here or sign up for the local newsletter" title
+                    if (event.id === 70 && event.organization === "Anthroposophy in Edinburgh") {
+                        const baseText = "For current information, please click ";
+                        const hereLinkHtml = `<a href="${event.link}" target="_blank">here</a>`;
+                        const newsletterText = " or sign up for the local ";
+                        const newsletterLinkHtml = `<a href="${event.secondaryLink}" target="_blank">newsletter</a>`;
+
                         listItem.innerHTML = `
-                            <h4>${event.title.replace('here', ' ')}<span class="link-placeholder">${linkContent}</span></h4>
+                            <h4>${baseText}${hereLinkHtml}${newsletterText}${newsletterLinkHtml}</h4>
                         `;
                     } else {
                         if (event.link && event.link.startsWith('http')) {
