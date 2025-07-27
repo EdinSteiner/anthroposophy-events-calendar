@@ -189,7 +189,7 @@ main {
     background-color: var(--main-bg); /* Using variable */
     border-radius: 12px; /* Increased border-radius */
     box-shadow: 0 6px 15px var(--main-shadow); /* More diffused shadow */
-    margin-top: 200px; /* Add margin-top to main content to account for fixed header and nav */
+    margin-top: 220px; /* Adjusted margin-top to account for fixed header and nav */
 }
 
 .no-events-message {
@@ -270,14 +270,14 @@ main {
     max-height: 3.5em; /* Limit height for description */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal; /* Allow wrap */
+    white-space: normal;
 }
 
 .event-card .more-info {
     margin-top: 3px; /* Reduced margin */
-    text-align: left; /* Aligned left as requested */
+    text-align: left;
     font-weight: bold;
-    font-size: 0.75em; /* Smaller font */
+    font-size: 0.75em;
 }
 
 .event-card .more-info a {
@@ -293,24 +293,24 @@ main {
 
 /* --- Diary View Layout --- */
 .diary-layout {
-    padding: 5px; /* Reduced padding for more compactness */
+    padding: 5px;
 }
 
 .diary-day-card {
     background-color: var(--diary-day-card-bg); /* Using variable */
     border: 1px solid var(--diary-day-card-border); /* Using variable */
     border-radius: 8px; /* Increased border-radius */
-    padding: 7px; /* Reduced padding */
-    margin-bottom: 7px; /* Reduced margin */
+    padding: 7px;
+    margin-bottom: 7px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04); /* More diffused shadow */
 }
 
 .diary-day-card h4 {
-    margin: 0 0 5px; /* Reduced margin */
+    margin: 0 0 5px;
     color: var(--diary-day-header-color); /* Using variable */
-    font-size: 1.2em; /* Slightly smaller font */
+    font-size: 1.2em;
     border-bottom: 1px solid var(--diary-day-header-border); /* Using variable */
-    padding-bottom: 3px; /* Reduced padding */
+    padding-bottom: 3px;
 }
 
 .diary-event-list {
@@ -323,14 +323,14 @@ main {
     background-color: var(--diary-event-list-item-bg); /* Using variable */
     border: 1px solid var(--diary-event-list-item-border); /* Using variable */
     border-radius: 6px; /* Increased border-radius */
-    padding: 6px; /* Reduced padding */
-    margin-bottom: 6px; /* Reduced margin */
+    padding: 6px;
+    margin-bottom: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); /* More diffused shadow */
     transition: background-color 0.2s ease;
 }
 
 .diary-event-list li:last-child {
-    margin-bottom: 0; /* Remove margin from last item in list */
+    margin-bottom: 0;
 }
 
 .diary-event-list li:hover {
@@ -338,10 +338,10 @@ main {
 }
 
 .diary-event-list .event-org-name-diary { /* For organization name in diary view */
-    font-size: 0.7em; /* Smaller font */
+    font-size: 0.7em;
     font-weight: bold;
     color: var(--card-org-name-color); /* Using variable */
-    margin-bottom: 1px; /* Reduced margin */
+    margin-bottom: 1px;
     text-transform: uppercase;
 }
 
@@ -358,16 +358,16 @@ main {
 
 
 .diary-event-list h4 {
-    margin: 0 0 3px; /* Reduced margin */
-    font-size: 0.95em; /* Smaller font */
+    margin: 0 0 3px;
+    font-size: 0.95em;
     color: var(--card-title-color); /* Using variable */
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .diary-event-list p {
-    margin: 0; /* Removed margin */
-    padding: 0; /* Ensure no padding adds to spacing */
+    margin: 0;
+    padding: 0;
     font-size: 0.72em;
     color: var(--card-detail-color); /* Using variable */
 }
@@ -377,11 +377,11 @@ main {
 }
 
 .diary-event-list .event-description-diary {
-    font-size: 0.65em; /* Even smaller font */
+    font-size: 0.65em;
     color: var(--card-description-color); /* Using variable */
-    margin-top: 3px; /* Reduced margin */
+    margin-top: 3px;
     margin-bottom: 3px;
-    max-height: 2.8em; /* Limit height for description */
+    max-height: 2.8em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
@@ -390,7 +390,7 @@ main {
 .diary-event-list .more-info-diary {
     text-align: left;
     font-weight: bold;
-    margin-top: 3px; /* Small margin above the link */
+    margin-top: 3px;
     font-size: 0.72em;
 }
 
@@ -409,52 +409,52 @@ main {
 .organization-layout {
     display: flex;
     flex-direction: column;
-    padding: 5px; /* Reduced padding */
+    padding: 5px;
 }
 
 .organization-header {
     display: flex;
     font-weight: bold;
-    font-size: 0.9em; /* Smaller font */
-    padding: 5px; /* Reduced padding */
-    margin-bottom: 8px; /* Reduced margin */
+    font-size: 0.9em;
+    padding: 5px;
+    margin-bottom: 8px;
     border-bottom: 1px solid var(--org-header-border); /* Using variable */
-    align-items: center; /* Vertically align content */
+    align-items: center;
     background-color: var(--org-header-bg); /* Using variable */
     color: var(--org-header-text-color); /* Using variable */
 }
 
 .header-org-name {
-    flex: 0 0 170px; /* Fixed width for organization name column */
-    padding: 0 5px; /* Reduced padding */
+    flex: 0 0 170px;
+    padding: 0 5px;
     color: var(--org-header-border); /* Using variable */
-    text-align: center; /* Center align header text */
+    text-align: center;
 }
 
 .header-events {
     flex-grow: 1;
-    padding: 0 5px; /* Reduced padding */
+    padding: 0 5px;
     color: var(--org-header-border); /* Using variable */
-    text-align: center; /* Center align header text */
+    text-align: center;
 }
 
 .organization-row {
     display: flex;
     border: 1px solid var(--org-row-border); /* Using variable */
     border-radius: 8px; /* Increased border-radius */
-    margin-bottom: 7px; /* Reduced margin */
+    margin-bottom: 7px;
     background-color: var(--org-row-bg); /* Using variable */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* More diffused shadow */
-    align-items: flex-start; /* Align content to the top of the row */
+    align-items: flex-start;
 }
 
 .organization-name-column {
-    flex: 0 0 170px; /* Fixed width */
-    padding: 8px; /* Reduced padding */
+    flex: 0 0 170px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start;
     border-right: 1px solid var(--org-name-column-border-right); /* Using variable */
     background-color: var(--org-name-column-bg); /* Using variable */
     border-radius: 8px 0 0 8px; /* Increased border-radius */
@@ -472,18 +472,18 @@ main {
 
 /* Apply fixed size and remove border for all logos in organization view */
 .organization-name-column img {
-    width: 150px; /* Increased width to be as big as possible within column */
-    height: 150px; /* Increased height to be as big as possible within column */
-    object-fit: contain; /* Ensures the image scales within the bounds without cropping */
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
     margin-bottom: 5px;
-    border: none; /* Removed border/rectangle around logos */
-    box-shadow: none; /* Removed any shadow that might look like a border */
+    border: none;
+    box-shadow: none;
 }
 
 
 .organization-name-column h2 {
     margin: 5px 0 0;
-    font-size: 1.15em; /* Slightly smaller font */
+    font-size: 1.15em;
     color: var(--card-title-color); /* Using variable */
 }
 
@@ -501,16 +501,16 @@ main {
 
 .organization-events-column {
     flex-grow: 1;
-    padding: 6px; /* Reduced padding */
+    padding: 6px;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px; /* Reduced gap between event cards */
-    align-items: flex-start; /* Align events to the top */
+    gap: 5px;
+    align-items: flex-start;
 }
 
 /* New/Modified rules for compact event listings in Organization View */
 .organization-event-list {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -519,26 +519,26 @@ main {
     background-color: var(--org-event-list-item-bg); /* Using variable */
     border: 1px solid var(--org-event-list-item-border); /* Using variable */
     border-radius: 6px; /* Increased border-radius */
-    padding: 6px; /* Consistent padding for list items */
-    margin-bottom: 5px; /* Small margin between list items */
+    padding: 6px;
+    margin-bottom: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* More diffused shadow */
     transition: background-color 0.2s ease;
-    flex: 1 1 100%; /* Ensure each event takes full width within its column */
+    flex: 1 1 100%;
 }
 
 .organization-event-list li:last-child {
-    margin-bottom: 0; /* Remove margin from last item in list */
+    margin-bottom: 0;
 }
 
 .organization-event-list li h4 {
-    margin: 0 0 3px; /* Small margin below title */
+    margin: 0 0 3px;
     font-size: 0.95em;
     color: var(--org-event-list-item-title-color); /* Using variable */
 }
 
 .organization-event-list li p {
-    margin: 0; /* REMOVED BLANK LINES: Set margin to 0 for paragraphs */
-    padding: 0; /* Ensure no padding adds to spacing */
+    margin: 0;
+    padding: 0;
     font-size: 0.72em;
     color: var(--org-event-list-item-detail-color); /* Using variable */
 }
@@ -550,7 +550,7 @@ main {
 .organization-event-list li .more-info-org {
     text-align: left;
     font-weight: bold;
-    margin-top: 3px; /* Small margin above the link */
+    margin-top: 3px;
     font-size: 0.72em;
 }
 
