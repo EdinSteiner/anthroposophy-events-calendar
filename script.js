@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 56, // Existing ID
             "organisation": "Anthroposophy in Edinburgh",
-            "title": "Tueaday Weekly Online Study Group of the Leading Thoughts",
+            "title": "Tuesday Weekly Online Study Group of the Leading Thoughts",
             "date": "2025-08-26",
             "time": "19:00-20:00",
             "location": "Online",
@@ -733,6 +733,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Edinburgh Steiner School",
             "description": "A staged reading of the play by Glen Williamson.",
             "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
+        },
+        // NEWLY RE-ADDED EVENT: Monday Reading Group
+        {
+            "id": 99, // Assigning a new unique ID
+            "organisation": "Anthroposophy in Edinburgh",
+            "title": "Monday Reading group with Riddles of Philosophy by Rudolf Steiner",
+            "date": "2025-08-18",
+            "time": "13:45-15:15",
+            "location": "Library at 21 Napier Road",
+            "description": "Fortnightly reading group focusing on Rudolf Steiner's 'Riddles of Philosophy'.",
+            "link": "Contact :ioberski[at]gmail.com"
         },
         // --- Edinburgh Steiner School (generic link for organisation view) ---
         {
@@ -1311,7 +1322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const consolidatedForumEvent = orgSpecificDetails.find(event => event.id === 98);
             if (orgName === "Anthroposophy in Edinburgh" && consolidatedForumEvent) {
                 // IDs of individual forum events that should be excluded from regularUpcomingEvents
-                const individualForumIds = [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96];
+                const individualForumIds = [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 99]; // Added ID 99 here
                 regularUpcomingEvents = regularUpcomingEvents.filter(event => !individualForumIds.includes(event.id));
             }
 
