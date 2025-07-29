@@ -73,7 +73,7 @@
     --diary-event-list-item-shadow: rgba(0, 0, 0, 0.03);
     --diary-event-list-item-hover-bg: #f9f9f9;
 
-    /* s View Specific */
+    /* Organization View Specific */
     --org-header-bg: #e0e0e0;
     --org-header-text-color: #333;
     --org-header-border: #a87e5b;
@@ -225,7 +225,7 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More diffused shadow */
 }
 
-.event-card .event-org-name { /* For s name within card view */
+.event-card .event-org-name { /* For organization name within card view */
     font-size: 0.75em; /* Smaller font */
     font-weight: bold;
     color: var(--card-org-name-color); /* Using variable */
@@ -233,7 +233,7 @@ main {
     text-transform: uppercase;
 }
 
-/* Specific colors for s names in cards (example, adjust as desired) */
+/* Specific colors for organization names in cards (example, adjust as desired) */
 .event-card .title-edinburgh-steiner-school { color: #5a8d40; } /* Greenish */
 .event-card .title-edinburgh-christian-community { color: #8e6b3b; } /* Brownish */
 .event-card .title-camphill-blair-drummond { color: #6e4e8e; } /* Purplish */
@@ -337,7 +337,7 @@ main {
     background-color: var(--diary-event-list-item-hover-bg); /* Using variable */
 }
 
-.diary-event-list .event-org-name-diary { /* For s name in diary view */
+.diary-event-list .event-org-name-diary { /* For organization name in diary view */
     font-size: 0.7em;
     font-weight: bold;
     color: var(--card-org-name-color); /* Using variable */
@@ -345,7 +345,7 @@ main {
     text-transform: uppercase;
 }
 
-/* Specific colors for s names in diary view */
+/* Specific colors for organization names in diary view */
 .diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
 .diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
 .diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
@@ -405,14 +405,14 @@ main {
     text-decoration: underline;
 }
 
-/* --- s View Layout --- */
-.s-layout {
+/* --- Organization View Layout --- */
+.organization-layout {
     display: flex;
     flex-direction: column;
     padding: 5px;
 }
 
-.s-header {
+.organization-header {
     display: flex;
     font-weight: bold;
     font-size: 0.9em;
@@ -438,7 +438,7 @@ main {
     text-align: center;
 }
 
-.s-row {
+.organization-row {
     display: flex;
     border: 1px solid var(--org-row-border); /* Using variable */
     border-radius: 8px; /* Increased border-radius */
@@ -448,7 +448,7 @@ main {
     align-items: flex-start;
 }
 
-.s-name-column {
+.organization-name-column {
     flex: 0 0 170px;
     padding: 8px;
     display: flex;
@@ -461,7 +461,7 @@ main {
     text-align: center;
 }
 
-.s-name-column .org-link-wrapper {
+.organization-name-column .org-link-wrapper {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -470,8 +470,8 @@ main {
     width: 100%;
 }
 
-/* Apply fixed size and remove border for all logos in s view */
-.s-name-column img {
+/* Apply fixed size and remove border for all logos in organization view */
+.organization-name-column img {
     width: 150px;
     height: 150px;
     object-fit: contain;
@@ -481,25 +481,25 @@ main {
 }
 
 
-.s-name-column h2 {
+.organization-name-column h2 {
     margin: 5px 0 0;
     font-size: 1.15em;
     color: var(--card-title-color); /* Using variable */
 }
 
-/* Specific colors for s names in s view */
-.s-name-column .title-edinburgh-steiner-school { color: #5a8d40; }
-.s-name-column .title-edinburgh-christian-community { color: #8e6b3b; }
-.s-name-column .title-camphill-blair-drummond { color: #6e4e8e; }
-.s-name-column .title-camphill-corbenic { color: #4b7b9e; }
-.s-name-column .title-tiphereth { color: #d67a30; }
-.s-name-column .title-garvald-west-linton { color: #a04040; }
-.s-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
-.s-name-column .title-garvald-edinburgh { color: #725d7c; }
-.s-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
+/* Specific colors for organization names in organization view */
+.organization-name-column .title-edinburgh-steiner-school { color: #5a8d40; }
+.organization-name-column .title-edinburgh-christian-community { color: #8e6b3b; }
+.organization-name-column .title-camphill-blair-drummond { color: #6e4e8e; }
+.organization-name-column .title-camphill-corbenic { color: #4b7b9e; }
+.organization-name-column .title-tiphereth { color: #d67a30; }
+.organization-name-column .title-garvald-west-linton { color: #a04040; }
+.organization-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
+.organization-name-column .title-garvald-edinburgh { color: #725d7c; }
+.organization-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
 
 
-.s-events-column {
+.organization-events-column {
     flex-grow: 1;
     padding: 6px;
     display: flex;
@@ -508,14 +508,14 @@ main {
     align-items: flex-start;
 }
 
-/* New/Modified rules for compact event listings in Organisation View */
-.s-event-list {
+/* New/Modified rules for compact event listings in Organization View */
+.organization-event-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.s-event-list li {
+.organization-event-list li {
     background-color: var(--org-event-list-item-bg); /* Using variable */
     border: 1px solid var(--org-event-list-item-border); /* Using variable */
     border-radius: 6px; /* Increased border-radius */
@@ -526,47 +526,47 @@ main {
     flex: 1 1 100%;
 }
 
-.s-event-list li:last-child {
+.organization-event-list li:last-child {
     margin-bottom: 0;
 }
 
-.s-event-list li h4 {
+.organization-event-list li h4 {
     margin: 0 0 3px;
     font-size: 0.95em;
     color: var(--org-event-list-item-title-color); /* Using variable */
 }
 
-.s-event-list li p {
+.organization-event-list li p {
     margin: 0;
     padding: 0;
     font-size: 0.72em;
     color: var(--org-event-list-item-detail-color); /* Using variable */
 }
 
-.s-event-list li strong {
+.organization-event-list li strong {
     color: var(--org-event-list-item-strong-color); /* Using variable */
 }
 
-.organisation-event-list li .more-info-org {
+.organization-event-list li .more-info-org {
     text-align: left;
     font-weight: bold;
     margin-top: 3px;
     font-size: 0.72em;
 }
 
-.s-event-list li .more-info-org a {
+.organization-event-list li .more-info-org a {
     color: var(--link-color); /* Using variable */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.s-event-list li .more-info-org a:hover {
+.organization-event-list li .more-info-org a:hover {
     color: var(--link-hover-color); /* Using variable */
     text-decoration: underline;
 }
 
 
-.s-events-column .no-events-on-day {
+.organization-events-column .no-events-on-day {
     font-style: italic;
     color: var(--org-no-events-message-color); /* Using variable */
     padding: 10px;
@@ -625,16 +625,16 @@ footer {
         margin-bottom: 6px;
     }
 
-    .s-header {
+    .organization-header {
         display: none; /* Hide header on small screens */
     }
 
-    .s-row {
+    .organization-row {
         flex-direction: column;
         margin-bottom: 10px;
     }
 
-    .s-name-column {
+    .organization-name-column {
         flex: none;
         width: 100%;
         border-right: none;
@@ -642,11 +642,11 @@ footer {
         padding-bottom: 10px;
     }
 
-    .s-events-column {
+    .organization-events-column {
         padding-top: 10px;
     }
 
-    .s-logo-fixed-size {
+    .organization-logo-fixed-size {
         width: 80px;
         height: 80px;
     }
