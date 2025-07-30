@@ -1360,11 +1360,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Handle consolidation for "Anthroposophy in Edinburgh" Forum events
             const consolidatedForumEvent = orgSpecificDetails.find(event => event.id === 98);
-            if (orgName === "Anthroposophy in Edinburgh" && consolidatedForumEvent) {
+            const consolidatedMondayStudyGroupEvent = orgSpecificDetails.find(event => event.id === 1000); // Find the consolidated Monday Study Group event
+
+            if (orgName === "Anthroposophy in Edinburgh") {
                 // IDs of individual forum events that should be excluded from regularUpcomingEvents
                 const individualForumIds = [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96];
                 regularUpcomingEvents = regularUpcomingEvents.filter(event => !individualForumIds.includes(event.id));
+
+                // Exclude individual Monday Study Group events from regularUpcomingEvents if the consolidated one exists
+                if (consolidatedMondayStudyGroupEvent) {
+                    regularUpcomingEvents = regularUpcomingEvents.filter(event =>
+                        !(event.organization === "Anthroposophy in Edinburgh" &&
+                          event.title.startsWith("Monday Study group: Riddles of Philosophy by Rudolf Steiner") &&
+                          event.id >= 100 && event.id < 1000)
+                    );
+                }
             }
+
 
             // Combine them, with organization-specific details first
             let eventsToDisplayInColumn = [...orgSpecificDetails, ...regularUpcomingEvents];
@@ -1386,7 +1398,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return new Date(a.date) - new Date(b.date);
                     }
                     if (a.date && !b.date) return 1; // Event with date comes before event without date
-                    if (!a.date && b.date) return -1;
+                    if (!a.date && !b.date) return 0; // Both no date, maintain relative order
                     return 0; // Maintain order if both have no date or dates are equal
                 });
             }
