@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 56, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Tueaday Weekly Online Study Group of the Leading Thoughts",
+            "title": "Tuesday Weekly Online Study Group of the Leading Thoughts",
             "date": "2025-08-26",
             "time": "19:00-20:00",
             "location": "Online",
@@ -759,6 +759,45 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         }
     ];
+
+    // Generate fortnightly Monday Reading Group events for Diary View
+    const mondayReadingGroupEvents = [];
+    let currentMonday = new Date('2025-08-18T00:00:00'); // Start date
+    const endDateForFortnightly = new Date('2025-12-22T00:00:00'); // End date
+
+    let newIdCounter = 100; // Starting new IDs for these events
+
+    while (currentMonday <= endDateForFortnightly) {
+        mondayReadingGroupEvents.push({
+            "id": newIdCounter++,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+            "date": currentMonday.toISOString().slice(0, 10),
+            "time": "1:45-3:15pm",
+            "location": "Library at 21 Napier Road",
+            "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+            "link": "Contact :ioberski[at]gmail.com"
+        });
+        currentMonday.setDate(currentMonday.getDate() + 14); // Add 14 days for fortnightly
+    }
+
+    // Add the newly generated fortnightly events to allEvents
+    allEvents.push(...mondayReadingGroupEvents);
+
+    // Add the consolidated event for Organization View
+    allEvents.push({
+        "id": 1000, // Unique ID for the consolidated event
+        "organization": "Anthroposophy in Edinburgh",
+        "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
+        "date": "2025-08-18", // Start date for sorting in org view
+        "endDate": "2025-12-22", // End date for sorting in org view
+        "time": "1:45-3:15pm (fortnightly)",
+        "location": "Library at 21 Napier Road",
+        "description": "Study group resumes on 18 August 2025 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'. More info from ioberski[at]gmail.com.",
+        "link": "Contact :ioberski[at]gmail.com",
+        "isOrganizationDetail": true // Mark as organization detail
+    });
+
 
     // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
     const organizationImages = {
