@@ -70,7 +70,7 @@
     --diary-day-header-border: #f0f0f0;
     --diary-event-list-item-bg: #fff;
     --diary-event-list-item-border: #eee;
-    --diary-event-list-item-shadow: rgba(0, 0, 0, 0.03);
+    --diary-event-list-item-shadow: rgba(0, 0, 0, 0.05);
     --diary-event-list-item-hover-bg: #f9f9f9;
 
     /* Organization View Specific */
@@ -88,7 +88,7 @@
     --org-event-list-item-bg: #fff;
     --org-event-list-item-border: #eee;
     --org-event-list-item-shadow: rgba(0, 0, 0, 0.07);
-    --org-event-list-item-title-color: #3a3a3a;
+    --org-event-list-item-title-color: #4a4a4a;
     --org-event-list-item-detail-color: #555;
     --org-event-list-item-strong-color: #333;
     --org-event-list-item-link-color: #a87e5b;
@@ -118,16 +118,11 @@ header {
     color: var(--header-text-color); /* Using variable */
     padding: 25px 10px;
     text-align: center;
-    border-radius: 12px 12px 0 0; /* Increased border-radius */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07); /* More diffused shadow */
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     margin: 10px auto 0;
     max-width: 1200px;
-    position: fixed; /* Make header fixed */
-    top: 0; /* Position at the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    width: 100%; /* Ensure it spans the width */
-    z-index: 1000; /* Ensure it stays on top of other content */
+    position: relative;
     overflow: hidden;
 }
 
@@ -135,14 +130,14 @@ header h1 {
     margin: 0 0 5px;
     font-size: 2.2em;
     font-weight: bold; /* Ensure bold is used for h1 */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Slightly softer text shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 header .subtitle {
     font-size: 1.1em;
     font-style: italic;
     opacity: var(--header-subtitle-opacity); /* Using variable */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Slightly softer text shadow */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     margin-top: 2px;
 }
 
@@ -151,8 +146,8 @@ nav {
     background-color: var(--nav-bg); /* Using variable */
     padding: 6px 10px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* More diffused shadow */
-    border-radius: 0 0 12px 12px; /* Increased border-radius */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
     max-width: 1200px;
     margin: 0 auto 10px; /* Aligns with header */
 }
@@ -163,11 +158,11 @@ nav button {
     border: none;
     padding: 7px 15px;
     margin: 3px;
-    border-radius: 8px; /* Increased border-radius */
+    border-radius: 4px;
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* More diffused shadow */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 nav button:hover {
@@ -177,7 +172,7 @@ nav button:hover {
 
 nav button.active {
     background-color: var(--nav-button-active-bg); /* Using variable */
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2); /* More diffused shadow */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
     transform: translateY(0);
 }
 
@@ -187,15 +182,14 @@ main {
     margin: 10px auto;
     padding: 10px;
     background-color: var(--main-bg); /* Using variable */
-    border-radius: 12px; /* Increased border-radius */
-    box-shadow: 0 6px 15px var(--main-shadow); /* More diffused shadow */
-    margin-top: 220px; /* Adjusted margin-top to account for fixed header and nav */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px var(--main-shadow); /* Using variable */
 }
 
 .no-events-message {
     text-align: center;
     font-style: italic;
-    color: var(--card-description-color); /* Using variable */
+    color: var(--org-no-events-message-color); /* Using variable */
     padding: 20px 0;
     font-size: 1em;
 }
@@ -211,9 +205,9 @@ main {
 .event-card {
     background-color: var(--card-bg); /* Using variable */
     border: 1px solid var(--card-border); /* Using variable */
-    border-radius: 8px; /* Increased border-radius */
+    border-radius: 5px;
     padding: 6px; /* Reduced padding further */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); /* More diffused shadow */
+    box-shadow: 0 1px 4px var(--card-shadow); /* Using variable */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -222,7 +216,7 @@ main {
 
 .event-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* More diffused shadow */
+    box-shadow: 0 2px 7px var(--card-hover-shadow); /* Using variable */
 }
 
 .event-card .event-org-name { /* For organization name within card view */
@@ -270,14 +264,14 @@ main {
     max-height: 3.5em; /* Limit height for description */
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal;
+    white-space: normal; /* Allow wrap */
 }
 
 .event-card .more-info {
     margin-top: 3px; /* Reduced margin */
-    text-align: left;
+    text-align: left; /* Aligned left as requested */
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: 0.75em; /* Smaller font */
 }
 
 .event-card .more-info a {
@@ -293,24 +287,25 @@ main {
 
 /* --- Diary View Layout --- */
 .diary-layout {
-    padding: 5px;
+    padding: 5px; /* Reduced padding for more compactness */
 }
 
 .diary-day-card {
     background-color: var(--diary-day-card-bg); /* Using variable */
     border: 1px solid var(--diary-day-card-border); /* Using variable */
-    border-radius: 8px; /* Increased border-radius */
-    padding: 7px;
-    margin-bottom: 7px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04); /* More diffused shadow */
+    border-radius: 5px;
+    padding: 7px; /* Reduced padding */
+    margin-bottom: 7px; /* Reduced margin */
+    box-shadow: 0 1px 5px var(--diary-day-card-shadow); /* Using variable */
+    scroll-margin-top: 180px; /* Added to ensure visibility below header/nav */
 }
 
 .diary-day-card h4 {
-    margin: 0 0 5px;
+    margin: 0 0 5px; /* Reduced margin */
     color: var(--diary-day-header-color); /* Using variable */
-    font-size: 1.2em;
+    font-size: 1.2em; /* Slightly smaller font */
     border-bottom: 1px solid var(--diary-day-header-border); /* Using variable */
-    padding-bottom: 3px;
+    padding-bottom: 3px; /* Reduced padding */
 }
 
 .diary-event-list {
@@ -322,143 +317,129 @@ main {
 .diary-event-list li {
     background-color: var(--diary-event-list-item-bg); /* Using variable */
     border: 1px solid var(--diary-event-list-item-border); /* Using variable */
-    border-radius: 6px; /* Increased border-radius */
-    padding: 6px;
-    margin-bottom: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); /* More diffused shadow */
-    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    padding: 6px; /* Reduced padding */
+    margin-bottom: 6px; /* Reduced margin */
+    box-shadow: 0 1px 3px var(--diary-event-list-item-shadow); /* Using variable */
 }
 
 .diary-event-list li:last-child {
     margin-bottom: 0;
 }
 
-.diary-event-list li:hover {
-    background-color: var(--diary-event-list-item-hover-bg); /* Using variable */
+.diary-event-list li p {
+    margin: 0; /* Remove default paragraph margins */
+    font-size: 0.8em; /* Smaller font for diary details */
+    color: var(--card-detail-color); /* Using variable */
 }
 
-.diary-event-list .event-org-name-diary { /* For organization name in diary view */
-    font-size: 0.7em;
+.diary-event-list li strong {
+    color: var(--strong-text-color); /* Using variable */
+}
+
+.diary-event-list li h4 { /* Event title within diary list item */
+    margin: 0 0 2px; /* Reduced margin */
+    font-size: 1em; /* Smaller font */
+    line-height: 1.2;
+    color: var(--card-title-color); /* Using variable */
+}
+
+.diary-event-list li .event-org-name-diary {
+    font-size: 0.7em; /* Even smaller font */
     font-weight: bold;
     color: var(--card-org-name-color); /* Using variable */
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     text-transform: uppercase;
 }
 
 /* Specific colors for organization names in diary view */
-.diary-event-list .title-edinburgh-steiner-school { color: #5a8d40; }
-.diary-event-list .title-edinburgh-christian-community { color: #8e6b3b; }
-.diary-event-list .title-camphill-blair-drummond { color: #6e4e8e; }
-.diary-event-list .title-camphill-corbenic { color: #4b7b9e; }
-.diary-event-list .title-tiphereth { color: #d67a30; }
-.diary-event-list .title-garvald-west-linton { color: #a04040; }
-.diary-event-list .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
-.diary-event-list .title-garvald-edinburgh { color: #725d7c; }
-.diary-event-list .title-camphill-loch-arthur { color: #5a9e9e; }
+.diary-event-list li .title-edinburgh-steiner-school { color: #5a8d40; }
+.diary-event-list li .title-edinburgh-christian-community { color: #8e6b3b; }
+.diary-event-list li .title-camphill-blair-drummond { color: #6e4e8e; }
+.diary-event-list li .title-camphill-corbenic { color: #4b7b9e; }
+.diary-event-list li .title-tiphereth { color: #d67a30; }
+.diary-event-list li .title-garvald-west-linton { color: #a04040; }
+.diary-event-list li .title-fairhill-rise { color: #4a6fa6; }
+.diary-event-list li .title-garvald-edinburgh { color: #725d7c; }
+.diary-event-list li .title-camphill-loch-arthur { color: #5a9e9e; }
+.diary-event-list li .title-anthroposophy-in-edinburgh { color: #8a6f4a; } /* New color for Anthroposophy in Edinburgh */
 
 
-.diary-event-list h4 {
-    margin: 0 0 3px;
-    font-size: 0.95em;
-    color: var(--card-title-color); /* Using variable */
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.diary-event-list p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.72em;
-    color: var(--card-detail-color); /* Using variable */
-}
-
-.diary-event-list strong {
-    color: var(--strong-text-color); /* Using variable */
-}
-
-.diary-event-list .event-description-diary {
-    font-size: 0.65em;
+.diary-event-list li .event-description-diary {
+    font-size: 0.7em; /* Even smaller font */
     color: var(--card-description-color); /* Using variable */
     margin-top: 3px;
     margin-bottom: 3px;
-    max-height: 2.8em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
 }
 
-.diary-event-list .more-info-diary {
+.diary-event-list li .more-info-diary {
+    margin-top: 3px;
     text-align: left;
     font-weight: bold;
-    margin-top: 3px;
-    font-size: 0.72em;
+    font-size: 0.75em;
 }
 
-.diary-event-list .more-info-diary a {
+.diary-event-list li .more-info-diary a {
     color: var(--link-color); /* Using variable */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.diary-event-list .more-info-diary a:hover {
+.diary-event-list li .more-info-diary a:hover {
     color: var(--link-hover-color); /* Using variable */
     text-decoration: underline;
 }
+
 
 /* --- Organization View Layout --- */
 .organization-layout {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    gap: 10px;
+    padding: 10px;
 }
 
 .organization-header {
     display: flex;
-    font-weight: bold;
-    font-size: 0.9em;
-    padding: 5px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid var(--org-header-border); /* Using variable */
-    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
     background-color: var(--org-header-bg); /* Using variable */
+    border-radius: 5px;
+    font-weight: bold;
     color: var(--org-header-text-color); /* Using variable */
+    font-size: 1.1em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.header-org-name {
-    flex: 0 0 170px;
-    padding: 0 5px;
-    color: var(--org-header-border); /* Using variable */
-    text-align: center;
+.organization-header .header-org-name {
+    flex: 0 0 250px; /* Fixed width for organization name column */
+    padding-left: 10px;
 }
 
-.header-events {
-    flex-grow: 1;
-    padding: 0 5px;
-    color: var(--org-header-border); /* Using variable */
-    text-align: center;
+.organization-header .header-events {
+    flex: 1;
+    padding-left: 10px;
 }
 
 .organization-row {
     display: flex;
     border: 1px solid var(--org-row-border); /* Using variable */
-    border-radius: 8px; /* Increased border-radius */
-    margin-bottom: 7px;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: var(--org-row-bg); /* Using variable */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); /* More diffused shadow */
-    align-items: flex-start;
+    box-shadow: 0 2px 5px var(--org-row-shadow); /* Using variable */
 }
 
 .organization-name-column {
-    flex: 0 0 170px;
-    padding: 8px;
+    flex: 0 0 250px; /* Fixed width for organization name column */
+    background-color: var(--org-name-column-bg); /* Using variable */
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    border-right: 1px solid var(--org-name-column-border-right); /* Using variable */
-    background-color: var(--org-name-column-bg); /* Using variable */
-    border-radius: 8px 0 0 8px; /* Increased border-radius */
+    justify-content: center;
     text-align: center;
+    border-right: 1px solid var(--org-name-column-border-right); /* Using variable */
 }
 
 .organization-name-column .org-link-wrapper {
@@ -467,24 +448,29 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100%; /* Ensure link wrapper takes full height */
 }
 
-/* Apply fixed size and remove border for all logos in organization view */
-.organization-name-column img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 5px;
-    border: none;
-    box-shadow: none;
+.organization-logo-fixed-size {
+    width: 110px; /* Fixed width */
+    height: 110px; /* Fixed height */
+    object-fit: contain; /* Ensures the image fits within the bounds without cropping */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: var(--org-logo-bg); /* Using variable */
+    padding: 5px; /* Padding inside the logo box */
+    border: 1px solid var(--org-logo-border); /* Using variable */
+    box-shadow: 0 1px 3px var(--org-logo-shadow); /* Using variable */
 }
 
 
 .organization-name-column h2 {
-    margin: 5px 0 0;
-    font-size: 1.15em;
-    color: var(--card-title-color); /* Using variable */
+    margin: 0;
+    font-size: 1.3em;
+    color: var(--text-color); /* Using variable */
+    line-height: 1.3;
 }
 
 /* Specific colors for organization names in organization view */
@@ -494,21 +480,17 @@ main {
 .organization-name-column .title-camphill-corbenic { color: #4b7b9e; }
 .organization-name-column .title-tiphereth { color: #d67a30; }
 .organization-name-column .title-garvald-west-linton { color: #a04040; }
-.organization-name-column .title-fairhill-rise { color: #4a6fa6; } /* Was Ruskin Mill */
+.organization-name-column .title-fairhill-rise { color: #4a6fa6; }
 .organization-name-column .title-garvald-edinburgh { color: #725d7c; }
 .organization-name-column .title-camphill-loch-arthur { color: #5a9e9e; }
+.organization-name-column .title-anthroposophy-in-edinburgh { color: #8a6f4a; }
 
 
 .organization-events-column {
-    flex-grow: 1;
-    padding: 6px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    align-items: flex-start;
+    flex: 1;
+    padding: 15px;
 }
 
-/* New/Modified rules for compact event listings in Organization View */
 .organization-event-list {
     list-style: none;
     padding: 0;
@@ -518,12 +500,10 @@ main {
 .organization-event-list li {
     background-color: var(--org-event-list-item-bg); /* Using variable */
     border: 1px solid var(--org-event-list-item-border); /* Using variable */
-    border-radius: 6px; /* Increased border-radius */
-    padding: 6px;
-    margin-bottom: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* More diffused shadow */
-    transition: background-color 0.2s ease;
-    flex: 1 1 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px var(--org-event-list-item-shadow); /* Using variable */
 }
 
 .organization-event-list li:last-child {
@@ -531,16 +511,15 @@ main {
 }
 
 .organization-event-list li h4 {
-    margin: 0 0 3px;
-    font-size: 0.95em;
+    margin: 0 0 5px;
     color: var(--org-event-list-item-title-color); /* Using variable */
+    font-size: 1.1em;
 }
 
 .organization-event-list li p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.72em;
+    margin: 0 0 3px;
     color: var(--org-event-list-item-detail-color); /* Using variable */
+    font-size: 0.9em;
 }
 
 .organization-event-list li strong {
@@ -548,42 +527,31 @@ main {
 }
 
 .organization-event-list li .more-info-org {
+    margin-top: 5px;
     text-align: left;
     font-weight: bold;
-    margin-top: 3px;
-    font-size: 0.72em;
+    font-size: 0.9em;
 }
 
 .organization-event-list li .more-info-org a {
-    color: var(--link-color); /* Using variable */
+    color: var(--org-event-list-item-link-color); /* Using variable */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .organization-event-list li .more-info-org a:hover {
-    color: var(--link-hover-color); /* Using variable */
+    color: var(--org-event-list-item-link-hover-color); /* Using variable */
     text-decoration: underline;
-}
-
-
-.organization-events-column .no-events-on-day {
-    font-style: italic;
-    color: var(--org-no-events-message-color); /* Using variable */
-    padding: 10px;
-    width: 100%;
-    text-align: center;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
     padding: 15px 10px;
-    margin-top: 20px;
-    color: var(--footer-text-color); /* Using variable */
     font-size: 0.85em;
     background-color: var(--footer-bg); /* Using variable */
     border-radius: 0 0 12px 12px; /* Increased border-radius */
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.04); /* More diffused shadow */
+    box-shadow: 0 -4px 10px var(--footer-shadow); /* More diffused shadow */
     max-width: 1200px;
     margin: 20px auto 10px;
 }

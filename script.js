@@ -1081,7 +1081,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentDate >= today) {
                     // Correctly generate dateKey in YYYY-MM-DD format based on local date
                     const year = currentDate.getFullYear();
-                    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Month is 0-indexed
+                    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
                     const day = currentDate.getDate().toString().padStart(2, '0');
                     const dateKey = `${year}-${month}-${day}`;
 
@@ -1097,8 +1097,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sort dates chronologically
         const sortedDateKeys = Array.from(dailyEventsMap.keys()).sort((a, b) => new Date(a) - new Date(b));
 
-        // Removed the automatic scroll to the first upcoming day card
-        // let firstUpcomingDayCard = null; // To store the element for the first upcoming day
+        let firstUpcomingDayCard = null; // To store the element for the first upcoming day
 
         // Get today's date in YYYY-MM-DD local format for accurate comparison
         const todayYear = today.getFullYear();
@@ -1115,13 +1114,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add a data attribute to easily find this card later
             dayCard.dataset.date = dateKey;
 
-            // Removed the automatic scroll to the first upcoming day card
-            // if (dateKey === todayKey && !firstUpcomingDayCard) {
-            //     firstUpcomingDayCard = dayCard;
-            // } else if (new Date(dateKey) > today && !firstUpcomingDayCard) {
-            //     // This condition correctly identifies the first future day with events
-            //     firstUpcomingDayCard = dayCard;
-            // }
+            // Identify the first upcoming day card (today or the first future day)
+            if (!firstUpcomingDayCard && (dateKey === todayKey || new Date(dateKey) > today)) {
+                firstUpcomingDayCard = dayCard;
+            }
 
             const eventList = document.createElement('ul');
             eventList.className = 'diary-event-list';
@@ -1156,10 +1152,10 @@ document.addEventListener('DOMContentLoaded', () => {
             eventContainer.appendChild(dayCard);
         });
 
-        // Removed the automatic scroll to the first upcoming day card
-        // if (firstUpcomingDayCard) {
-        //     firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // }
+        // Scroll to the first upcoming day card if found
+        if (firstUpcomingDayCard) {
+            firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     // --- Render Organization View ---
