@@ -762,17 +762,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Generate fortnightly Monday Reading Group events for Diary View
     const mondayReadingGroupEvents = [];
-    let currentMonday = new Date('2025-08-18T00:00:00'); // Start date
-    const endDateForFortnightly = new Date('2025-12-22T00:00:00'); // End date
+    // Start on Monday, August 18, 2025
+    let currentMonday = new Date(2025, 7, 18); // Month is 0-indexed, so 7 is August
+    currentMonday.setHours(0, 0, 0, 0); // Normalize to start of the day
+    const endDateForFortnightly = new Date(2025, 11, 22); // Month is 0-indexed, so 11 is December 22, 2025
+    endDateForFortnightly.setHours(23, 59, 59, 999); // Normalize to end of the day
 
     let newIdCounter = 100; // Starting new IDs for these events
 
     while (currentMonday <= endDateForFortnightly) {
+        // Ensure the date string is correctly formatted as YYYY-MM-DD
+        const year = currentMonday.getFullYear();
+        const month = (currentMonday.getMonth() + 1).toString().padStart(2, '0');
+        const day = currentMonday.getDate().toString().padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`;
+
         mondayReadingGroupEvents.push({
             "id": newIdCounter++,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
-            "date": currentMonday.toISOString().slice(0, 10),
+            "date": formattedDate, // Use the explicitly formatted date
             "time": "1:45-3:15pm",
             "location": "Library at 21 Napier Road",
             "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
