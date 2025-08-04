@@ -659,6 +659,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": null,
             "link": "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
+        {
+            "id": 1001,
+            "organization": "Camphill (Loch Arthur)",
+            "title": "Loch Arthur Farm Shop and Cafe",
+            "date": null,
+            "time": "Monday–Saturday: 9:00am–5:00pm; Sunday: 10:00am–4:00pm",
+            "location": "Loch Arthur Camphill Community",
+            "description": "Visit our Farm Shop and Cafe for fresh organic produce, artisan bread, cheese, and more. Or order <a href=\"https://www.locharthurshop.co.uk/\" target=\"_blank\">online</a>.",
+            "link": "https://locharthur.org.uk/farm-shop-cafe/",
+            "isOrganizationDetail": true
         }
     ];
 
