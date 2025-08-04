@@ -114,11 +114,14 @@ body {
 
 /* Header Styling - Solid dark background */
 header {
-    background: #7a4c1e; /* Darker brown/orange for better contrast */
+    background: #af0d87; /* Darker brown/orange for better contrast */
     color: #fff;
     padding: 1.5rem 0 1rem 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
