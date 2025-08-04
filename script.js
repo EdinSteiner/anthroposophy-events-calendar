@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
         },
         {
-            "id": 3, // New ID
+            "id": 44, // New ID
             "organization": "Edinburgh Steiner School",
             "title": "Kindergarten Summer Camp: Week 2",
             "date": "2025-08-11",
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
         },
         {
-            "id": 4, // New ID
+            "id": 45, // New ID
             "organization": "Edinburgh Steiner School",
             "title": "Early Years Parent Education Evening: Rhythm, Repetition, Reverence",
             "date": "2025-09-18",
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.edinburghsteinerschool.org.uk/event/early-years-parent-education-evening-rhythm-repetition-reverence/"
         },
         {
-            "id": 5, // New ID
+            "id": 46, // New ID
             "organization": "Edinburgh Steiner School",
             "title": "El Mercado Market",
             "date": "2025-10-04", // Corrected date format
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
         },
         {
-            "id": 6, // New ID for Christmas Market
+            "id": 73, // New ID for Christmas Market
             "organization": "Edinburgh Steiner School",
             "title": "Christmas Market",
             "date": "2025-11-22",
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW ITEM: Edinburgh Steiner Education Course
         {
-            "id": 7, // New unique ID
+            "id": 97, // New unique ID
             "organization": "Edinburgh Steiner School",
             "title": "Edinburgh Steiner Education Course. More information", // Sentence removed as requested
             "date": "2025-09-12",
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Edinburgh Christian Community (Facebook link) ---
         {
-            "id": 8,
+            "id": 4,
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-07-06",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 9,
+            "id": 8,
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-07-13",
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 10,
+            "id": 11,
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-07-20",
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 11, // New ID
+            "id": 16, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Devotional Gathering",
             "date": "2025-07-27",
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 12, // New ID
+            "id": 17, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Tom Ravetz's Visit and Congregational Meeting",
             "date": "2025-08-02",
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 13, // New ID
+            "id": 47, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-08-03",
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 14, // New ID
+            "id": 48, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-08-10",
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 15, // New ID
+            "id": 49, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-08-17",
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 16, // New ID
+            "id": 50, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-08-24",
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
-            "id": 17, // New ID
+            "id": 51, // New ID
             "organization": "Edinburgh Christian Community",
             "title": "Act of Consecration of Man",
             "date": "2025-08-31",
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         {
-            "id": 18, // New ID for the generic link
+            "id": 62, // New ID for the generic link
             "organization": "Camphill Blair Drummond",
             "title": "For current information, please click here",
             "date": null,
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 19,
+            "id": 18,
             "organization": "Camphill Blair Drummond",
             "title": "Vocal Recital: Un-Ravel-ing the Source Material",
             "date": "2025-07-19",
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Camphill Corbenic (removed "New Day Service" and "Community Barn Project") ---
         {
-            "id": 20, // New ID for the generic link
+            "id": 63, // New ID for the generic link
             "organization": "Camphill Corbenic",
             "title": "For current information, please click here",
             "date": null,
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 21, // New ID for Corbenic Community Shop & Café
+            "id": 61, // New ID for Corbenic Community Shop & Café
             "organization": "Camphill Corbenic",
             "title": "Corbenic Community Shop & Café",
             "date": null, // This does not go in Diary view
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
         {
-            "id": 22, // New ID for the generic link
+            "id": 64, // New ID for the generic link
             "organization": "Tiphereth",
             "title": "For current information, please click here",
             "date": null,
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 23,
+            "id": 21,
             "organization": "Tiphereth",
             "title": "Open Morning",
             "date": "2025-07-30",
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // ADDITION 1.1: Tiphereth Etsy Shop for Organization view
         {
-            "id": 24, // New ID for Etsy shop
+            "id": 54, // New ID for Etsy shop
             "organization": "Tiphereth",
             "title": "Tiphereth Etsy Shop",
             "date": null, // This does not go in Diary view, so no specific date
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // ADDITION 1.2: Tiphereth Pop-up Shop
         {
-            "id": 25, // New ID for pop-up shop
+            "id": 55, // New ID for pop-up shop
             "organization": "Tiphereth",
             "title": "New Pop-up Shop Opening",
             "date": "2025-07-11",
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Garvald West Linton (from recent Google Search tool results) ---
         // Only keeping Christmas Fair (ID 31)
         {
-            "id": 26,
+            "id": 31,
             "organization": "Garvald West Linton",
             "title": "Christmas Fair",
             "date": "2025-12-06",
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
         {
-            "id": 27, // New ID for the generic link
+            "id": 66, // New ID for the generic link
             "organization": "Fairhill Rise",
             "title": "For current information, please click here",
             "date": null,
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 28,
+            "id": 35,
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-07-31",
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "id": 29,
+            "id": 36,
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-08-25",
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "id": 30,
+            "id": 37,
             "organization": "Fairhill Rise", // Updated from Ruskin Mill
             "title": "Open Day",
             "date": "2025-09-29",
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://rmt.org/rise/fairhill-rise/"
         },
         {
-            "id": 31,
+            "id": 38,
             "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Call for Entries",
             "date": "2025-12-02", // Deadline for entries
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.ruskinprize.co.uk/" // Corrected link
         },
         {
-            "id": 32,
+            "id": 39,
             "organization": "Fairhill Rise", // Was Ruskin Mill, John Ruskin Prize related event
             "title": "John Ruskin Prize 2026: Exhibition",
             "date": "2026-01-29",
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // --- Garvald Edinburgh (Grant's Robot Faces and placeholder) ---
         {
-            "id": 33, // New ID for the generic link
+            "id": 67, // New ID for the generic link
             "organization": "Garvald Edinburgh",
             "title": "For current information, please click here",
             "date": null,
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 34, // New ID for the second generic link
+            "id": 68, // New ID for the second generic link
             "organization": "Garvald Edinburgh",
             "title": "Visit our Facebook page for more ", // Added space here
             "date": null,
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 35,
+            "id": 40,
             "organization": "Garvald Edinburgh",
             "title": "Grant's Robot Faces Exhibition",
             "date": "2025-06-02", // Start date in the past
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
         {
-            "id": 36, // New ID
+            "id": 52, // New ID
             "organization": "Garvald Edinburgh",
             "title": "Garvald Gorgie Workshops Open Day",
             "date": "2025-08-30",
@@ -400,11 +400,64 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "An open day at Garvald Gorgie Workshops.",
             "link": "https://www.garvaldedinburgh.org.uk/events/garvald-gorgie-workshops-open-day-2025"
         },
-
-
+           {
+            "id": 3,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Artists at Edinburgh Printmakers",
+            "date": "2025-07-31",
+            "endDate": "2025-08-31",
+            "time": "Tuesday - Sunday, 10am-6pm (Tuesday entry via 2 Gilmore Park, ring buzzer for access)",
+            "location": "KUBA Cafe, Edinburgh Printmakers, Castle Mills, 1 Dundee St, EH3 9FP",
+            "description": "A Creative Scotland funded project showcasing the work of Kwok Kin Chan, Alison Edward, and David Lorimer, who explored a variety of printmaking techniques.",
+            "link": ""
+        },
+        {
+            "id": 41,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Makers Shop Exhibition",
+            "date": "2025-07-31",
+            "endDate": "2025-10-31",
+            "time": "Monday - Saturday, 9.30am-5pm",
+            "location": "Garvald Makers, 356 Morningside Road, EH11 2A",
+            "description": "A selection of prints by Garvald artists are on show and for sale.",
+            "link": ""
+        },
+        {
+            "id": 42,
+            "organization": "Garvald Edinburgh",
+            "title": "ASSEMBLAGE - Visual Arts Scotland Artists and Makers Market",
+            "date": "2025-08-15",
+            "endDate": "2025-08-17",
+            "time": "10.30am - 4.30pm daily",
+            "location": "Dalkeith Palace and Country Park, Dalkeith, EH22 2NA",
+            "description": "Garvald Edinburgh will show a curated selection of abstract artwork by John Black alongside a collection of hand carved vessels.",
+            "link": ""
+        },
+        {
+            "id": 43,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Puppetry Ensemble Performance",
+            "date": "2025-08-15",
+            "time": "11:30 AM",
+            "location": "Garvald Edinburgh Exhibition room on the ground floor, Dalkeith Palace",
+            "description": "A vibrant, immersive experience centering around expressive dance and movement.",
+            "link": ""
+        },
+        {
+            "id": 58,
+            "organization": "Garvald Edinburgh",
+            "title": "Edinburgh Art Fair",
+            "date": "2025-09-19",
+            "endDate": "2025-09-21",
+            "time": "Friday to Sunday, 11am-6pm",
+            "location": "O2 Academy, Newmarket Road, Edinburgh, EH14 1RJ",
+            "description": "Garvald Edinburgh returns as a Charity Partner, presenting the work of John Black, David Lorimer, Angela Ramsay, Nicole Tait and Joseph Whales.",
+            "link": ""
+        },
+//
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
-            "id": 37, // New ID for the generic link
+            "id": 69, // New ID for the generic link
             "organization": "Camphill (Loch Arthur)",
             "title": "For current information, please click here",
             "date": null,
@@ -415,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
-            "id": 38, // New ID
+            "id": 53, // New ID
             "organization": "Camphill (Loch Arthur)",
             "title": "Concert: Anna Massie",
             "date": "2025-10-29",
@@ -426,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Anthroposophy in Edinburgh ---
         {
-            "id": 39, // Existing ID for generic link
+            "id": 70, // Existing ID for generic link
             "organization": "Anthroposophy in Edinburgh",
             "title": "For current information, please click here or sign up for the local newsletter", // Modified title
             "date": null,
@@ -439,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW CONSOLIDATED ITEM: Forum Meetings for Organization View
         {
-            "id": 40, // New unique ID for the consolidated forum event
+            "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
             "date": "2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.", // Dates for organization view
@@ -451,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // Individual Forum Meeting events (for Diary View)
         {
-            "id": 41, // Existing ID
+            "id": 86, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-09-07",
@@ -461,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 42, // Existing ID
+            "id": 87, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-12-14",
@@ -471,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 43, // Existing ID
+            "id": 88, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-01-11",
@@ -481,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 44, // Existing ID
+            "id": 89, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-02-01",
@@ -491,7 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 45, // Existing ID
+            "id": 90, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-03-08",
@@ -501,7 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 46, // Existing ID
+            "id": 91, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-04-12",
@@ -511,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 47, // Existing ID
+            "id": 92, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-05-10",
@@ -521,7 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 48, // Existing ID
+            "id": 93, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-06-07",
@@ -531,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 49, // Existing ID
+            "id": 94, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-07-12",
@@ -542,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW ITEM: Forum on 5 October: Michaelmas
         {
-            "id": 50, // Existing ID
+            "id": 95, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum: Michaelmas",
             "date": "2025-10-05",
@@ -553,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // NEW ITEM: Easter Preparation event
         {
-            "id": 51, // Existing ID
+            "id": 96, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Easter Preparation event",
             "date": "2026-03-14",
@@ -563,7 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 52, // Existing ID
+            "id": 56, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Tuesday Weekly Online Study Group of the Leading Thoughts",
             "date": "2025-08-26",
@@ -573,7 +626,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 53, // Existing ID
+            "id": 57, // Existing ID
             "organization": "Anthroposophy in Edinburgh", // Primary organization
             "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
             "title": "Fire in the Temple: A Staged Reading",
@@ -585,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Edinburgh Steiner School (generic link for organization view) ---
         {
-            "id": 54, // New ID for the generic link
+            "id": 71, // New ID for the generic link
             "organization": "Edinburgh Steiner School",
             "title": "For current information, please click here",
             "date": null,
@@ -597,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // --- Garvald Home Farm (new organization) ---
         {
-            "id": 55, // New ID for Garvald Home Farm generic link
+            "id": 72, // New ID for Garvald Home Farm generic link
             "organization": "Garvald Home Farm",
             "title": "For current information, please click here",
             "date": null,
@@ -624,7 +677,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const year = currentMonday.getFullYear();
         const month = (currentMonday.getMonth() + 1).toString().padStart(2, '0');
         const day = currentMonday.getDate().toString().padStart(2, '0');
-        const formattedDate = `${year}-${month}-${day}`;
+        const formattedDate = `${day}-${month}-${year}`;
 
         mondayReadingGroupEvents.push({
             "id": newIdCounter++,
@@ -761,7 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '--body-bg': '#fcf9ed', /* Lighter, sun-kissed cream */
             '--text-color': '#403a30', /* Soft, warm brown */
             '--strong-text-color': '#302a20',
-            '--link-color': '#e09a50', /* Golden orange */
+            '--link-color': '#b41f0bff', /* Golden orange */
             '--link-hover-color': '#c2813c',
 
             '--header-bg': '#e09a50', /* Golden orange */
@@ -789,7 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '--diary-day-card-bg': '#fcfcfc',
             '--diary-day-card-border': '#e0e0e0',
             '--diary-day-card-shadow': 'rgba(0, 0, 0, 0.05)',
-            '--diary-day-header-color': '#e09a50', /* Golden orange */
+            '--diary-day-header-color': '#cf4f1cff', /* Golden orange */
             '--diary-day-header-border': '#f0f0f0',
             '--diary-event-list-item-bg': '#fff',
             '--diary-event-list-item-border': '#eee',
@@ -1030,8 +1083,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper to format dates consistently
     const formatDate = (dateString, endDateString = null) => {
-        const options = { day: 'numeric', month: 'short', year: 'numeric' };
-        // Handle null dateString for events like Etsy shop that don't have a date
+        // Use 'Monday, 4 Aug 2025' format
+        const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' };
         if (!dateString) {
             return '';
         }
@@ -1040,6 +1093,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (endDateString && dateString !== endDateString) {
             const endDate = new Date(endDateString).toLocaleDateString('en-GB', options);
             return `${startDate} - ${endDate}`;
+        }
+        return startDate;
+    };
+
+    // Helper to format dates for Organization View: DD-MMM-YYYY or range
+    const formatOrgDate = (dateString, endDateString = null) => {
+        if (!dateString) return '';
+        // If date is a list (Forum Meetings), just return as is
+        if (dateString.match(/\d{4}:/) || dateString.includes(',')) {
+            return dateString;
+        }
+        // Format: DD-MMM-YYYY (e.g., 31-Jul-2025)
+        const options = { day: '2-digit', month: 'short', year: 'numeric' };
+        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+        if (endDateString && dateString !== endDateString) {
+            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+            return `${startDate} to ${endDate}`;
         }
         return startDate;
     };
@@ -1152,8 +1222,12 @@ document.addEventListener('DOMContentLoaded', () => {
             eventContainer.appendChild(dayCard);
         });
 
-        // Scroll to the first upcoming day card if found
-        if (firstUpcomingDayCard) {
+        // --- FIX: Only scroll if user has navigated to Diary View, not on initial page load ---
+        if (firstUpcomingDayCard && !window.__initialDiaryScrollDone) {
+            // Do NOT scroll on initial page load
+            window.__initialDiaryScrollDone = true;
+        } else if (firstUpcomingDayCard) {
+            // If user switches to Diary View after initial load, scroll as before
             firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
@@ -1163,7 +1237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'organization-layout';
 
-        // Group ALL events by organization, including those for organization details
+        // Group ALL events by organisation, including those for organisation details
         const groupedEvents = allEvents.reduce((acc, event) => {
             if (!acc[event.organization]) {
                 acc[event.organization] = [];
@@ -1176,7 +1250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const headerRow = document.createElement('div');
         headerRow.className = 'organization-header';
         headerRow.innerHTML = `
-            <div class="header-org-name">Organization</div>
+            <div class="header-org-name">Organisation</div>
             <div class="header-events">Upcoming Events</div>
         `;
         eventContainer.appendChild(headerRow);
@@ -1231,7 +1305,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-
             // Combine them, with organization-specific details first
             let eventsToDisplayInColumn = [...orgSpecificDetails, ...regularUpcomingEvents];
 
@@ -1256,7 +1329,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return 0; // Maintain order if both have no date or dates are equal
                 });
             }
-
 
             if (eventsToDisplayInColumn.length > 0) {
                 const eventList = document.createElement('ul');
@@ -1284,7 +1356,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
 
                         // Conditionally add elements to remove blank lines
-                        const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${event.date}</p>` : ''; // Display raw date string for consolidated forum
+                        // Use formatOrgDate for date display
+                        const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatOrgDate(event.date, event.endDate)}</p>` : '';
                         const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
                         const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
                         const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
@@ -1322,6 +1395,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (view === 'diary') {
             renderDiaryView(upcomingEvents);
             diaryViewBtn.classList.add('active');
+            // If this is a user-initiated switch (not initial load), scroll to first event
+            if (window.__initialDiaryScrollDone) {
+                const firstUpcomingDayCard = document.querySelector('.diary-day-card');
+                if (firstUpcomingDayCard) {
+                    firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         } else if (view === 'organization') {
             renderOrganizationView(); // Call without argument to use allEvents directly
             organizationViewBtn.classList.add('active');
@@ -1333,5 +1413,6 @@ document.addEventListener('DOMContentLoaded', () => {
     organizationViewBtn.addEventListener('click', () => setView('organization'));
 
     // Initial render based on default view
+    window.__initialDiaryScrollDone = false; // Track if initial load has happened
     setView(currentView);
 });

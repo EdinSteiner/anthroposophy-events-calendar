@@ -66,7 +66,7 @@
     --diary-day-card-bg: #fcfcfc;
     --diary-day-card-border: #e0e0e0;
     --diary-day-card-shadow: rgba(0, 0, 0, 0.05);
-    --diary-day-header-color: #a87e5b;
+    --diary-day-header-color: #b05a1e; /* Darker orange for diary headings */
     --diary-day-header-border: #f0f0f0;
     --diary-event-list-item-bg: #fff;
     --diary-event-list-item-border: #eee;
@@ -114,23 +114,23 @@ body {
 
 /* Header Styling - Solid dark background */
 header {
-    background-color: var(--header-bg); /* Using variable */
-    color: var(--header-text-color); /* Using variable */
-    padding: 25px 10px;
+    background: #7a4c1e; /* Darker brown/orange for better contrast */
+    color: #fff;
+    padding: 1.5rem 0 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     text-align: center;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    margin: 10px auto 0;
-    max-width: 1200px;
-    position: relative;
-    overflow: hidden;
 }
 
 header h1 {
-    margin: 0 0 5px;
-    font-size: 2.2em;
-    font-weight: bold; /* Ensure bold is used for h1 */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 0 0 0.2em 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: transparent;
+    padding: 0.2em 0;
+    border-radius: 0.2em;
 }
 
 header .subtitle {
@@ -139,6 +139,18 @@ header .subtitle {
     opacity: var(--header-subtitle-opacity); /* Using variable */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     margin-top: 2px;
+}
+
+/* Diary View: Make date headings darker for contrast */
+.diary-day-header {
+    color: #b05a1e !important; /* Darker orange */
+    background: #f5f2eb;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0.5em;
+    padding: 0.4em 0.7em 0.3em 0.7em;
+    border-radius: 0.2em 0.2em 0 0;
 }
 
 /* Navigation Bar */
