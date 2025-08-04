@@ -312,7 +312,7 @@ main {
     padding: 7px; /* Reduced padding */
     margin-bottom: 7px; /* Reduced margin */
     box-shadow: 0 1px 5px var(--diary-day-card-shadow); /* Using variable */
-    scroll-margin-top: 180px; /* Added to ensure visibility below header/nav */
+    scroll-margin-top: 320px; /* Increased to ensure full visibility below sticky header, subtitle, and nav */
 }
 
 .diary-day-card h4 {
@@ -443,6 +443,7 @@ main {
     overflow: hidden;
     background-color: var(--org-row-bg); /* Using variable */
     box-shadow: 0 2px 5px var(--org-row-shadow); /* Using variable */
+    scroll-margin-top: 320px; /* Increased to ensure full visibility below sticky header, subtitle, and nav */
 }
 
 .organization-name-column {
