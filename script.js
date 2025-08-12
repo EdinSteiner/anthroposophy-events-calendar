@@ -704,17 +704,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let newIdCounter = 100; // Starting new IDs for these events
 
     while (currentMonday <= endDateForFortnightly) {
-        // Ensure the date string is correctly formatted as YYYY-MM-DD
+        // Ensure the date string is correctly formatted as YYYY-MM-DD for logic,
+        // but display as DD-MM-YYYY in the UI
         const year = currentMonday.getFullYear();
         const month = (currentMonday.getMonth() + 1).toString().padStart(2, '0');
         const day = currentMonday.getDate().toString().padStart(2, '0');
-        const formattedDate = `${day}-${month}-${year}`;
+        const formattedDate = `${year}-${month}-${day}`; // Use this for event.date
 
         mondayReadingGroupEvents.push({
             "id": newIdCounter++,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
-            "date": formattedDate, // Use the explicitly formatted date
+            "date": formattedDate, // Use YYYY-MM-DD for correct logic
             "time": "1:45-3:15pm",
             "location": "Library at 21 Napier Road",
             "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
@@ -747,13 +748,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "Camphill Blair Drummond": "images/Camphill Blair Drummond Logo.png",
         "Camphill Corbenic": "images/Camphill Corbenic Logo.avif",
         "Tiphereth": "images/Camphill Tiphereth Logo.png",
-        "Edinburgh Christian Community": "images/Christian Community Logo.jpg", // Corrected file name
+        "Edinburgh Christian Community": "images/Christian Community Logo.jpg",
         "Edinburgh Steiner School": "images/Edinburgh Steiner School Logo.png",
-        "Fairhill Rise": "images/Ruskin Mill Logo.png", // Renamed from Ruskin Mill, keeping old logo name for now
-        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png", // Corrected file name
+        "Fairhill Rise": "images/Ruskin Mill Logo.png",
+        "Garvald Edinburgh": "images/Garvald Edinburgh Logo.png",
         "Garvald West Linton": "images/Garvald West Linton Logo.jpg",
         "Camphill (Loch Arthur)": "images/Camphill Loch Arthur.jpg",
-        "Garvald Home Farm": "images/Garvald Home Farm Logo.jpg" // Updated to the correct image file
+        "Garvald Home Farm": "images/Garvald Home Farm Logo.jpg",
+        "Columcille": "https://columcille.org.uk/wp-content/uploads/2024/05/columcille_logo_web.svg" // Added Columcille logo
     };
     // --- End of Data Definitions ---
 
@@ -1114,15 +1116,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper to format dates consistently
     const formatDate = (dateString, endDateString = null) => {
-        // Use 'Monday, 4 Aug 2025' format
-        const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' };
+        // Use 'Monday, 04-08-2025' format for UK
+        const options = { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' };
         if (!dateString) {
             return '';
         }
-        const startDate = new Date(dateString).toLocaleDateString('en-GB', options);
+        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
 
         if (endDateString && dateString !== endDateString) {
-            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options);
+            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
             return `${startDate} - ${endDate}`;
         }
         return startDate;
@@ -1135,11 +1137,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dateString.match(/\d{4}:/) || dateString.includes(',')) {
             return dateString;
         }
-        // Format: DD-MMM-YYYY (e.g., 31-Jul-2025)
-        const options = { day: '2-digit', month: 'short', year: 'numeric' };
-        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+        // Format: DD-MM-YYYY (e.g., 31-07-2025)
+        const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
         if (endDateString && dateString !== endDateString) {
-            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
             return `${startDate} to ${endDate}`;
         }
         return startDate;
