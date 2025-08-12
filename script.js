@@ -670,6 +670,26 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Visit our Farm Shop and Cafe for fresh organic produce, artisan bread, cheese, and more. Or order <a href=\"https://www.locharthurshop.co.uk/\" target=\"_blank\">online</a>.",
             "link": "https://locharthur.org.uk/farm-shop-cafe/",
             "isOrganizationDetail": true
+        },
+        {
+            "id": 2001,
+            "organization": "Columcille",
+            "title": "Autumn Fair",
+            "date": "2025-09-27",
+            "time": "10:30 – 14:00",
+            "location": "Columcille",
+            "description": "",
+            "link": ""
+        },
+        {
+            "id": 2002,
+            "organization": "Columcille",
+            "title": "Christmas Play",
+            "date": "2025-12-16",
+            "time": "14:00",
+            "location": "Columcille",
+            "description": "",
+            "link": ""
         }
     ];
 
