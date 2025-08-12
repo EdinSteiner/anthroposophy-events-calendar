@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Tuesday - Sunday, 10am-6pm (Tuesday entry via 2 Gilmore Park, ring buzzer for access)",
             "location": "KUBA Cafe, Edinburgh Printmakers, Castle Mills, 1 Dundee St, EH3 9FP",
             "description": "A Creative Scotland funded project showcasing the work of Kwok Kin Chan, Alison Edward, and David Lorimer, who explored a variety of printmaking techniques.",
-            "link": ""
+            "link": "https://www.garvaldedinburgh.org.uk/events/garvald-artists-at-edinburgh-printmakers"
         },
         {
             "id": 41,
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "Monday - Saturday, 9.30am-5pm",
             "location": "Garvald Makers, 356 Morningside Road, EH11 2A",
             "description": "A selection of prints by Garvald artists are on show and for sale.",
-            "link": ""
+            "link": "https://www.garvaldedinburgh.org.uk/shop"
         },
         {
             "id": 42,
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10.30am - 4.30pm daily",
             "location": "Dalkeith Palace and Country Park, Dalkeith, EH22 2NA",
             "description": "Garvald Edinburgh will show a curated selection of abstract artwork by John Black alongside a collection of hand carved vessels.",
-            "link": ""
+            "link": "https://www.garvaldedinburgh.org.uk/events/visual-arts-scotland-artists-and-makers-market"
         },
         {
             "id": 43,
@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "11:30 AM",
             "location": "Garvald Edinburgh Exhibition room on the ground floor, Dalkeith Palace",
             "description": "A vibrant, immersive experience centering around expressive dance and movement.",
-            "link": ""
+            "link": "https://www.garvaldedinburgh.org.uk/events/visual-arts-scotland-artists-and-makers-market#:~:text=Garvald%20Woodwork%20Makers.%20The%20Garvald%20Puppetry%20ensemble,offer%20a%20vibrant%2C%20immersive%20experience%20centring%20around"
         },
         {
             "id": 58,
@@ -679,7 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "10:30 – 14:00",
             "location": "Columcille",
             "description": "",
-            "link": ""
+            "link": "https://columcille.org.uk/"
         },
         {
             "id": 2002,
@@ -689,7 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "14:00",
             "location": "Columcille",
             "description": "",
-            "link": ""
+            "link": "https://columcille.org.uk/"
         }
     ];
 
@@ -772,7 +772,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
         "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
         "Anthroposophy in Edinburgh": { homepage: "https://www.facebook.com/anthroposophyscotland" }, // Updated to the Facebook link as the primary homepage
-        "Garvald Home Farm": { homepage: "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB" } // New organization homepage
+        "Garvald Home Farm": { homepage: "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB" }, // New organization homepage
+        "Columcille": { homepage: "https://columcille.org.uk/" }
     };
 
 
