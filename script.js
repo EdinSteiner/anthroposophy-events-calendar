@@ -446,13 +446,13 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 58,
             "organization": "Garvald Edinburgh",
-            "title": "Edinburgh Art Fair",
+            "title": "Garvald at the Edinburgh Art Fair",
             "date": "2025-09-19",
             "endDate": "2025-09-21",
             "time": "Friday to Sunday, 11am-6pm",
             "location": "O2 Academy, Newmarket Road, Edinburgh, EH14 1RJ",
             "description": "Garvald Edinburgh returns as a Charity Partner, presenting the work of John Black, David Lorimer, Angela Ramsay, Nicole Tait and Joseph Whales.",
-            "link": ""
+            "link": "https://www.artedinburgh.com/garvald-edinburgh"
         },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
