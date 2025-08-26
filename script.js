@@ -577,6 +577,26 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Tiphereth is opening a new pop-up shop offering a variety of handcrafted items made in their workshops, including print studio products.",
             "link": "https://www.tiphereth.org.uk/" // Link to Tiphereth's main site for general info
         },
+        {
+            "id": 201,
+            "organization": "Tiphereth",
+            "title": "Open Morning",
+            "date": "2025-09-11",
+            "time": "10:00 - 13:00",
+            "location": "55 Torphin Road, Edinburgh, EH13 0PQ",
+            "description": "Join us for our Open Morning! If you are looking for a Day Service or transition alternatives following your school years, come along to our next Open Morning. Confirm your attendance with our Day Service Manager - Lucy Robertson on Lucy.Robertson@tiphereth.org.uk. Phone: 0131-4412055.",
+            "link": "https://www.tiphereth.org.uk/"
+        },
+        {
+            "id": 202,
+            "organization": "Tiphereth",
+            "title": "Tiphereth stall at Alpaca Day in aid of Marie Curie",
+            "date": "2025-08-31",
+            "time": "10:00 - 16:00",
+            "location": "BobCat Alpacas, Bonaly, EH13 0PB",
+            "description": "Tiphereth stall at Alpaca Day in aid of Marie Curie. Live music, spinning, face painting, stalls, refreshments. Tickets from £5 per person. Tickets: search ‘Alpaca Gala Day’ on Eventbrite.",
+            "link": "https://www.eventbrite.co.uk/"
+        },
 
         // --- Garvald West Linton (from recent Google Search tool results) ---
         // Only keeping Christmas Fair (ID 31)
@@ -794,12 +814,12 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.", // Dates for organization view
+            "date": "2025: 7 Sep, 2 Nov (AGM), 14 Dec. 2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr, 10 May, 14 Jun, 5 Jul. Forum: Michaelmas: 5 Oct 2025.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Regular forum meetings and a special Michaelmas forum. Contact :ioberski[at]gmail.com for details.",
+            "description": "Regular forum meetings, AGM, and Michaelmas. Contact :ioberski[at]gmail.com for details.",
             "link": "Contact :ioberski[at]gmail.com",
-            "isOrganizationDetail": true // Only for Organization View
+            "isOrganizationDetail": true
         },
         // Individual Forum Meeting events (for Diary View)
         {
@@ -1349,6 +1369,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adjust to Thursday in week 1 and count number of weeks from date to week1.
         return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
     }
+
+   
 
     // Function to apply the seasonal palette
     const applySeasonalPalette = () => {
