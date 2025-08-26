@@ -184,7 +184,306 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Weekly service.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
-
+        {
+            "id": 101,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service",
+            "date": "2025-09-07",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 102,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Luke 10)",
+            "date": "2025-09-07",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 103,
+            "organization": "Edinburgh Christian Community",
+            "title": "Devotional Gathering (Luke 17, v 11-19)",
+            "date": "2025-09-14",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 104,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration followed by Gospel Study",
+            "date": "2025-09-18",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "And each Thursday at least until November",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 105,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Matt 6, v 19-34)",
+            "date": "2025-09-21",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 106,
+            "organization": "Edinburgh Christian Community",
+            "title": "Talk by Paul Corman: The Sacraments as Contemporary Mystery Dramas I",
+            "date": "2025-09-21",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 107,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Luke 7, v 11-17)",
+            "date": "2025-09-28",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 108,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Sacraments as Contemporary Mystery Dramas II",
+            "date": "2025-09-28",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 109,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man for Michaelmas Day",
+            "date": "2025-09-29",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 110,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service with Story",
+            "date": "2025-10-05",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 111,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Matthew 22, v 1-14)",
+            "date": "2025-10-05",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 112,
+            "organization": "Edinburgh Christian Community",
+            "title": "Michael's Countenance, Clear Shining, Solemn Introduction, conversation, artistic exercise with Paul",
+            "date": "2025-10-05",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 113,
+            "organization": "Edinburgh Christian Community",
+            "title": "Die Menschenweihehandlung, German service",
+            "date": "2025-10-11",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 114,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Rev 12)",
+            "date": "2025-10-12",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 115,
+            "organization": "Edinburgh Christian Community",
+            "title": "Michael's Feet, Free of Earth's Weight. Introduction, conversation, artistic exercise with Paul",
+            "date": "2025-10-12",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 116,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Rev 19, v 11-16)",
+            "date": "2025-10-19",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 117,
+            "organization": "Edinburgh Christian Community",
+            "title": "Michaelmas Festival for Adults and Children",
+            "date": "2025-10-19",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 118,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Ephesians 6, v 10-19)",
+            "date": "2025-10-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 119,
+            "organization": "Edinburgh Christian Community",
+            "title": "Michael Then and Now. Introduction and conversation",
+            "date": "2025-10-26",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 120,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service with Story",
+            "date": "2025-11-02",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 121,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Rev 1)",
+            "date": "2025-11-02",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 122,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Sacraments as Contemporary Mystery Dramas III",
+            "date": "2025-11-02",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 123,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Rev 3, v 1-6)",
+            "date": "2025-11-09",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 124,
+            "organization": "Edinburgh Christian Community",
+            "title": "Congregational Meeting with Tom Ravetz",
+            "date": "2025-11-09",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 125,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Rev 7, v 9-17)",
+            "date": "2025-11-16",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 126,
+            "organization": "Edinburgh Christian Community",
+            "title": "How the Dead can help us. Introduction and Conversation with Peter",
+            "date": "2025-11-16",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 127,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Rev 14)",
+            "date": "2025-11-23",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 128,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service with short Story",
+            "date": "2025-11-30",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 129,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Advent Sunday)",
+            "date": "2025-11-30",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 130,
+            "organization": "Edinburgh Christian Community",
+            "title": "Advent Garden",
+            "date": "2025-11-30",
+            "time": "16:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         {
             "id": 62, // New ID for the generic link
@@ -1303,6 +1602,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const organizationNameColumn = document.createElement('div');
             organizationNameColumn.className = `organization-name-column ${getOrgClass(orgName)}`;
+            // Add a CSS class for top alignment
+            organizationNameColumn.style.display = "flex";
+            organizationNameColumn.style.flexDirection = "column";
+            organizationNameColumn.style.justifyContent = "flex-start"; // Align content to top
             organizationNameColumn.innerHTML = `
                 <a href="${orgHomePageLink}" target="_blank" class="org-link-wrapper">
                     <img src="${orgImageSrc}" alt="${orgName} Logo" class="organization-logo-fixed-size">
