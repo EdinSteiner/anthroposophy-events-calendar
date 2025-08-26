@@ -495,16 +495,40 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2025: Sep 7, Dec 14. 2026: Jan 11, Feb 1, Mar 8, Apr 12, May 10, Jun 7, Jul 12. Forum: Michaelmas: Oct 5, 2025.", // Dates for organization view
+            "date": "2025: 7 Sep, 2 Nov (AGM), 14 Dec. 2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr, 10 May, 14 Jun, 5 Jul. Forum: Michaelmas: 5 Oct 2025. Easter Preparation: 14 Mar 2026.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Regular forum meetings and a special Michaelmas forum. Contact :ioberski[at]gmail.com for details.",
+            "description": "Regular forum meetings, AGM, Michaelmas, and Easter Preparation. Contact :ioberski[at]gmail.com for details.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true // Only for Organization View
         },
-        // Individual Forum Meeting events (for Diary View)
+        // Michaelmas Forum Meeting (listed separately in Organization view)
         {
-            "id": 86, // Existing ID
+            "id": 95,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum: Michaelmas",
+            "date": "2025-10-05",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Michaelmas Celebration",
+            "link": "Contact :ioberski[at]gmail.com",
+            "isOrganizationDetail": true
+        },
+        // Easter Preparation Forum Meeting (listed in both views)
+        {
+            "id": 96,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting: Easter Preparation",
+            "date": "2026-03-14",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Easter Preparation Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "isOrganizationDetail": true
+        },
+        // Individual Forum Meetings for Diary view (all correct dates, excluding 7 June and 12 July 2026)
+        {
+            "id": 86,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-09-07",
@@ -514,7 +538,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 87, // Existing ID
+            "id": 99,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meeting (AGM)",
+            "date": "2025-11-02",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Annual General Meeting.",
+            "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 87,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-12-14",
@@ -524,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 88, // Existing ID
+            "id": 88,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-01-11",
@@ -534,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 89, // Existing ID
+            "id": 89,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-02-01",
@@ -544,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 90, // Existing ID
+            "id": 90,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-03-08",
@@ -554,7 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 91, // Existing ID
+            "id": 91,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-04-12",
@@ -564,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 92, // Existing ID
+            "id": 92,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2026-05-10",
@@ -574,124 +608,38 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 93, // Existing ID
+            "id": 1002,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-06-07",
+            "date": "2026-06-14",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
-            "id": 94, // Existing ID
+            "id": 1003,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-07-12",
+            "date": "2026-07-05",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
         },
-        // NEW ITEM: Forum on 5 October: Michaelmas
         {
-            "id": 95, // Existing ID
+            "id": 1000, // Unique ID for the consolidated event
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum: Michaelmas",
-            "date": "2025-10-05",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Michaelmas Celebration",
-            "link": "Contact :ioberski[at]gmail.com"
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
+            "date": "2025-08-18", // Start date for sorting in org view
+            "endDate": "2025-12-22", // End date for sorting in org view
+            "time": "1:45-3:15pm (fortnightly)",
+            "location": "Library at 21 Napier Road",
+            "description": "Study group resumes on 18 August 2025 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'. More info from ioberski[at]gmail.com.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "isOrganizationDetail": true // Mark as organization detail
         },
-        // NEW ITEM: Easter Preparation event
-        {
-            "id": 96, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Easter Preparation event",
-            "date": "2026-03-14",
-            "time": "To be confirmed",
-            "location": "To be confirmed",
-            "description": "Details to be confirmed.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        {
-            "id": 56, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Tuesday Weekly Online Study Group of the Leading Thoughts",
-            "date": "2025-08-26",
-            "time": "19:00-20:00",
-            "location": "Online",
-            "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        {
-            "id": 57, // Existing ID
-            "organization": "Anthroposophy in Edinburgh", // Primary organization
-            "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
-            "title": "Fire in the Temple: A Staged Reading",
-            "date": "2025-11-09",
-            "time": "14:00-16:30",
-            "location": "Edinburgh Steiner School",
-            "description": "A staged reading of the play by Glen Williamson.",
-            "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
-        },
-        // --- Edinburgh Steiner School (generic link for organization view) ---
-        {
-            "id": 71, // New ID for the generic link
-            "organization": "Edinburgh Steiner School",
-            "title": "For current information, please click here",
-            "date": null,
-            "time": null,
-            "location": null,
-            "description": null,
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/",
-            "isOrganizationDetail": true // Custom property to signify it's for org view only
-        },
-        // --- Garvald Home Farm (new organization) ---
-        {
-            "id": 72, // New ID for Garvald Home Farm generic link
-            "organization": "Garvald Home Farm",
-            "title": "For current information, please click here",
-            "date": null,
-            "time": null,
-            "location": null,
-            "description": null,
-            "link": "https://www.facebook.com/GarvaldHomeFarm/?locale=en_GB",
-            "isOrganizationDetail": true // Custom property to signify it's for org view only
-        },
-        {
-            "id": 1001,
-            "organization": "Camphill (Loch Arthur)",
-            "title": "Loch Arthur Farm Shop and Cafe",
-            "date": null,
-            "time": "Monday–Saturday: 9:00am–5:00pm; Sunday: 10:00am–4:00pm",
-            "location": "Loch Arthur Camphill Community",
-            "description": "Visit our Farm Shop and Cafe for fresh organic produce, artisan bread, cheese, and more. Or order <a href=\"https://www.locharthurshop.co.uk/\" target=\"_blank\">online</a>.",
-            "link": "https://locharthur.org.uk/farm-shop-cafe/",
-            "isOrganizationDetail": true
-        },
-        {
-            "id": 2001,
-            "organization": "Columcille",
-            "title": "Autumn Fair",
-            "date": "2025-09-27",
-            "time": "10:30 – 14:00",
-            "location": "Columcille",
-            "description": "",
-            "link": "https://columcille.org.uk/"
-        },
-        {
-            "id": 2002,
-            "organization": "Columcille",
-            "title": "Christmas Play",
-            "date": "2025-12-16",
-            "time": "14:00",
-            "location": "Columcille",
-            "description": "",
-            "link": "https://columcille.org.uk/"
-        }
-    ];
+
 
     // Generate fortnightly Monday Reading Group events for Diary View
     const mondayReadingGroupEvents = [];
@@ -1406,7 +1354,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${eventLinkHtml}
                         `;
                     }
-                    eventList.appendChild(listItem);
+                    eventList.appendChild listItem);
                 });
                 organizationEventsColumn.appendChild(eventList);
             } else {
