@@ -82,7 +82,86 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": null, // Description is now null as the relevant sentence was removed from the title
             "link": "https://www.edinburghsteinerschool.org.uk/teacher-development/"
         },
-
+        {
+            "id": 74,
+            "organization": "Edinburgh Steiner School",
+            "title": "Class 9 Comedy & Tragedy Performance",
+            "date": "2025-09-19",
+            "time": "18:00 - 19:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 75,
+            "organization": "Edinburgh Steiner School",
+            "title": "Classes 1 - 3 Michaelmas Play",
+            "date": "2025-09-30",
+            "time": "To be confirmed",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 76,
+            "organization": "Edinburgh Steiner School",
+            "title": "Open Tour",
+            "date": "2025-10-03",
+            "time": "To be confirmed",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "To book email admissions@edinburghsteinerschool.org.uk",
+            "link": "mailto:admissions@edinburghsteinerschool.org.uk"
+        },
+        {
+            "id": 77,
+            "organization": "Edinburgh Steiner School",
+            "title": "Christmas Concert",
+            "date": "2025-12-10",
+            "time": "13:20",
+            "location": "Polwarth Church",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 78,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 1: Paradise Play (Classes 3+)",
+            "date": "2025-12-16",
+            "time": "14:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 79,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 2: Shepherds' Play",
+            "date": "2025-12-17",
+            "time": "14:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 80,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Plays: Paradise & Shepherds' Plays",
+            "date": "2025-12-17",
+            "time": "19:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 81,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 3: Three Kings' Play (Classes 6+)",
+            "date": "2026-01-22",
+            "time": "14:15",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
         // --- Edinburgh Christian Community (Facebook link) ---
         {
             "id": 4,
