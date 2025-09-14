@@ -1017,16 +1017,15 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 56, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Tuesday Weekly Online Study Group of the Leading Thoughts",
-            "date": "2025-08-26",
-            "time": "19:00-20:00",
+            "date": "2025-09-16",
+            "time": "18:00-19:00",
             "location": "Online",
-            "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65.",
+            "description": "Online Study Group of the Leading Thoughts resumes with Leading Thoughts 62-65. Contact :ioberski[at]gmail.com for details.",
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
             "id": 57, // Existing ID
-            "organization": "Anthroposophy in Edinburgh", // Primary organization
-            "secondaryOrganization": "Edinburgh Steiner School", // Secondary organization for display if desired
+            "organization": "Anthroposophy in Edinburgh",
             "title": "Fire in the Temple: A Staged Reading",
             "date": "2025-11-09",
             "time": "14:00-16:30",
@@ -1088,6 +1087,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Columcille",
             "description": "",
             "link": "https://columcille.org.uk/"
+        },
+        {
+            "id": 2003,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Sophia - The Goddess of Wisdom and Guardian of the Earth - Book launch & talk by Karsten Massei",
+            "date": "2025-10-31",
+            "time": "19:30 - 21:00 (Doors at 19:15)",
+            "location": "Columcille Centre, 2 Newbattle Terrace, Edinburgh EH10 4RT",
+            "description": "Book launch & talk by Karsten Massei.",
+            "link": "https://www.eventbrite.com/e/sophia-the-goddess-of-wisdom-and-the-guardian-of-earth-tickets-1671983249909?aff=oddtdtcreator"
         }
     ];
 
@@ -1825,7 +1834,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- View Mode Management ---
     let currentView = 'diary'; // Default view
 
+    // Store scroll positions for each view
+    let diaryScrollY = 0;
+    let organizationScrollY = 0;
+
     const setView = (view) => {
+        // Save current scroll position before switching
+        if (currentView === 'diary') {
+            diaryScrollY = window.scrollY;
+        } else if (currentView === 'organization') {
+            organizationScrollY = window.scrollY;
+        }
+
         currentView = view;
         diaryViewBtn.classList.remove('active');
         organizationViewBtn.classList.remove('active');
@@ -1833,16 +1853,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (view === 'diary') {
             renderDiaryView(upcomingEvents);
             diaryViewBtn.classList.add('active');
-            // If this is a user-initiated switch (not initial load), scroll to first event
-            if (window.__initialDiaryScrollDone) {
-                const firstUpcomingDayCard = document.querySelector('.diary-day-card');
-                if (firstUpcomingDayCard) {
-                    firstUpcomingDayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
+            // Restore previous scroll position for Diary view
+            setTimeout(() => {
+                window.scrollTo({ top: diaryScrollY, behavior: 'auto' });
+            }, 0);
         } else if (view === 'organization') {
-            renderOrganizationView(); // Call without argument to use allEvents directly
+            renderOrganizationView();
             organizationViewBtn.classList.add('active');
+            // Restore previous scroll position for Organization view
+            setTimeout(() => {
+                window.scrollTo({ top: organizationScrollY, behavior: 'auto' });
+            }, 0);
         }
     };
 
