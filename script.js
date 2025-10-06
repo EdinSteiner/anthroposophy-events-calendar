@@ -788,16 +788,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "An exhibition of unique robot faces created by artist Grant. Continues through July.",
             "link": "https://www.garvaldedinburgh.org.uk/events" // Found on general events page previously
         },
-        {
-            "id": 52, // New ID
-            "organization": "Garvald Edinburgh",
-            "title": "Garvald Gorgie Workshops Open Day",
-            "date": "2025-08-30",
-            "time": "10:30-13:30",
-            "location": "Garvald Gorgie Workshops, Edinburgh",
-            "description": "An open day at Garvald Gorgie Workshops.",
-            "link": "https://www.garvaldedinburgh.org.uk/events/garvald-gorgie-workshops-open-day-2025"
-        },
+            {
+                "id": 2101,
+                "organization": "Garvald Edinburgh",
+                "title": "HARVEST: Contemporary Craft Fair (City Art Centre)",
+                "date": "2025-10-11",
+                "endDate": "2025-10-19",
+                "time": "See event programme",
+                "location": "City Art Centre, Edinburgh",
+                "description": "We are delighted our Garvald Woodworkers and Textiles makers have had work selected to be part of HARVEST. HARVEST: Contemporary Craft Fair is coming to Edinburgh’s City Art Centre 11–19 Oct 2025. Presented by @craftscotland and curated by @stacey___hunter, the Fair will immerse audiences in the work of Scotland-based makers, complemented by a rich programme of workshops and events.",
+                "link": "https://www.craftscotland.org/about/projects/harvest-contemporary-craft-fair-2025/makers; https://cultureedinburgh.com/our-venues/city-art-centre"
+            },
            {
             "id": 3,
             "organization": "Garvald Edinburgh",
