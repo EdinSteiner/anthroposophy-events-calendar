@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Edinburgh Christian Community",
             "title": "Michaelmas Festival for Adults and Children",
             "date": "2025-10-19",
-            "time": "11:30",
+            "time": "11:00",
             "location": "21 Napier Road, Edinburgh",
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
