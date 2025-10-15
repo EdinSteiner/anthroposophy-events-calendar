@@ -897,7 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "date": "2025: 7 Sep, 2 Nov (AGM), 14 Dec. 2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr, 10 May, 14 Jun, 5 Jul. Forum: Michaelmas: 5 Oct 2025.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Regular forum meetings, AGM, and Michaelmas. Contact :ioberski[at]gmail.com for details.",
+            "description": "Regular forum meetings, AGM, and Michaelmas.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true
         },
@@ -1135,7 +1135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "endDate": "2025-12-22", // End date for sorting in org view
         "time": "1:45-3:15pm (fortnightly)",
         "location": "Library at 21 Napier Road",
-        "description": "Study group resumes on 18 August 2025 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'. More info from ioberski[at]gmail.com.",
+        "description": "Study group resumes on 18 August 2025 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
@@ -1143,11 +1143,11 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     "id": 1002,
     "organization": "Anthroposophy in Edinburgh",
-    "title": "Tuesday Online Study Group of the Leading Thoughts (Ongoing, Tuesdays 7–8pm, except public holidays)",
-    "date": "Ongoing",
-    "time": "Tuesdays, 19:00–20:00 (except public holidays)",
+    "title": "Tuesday Online Study Group of the Leading Thoughts (Ongoing, Tuesdays 7–8pm)",
+    "date": "ongoing",
+    "time": "Tuesdays, 19:00–20:00",
     "location": "Online",
-    "description": "Ongoing weekly online study group of the Leading Thoughts. Meets every Tuesday 7–8pm, except on or near public holidays. Contact :ioberski[at]gmail.com for details.",
+    "description": "Ongoing weekly online study group of the Leading Thoughts. Meets every Tuesday 7–8pm.",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -1187,7 +1187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "date": dateStr,
                     "time": "19:00-20:00",
                     "location": "Online",
-                    "description": "Weekly meeting. Contact :ioberski[at]gmail.com for details.",
+                    "description": "Weekly meeting.",
                     "link": "Contact :ioberski[at]gmail.com"
                 });
             }
@@ -1590,8 +1590,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper to format dates for Organization View: DD-MMM-YYYY or range
     const formatOrgDate = (dateString, endDateString = null) => {
         if (!dateString) return '';
-        // If date is a list (Forum Meetings), just return as is
-        if (dateString.match(/\d{4}:/) || dateString.includes(',')) {
+        // If date is a list (Forum Meetings), or 'ongoing', just return as is
+        if (dateString === 'ongoing' || dateString.match(/\d{4}:/) || dateString.includes(',')) {
             return dateString;
         }
         // Format: DD-MM-YYYY (e.g., 31-07-2025)
