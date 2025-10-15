@@ -699,7 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": null,
             "location": null,
             "description": null,
-            "link": "https://rmt.org/rise/fairhill-rise/",
+            "link": "https://rmt.org/post-education/fairhillrise/",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
@@ -710,7 +710,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "link": "https://rmt.org/post-education/fairhillrise/"
         },
         {
             "id": 36,
@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "link": "https://rmt.org/post-education/fairhillrise/"
         },
         {
             "id": 37,
@@ -730,7 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "To be confirmed",
             "location": "Fairhill Rise, East Lothian",
             "description": "An opportunity to visit Fairhill Rise and learn about their work.",
-            "link": "https://rmt.org/rise/fairhill-rise/"
+            "link": "https://rmt.org/post-education/fairhillrise/"
         },
         {
             "id": 38,
@@ -1243,7 +1243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Camphill Corbenic": { homepage: "https://www.corbeniccamphill.co.uk/" },
         "Tiphereth": { homepage: "https://www.tiphereth.org.uk/" },
         "Garvald West Linton": { homepage: "https://garvaldwestlinton.org.uk/" },
-        "Fairhill Rise": { homepage: "https://rmt.org/rise/fairhill-rise/" },
+    "Fairhill Rise": { homepage: "https://rmt.org/post-education/fairhillrise/" },
         "Garvald Edinburgh": { homepage: "https://www.garvaldedinburgh.org.uk/" },
         "Camphill (Loch Arthur)": { homepage: "https://locharthur.org.uk/" },
         "Anthroposophy in Edinburgh": { homepage: "https://www.facebook.com/anthroposophyscotland" }, // Updated to the Facebook link as the primary homepage
