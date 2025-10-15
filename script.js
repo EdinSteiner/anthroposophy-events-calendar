@@ -1141,77 +1141,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Add the consolidated event for Tuesday Online Study Group Organization View
     allEvents.push({
-        "id": 1002,
-        "organization": "Anthroposophy in Edinburgh",
-        "title": "Tuesday Online Study Group of the Leading Thoughts (Weekly, 7-8pm; 16 Sep at 6-7pm; not on 23 or 30 Sep)",
-        "date": "2025-09-16", // Start date for sorting in org view
-        "endDate": "2025-12-30", // End date for sorting in org view
-        "time": "Tuesdays, 7-8pm (16 Sep at 6-7pm; not on 23 or 30 Sep)",
-        "location": "Online",
-        "description": "Weekly online study group of the Leading Thoughts. On 16 September, the meeting is 6-7pm. No meetings on 23 or 30 September. Resumes 7 October, 7-8pm and weekly thereafter. Contact :ioberski[at]gmail.com for details.",
-        "link": "Contact :ioberski[at]gmail.com",
-        "isOrganizationDetail": true
+    "id": 1002,
+    "organization": "Anthroposophy in Edinburgh",
+    "title": "Tuesday Online Study Group of the Leading Thoughts (Ongoing, Tuesdays 7–8pm, except public holidays)",
+    "date": "Ongoing",
+    "time": "Tuesdays, 19:00–20:00 (except public holidays)",
+    "location": "Online",
+    "description": "Ongoing weekly online study group of the Leading Thoughts. Meets every Tuesday 7–8pm, except on or near public holidays. Contact :ioberski[at]gmail.com for details.",
+    "link": "Contact :ioberski[at]gmail.com",
+    "isOrganizationDetail": true
     });
     // Add individual Diary events for each session
     allEvents.push({
-        "id": 2004,
-        "organization": "Anthroposophy in Edinburgh",
-        "title": "Tuesday Online Study Group of the Leading Thoughts",
-        "date": "2025-09-16",
-        "time": "18:00-19:00",
-        "location": "Online",
-        "description": "Special time: 6-7pm. Contact :ioberski[at]gmail.com for details.",
-        "link": "Contact :ioberski[at]gmail.com"
+    // Removed special 16 Sep event (old time)
     });
     allEvents.push({
-        "id": 2005,
-        "organization": "Anthroposophy in Edinburgh",
-        "title": "Tuesday Online Study Group of the Leading Thoughts",
-        "date": "2025-09-23",
-        "time": "No meeting",
-        "location": "Online",
-        "description": "No meeting this week.",
-        "link": "Contact :ioberski[at]gmail.com"
+    // Removed 23 Sep (no meeting)
     });
     allEvents.push({
-        "id": 2006,
-        "organization": "Anthroposophy in Edinburgh",
-        "title": "Tuesday Online Study Group of the Leading Thoughts",
-        "date": "2025-09-30",
-        "time": "No meeting",
-        "location": "Online",
-        "description": "No meeting this week.",
-        "link": "Contact :ioberski[at]gmail.com"
+    // Removed 30 Sep (no meeting)
     });
     allEvents.push({
-        "id": 2007,
-        "organization": "Anthroposophy in Edinburgh",
-        "title": "Tuesday Online Study Group of the Leading Thoughts",
-        "date": "2025-10-07",
-        "time": "19:00-20:00",
-        "location": "Online",
-        "description": "Resumes weekly on Tuesdays, 7-8pm. Contact :ioberski[at]gmail.com for details.",
-        "link": "Contact :ioberski[at]gmail.com"
+    // Removed 7 Oct (handled by loop)
     });
     // Add weekly events from 14 October onwards
     (() => {
         let id = 2008;
         let date = new Date(2025, 9, 14); // 14 October 2025
         const endDate = new Date(2025, 11, 30); // 30 December 2025
+        // List of public holidays to skip (UK/Scotland, 2025):
+        const skipDates = [
+            '2025-12-23', // Christmas week
+            '2025-12-30', // New Year week
+        ];
         while (date <= endDate) {
             const year = date.getFullYear();
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
             const day = date.getDate().toString().padStart(2, '0');
-            allEvents.push({
-                "id": id++,
-                "organization": "Anthroposophy in Edinburgh",
-                "title": "Tuesday Online Study Group of the Leading Thoughts",
-                "date": `${year}-${month}-${day}`,
-                "time": "19:00-20:00",
-                "location": "Online",
-                "description": "Weekly meeting. Contact :ioberski[at]gmail.com for details.",
-                "link": "Contact :ioberski[at]gmail.com"
-            });
+            const dateStr = `${year}-${month}-${day}`;
+            if (!skipDates.includes(dateStr)) {
+                allEvents.push({
+                    "id": id++,
+                    "organization": "Anthroposophy in Edinburgh",
+                    "title": "Tuesday Online Study Group of the Leading Thoughts",
+                    "date": dateStr,
+                    "time": "19:00-20:00",
+                    "location": "Online",
+                    "description": "Weekly meeting. Contact :ioberski[at]gmail.com for details.",
+                    "link": "Contact :ioberski[at]gmail.com"
+                });
+            }
             date.setDate(date.getDate() + 7);
         }
     })();
