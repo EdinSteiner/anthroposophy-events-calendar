@@ -799,6 +799,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 "description": "We are delighted our Garvald Woodworkers and Textiles makers have had work selected to be part of HARVEST. HARVEST: Contemporary Craft Fair is coming to Edinburgh’s City Art Centre 11–19 Oct 2025. Presented by @craftscotland and curated by @stacey___hunter, the Fair will immerse audiences in the work of Scotland-based makers, complemented by a rich programme of workshops and events.",
                 "link": "https://www.craftscotland.org/about/projects/harvest-contemporary-craft-fair-2025/makers; https://cultureedinburgh.com/our-venues/city-art-centre"
             },
+                {
+                    "id": 2110,
+                    "organization": "Garvald Edinburgh",
+                    "title": "Orwell Arts Open Day",
+                    "date": "2025-11-29",
+                    "time": "10:30-13:30",
+                    "location": "Orwell Arts, 17 Orwell Place, Edinburgh, EH11 2AA",
+                    "description": "Open Day at Orwell Arts — drop in to see work from Garvald makers and learn about our workshops.",
+                    "link": "https://www.garvaldedinburgh.org.uk/events/orwell-arts-open-day"
+                },
+                {
+                    "id": 2111,
+                    "organization": "Garvald Edinburgh",
+                    "title": "Life Is Weird — exhibition of work from Mayfield House staff",
+                    "date": "2025-11-29",
+                    "time": "13:00-17:00",
+                    "location": "Phoenix Centre, 1 Harrison Place, Edinburgh, EH11 1SF",
+                    "description": "Exhibition of artwork from Mayfield House staff. More info via the event link.",
+                    "link": "https://fb.me/e/56ClqSu1C"
+                },
+                {
+                    "id": 2112,
+                    "organization": "Garvald Edinburgh",
+                    "title": "Life Is Weird — exhibition of work from Mayfield House staff",
+                    "date": "2025-11-30",
+                    "time": "11:00-15:00",
+                    "location": "Phoenix Centre, 1 Harrison Place, Edinburgh, EH11 1SF",
+                    "description": "Exhibition of artwork from Mayfield House staff. More info via the event link.",
+                    "link": "https://fb.me/e/56ClqSu1C"
+                },
+                {
+                    "id": 2120,
+                    "organization": "Garvald Edinburgh",
+                    "title": "Life Is Weird — exhibition of work from Mayfield House staff (29–30 Nov 2025)",
+                    "date": "2025-11-29",
+                    "endDate": "2025-11-30",
+                    "time": "See programme (29 Nov: 13:00-17:00; 30 Nov: 11:00-15:00)",
+                    "location": "Phoenix Centre, 1 Harrison Place, Edinburgh, EH11 1SF",
+                    "description": "Exhibition of artwork from Mayfield House staff across 29–30 Nov 2025.",
+                    "link": "https://fb.me/e/56ClqSu1C",
+                    "isOrganizationDetail": true
+                },
            {
             "id": 3,
             "organization": "Garvald Edinburgh",
@@ -1804,6 +1846,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                                             event.title === "Tuesday Online Study Group of the Leading Thoughts" &&
                                                             (event.id === 56 || (event.id >= 2004 && event.id <= 2100)))
                                                 );
+            }
+
+            if (orgName === "Garvald Edinburgh") {
+                // Exclude individual 'Life Is Weird' daily entries from organization view
+                const lifeIsWeirdIds = [2111, 2112];
+                regularUpcomingEvents = regularUpcomingEvents.filter(event => !lifeIsWeirdIds.includes(event.id));
             }
 
             // Combine them, with organization-specific details first
