@@ -1,0 +1,206 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Event Data ---
+    // IMPORTANT: This array holds STATIC event data.
+    // Events below are consolidated from previous search results and your direct input,
+    // filtered and adjusted based on all your feedback.
+    // As an AI, I cannot dynamically fetch or verify live event schedules in real-time.
+    // You MUST verify the accuracy and currency of these events against official websites.
+    // Dates are set to be in the future (from current date June 30, 2025) or ongoing.
+    const allEvents = [
+        // --- Edinburgh Steiner School (from previous Google Search tool results) ---
+        {
+            "id": 1,
+            "organization": "Edinburgh Steiner School",
+            "title": "Summer Circus and Craft Camp",
+            "date": "2025-07-07",
+            "endDate": "2025-07-11", // Example duration
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Engaging camp with circus skills and creative crafts.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/summer-camp/"
+        },
+        {
+            "id": 2,
+            "organization": "Edinburgh Steiner School",
+            "title": "Kindergarten Summer Camp: Week 1",
+            "date": "2025-08-04",
+            "endDate": "2025-08-08", // Corrected duration
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Gentle summer camp for younger children.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
+        },
+        {
+            "id": 44, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Kindergarten Summer Camp: Week 2",
+            "date": "2025-08-11",
+            "endDate": "2025-08-15", // Corrected duration
+            "time": "Full Day",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Gentle summer camp for younger children.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/kindergarten-summer-camps/"
+        },
+        {
+            "id": 45, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Early Years Parent Education Evening: Rhythm, Repetition, Reverence",
+            "date": "2025-09-18",
+            "time": "19:00 - 21:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "An evening for parents focusing on rhythm, repetition, and reverence in early years education.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/early-years-parent-education-evening-rhythm-repetition-reverence/"
+        },
+        {
+            "id": 46, // New ID
+            "organization": "Edinburgh Steiner School",
+            "title": "El Mercado Market",
+            "date": "2025-10-04", // Corrected date format
+            "time": "11:00 - 16:00", // Corrected time
+            "location": "Edinburgh Steiner School Campus",
+            "description": "A vibrant market featuring various stalls.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/el-mercado-market/"
+        },
+        {
+            "id": 73, // New ID for Christmas Market
+            "organization": "Edinburgh Steiner School",
+            "title": "Christmas Market",
+            "date": "2025-11-22",
+            "time": "11:00 - 16:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "A vibrant market featuring various stalls.",
+            "link": "https://www.edinburghsteinerschool.org.uk/event/christmas-market-2024/"
+        },
+        // NEW ITEM: Edinburgh Steiner Education Course
+        {
+            "id": 97, // New unique ID
+            "organization": "Edinburgh Steiner School",
+            "title": "Edinburgh Steiner Education Course. More information", // Sentence removed as requested
+            "date": "2025-09-12",
+            "time": "Starts",
+            "location": "Edinburgh Steiner School",
+            "description": null, // Description is now null as the relevant sentence was removed from the title
+            "link": "https://www.edinburghsteinerschool.org.uk/teacher-development/"
+        },
+        {
+            "id": 74,
+            "organization": "Edinburgh Steiner School",
+            "title": "Class 9 Comedy & Tragedy Performance",
+            "date": "2025-09-19",
+            "time": "18:00 - 19:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 75,
+            "organization": "Edinburgh Steiner School",
+            "title": "Classes 1 - 3 Michaelmas Play",
+            "date": "2025-09-30",
+            "time": "To be confirmed",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 76,
+            "organization": "Edinburgh Steiner School",
+            "title": "Open Tour",
+            "date": "2025-10-03",
+            "time": "To be confirmed",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "To book email admissions@edinburghsteinerschool.org.uk",
+            "link": "mailto:admissions@edinburghsteinerschool.org.uk"
+        },
+        {
+            "id": 77,
+            "organization": "Edinburgh Steiner School",
+            "title": "Christmas Concert",
+            "date": "2025-12-10",
+            "time": "13:20",
+            "location": "Polwarth Church",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 78,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 1: Paradise Play (Classes 3+)",
+            "date": "2025-12-16",
+            "time": "14:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 79,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 2: Shepherds' Play",
+            "date": "2025-12-17",
+            "time": "14:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 80,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Plays: Paradise & Shepherds' Plays",
+            "date": "2025-12-17",
+            "time": "19:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        {
+            "id": 81,
+            "organization": "Edinburgh Steiner School",
+            "title": "Oberufer Play 3: Three Kings' Play (Classes 6+)",
+            "date": "2026-01-22",
+            "time": "14:15",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "",
+            "link": "https://www.edinburghsteinerschool.org.uk/"
+        },
+        // --- Edinburgh Christian Community (Facebook link) ---
+        {
+            "id": 4,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-07-06",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 8,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-07-13",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 11,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-07-20",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Weekly service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 16, // New ID
+            "organization": "Edinburgh Christian Community",
+            "title": "Devotional Gathering",
+            "date": "2025-07-27",
+            "time": "10:00",
+            "location": "Edinburgh Christian Community Church",
+            "description": "Devotional Gathering.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+... (file backed up)
