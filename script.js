@@ -678,16 +678,17 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // --- Garvald West Linton (from recent Google Search tool results) ---
-        // Only keeping Christmas Fair (ID 31)
+        // Garvald West Linton: Christmas Fair (kept for both Diary and Org views)
         {
             "id": 31,
             "organization": "Garvald West Linton",
-            "title": "Christmas Fair",
+            "title": "Garvald West Linton Christmas Fair",
             "date": "2025-12-06",
             "time": "10:30 - 13:00",
-            "location": "Garvald West Linton Workshops",
-            "description": "Workshops selling handmade items.",
-             "link": "https://garvaldwestlinton.org.uk/events/"
+            "location": "Garvald West Linton",
+            "description": "Various stalls. Hot food, teas & coffees. Crafts activities.",
+            "poster": "images/garvald-west-linton-christmas-fair-2025.jpg",
+            "link": "https://garvaldwestlinton.org.uk/event/christmas-fair/"
         },
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
