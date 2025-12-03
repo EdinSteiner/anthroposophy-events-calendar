@@ -1068,6 +1068,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "A staged reading of the play by Glen Williamson.",
             "link": "https://www.eventbrite.co.uk/e/fire-in-the-temple-tickets-1488785109339?aff=oddtdtcreator"
         },
+        {
+            "id": 2300,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Apocalypse - The Revelation of John. A Creative Speech Performance",
+            "date": "2026-01-25",
+            "time": "14:00-16:30",
+            "location": "Columcille",
+            "description": "A creative speech performance of the Apocalypse - The Revelation of John.",
+            "link": "https://www.eventbrite.co.uk/e/apocalypse-the-reveleation-of-john-tickets-1976765067530?aff=oddtdtcreator"
+        },
         // --- Edinburgh Steiner School (generic link for organization view) ---
         {
             "id": 71, // New ID for the generic link
