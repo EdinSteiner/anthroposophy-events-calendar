@@ -937,7 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2025: 7 Sep, 2 Nov (AGM), 14 Dec. 2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr, 10 May, 14 Jun, 5 Jul. Forum: Michaelmas: 5 Oct 2025.",
+            "date": "2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr (Introduction to membership of the Society), 10 May, 14 Jun, 5 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Regular forum meetings, AGM, and Michaelmas.",
@@ -958,11 +958,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 87, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "title": "CANCELLED - Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
             "date": "2025-12-14",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
+            "description": "Forum meeting - Cancelled.",
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
@@ -998,11 +998,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 91, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
+            "title": "Introduction to membership of the Society",
             "date": "2026-04-12",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
+            "description": "Introduction to membership of the Society.",
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
