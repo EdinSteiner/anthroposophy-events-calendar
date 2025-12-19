@@ -1517,10 +1517,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Generate fortnightly Monday Reading Group events for Diary View
     const mondayReadingGroupEvents = [];
-    // Start on Monday, August 18, 2025
-    let currentMonday = new Date(2025, 7, 18); // Month is 0-indexed, so 7 is August
+    // Start on Monday, January 12, 2026
+    let currentMonday = new Date(2026, 0, 12); // Month is 0-indexed, so 0 is January
     currentMonday.setHours(0, 0, 0, 0); // Normalize to start of the day
-    const endDateForFortnightly = new Date(2025, 11, 22); // Month is 0-indexed, so 11 is December 22, 2025
+    const endDateForFortnightly = new Date(2026, 11, 31); // Through end of 2026
     endDateForFortnightly.setHours(23, 59, 59, 999); // Normalize to end of the day
 
     let newIdCounter = 100; // Starting new IDs for these events
@@ -1554,23 +1554,23 @@ document.addEventListener('DOMContentLoaded', () => {
         "id": 1000, // Unique ID for the consolidated event
         "organization": "Anthroposophy in Edinburgh",
         "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
-        "date": "2025-08-18", // Start date for sorting in org view
-        "endDate": "2025-12-22", // End date for sorting in org view
+        "date": "2026-01-12", // Start date for sorting in org view
+        "endDate": "2026-12-31", // End date for sorting in org view
         "time": "1:45-3:15pm (fortnightly)",
         "location": "Library at 21 Napier Road",
-        "description": "Study group resumes on 18 August 2025 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+        "description": "Study group resumes on 12 January 2026 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
-    // Add the consolidated event for Tuesday Online Study Group Organization View
+    // Add the consolidated event for Thursday Online Study Group Organization View
     allEvents.push({
     "id": 1002,
     "organization": "Anthroposophy in Edinburgh",
-    "title": "Tuesday Online Study Group of the Leading Thoughts (Ongoing, Tuesdays 7–8pm)",
+    "title": "Thursday Online Study Group of the Leading Thoughts (Ongoing, Thursdays 7–8pm)",
     "date": "ongoing",
-    "time": "Tuesdays, 19:00–20:00",
+    "time": "Thursdays, 19:00–20:00",
     "location": "Online",
-    "description": "Ongoing weekly online study group of the Leading Thoughts. Meets every Tuesday 7–8pm.",
+    "description": "Ongoing weekly online study group of the Leading Thoughts. Resumes 15 January 2026, meets every Thursday 7–8pm.",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -1587,15 +1587,14 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     // Removed 7 Oct (handled by loop)
     });
-    // Add weekly events from 14 October onwards
+    // Add weekly Thursday events from 15 January 2026 onwards
     (() => {
         let id = 2008;
-        let date = new Date(2025, 9, 14); // 14 October 2025
-        const endDate = new Date(2025, 11, 30); // 30 December 2025
-        // List of public holidays to skip (UK/Scotland, 2025):
+        let date = new Date(2026, 0, 15); // 15 January 2026 (Thursday)
+        const endDate = new Date(2026, 11, 31); // 31 December 2026
+        // List of public holidays to skip (UK/Scotland, 2026):
         const skipDates = [
-            '2025-12-23', // Christmas week
-            '2025-12-30', // New Year week
+            // Add any known holidays here if needed
         ];
         while (date <= endDate) {
             const year = date.getFullYear();
@@ -1606,7 +1605,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 allEvents.push({
                     "id": id++,
                     "organization": "Anthroposophy in Edinburgh",
-                    "title": "Tuesday Online Study Group of the Leading Thoughts",
+                    "title": "Thursday Online Study Group of the Leading Thoughts",
                     "date": dateStr,
                     "time": "19:00-20:00",
                     "location": "Online",
@@ -2221,12 +2220,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     );
                 }
 
-                                // Exclude all individual Tuesday study group events from organization view
-                                                regularUpcomingEvents = regularUpcomingEvents.filter(event =>
-                                                        !(event.organization === "Anthroposophy in Edinburgh" &&
-                                                            event.title === "Tuesday Online Study Group of the Leading Thoughts" &&
-                                                            (event.id === 56 || (event.id >= 2004 && event.id <= 2100)))
-                                                );
+                                // Exclude all individual Thursday study group events from organization view
+                                regularUpcomingEvents = regularUpcomingEvents.filter(event =>
+                                        !(event.organization === "Anthroposophy in Edinburgh" &&
+                                            event.title === "Thursday Online Study Group of the Leading Thoughts" &&
+                                            (event.id === 56 || (event.id >= 2004 && event.id <= 2100)))
+                                );
             }
 
             if (orgName === "Garvald Edinburgh") {
