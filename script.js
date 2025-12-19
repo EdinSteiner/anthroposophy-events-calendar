@@ -563,6 +563,376 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
+        {
+            "id": 2501,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Luke 1, 26-38)",
+            "date": "2025-12-21",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2502,
+            "organization": "Edinburgh Christian Community",
+            "title": "Talk by Paul: The Act of Consecration of Man is Born Anew Each Christmas as Revealed in the Trinity of Epistles in the 3 Christmas Services",
+            "date": "2025-12-21",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2503,
+            "organization": "Edinburgh Christian Community",
+            "title": "Christmas Midnight Service with Choir (Matthew 1)",
+            "date": "2025-12-24",
+            "time": "24:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2504,
+            "organization": "Edinburgh Christian Community",
+            "title": "Dawn Service (Luke 2, 1-20)",
+            "date": "2025-12-25",
+            "time": "08:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2505,
+            "organization": "Edinburgh Christian Community",
+            "title": "Christmas Children's Service",
+            "date": "2025-12-25",
+            "time": "09:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2506,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daytime Service (John 21, 15-25)",
+            "date": "2025-12-25",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2507,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-12-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2508,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 1 - The Nature and Creation of the Human Being",
+            "date": "2025-12-26",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2509,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-12-27",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2510,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 2 - Paradise Lost",
+            "date": "2025-12-27",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2511,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Luke 2, 21-40)",
+            "date": "2025-12-28",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2512,
+            "organization": "Edinburgh Christian Community",
+            "title": "Talk by Christian Maclean: The Stars of 2026. The expanding universe and the role of the human being",
+            "date": "2025-12-28",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2513,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-12-29",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2514,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 3 - A World without God",
+            "date": "2025-12-29",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2515,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-12-30",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2516,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 4 - In the Fullness of Time",
+            "date": "2025-12-30",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2517,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2025-12-31",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2518,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 5 - Son of God and Son of Man",
+            "date": "2025-12-31",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2519,
+            "organization": "Edinburgh Christian Community",
+            "title": "Family Gathering with games, singing, food & Close of Day at the altar",
+            "date": "2025-12-31",
+            "time": "17:00-20:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2520,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man with New Year Sermon",
+            "date": "2026-01-01",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2521,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 6 - The Mystery of the Powerless God",
+            "date": "2026-01-01",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2522,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2026-01-02",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2523,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 7 - The Healing Power of Christ",
+            "date": "2026-01-02",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2524,
+            "organization": "Edinburgh Christian Community",
+            "title": "German Service: Menschenweihehandlung",
+            "date": "2026-01-03",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2525,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 8 - Christendom",
+            "date": "2026-01-03",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2526,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (John 1, 1-18)",
+            "date": "2026-01-04",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2527,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 9 - History and Mysticism",
+            "date": "2026-01-04",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2528,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man",
+            "date": "2026-01-05",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2529,
+            "organization": "Edinburgh Christian Community",
+            "title": "Daily Course with Paul and Peter: Essence of Christianity 10 - Apocalyptic Outlook",
+            "date": "2026-01-05",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2530,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Epiphany)",
+            "date": "2026-01-06",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2531,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Matthew 2, 1-12)",
+            "date": "2026-01-11",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2532,
+            "organization": "Edinburgh Christian Community",
+            "title": "Farewell for Paul and Fredy over Coffee",
+            "date": "2026-01-11",
+            "time": "11:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2533,
+            "organization": "Edinburgh Christian Community",
+            "title": "Follow the Star - input and conversation about an exciting new year and seeking our own star",
+            "date": "2026-01-11",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2534,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (Luke 2, 41-52)",
+            "date": "2026-01-18",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2535,
+            "organization": "Edinburgh Christian Community",
+            "title": "Development Group meet",
+            "date": "2026-01-18",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2536,
+            "organization": "Edinburgh Christian Community",
+            "title": "Act of Consecration of Man (John 2, 1-11)",
+            "date": "2026-01-25",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2537,
+            "organization": "Edinburgh Christian Community",
+            "title": "Meeting with Johannes (main architect) - to be confirmed",
+            "date": "2026-01-25",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Possible date - to be confirmed",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
         // --- Camphill Blair Drummond (from recent Google Search tool results) ---
         {
             "id": 62, // New ID for the generic link
