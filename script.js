@@ -1307,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2026: 11 Jan, 1 Feb, 8 Mar, 12 Apr (Introduction to membership of the Society), 10 May, 14 Jun, 5 Jul.",
+            "date": "2026: 1 Feb, 8 Mar, 12 Apr (Introduction to membership of the Society), 3 May, 14 Jun, 5 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Regular forum meetings, AGM, and Michaelmas.",
@@ -1379,7 +1379,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 92, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-05-10",
+            "date": "2026-05-03",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
@@ -1389,7 +1389,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 93, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-06-07",
+            "date": "2026-06-14",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
@@ -1399,7 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 94, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-07-12",
+            "date": "2026-07-05",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
@@ -1443,10 +1443,91 @@ document.addEventListener('DOMContentLoaded', () => {
             "organization": "Anthroposophy in Edinburgh",
             "title": "Apocalypse - The Revelation of John. A Creative Speech Performance",
             "date": "2026-01-25",
-            "time": "14:00-16:30",
+            "time": "14:00-15:30",
             "location": "Columcille",
             "description": "A creative speech performance of the Apocalypse - The Revelation of John.",
             "link": "https://www.eventbrite.co.uk/e/apocalypse-the-reveleation-of-john-tickets-1976765067530?aff=oddtdtcreator"
+        },
+        // --- Balancing in Freedom performances ---
+        {
+            "id": 2310,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-01-29",
+            "time": "19:30-21:00",
+            "location": "Scottish Storytelling Centre, Edinburgh",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+        },
+        {
+            "id": 2311,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-03-15",
+            "time": "14:00-15:30",
+            "location": "Scottish Storytelling Centre, Edinburgh",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+        },
+        {
+            "id": 2312,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-04-18",
+            "time": "14:00-15:30",
+            "location": "Cumbernauld Theatre at Lanternhouse",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+        },
+        {
+            "id": 2313,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-06-13",
+            "time": "14:00-15:30",
+            "location": "Scottish Storytelling Centre, Edinburgh",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+        },
+        {
+            "id": 2314,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-07-31",
+            "time": "19:30-21:00",
+            "location": "Cumbernauld Theatre at Lanternhouse",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+        },
+        {
+            "id": 2315,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-09-10",
+            "time": "19:30-21:00",
+            "location": "Cumbernauld Theatre at Lanternhouse",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+        },
+        {
+            "id": 2316,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-10-11",
+            "time": "14:00-15:30",
+            "location": "Cumbernauld Theatre at Lanternhouse",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+        },
+        {
+            "id": 2317,
+            "organization": "Iddo Oberski",
+            "title": "Balancing in Freedom",
+            "date": "2026-11-20",
+            "time": "19:30-21:00",
+            "location": "Scottish Storytelling Centre, Edinburgh",
+            "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
         },
         // --- Edinburgh Steiner School (generic link for organization view) ---
         {
@@ -1594,7 +1675,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const endDate = new Date(2026, 11, 31); // 31 December 2026
         // List of public holidays to skip (UK/Scotland, 2026):
         const skipDates = [
-            // Add any known holidays here if needed
+            "2026-01-29" // CANCELLED
         ];
         while (date <= endDate) {
             const year = date.getFullYear();
@@ -1617,6 +1698,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })();
 
+    // CANCELLED Thursday Online Study Group event
+    allEvents.push({
+        "id": 2301,
+        "organization": "Anthroposophy in Edinburgh",
+        "title": "Thursday Online Study Group of the Leading Thoughts - CANCELLED",
+        "date": "2026-01-29",
+        "time": "19:00-20:00",
+        "location": "Online",
+        "description": "This week's meeting is cancelled.",
+        "link": "Contact :ioberski[at]gmail.com"
+    });
 
     // --- Organization Images (Paths Confirmed and Fairhill Rise) ---
     const organizationImages = {
@@ -2232,6 +2324,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Exclude individual 'Life Is Weird' daily entries from organization view
                 const lifeIsWeirdIds = [2111, 2112];
                 regularUpcomingEvents = regularUpcomingEvents.filter(event => !lifeIsWeirdIds.includes(event.id));
+            }
+
+            if (orgName === "Iddo Oberski") {
+                // Exclude all "Balancing in Freedom" events from organization view
+                regularUpcomingEvents = regularUpcomingEvents.filter(event => 
+                    !(event.title === "Balancing in Freedom")
+                );
             }
 
             // Combine them, with organization-specific details first
