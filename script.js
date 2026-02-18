@@ -1366,6 +1366,39 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
+            "id": 2548,
+            "organization": "Edinburgh Steiner School",
+            "title": "Class 8 present Shakespeare's The Comedy of Errors",
+            "date": "2026-02-26",
+            "time": "19:00",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Table audience & refreshments. Book Your Table For Shakespeare's Funniest Play.",
+            "link": "https://www.zeffy.com/en-GB/ticketing/comedy-of-errors-3",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2549,
+            "organization": "Edinburgh Steiner School",
+            "title": "Class 8 present Shakespeare's The Comedy of Errors",
+            "date": "2026-02-27",
+            "time": "18:30",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Table audience & refreshments. Book Your Table For Shakespeare's Funniest Play.",
+            "link": "https://www.zeffy.com/en-GB/ticketing/comedy-of-errors-3",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2550,
+            "organization": "Edinburgh Steiner School",
+            "title": "Class 8 present Shakespeare's The Comedy of Errors",
+            "date": "2026-02-26",
+            "time": "Thursday 26 Feb 7pm, Friday 27 Feb 6:30pm",
+            "location": "Edinburgh Steiner School Campus",
+            "description": "Table audience & refreshments. Book Your Table For Shakespeare's Funniest Play.",
+            "link": "https://www.zeffy.com/en-GB/ticketing/comedy-of-errors-3",
+            "isOrganizationDetail": true
+        },
+        {
             "id": 2540,
             "organization": "Edinburgh Christian Community",
             "title": "Devotional Gathering (Matthew 17, 1-9)",
@@ -2391,7 +2424,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Separate events into two categories for this organization
             let orgSpecificDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
             let regularUpcomingEvents = groupedEvents[orgName].filter(event =>
-                !event.isOrganizationDetail && filterUpcomingEvents([event]).length > 0
+                !event.isOrganizationDetail && !event.hideFromOrganizationView && filterUpcomingEvents([event]).length > 0
             );
 
             // Handle consolidation for "Anthroposophy in Edinburgh" Forum events
