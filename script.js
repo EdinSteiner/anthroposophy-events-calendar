@@ -1356,6 +1356,26 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "Contact :ioberski[at]gmail.com"
         },
         {
+            "id": 2539,
+            "organization": "Edinburgh Christian Community",
+            "title": "Devotional Gathering (Matthew 4, 1-11)",
+            "date": "2026-02-22",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2540,
+            "organization": "Edinburgh Christian Community",
+            "title": "Devotional Gathering (Matthew 17, 1-9)",
+            "date": "2026-03-01",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
             "id": 90, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
@@ -1364,6 +1384,76 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
             "link": "Contact :ioberski[at]gmail.com"
+        },
+        {
+            "id": 2541,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service with Story",
+            "date": "2026-03-08",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2542,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Luke 11, 14-36)",
+            "date": "2026-03-08",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2543,
+            "organization": "Edinburgh Christian Community",
+            "title": "Project Development Group meeting",
+            "date": "2026-03-08",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2544,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 6)",
+            "date": "2026-03-15",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2545,
+            "organization": "Edinburgh Christian Community",
+            "title": "Secrets of the Sounding Bowl - Talk and demonstration by Anne Byrne",
+            "date": "2026-03-15",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2546,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 8)",
+            "date": "2026-03-22",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2547,
+            "organization": "Edinburgh Christian Community",
+            "title": "Synod sharing, news from the Region",
+            "date": "2026-03-22",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
             "id": 91, // Existing ID
