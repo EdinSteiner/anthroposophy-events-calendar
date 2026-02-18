@@ -1427,6 +1427,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Details to be confirmed.",
             "link": "Contact :ioberski[at]gmail.com"
         },
+        {
+            "id": 2538,
+            "organization": "Edinburgh Steiner School",
+            "title": "Steiner Waldorf Education Taster Day",
+            "date": "2026-03-14",
+            "time": "09:00 - 17:00",
+            "location": "Edinburgh Steiner School, 60 - 64 Spylaw Road, Edinburgh South EH10 5BR",
+            "description": "£45. <a href='https://edinburghsteinerschool.org.uk/steiner-education/teachercpd/' target='_blank'>Website</a> | <a href='https://www.facebook.com/EdSteinerSchool' target='_blank'>Facebook</a> | <a href='https://www.instagram.com/edinburghsteiner.school' target='_blank'>Instagram</a>",
+            "link": "https://edinburghsteinerschool.org.uk/steiner-education/teachercpd/"
+        },
                 // Removed duplicate Tuesday study group event for 16 September (id 56)
         {
             "id": 57, // Existing ID
