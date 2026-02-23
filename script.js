@@ -2436,8 +2436,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         eventContainer.appendChild(headerRow);
 
-        // Sort organizations alphabetically for consistent display
-        const sortedOrgNames = Object.keys(groupedEvents).sort();
+        // Sort organizations alphabetically for consistent display, excluding Undefined
+        const sortedOrgNames = Object.keys(groupedEvents).filter(orgName => orgName !== 'undefined' && orgName !== 'Undefined').sort();
 
         sortedOrgNames.forEach(orgName => {
             const organizationRow = document.createElement('div');
@@ -2584,7 +2584,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 organizationEventsColumn.innerHTML = '<p class="no-events-message">No upcoming events listed at this time.</p>';
             }
             organizationRow.appendChild(organizationEventsColumn);
-            eventContainer.appendChild(organizationRow);
+            
+            // Only append the organization row if there are events to display
+            if (eventsToDisplayInColumn.length > 0) {
+                eventContainer.appendChild(organizationRow);
+            }
         });
     };
 
