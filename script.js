@@ -965,7 +965,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": null,
             "location": null,
             "description": null,
-            "link": "https://www.corbeniccamphill.co.uk/newsletter",
+            "link": "https://www.corbeniccamphill.co.uk/blog/categories/public-events",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         {
@@ -980,6 +980,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
 
+        // --- Columcille Edinburgh ---
+        {
+            "id": 65, // New ID for the generic link
+            "organization": "Columcille",
+            "title": "For current information please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://columcille.org.uk/news-and-events/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
+        },
 
         // --- Tiphereth Edinburgh (No specific upcoming events found via search) ---
         {
@@ -1059,6 +1071,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Various stalls. Hot food, teas & coffees. Crafts activities.",
             "poster": "images/garvald-west-linton-christmas-fair-2025.jpg",
             "link": "https://garvaldwestlinton.org.uk/event/christmas-fair/"
+        },
+
+        // --- Garvald West Linton (For current information link) ---
+        {
+            "id": 83, // New ID for the generic link
+            "organization": "Garvald West Linton",
+            "title": "For current information, please click here",
+            "date": null,
+            "time": null,
+            "location": null,
+            "description": null,
+            "link": "https://garvaldwestlinton.org.uk/events/",
+            "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
 
         // --- Fairhill Rise (Was Ruskin Mill, now updated name and added events) ---
@@ -1265,6 +1290,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "O2 Academy, Newmarket Road, Edinburgh, EH14 1RJ",
             "description": "Garvald Edinburgh returns as a Charity Partner, presenting the work of John Black, David Lorimer, Angela Ramsay, Nicole Tait and Joseph Whales.",
             "link": "https://www.artedinburgh.com/garvald-edinburgh"
+        },
+        {
+            "id": 82,
+            "organization": "Garvald Edinburgh",
+            "title": "Art exhibition and sale in support of Garvald Edinburgh",
+            "date": "2026-03-13",
+            "endDate": "2026-03-14",
+            "time": "Friday 6-9pm, Saturday 10am-4pm",
+            "location": "Whitespace Gallery, 76 Crosscauseway, Edinburgh, EH8 9HQ",
+            "description": "All artworks generously donated by an independent group of artists. More information from Exhibitions@garvaldedinburgh.org.uk",
+            "link": "mailto:Exhibitions@garvaldedinburgh.org.uk"
         },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
@@ -1590,7 +1626,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:30-21:00",
             "location": "Scottish Storytelling Centre, Edinburgh",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/",
+            "hideFromOrgView": true
         },
         {
             "id": 2311,
@@ -1600,7 +1637,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "14:00-15:30",
             "location": "Scottish Storytelling Centre, Edinburgh",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/",
+            "hideFromOrgView": true
         },
         {
             "id": 2312,
@@ -1610,7 +1648,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "14:00-15:30",
             "location": "Cumbernauld Theatre at Lanternhouse",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/",
+            "hideFromOrgView": true
         },
         {
             "id": 2313,
@@ -1620,7 +1659,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "14:00-15:30",
             "location": "Scottish Storytelling Centre, Edinburgh",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/",
+            "hideFromOrgView": true
         },
         {
             "id": 2314,
@@ -1630,7 +1670,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:30-21:00",
             "location": "Cumbernauld Theatre at Lanternhouse",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/",
+            "hideFromOrgView": true
         },
         {
             "id": 2315,
@@ -1640,7 +1681,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:30-21:00",
             "location": "Cumbernauld Theatre at Lanternhouse",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/",
+            "hideFromOrgView": true
         },
         {
             "id": 2316,
@@ -1650,7 +1692,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "14:00-15:30",
             "location": "Cumbernauld Theatre at Lanternhouse",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://lanternhousearts.org/events/balancing-in-freedom/"
+            "link": "https://lanternhousearts.org/events/balancing-in-freedom/",
+            "hideFromOrgView": true
         },
         {
             "id": 2317,
@@ -1660,7 +1703,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "19:30-21:00",
             "location": "Scottish Storytelling Centre, Edinburgh",
             "description": "Drawing on his family's Holocaust history, his own experience of disability, and Rudolf Steiner's Philosophy of Freedom, Iddo Oberski weaves a deeply personal journey with his onstage puppet counterpart, Svjetlana, a dialogue that constantly surprises and reveals new layers of understanding.",
-            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/"
+            "link": "https://scottishstorytellingcentre.online.red61.co.uk/event/913:6368/",
+            "hideFromOrgView": true
         },
         // --- Edinburgh Steiner School (generic link for organization view) ---
         {
@@ -1671,7 +1715,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": null,
             "location": null,
             "description": null,
-            "link": "https://www.edinburghsteinerschool.org.uk/community/events/",
+            "link": "https://edinburghsteinerschool.org.uk/about-our-school/school-calendar/",
             "isOrganizationDetail": true // Custom property to signify it's for org view only
         },
         // --- Garvald Home Farm (new organization) ---
@@ -1863,7 +1907,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Organization Details (for home page links and potentially other org-specific info) ---
     // Added a dedicated object for organization homepages to ensure correct linking for logos.
     const organizationDetails = {
-        "Edinburgh Steiner School": { homepage: "https://www.edinburghsteinerschool.org.uk/community/events/" }, // Updated link
+        "Edinburgh Steiner School": { homepage: "https://edinburghsteinerschool.org.uk/" }, // Updated link
         "Edinburgh Christian Community": { homepage: "https://www.thechristiancommunity.co.uk/topic/congregations/north/edinburgh/" }, // Updated link
         "Camphill Blair Drummond": { homepage: "https://camphillblairdrummond.org.uk/" },
         "Camphill Corbenic": { homepage: "https://www.corbeniccamphill.co.uk/" },
@@ -2460,9 +2504,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (orgName === "Iddo Oberski") {
-                // Exclude all "Balancing in Freedom" events from organization view
+                // Hide all Iddo Oberski events from organization view
                 regularUpcomingEvents = regularUpcomingEvents.filter(event => 
-                    !(event.title === "Balancing in Freedom")
+                    !event.hideFromOrgView
                 );
             }
 
