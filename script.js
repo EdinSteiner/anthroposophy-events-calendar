@@ -1295,11 +1295,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 82,
             "organization": "Garvald Edinburgh",
             "title": "Art exhibition and sale in support of Garvald Edinburgh",
-            "date": "2026-03-13",
-            "endDate": "2026-03-14",
-            "time": "Friday 6-9pm, Saturday 10am-4pm",
+            "date": "2026-03-14",
+            "time": "Saturday 10am-4pm",
             "location": "Whitespace Gallery, 76 Crosscauseway, Edinburgh, EH8 9HQ",
-            "description": "All artworks generously donated by an independent group of artists. More information from Exhibitions@garvaldedinburgh.org.uk",
+            "description": "Saturday-only exhibition and sale in support of Garvald Edinburgh. All artworks generously donated by an independent group of artists. More information from Exhibitions@garvaldedinburgh.org.uk",
             "link": "mailto:Exhibitions@garvaldedinburgh.org.uk"
         },
 //
@@ -2295,6 +2294,44 @@ document.addEventListener('DOMContentLoaded', () => {
         return startDate;
     };
 
+    // Helper to format time for display in am/pm style
+    const formatTimeAmPm = (timeString) => {
+        if (!timeString) {
+            return 'To be confirmed';
+        }
+
+        let formatted = timeString;
+
+        const toAmPm = (hourValue, minuteValue) => {
+            const hour = parseInt(hourValue, 10);
+            const minute = String(minuteValue).padStart(2, '0');
+            const period = hour >= 12 ? 'pm' : 'am';
+            const hour12 = hour % 12 === 0 ? 12 : hour % 12;
+            return `${hour12}:${minute}${period}`;
+        };
+
+        // Convert 24h with colon, e.g. 19:00 -> 7:00pm
+        formatted = formatted.replace(/\b([01]?\d|2[0-3]):([0-5]\d)\b/g, (match, hourPart, minutePart) => {
+            return toAmPm(hourPart, minutePart);
+        });
+
+        // Convert 24h with h, e.g. 19h00 -> 7:00pm
+        formatted = formatted.replace(/\b([01]?\d|2[0-3])h([0-5]\d)\b/gi, (match, hourPart, minutePart) => {
+            return toAmPm(hourPart, minutePart);
+        });
+
+        // Convert dot-style am/pm, e.g. 9.30am -> 9:30am
+        formatted = formatted.replace(/\b(\d{1,2})\.(\d{2})\s*(am|pm)\b/gi, (match, hourPart, minutePart, meridiem) => {
+            return `${parseInt(hourPart, 10)}:${minutePart}${meridiem.toLowerCase()}`;
+        });
+
+        // Normalize meridiem casing and spacing, e.g. 11:30 AM -> 11:30am
+        formatted = formatted.replace(/\b(am|pm)\b/gi, (match) => match.toLowerCase());
+        formatted = formatted.replace(/(\d)\s+(am|pm)\b/gi, (match, digit, meridiem) => `${digit}${meridiem.toLowerCase()}`);
+
+        return formatted;
+    };
+
     // Helper to generate CSS class from organization name for color coding
     const getOrgClass = (orgName) => {
         // Ensure the class name is valid (lowercase, replace non-alphanumeric with hyphen)
@@ -2391,8 +2428,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 listItem.innerHTML = `
                         <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
                         <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
-                        <p><strong>Date:</strong> ${formatDate(event.date, event.endDate)}</p>
-                        <p><strong>Time:</strong> ${event.time || 'To be confirmed'}</p>
+                    <p><strong>Date:</strong> ${formatDate(dateKey)}</p>
+                    <p><strong>Time:</strong> ${formatTimeAmPm(event.time)}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
                         ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
                         <p class="more-info-diary">${linkContent}</p>
@@ -2563,7 +2600,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Conditionally add elements to remove blank lines
                         // Use formatOrgDate for date display
                         const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatOrgDate(event.date, event.endDate)}</p>` : '';
-                        const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${event.time}</p>` : '';
+                        const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${formatTimeAmPm(event.time)}</p>` : '';
                         const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
                         const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
                         const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
