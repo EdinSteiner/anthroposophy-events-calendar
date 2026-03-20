@@ -1342,7 +1342,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2026: 1 Feb, 8 Mar, 12 Apr (Introduction to membership of the Society), 3 May, 14 Jun, 5 Jul.",
+            "date": "2026: 12 Apr (Introduction to membership of the Society), 3 May, 14 Jun, 5 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Regular forum meetings, AGM, and Michaelmas.",
@@ -1350,46 +1350,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "isOrganizationDetail": true
         },
         // Individual Forum Meeting events (for Diary View)
-        {
-            "id": 86, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2025-09-07",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        {
-            "id": 87, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "CANCELLED - Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2025-12-14",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting - Cancelled.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        {
-            "id": 88, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-01-11",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
-        {
-            "id": 89, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-02-01",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
-        },
         {
             "id": 2539,
             "organization": "Edinburgh Christian Community",
@@ -1442,16 +1402,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "21 Napier Road, Edinburgh",
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
-        },
-        {
-            "id": 90, // Existing ID
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-03-08",
-            "time": "14:00-15:15",
-            "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
         },
         {
             "id": 2541,
@@ -1521,6 +1471,136 @@ document.addEventListener('DOMContentLoaded', () => {
             "time": "11:30",
             "location": "21 Napier Road, Edinburgh",
             "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2548,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Matt 21, 1-11)",
+            "date": "2026-03-29",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Palm Sunday.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2549,
+            "organization": "Edinburgh Christian Community",
+            "title": "Holy Week Events: an Overview",
+            "date": "2026-03-29",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "With Peter Holman.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2550,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (Luke 23, 13-32)",
+            "date": "2026-04-02",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Maundy Thursday.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2551,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study on the Last Supper",
+            "date": "2026-04-02",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2552,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 19)",
+            "date": "2026-04-03",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Good Friday.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2553,
+            "organization": "Edinburgh Christian Community",
+            "title": "Contemplation with music before the altar",
+            "date": "2026-04-03",
+            "time": "14:45",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2554,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Children's Service followed by Easter Egg Hunt",
+            "date": "2026-04-05",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Easter Sunday.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2555,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration with Choir (Mark 16, 1-8)",
+            "date": "2026-04-05",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2556,
+            "organization": "Edinburgh Christian Community",
+            "title": "On The Historical Date of the Resurrection",
+            "date": "2026-04-05",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Introduction and conversation with Peter.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2557,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 20, 10-29)",
+            "date": "2026-04-12",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2558,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 10, 1-21)",
+            "date": "2026-04-19",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2559,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (John 15, 1-17)",
+            "date": "2026-04-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2560,
+            "organization": "Edinburgh Christian Community",
+            "title": "Resurrection Radiance and Radiation from Chernobyl 40 years ago",
+            "date": "2026-04-26",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Introduction, contemplation and conversation with Peter.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         },
         {
@@ -1761,6 +1841,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://columcille.org.uk/"
         },
         {
+            "id": 2004,
+            "organization": "Columcille",
+            "title": "An exhibition of Columcille's creative work",
+            "date": "2026-08-31",
+            "endDate": "2026-09-05",
+            "time": "To be confirmed",
+            "location": "Out of the Blue Drill Hall, Leith",
+            "description": "An exhibition of Columcille's creative work.",
+            "link": "https://www.outoftheblue.org.uk/"
+        },
+        {
             "id": 2003,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Sophia - The Goddess of Wisdom and Guardian of the Earth - Book launch & talk by Karsten Massei",
@@ -1790,16 +1881,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const day = currentMonday.getDate().toString().padStart(2, '0');
         const formattedDate = `${year}-${month}-${day}`; // Use this for event.date
 
-        mondayReadingGroupEvents.push({
-            "id": newIdCounter++,
-            "organization": "Anthroposophy in Edinburgh",
-            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
-            "date": formattedDate, // Use YYYY-MM-DD for correct logic
-            "time": "1:45-3:15pm",
-            "location": "Library at 21 Napier Road",
-            "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
-            "link": "Contact :ioberski[at]gmail.com"
-        });
+        if (formattedDate !== "2026-04-06") {
+            mondayReadingGroupEvents.push({
+                "id": newIdCounter++,
+                "organization": "Anthroposophy in Edinburgh",
+                "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+                "date": formattedDate, // Use YYYY-MM-DD for correct logic
+                "time": "1:45-3:15pm",
+                "location": "Library at 21 Napier Road",
+                "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+                "link": "Contact :ioberski[at]gmail.com"
+            });
+        }
         currentMonday.setDate(currentMonday.getDate() + 14); // Add 14 days for fortnightly
     }
 
@@ -1811,11 +1904,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "id": 1000, // Unique ID for the consolidated event
         "organization": "Anthroposophy in Edinburgh",
         "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
-        "date": "2026-01-12", // Start date for sorting in org view
-        "endDate": "2026-12-31", // End date for sorting in org view
+        "date": "ongoing",
         "time": "1:45-3:15pm (fortnightly)",
         "location": "Library at 21 Napier Road",
-        "description": "Study group resumes on 12 January 2026 and meets fortnightly. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+        "description": "",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
@@ -1827,7 +1919,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "date": "ongoing",
     "time": "Thursdays, 19:00–20:00",
     "location": "Online",
-    "description": "Ongoing weekly online study group of the Leading Thoughts. Resumes 15 January 2026, meets every Thursday 7–8pm.",
+    "description": "",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -1851,7 +1943,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const endDate = new Date(2026, 11, 31); // 31 December 2026
         // List of public holidays to skip (UK/Scotland, 2026):
         const skipDates = [
-            "2026-01-29" // CANCELLED
+            "2026-01-29", // CANCELLED
+            "2026-04-02",
+            "2026-04-09"
         ];
         while (date <= endDate) {
             const year = date.getFullYear();
