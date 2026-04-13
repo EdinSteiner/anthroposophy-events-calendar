@@ -1852,6 +1852,50 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.outoftheblue.org.uk/"
         },
         {
+            "id": 2601,
+            "organization": null,
+            "title": "Edinburgh: Free, Equal & Together an introduction",
+            "date": "2026-04-22",
+            "time": "12.45 pm - 2.15 pm (doors open at 12.30 pm)",
+            "location": "Millennium Centre, Muirhouse, Almond, EH4 4RW",
+            "description": "Contribution: Contribute whatever you want, can and feel is appropriate. <a href=\"https://www.tickettailor.com/events/economytransformers/2144448\" target=\"_blank\">Sign up and contribute</a>.",
+            "link": "https://www.tickettailor.com/events/economytransformers/2144448",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2602,
+            "organization": null,
+            "title": "Glasgow: Free, Equal & Together an introduction",
+            "date": "2026-04-23",
+            "time": "1.15 pm - 2.45 pm (doors open at 1.00 pm)",
+            "location": "The Pyramid at Anderson, 759 Argyle Street, Glasgow G3 8DS",
+            "description": "Contribution: Contribute whatever you want, can and feel is appropriate. <a href=\"https://www.tickettailor.com/events/economytransformers/2144681\" target=\"_blank\">Sign up and contribute</a>.",
+            "link": "https://www.tickettailor.com/events/economytransformers/2144681",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2603,
+            "organization": null,
+            "title": "Four Scenarios: A Workshop",
+            "date": "2026-04-25",
+            "time": "9.45 am - 1.15 pm (doors open at 9.30 am)",
+            "location": "Columcille, 2 Newbattle Terrace, Edinburgh EH10 4RT",
+            "description": "Contribution: Contribute whatever you want, can and feel is appropriate. <a href=\"https://www.tickettailor.com/events/economytransformers/2144700\" target=\"_blank\">Sign up and contribute</a>.",
+            "link": "https://www.tickettailor.com/events/economytransformers/2144700",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2604,
+            "organization": null,
+            "title": "From before Christ until after crowdfunding a workshop",
+            "date": "2026-04-25",
+            "time": "4.15 pm - 7.45 pm (doors open at 4.00 pm)",
+            "location": "Augustine United Church, 41 George IV Bridge, EH1 1EL",
+            "description": "Contribution: Contribute whatever you want, can and feel is appropriate. <a href=\"https://www.tickettailor.com/events/economytransformers/2144709\" target=\"_blank\">Sign up and contribute</a>.",
+            "link": "https://www.tickettailor.com/events/economytransformers/2144709",
+            "hideFromOrganizationView": true
+        },
+        {
             "id": 2003,
             "organization": "Anthroposophy in Edinburgh",
             "title": "Sophia - The Goddess of Wisdom and Guardian of the Earth - Book launch & talk by Karsten Massei",
@@ -2350,6 +2394,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // For text like "2026: 12 Apr (note), 3 May, 14 Jun", keep only entries today/future.
+    const trimPastEntriesFromYearDateList = (text, today) => {
+        if (typeof text !== 'string') {
+            return text;
+        }
+
+        const yearListMatch = text.match(/^\s*(\d{4})\s*:\s*(.+?)\s*\.?\s*$/);
+        if (!yearListMatch) {
+            return text;
+        }
+
+        const year = parseInt(yearListMatch[1], 10);
+        const rawEntries = yearListMatch[2]
+            .split(',')
+            .map(entry => entry.trim())
+            .filter(Boolean);
+
+        const monthMap = {
+            jan: 0, january: 0,
+            feb: 1, february: 1,
+            mar: 2, march: 2,
+            apr: 3, april: 3,
+            may: 4,
+            jun: 5, june: 5,
+            jul: 6, july: 6,
+            aug: 7, august: 7,
+            sep: 8, sept: 8, september: 8,
+            oct: 9, october: 9,
+            nov: 10, november: 10,
+            dec: 11, december: 11
+        };
+
+        const remainingEntries = rawEntries.filter(entry => {
+            const dateMatch = entry.match(/(\d{1,2})\s+([A-Za-z]+)/);
+            if (!dateMatch) {
+                return true;
+            }
+
+            const day = parseInt(dateMatch[1], 10);
+            const monthKey = dateMatch[2].toLowerCase();
+            const month = monthMap[monthKey];
+            if (month === undefined) {
+                return true;
+            }
+
+            const entryDate = new Date(year, month, day);
+            entryDate.setHours(0, 0, 0, 0);
+            return entryDate >= today;
+        });
+
+        if (remainingEntries.length === 0) {
+            return '';
+        }
+
+        return `${year}: ${remainingEntries.join(', ')}.`;
+    };
+
+    const isUpcomingForOrganizationView = (event, today) => {
+        if (!event.date || event.date === 'ongoing') {
+            return true;
+        }
+
+        // Handle normal ISO date events.
+        if (/^\d{4}-\d{2}-\d{2}$/.test(event.date)) {
+            const startDate = new Date(event.date);
+            startDate.setHours(0, 0, 0, 0);
+
+            if (event.endDate) {
+                const endDate = new Date(event.endDate);
+                endDate.setHours(23, 59, 59, 999);
+                return endDate >= today;
+            }
+
+            return startDate >= today;
+        }
+
+        // Non-ISO date text (e.g. a year+list string) is handled separately.
+        return true;
+    };
+
     const upcomingEvents = filterUpcomingEvents(allEvents); // Filter events once
 
     console.log("Upcoming Events Array:", upcomingEvents);
@@ -2429,6 +2553,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper to generate CSS class from organization name for color coding
     const getOrgClass = (orgName) => {
         // Ensure the class name is valid (lowercase, replace non-alphanumeric with hyphen)
+        if (!orgName) {
+            return 'title-generic';
+        }
         return `title-${orgName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
@@ -2514,14 +2641,18 @@ document.addEventListener('DOMContentLoaded', () => {
             dailyEventsMap.get(dateKey).forEach(event => {
                 const listItem = document.createElement('li');
                 let linkContent = event.link;
+                const orgClass = getOrgClass(event.organization);
+                const orgNameHtml = event.organization
+                    ? `<p class="event-org-name-diary ${orgClass}">${event.organization}</p>`
+                    : '';
                 if (event.link && event.link.startsWith('http')) {
                     linkContent = `<a href="${event.link}" target="_blank">More Information</a>`;
                 } else if (event.link && event.link.startsWith('Contact')) {
                     linkContent = event.link; // Display as is if it's contact info
                 }
                 listItem.innerHTML = `
-                        <p class="event-org-name-diary ${getOrgClass(event.organization)}">${event.organization}</p>
-                        <h4 class="${getOrgClass(event.organization)}">${event.title}</h4>
+                        ${orgNameHtml}
+                        <h4 class="${orgClass}">${event.title}</h4>
                     <p><strong>Date:</strong> ${formatDate(dateKey)}</p>
                     <p><strong>Time:</strong> ${formatTimeAmPm(event.time)}</p>
                         <p><strong>Location:</strong> ${event.location}</p>
@@ -2548,6 +2679,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderOrganizationView = () => {
         eventContainer.innerHTML = '';
         eventContainer.className = 'organization-layout';
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
         // Group ALL events by organisation, including those for organisation details
         const groupedEvents = allEvents.reduce((acc, event) => {
@@ -2597,7 +2730,20 @@ document.addEventListener('DOMContentLoaded', () => {
             organizationEventsColumn.className = 'organization-events-column';
 
             // Separate events into two categories for this organization
-            let orgSpecificDetails = groupedEvents[orgName].filter(event => event.isOrganizationDetail);
+            let orgSpecificDetails = groupedEvents[orgName]
+                .filter(event => event.isOrganizationDetail)
+                .map(event => {
+                    const cleanedEvent = { ...event };
+                    cleanedEvent.date = trimPastEntriesFromYearDateList(cleanedEvent.date, today);
+                    cleanedEvent.description = trimPastEntriesFromYearDateList(cleanedEvent.description, today);
+                    return cleanedEvent;
+                })
+                .filter(event => {
+                    if (event.date === '') {
+                        return false;
+                    }
+                    return isUpcomingForOrganizationView(event, today);
+                });
             let regularUpcomingEvents = groupedEvents[orgName].filter(event =>
                 !event.isOrganizationDetail && !event.hideFromOrganizationView && filterUpcomingEvents([event]).length > 0
             );
