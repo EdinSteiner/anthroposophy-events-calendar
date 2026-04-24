@@ -1596,7 +1596,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 2560,
             "organization": "Edinburgh Christian Community",
-            "title": "Resurrection Radiance and Radiation from Chernobyl 40 years ago",
+            "title": "The Transformation and Redemption of Matter: Chernobyl - Easter - Communion",
             "date": "2026-04-26",
             "time": "11:30",
             "location": "21 Napier Road, Edinburgh",
