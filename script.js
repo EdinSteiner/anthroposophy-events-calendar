@@ -1904,6 +1904,168 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Columcille Centre, 2 Newbattle Terrace, Edinburgh EH10 4RT",
             "description": "Book launch & talk by Karsten Massei.",
             "link": "https://www.eventbrite.com/e/sophia-the-goddess-of-wisdom-and-the-guardian-of-earth-tickets-1671983249909?aff=oddtdtcreator"
+        },
+        // --- May 2026 Events for Edinburgh Christian Community ---
+        {
+            "id": 2605,
+            "organization": "Edinburgh Christian Community",
+            "title": "Peter in Loch Arthur",
+            "date": "2026-05-01",
+            "endDate": "2026-05-02",
+            "time": "Friday to Saturday",
+            "location": "Loch Arthur",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2606,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service",
+            "date": "2026-05-03",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2607,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-03",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "John 8",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2608,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-07",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2609,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-10",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2610,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Heart is full: Contemplation on the Easter Epistle with Rev Tom Ravetz",
+            "date": "2026-05-10",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2611,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-14",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2612,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-17",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2613,
+            "organization": "Edinburgh Christian Community",
+            "title": "Transformation and Redemption of Matter: Chernobyl, Easter, Communion",
+            "date": "2026-05-17",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Talk by Peter Holman",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2614,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service",
+            "date": "2026-05-24",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Whitsun",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2615,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man with choir",
+            "date": "2026-05-24",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Whitsun with Jean-Marie Falcone",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2616,
+            "organization": "Edinburgh Christian Community",
+            "title": "Contemplation with Jean-Marie Falcone",
+            "date": "2026-05-24",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Whitsun",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2617,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-25",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Whit Monday (French) Followed by Contemplation",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2618,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Whit Tuesday (German) Followed by Contemplation",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2619,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-28",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2620,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-05-31",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         }
     ];
 
