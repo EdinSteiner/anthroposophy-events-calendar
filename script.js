@@ -1301,6 +1301,27 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Saturday-only exhibition and sale in support of Garvald Edinburgh. All artworks generously donated by an independent group of artists. More information from Exhibitions@garvaldedinburgh.org.uk",
             "link": "mailto:Exhibitions@garvaldedinburgh.org.uk"
         },
+        {
+            "id": 2131,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Edinburgh – Spring Fair",
+            "date": "2026-05-23",
+            "time": "11:00–14:00",
+            "location": "Mayfield House, McSense Business Park, 32 Sycamore Road, Mayfield, Dalkeith, EH22 5TA",
+            "description": "Fun activities, refreshments, craft stalls, and more.",
+            "link": "https://www.garvaldedinburgh.org.uk"
+        },
+        {
+            "id": 2132,
+            "organization": "Garvald Edinburgh",
+            "title": "Carved, Woven, Fired: Garvald Edinburgh & Craft Scotland",
+            "date": "2026-06-12",
+            "endDate": "2026-06-21",
+            "time": "See event details",
+            "location": "Garvald Makers Shop, 356 Morningside Rd, Edinburgh",
+            "description": "Garvald Edinburgh and Craft Scotland are delighted to present an exhibition celebrating the skills and stories flourishing within Garvald's craft workshops.",
+            "link": "https://www.craftscotland.org/"
+        },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
