@@ -1322,6 +1322,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Garvald Edinburgh and Craft Scotland are delighted to present an exhibition celebrating the skills and stories flourishing within Garvald's craft workshops.",
             "link": "https://www.craftscotland.org/"
         },
+        {
+            "id": 2133,
+            "organization": "Garvald Edinburgh",
+            "title": "Waterside Summer Festival",
+            "date": "2026-06-04",
+            "time": "11:00-13:30",
+            "location": "Waterside Workshops, 492 Gorgie Road, Edinburgh EH11 3AF",
+            "description": "Accessibility: Accessible drop-off only. Transport: Bus routes 3, 25, 30, 33, 38. Activities: Cafe, Garden, Stalls, Fun activities, 12:00 - Puppet Show (Tickets £7). Booking: Call 0131 541 2284.",
+            "link": "https://www.garvaldedinburgh.org.uk/"
+        },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
