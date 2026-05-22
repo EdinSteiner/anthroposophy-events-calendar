@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.edinburghsteinerschool.org.uk/teacher-development/"
         },
         {
+            "id": 3001,
+            "organization": "Edinburgh Steiner School",
+            "title": "June ESEC Taster Day: Edinburgh Steiner Education Course",
+            "date": "2026-06-06",
+            "time": "09:00 - 18:00",
+            "location": "Edinburgh Steiner School",
+            "description": "A creative and inspiring day of painting, singing, movement and Eurythmy, with talks on Rudolf Steiner and the Steiner curriculum. Ideal for parents and anyone interested in Steiner education. Includes discussion, reflection, and a wholesome lunch. For the full programme contact teacherdevelopment@edinburghsteinerschool.org.uk.",
+            "link": "https://ess-shop.company.site/June-ESEC-Taster-Day-Edinburgh-Steiner-Education-Course-p813458784"
+        },
+        {
             "id": 74,
             "organization": "Edinburgh Steiner School",
             "title": "Class 9 Comedy & Tragedy Performance",
