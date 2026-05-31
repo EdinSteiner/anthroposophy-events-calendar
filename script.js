@@ -2107,6 +2107,186 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "21 Napier Road, Edinburgh",
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2621,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-04",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2622,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-06-04",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2623,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service",
+            "date": "2026-06-07",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2624,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-07",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "John 4, 1-26.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2625,
+            "organization": "Edinburgh Christian Community",
+            "title": "Christening",
+            "date": "2026-06-07",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2626,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-11",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2627,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-06-11",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2628,
+            "organization": "Edinburgh Christian Community",
+            "title": "Community Croquet Evening",
+            "date": "2026-06-12",
+            "time": "17:30 for 18:00",
+            "location": "Meadows Croquet Club",
+            "description": "GBP 5. Flat shoes. Bring-and-share buffet supper.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2629,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-14",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Luke 6, 1-19.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2630,
+            "organization": "Edinburgh Christian Community",
+            "title": "Secrets of the Sounding Bowl",
+            "date": "2026-06-14",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Talk and demonstration with Anne Byrne.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2631,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-18",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2632,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-06-18",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2633,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-06-21",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "John 17, 1-11.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2634,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man (St John)",
+            "date": "2026-06-25",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Thursday service.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2635,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-06-25",
+            "time": "11:15",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2636,
+            "organization": "Edinburgh Christian Community",
+            "title": "Children's Service",
+            "date": "2026-06-28",
+            "time": "09:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Mark 1, 1-13.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2637,
+            "organization": "Edinburgh Christian Community",
+            "title": "St John's Sunday: Last Act of Consecration in old chapel",
+            "date": "2026-06-28",
+            "time": "10:00",
+            "location": "Old Chapel, 21 Napier Road, Edinburgh",
+            "description": "Farewell sermon and choir.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2638,
+            "organization": "Edinburgh Christian Community",
+            "title": "Festive Gathering with Music, Memories and More",
+            "date": "2026-06-28",
+            "time": "11:30",
+            "location": "Garden at 21 Napier Road, Edinburgh",
+            "description": "Followed by bring-and-share lunch.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         }
     ];
 
@@ -2135,7 +2315,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
                 "date": formattedDate, // Use YYYY-MM-DD for correct logic
                 "time": "1:45-3:15pm",
-                "location": "Library at 21 Napier Road",
+                "location": "The Centre in Morningside",
+                "locationLink": "https://www.christchurchmorningside.org/centre.html",
                 "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
                 "link": "Contact :ioberski[at]gmail.com"
             });
@@ -2153,7 +2334,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
         "date": "ongoing",
         "time": "1:45-3:15pm (fortnightly)",
-        "location": "Library at 21 Napier Road",
+        "location": "The Centre in Morningside",
+        "locationLink": "https://www.christchurchmorningside.org/centre.html",
         "description": "",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
@@ -2844,6 +3026,9 @@ document.addEventListener('DOMContentLoaded', () => {
             dailyEventsMap.get(dateKey).forEach(event => {
                 const listItem = document.createElement('li');
                 let linkContent = event.link;
+                const locationContent = event.locationLink
+                    ? `<a href="${event.locationLink}" target="_blank">${event.location}</a>`
+                    : event.location;
                 const orgClass = getOrgClass(event.organization);
                 const orgNameHtml = event.organization
                     ? `<p class="event-org-name-diary ${orgClass}">${event.organization}</p>`
@@ -2858,7 +3043,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h4 class="${orgClass}">${event.title}</h4>
                     <p><strong>Date:</strong> ${formatDate(dateKey)}</p>
                     <p><strong>Time:</strong> ${formatTimeAmPm(event.time)}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
+                        <p><strong>Location:</strong> ${locationContent}</p>
                         ${event.description ? `<p class="event-description-diary">${event.description}</p>` : ''}
                         <p class="more-info-diary">${linkContent}</p>
                     `;
@@ -3044,7 +3229,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Use formatOrgDate for date display
                         const eventDateHtml = event.date ? `<p><strong>Date:</strong> ${formatOrgDate(event.date, event.endDate)}</p>` : '';
                         const eventTimeHtml = event.time ? `<p><strong>Time:</strong> ${formatTimeAmPm(event.time)}</p>` : '';
-                        const eventLocationHtml = event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : '';
+                        const eventLocationHtml = event.location
+                            ? `<p><strong>Location:</strong> ${event.locationLink ? `<a href="${event.locationLink}" target="_blank">${event.location}</a>` : event.location}</p>`
+                            : '';
                         const eventDescriptionHtml = event.description ? `<p>${event.description}</p>` : '';
                         const eventLinkHtml = linkContent ? `<p class="more-info-org">${linkContent}</p>` : '';
 
