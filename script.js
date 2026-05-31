@@ -1382,11 +1382,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meetings (Letters to Members, Anthroposophical Leading Thoughts & Michaelmas)",
-            "date": "2026: 12 Apr (Introduction to membership of the Society), 3 May, 14 Jun, 5 Jul.",
+            "title": "Forum Meetings",
+            "date": "2026: 4 Oct, 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 5 Apr, 2 May, 13 Jun, 4 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Regular forum meetings, AGM, and Michaelmas.",
+            "description": "Forum meetings are open to members and friends.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true
         },
@@ -1647,64 +1647,101 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 91, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Introduction to membership of the Society",
-            "date": "2026-04-12",
+            "title": "Forum Meetings",
+            "date": "2026-10-04",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Introduction to membership of the Society.",
-            "link": "Contact :ioberski[at]gmail.com"
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
         {
             "id": 92, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-05-03",
+            "title": "Forum Meetings",
+            "date": "2026-11-08",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
         {
             "id": 93, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-06-14",
+            "title": "Forum Meetings",
+            "date": "2026-12-06",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
         {
             "id": 94, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meeting (Letters to Members and Anthroposophical Leading Thoughts)",
-            "date": "2026-07-05",
+            "title": "Forum Meetings",
+            "date": "2027-01-17",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
-            "link": "Contact :ioberski[at]gmail.com"
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
-        // NEW ITEM: Forum on 5 October: Michaelmas
         {
             "id": 95, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum: Michaelmas",
-            "date": "2025-10-05",
+            "title": "Forum Meetings",
+            "date": "2027-02-07",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Michaelmas Celebration",
-            "link": "Contact :ioberski[at]gmail.com"
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
-        // NEW ITEM: Easter Preparation event
         {
             "id": 96, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Easter Preparation event",
-            "date": "2026-03-14",
-            "time": "To be confirmed",
-            "location": "To be confirmed",
-            "description": "Details to be confirmed.",
-            "link": "Contact :ioberski[at]gmail.com"
+            "title": "Forum Meetings",
+            "date": "2027-04-05",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2701,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meetings",
+            "date": "2027-05-02",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2702,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meetings",
+            "date": "2027-06-13",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
+        },
+        {
+            "id": 2703,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Forum Meetings",
+            "date": "2027-07-04",
+            "time": "14:00-15:15",
+            "location": "Eurythmy Room, Edinburgh Steiner School",
+            "description": "Forum meeting.",
+            "link": "Contact :ioberski[at]gmail.com",
+            "hideFromOrganizationView": true
         },
         {
             "id": 2538,
@@ -2779,22 +2816,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // For text like "2026: 12 Apr (note), 3 May, 14 Jun", keep only entries today/future.
+    // For text like "2026: 12 Apr, 3 May. 2027: 7 Feb, 5 Apr", keep only entries today/future.
     const trimPastEntriesFromYearDateList = (text, today) => {
         if (typeof text !== 'string') {
             return text;
         }
 
-        const yearListMatch = text.match(/^\s*(\d{4})\s*:\s*(.+?)\s*\.?\s*$/);
-        if (!yearListMatch) {
-            return text;
+        const yearBlockRegex = /(\d{4})\s*:\s*([\s\S]*?)(?=(?:\s*\d{4}\s*:)|$)/g;
+        const parsedBlocks = [];
+        let blockMatch;
+        while ((blockMatch = yearBlockRegex.exec(text)) !== null) {
+            parsedBlocks.push({
+                year: parseInt(blockMatch[1], 10),
+                entriesText: blockMatch[2].trim()
+            });
         }
 
-        const year = parseInt(yearListMatch[1], 10);
-        const rawEntries = yearListMatch[2]
-            .split(',')
-            .map(entry => entry.trim())
-            .filter(Boolean);
+        if (parsedBlocks.length === 0) {
+            return text;
+        }
 
         const monthMap = {
             jan: 0, january: 0,
@@ -2811,29 +2851,44 @@ document.addEventListener('DOMContentLoaded', () => {
             dec: 11, december: 11
         };
 
-        const remainingEntries = rawEntries.filter(entry => {
-            const dateMatch = entry.match(/(\d{1,2})\s+([A-Za-z]+)/);
-            if (!dateMatch) {
-                return true;
-            }
+        const remainingBlocks = parsedBlocks
+            .map(({ year, entriesText }) => {
+                const rawEntries = entriesText
+                    .split(',')
+                    .map(entry => entry.trim().replace(/\.+$/, ''))
+                    .filter(Boolean);
 
-            const day = parseInt(dateMatch[1], 10);
-            const monthKey = dateMatch[2].toLowerCase();
-            const month = monthMap[monthKey];
-            if (month === undefined) {
-                return true;
-            }
+                const remainingEntries = rawEntries.filter(entry => {
+                    const dateMatch = entry.match(/(\d{1,2})\s+([A-Za-z]+)/);
+                    if (!dateMatch) {
+                        return true;
+                    }
 
-            const entryDate = new Date(year, month, day);
-            entryDate.setHours(0, 0, 0, 0);
-            return entryDate >= today;
-        });
+                    const day = parseInt(dateMatch[1], 10);
+                    const monthKey = dateMatch[2].toLowerCase();
+                    const month = monthMap[monthKey];
+                    if (month === undefined) {
+                        return true;
+                    }
 
-        if (remainingEntries.length === 0) {
+                    const entryDate = new Date(year, month, day);
+                    entryDate.setHours(0, 0, 0, 0);
+                    return entryDate >= today;
+                });
+
+                if (remainingEntries.length === 0) {
+                    return null;
+                }
+
+                return `${year}: ${remainingEntries.join(', ')}`;
+            })
+            .filter(Boolean);
+
+        if (remainingBlocks.length === 0) {
             return '';
         }
 
-        return `${year}: ${remainingEntries.join(', ')}.`;
+        return `${remainingBlocks.join('. ')}.`;
     };
 
     const isUpcomingForOrganizationView = (event, today) => {
