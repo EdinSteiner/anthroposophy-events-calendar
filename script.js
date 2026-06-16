@@ -1744,6 +1744,36 @@ document.addEventListener('DOMContentLoaded', () => {
             "hideFromOrganizationView": true
         },
         {
+            "id": 3501,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "The Mystery Drama of our Lives: Talk by Adrian Locher",
+            "date": "2026-07-03",
+            "time": "19:30-21:00",
+            "location": "Edinburgh Steiner School, Eurythmy Room",
+            "description": "Steiner's four Mystery Dramas follow the lives of their protagonists through several incarnations. Are we living through the Fifth Drama? Free. Donations at the door. No need to book. No prior experience of the mystery dramas is required.",
+            "link": "https://www.eventbrite.co.uk/e/the-mystery-drama-of-our-lives-talk-and-workshop-by-adrian-locher-tickets-1990732514540"
+        },
+        {
+            "id": 3502,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "The Mystery Drama of our Lives: Workshop by Adrian Locher",
+            "date": "2026-07-04",
+            "time": "10:00-13:00",
+            "location": "Edinburgh Steiner School, Eurythmy Room",
+            "description": "Steiner's four Mystery Dramas follow the lives of their protagonists through several incarnations. Are we living through the Fifth Drama? Ticketed workshop (20 places available). Please reserve your place by buying a ticket. No prior experience of the mystery dramas is required.",
+            "link": "https://www.eventbrite.co.uk/e/the-mystery-drama-of-our-lives-talk-and-workshop-by-adrian-locher-tickets-1990732514540"
+        },
+        {
+            "id": 3503,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Introduction to Anthroposophical Initiatives in and around Edinburgh",
+            "date": "2026-09-20",
+            "time": "14:00-16:30",
+            "location": "Columcille",
+            "description": "Free.",
+            "link": "https://www.facebook.com/anthroposophyscotland"
+        },
+        {
             "id": 2538,
             "organization": "Edinburgh Steiner School",
             "title": "Steiner Waldorf Education Taster Day",
