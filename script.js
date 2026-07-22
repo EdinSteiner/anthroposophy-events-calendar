@@ -1383,7 +1383,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings",
-            "date": "2026: 4 Oct, 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 5 Apr, 2 May, 13 Jun, 4 Jul.",
+            "date": "2026: 4 Oct (AGM), 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 5 Apr, 2 May, 13 Jun, 4 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meetings are open to members and friends.",
@@ -1651,7 +1651,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "date": "2026-10-04",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
+            "description": "Forum meeting (including AGM).",
             "link": "Contact :ioberski[at]gmail.com",
             "hideFromOrganizationView": true
         },
@@ -2447,12 +2447,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Generate fortnightly Monday Reading Group events for Diary View
+    // Generate Monday Reading Group events for Diary View
     const mondayReadingGroupEvents = [];
-    // Start on Monday, January 12, 2026
+    // Historical fortnightly run: from Monday, January 12, 2026 to Monday, July 20, 2026
     let currentMonday = new Date(2026, 0, 12); // Month is 0-indexed, so 0 is January
     currentMonday.setHours(0, 0, 0, 0); // Normalize to start of the day
-    const endDateForFortnightly = new Date(2026, 11, 31); // Through end of 2026
+    const endDateForFortnightly = new Date(2026, 6, 20); // Through 20 July 2026
     endDateForFortnightly.setHours(23, 59, 59, 999); // Normalize to end of the day
 
     let newIdCounter = 100; // Starting new IDs for these events
@@ -2481,6 +2481,33 @@ document.addEventListener('DOMContentLoaded', () => {
         currentMonday.setDate(currentMonday.getDate() + 14); // Add 14 days for fortnightly
     }
 
+    // Current scheduled dates for late 2026
+    const riddlesResumeDates = [
+        "2026-08-31",
+        "2026-09-07",
+        "2026-09-21",
+        "2026-10-05",
+        "2026-10-19",
+        "2026-11-02",
+        "2026-11-16",
+        "2026-11-30",
+        "2026-12-14"
+    ];
+
+    riddlesResumeDates.forEach(formattedDate => {
+        mondayReadingGroupEvents.push({
+            "id": newIdCounter++,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+            "date": formattedDate,
+            "time": "1:45-3:15pm",
+            "location": "The Centre in Morningside",
+            "locationLink": "https://www.christchurchmorningside.org/centre.html",
+            "description": "We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+            "link": "Contact :ioberski[at]gmail.com"
+        });
+    });
+
     // Add the newly generated fortnightly events to allEvents
     allEvents.push(...mondayReadingGroupEvents);
 
@@ -2488,12 +2515,12 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
         "id": 1000, // Unique ID for the consolidated event
         "organization": "Anthroposophy in Edinburgh",
-        "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
+        "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
         "date": "ongoing",
-        "time": "1:45-3:15pm (fortnightly)",
+        "time": "1:45-3:15pm (selected Mondays)",
         "location": "The Centre in Morningside",
         "locationLink": "https://www.christchurchmorningside.org/centre.html",
-        "description": "",
+        "description": "Dates: 31 Aug; 7, 21 Sep; 5, 19 Oct; 2, 16, 30 Nov; 14 Dec. No other dates planned yet.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
@@ -2501,11 +2528,11 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     "id": 1002,
     "organization": "Anthroposophy in Edinburgh",
-    "title": "Thursday Online Study Group of the Leading Thoughts (Ongoing, Thursdays 7–8pm)",
+    "title": "Thursday Online Study Group of the Leading Thoughts",
     "date": "ongoing",
     "time": "Thursdays, 19:00–20:00",
     "location": "Online",
-    "description": "",
+    "description": "Paused for summer. Restarts on Thursday 3 September 2026.",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -2531,7 +2558,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const skipDates = [
             "2026-01-29", // CANCELLED
             "2026-04-02",
-            "2026-04-09"
+            "2026-04-09",
+            "2026-07-23",
+            "2026-07-30",
+            "2026-08-06",
+            "2026-08-13",
+            "2026-08-20",
+            "2026-08-27"
         ];
         while (date <= endDate) {
             const year = date.getFullYear();
