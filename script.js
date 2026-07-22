@@ -2354,6 +2354,96 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Garden at 21 Napier Road, Edinburgh",
             "description": "Followed by bring-and-share lunch.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2639,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-07-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2640,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-02",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2641,
+            "organization": "Edinburgh Christian Community",
+            "title": "Design Meeting for new Church",
+            "date": "2026-08-02",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "All welcome and encouraged to attend. Architect and Builder to take part.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2642,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-09",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2643,
+            "organization": "Edinburgh Christian Community",
+            "title": "St John: Baptist or Evangelist?",
+            "date": "2026-08-09",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "A slightly belated look at this question.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2644,
+            "organization": "Edinburgh Christian Community",
+            "title": "No Service",
+            "date": "2026-08-16",
+            "time": "No service",
+            "location": "Tiphereth",
+            "description": "No service as Tiphereth have an external booking.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2645,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-23",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2646,
+            "organization": "Edinburgh Christian Community",
+            "title": "Final sign-off warrant meeting with budget",
+            "date": "2026-08-23",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2647,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-30",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         }
     ];
 
