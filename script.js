@@ -2974,9 +2974,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Format: DD-MM-YYYY (e.g., 31-07-2025)
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
+        const parsedStartDate = new Date(dateString);
+        if (Number.isNaN(parsedStartDate.getTime())) {
+            return dateString;
+        }
+        const startDate = parsedStartDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
         if (endDateString && dateString !== endDateString) {
-            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
+            const parsedEndDate = new Date(endDateString);
+            if (Number.isNaN(parsedEndDate.getTime())) {
+                return startDate;
+            }
+            const endDate = parsedEndDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
             return `${startDate} to ${endDate}`;
         }
         return startDate;
