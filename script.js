@@ -1382,11 +1382,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meetings",
-            "date": "2026: 4 Oct, 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 5 Apr, 2 May, 13 Jun, 4 Jul.",
+            "title": "Forum Meetings and AGM",
+            "date": "2026: 4 Oct (AGM), 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 4 Apr, 2 May, 13 Jun, 4 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meetings are open to members and friends.",
+            "description": "Forum meetings are open to members and friends. The 4 October meeting includes the AGM of Anthroposophy in Edinburgh.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true
         },
@@ -1703,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 96, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings",
-            "date": "2027-04-05",
+            "date": "2027-04-04",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
@@ -2357,39 +2357,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Generate fortnightly Monday Reading Group events for Diary View
+    // Add Monday Reading Group events for Diary View (resume dates after holiday)
     const mondayReadingGroupEvents = [];
-    // Start on Monday, January 12, 2026
-    let currentMonday = new Date(2026, 0, 12); // Month is 0-indexed, so 0 is January
-    currentMonday.setHours(0, 0, 0, 0); // Normalize to start of the day
-    const endDateForFortnightly = new Date(2026, 11, 31); // Through end of 2026
-    endDateForFortnightly.setHours(23, 59, 59, 999); // Normalize to end of the day
+    const mondayReadingResumeDates = [
+        "2026-08-31",
+        "2026-09-07",
+        "2026-09-21",
+        "2026-10-05",
+        "2026-10-19",
+        "2026-11-02",
+        "2026-11-16",
+        "2026-11-30",
+        "2026-12-14"
+    ];
 
     let newIdCounter = 100; // Starting new IDs for these events
-
-    while (currentMonday <= endDateForFortnightly) {
-        // Ensure the date string is correctly formatted as YYYY-MM-DD for logic,
-        // but display as DD-MM-YYYY in the UI
-        const year = currentMonday.getFullYear();
-        const month = (currentMonday.getMonth() + 1).toString().padStart(2, '0');
-        const day = currentMonday.getDate().toString().padStart(2, '0');
-        const formattedDate = `${year}-${month}-${day}`; // Use this for event.date
-
-        if (formattedDate !== "2026-04-06") {
-            mondayReadingGroupEvents.push({
-                "id": newIdCounter++,
-                "organization": "Anthroposophy in Edinburgh",
-                "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
-                "date": formattedDate, // Use YYYY-MM-DD for correct logic
-                "time": "1:45-3:15pm",
-                "location": "The Centre in Morningside",
-                "locationLink": "https://www.christchurchmorningside.org/centre.html",
-                "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
-                "link": "Contact :ioberski[at]gmail.com"
-            });
-        }
-        currentMonday.setDate(currentMonday.getDate() + 14); // Add 14 days for fortnightly
-    }
+    mondayReadingResumeDates.forEach((formattedDate) => {
+        mondayReadingGroupEvents.push({
+            "id": newIdCounter++,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Monday Reading group: Riddles of Philosophy by Rudolf Steiner",
+            "date": formattedDate,
+            "time": "1:45-3:15pm",
+            "location": "The Centre of Christ Church Morningside",
+            "locationLink": "https://www.christchurchmorningside.org/centre.html",
+            "description": "Meeting dates after the summer holiday.",
+            "link": "Contact :ioberski[at]gmail.com"
+        });
+    });
 
     // Add the newly generated fortnightly events to allEvents
     allEvents.push(...mondayReadingGroupEvents);
@@ -2398,10 +2393,10 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
         "id": 1000, // Unique ID for the consolidated event
         "organization": "Anthroposophy in Edinburgh",
-        "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner (Fortnightly)",
-        "date": "ongoing",
-        "time": "1:45-3:15pm (fortnightly)",
-        "location": "The Centre in Morningside",
+        "title": "Monday Reading group: Riddles of Philosophy by Rudolf Steiner",
+        "date": "31 Aug, 7 & 21 Sep, 5 & 19 Oct, 2, 16 & 30 Nov, 14 Dec (2026).",
+        "time": "1:45-3:15pm",
+        "location": "The Centre of Christ Church Morningside",
         "locationLink": "https://www.christchurchmorningside.org/centre.html",
         "description": "",
         "link": "Contact :ioberski[at]gmail.com",
@@ -2411,8 +2406,8 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     "id": 1002,
     "organization": "Anthroposophy in Edinburgh",
-    "title": "Thursday Online Study Group of the Leading Thoughts (Ongoing, Thursdays 7–8pm)",
-    "date": "ongoing",
+    "title": "Thursday Online Study Group of the Leading Thoughts",
+    "date": "Starts 3 Sep 2026; weekly.",
     "time": "Thursdays, 19:00–20:00",
     "location": "Online",
     "description": "",
@@ -2432,34 +2427,26 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     // Removed 7 Oct (handled by loop)
     });
-    // Add weekly Thursday events from 15 January 2026 onwards
+    // Add weekly Thursday events from 3 September 2026 onwards
     (() => {
         let id = 2008;
-        let date = new Date(2026, 0, 15); // 15 January 2026 (Thursday)
+        let date = new Date(2026, 8, 3); // 3 September 2026 (Thursday)
         const endDate = new Date(2026, 11, 31); // 31 December 2026
-        // List of public holidays to skip (UK/Scotland, 2026):
-        const skipDates = [
-            "2026-01-29", // CANCELLED
-            "2026-04-02",
-            "2026-04-09"
-        ];
         while (date <= endDate) {
             const year = date.getFullYear();
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
             const day = date.getDate().toString().padStart(2, '0');
             const dateStr = `${year}-${month}-${day}`;
-            if (!skipDates.includes(dateStr)) {
-                allEvents.push({
-                    "id": id++,
-                    "organization": "Anthroposophy in Edinburgh",
-                    "title": "Thursday Online Study Group of the Leading Thoughts",
-                    "date": dateStr,
-                    "time": "19:00-20:00",
-                    "location": "Online",
-                    "description": "Weekly meeting.",
-                    "link": "Contact :ioberski[at]gmail.com"
-                });
-            }
+            allEvents.push({
+                "id": id++,
+                "organization": "Anthroposophy in Edinburgh",
+                "title": "Thursday Online Study Group of the Leading Thoughts",
+                "date": dateStr,
+                "time": "19:00-20:00",
+                "location": "Online",
+                "description": "Weekly meeting.",
+                "link": "Contact :ioberski[at]gmail.com"
+            });
             date.setDate(date.getDate() + 7);
         }
     })();
@@ -2972,9 +2959,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dateString === 'ongoing' || dateString.match(/\d{4}:/) || dateString.includes(',')) {
             return dateString;
         }
+        const parsedDate = new Date(dateString);
+        if (isNaN(parsedDate)) {
+            return dateString;
+        }
         // Format: DD-MM-YYYY (e.g., 31-07-2025)
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        const startDate = new Date(dateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
+        const startDate = parsedDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
         if (endDateString && dateString !== endDateString) {
             const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
             return `${startDate} to ${endDate}`;
@@ -3234,7 +3225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (consolidatedMondayStudyGroupEvent) {
                     regularUpcomingEvents = regularUpcomingEvents.filter(event =>
                         !(event.organization === "Anthroposophy in Edinburgh" &&
-                          event.title.startsWith("Monday Study group: Riddles of Philosophy by Rudolf Steiner") &&
+                          event.title.startsWith("Monday Reading group: Riddles of Philosophy by Rudolf Steiner") &&
                           event.id >= 100 && event.id < 1000)
                     );
                 }
