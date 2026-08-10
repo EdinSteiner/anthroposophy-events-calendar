@@ -1382,11 +1382,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             "id": 98, // New unique ID for the consolidated forum event
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Forum Meetings and AGM",
-            "date": "2026: 4 Oct (AGM), 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 4 Apr, 2 May, 13 Jun, 4 Jul.",
+            "title": "Forum Meetings",
+            "date": "2026: 4 Oct (AGM), 8 Nov, 6 Dec. 2027: 17 Jan, 7 Feb, 5 Apr, 2 May, 13 Jun, 4 Jul.",
             "time": "2-3:15pm (for Forum Meetings)",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meetings are open to members and friends. The 4 October meeting includes the AGM of Anthroposophy in Edinburgh.",
+            "description": "Forum meetings are open to members and friends.",
             "link": "Contact :ioberski[at]gmail.com",
             "isOrganizationDetail": true
         },
@@ -1651,7 +1651,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "date": "2026-10-04",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
-            "description": "Forum meeting.",
+            "description": "Forum meeting (including AGM).",
             "link": "Contact :ioberski[at]gmail.com",
             "hideFromOrganizationView": true
         },
@@ -1703,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "id": 96, // Existing ID
             "organization": "Anthroposophy in Edinburgh",
             "title": "Forum Meetings",
-            "date": "2027-04-04",
+            "date": "2027-04-05",
             "time": "14:00-15:15",
             "location": "Eurythmy Room, Edinburgh Steiner School",
             "description": "Forum meeting.",
@@ -2354,12 +2354,135 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "Garden at 21 Napier Road, Edinburgh",
             "description": "Followed by bring-and-share lunch.",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2639,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-07-26",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2640,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-02",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2641,
+            "organization": "Edinburgh Christian Community",
+            "title": "Design Meeting for new Church",
+            "date": "2026-08-02",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "All welcome and encouraged to attend. Architect and Builder to take part.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2642,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-09",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2643,
+            "organization": "Edinburgh Christian Community",
+            "title": "St John: Baptist or Evangelist?",
+            "date": "2026-08-09",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "A slightly belated look at this question.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2644,
+            "organization": "Edinburgh Christian Community",
+            "title": "No Service",
+            "date": "2026-08-16",
+            "time": "No service",
+            "location": "Tiphereth",
+            "description": "No service as Tiphereth have an external booking.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2645,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-23",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2646,
+            "organization": "Edinburgh Christian Community",
+            "title": "Final sign-off warrant meeting with budget",
+            "date": "2026-08-23",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2647,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-08-30",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         }
     ];
 
-    // Add Monday Reading Group events for Diary View (resume dates after holiday)
+    // Generate Monday Reading Group events for Diary View
     const mondayReadingGroupEvents = [];
-    const mondayReadingResumeDates = [
+    // Historical fortnightly run: from Monday, January 12, 2026 to Monday, July 20, 2026
+    let currentMonday = new Date(2026, 0, 12); // Month is 0-indexed, so 0 is January
+    currentMonday.setHours(0, 0, 0, 0); // Normalize to start of the day
+    const endDateForFortnightly = new Date(2026, 6, 20); // Through 20 July 2026
+    endDateForFortnightly.setHours(23, 59, 59, 999); // Normalize to end of the day
+
+    let newIdCounter = 100; // Starting new IDs for these events
+
+    while (currentMonday <= endDateForFortnightly) {
+        // Ensure the date string is correctly formatted as YYYY-MM-DD for logic,
+        // but display as DD-MM-YYYY in the UI
+        const year = currentMonday.getFullYear();
+        const month = (currentMonday.getMonth() + 1).toString().padStart(2, '0');
+        const day = currentMonday.getDate().toString().padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`; // Use this for event.date
+
+        if (formattedDate !== "2026-04-06") {
+            mondayReadingGroupEvents.push({
+                "id": newIdCounter++,
+                "organization": "Anthroposophy in Edinburgh",
+                "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+                "date": formattedDate, // Use YYYY-MM-DD for correct logic
+                "time": "1:45-3:15pm",
+                "location": "The Centre in Morningside",
+                "locationLink": "https://www.christchurchmorningside.org/centre.html",
+                "description": "Fortnightly meeting. We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+                "link": "Contact :ioberski[at]gmail.com"
+            });
+        }
+        currentMonday.setDate(currentMonday.getDate() + 14); // Add 14 days for fortnightly
+    }
+
+    // Current scheduled dates for late 2026
+    const riddlesResumeDates = [
         "2026-08-31",
         "2026-09-07",
         "2026-09-21",
@@ -2371,17 +2494,57 @@ document.addEventListener('DOMContentLoaded', () => {
         "2026-12-14"
     ];
 
-    let newIdCounter = 100; // Starting new IDs for these events
-    mondayReadingResumeDates.forEach((formattedDate) => {
+    riddlesResumeDates.forEach(formattedDate => {
         mondayReadingGroupEvents.push({
             "id": newIdCounter++,
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Monday Reading group: Riddles of Philosophy by Rudolf Steiner",
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
             "date": formattedDate,
             "time": "1:45-3:15pm",
-            "location": "The Centre of Christ Church Morningside",
+            "location": "The Centre in Morningside",
             "locationLink": "https://www.christchurchmorningside.org/centre.html",
-            "description": "Meeting dates after the summer holiday.",
+            "description": "We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+            "link": "Contact :ioberski[at]gmail.com"
+        });
+    });
+
+    // Scheduled dates for 2027
+    const riddlesDates2027 = [
+        "2027-01-18",
+        "2027-02-01",
+        "2027-02-15",
+        "2027-03-01",
+        "2027-03-15",
+        "2027-04-05",
+        "2027-04-19",
+        "2027-05-03",
+        "2027-05-17",
+        "2027-05-31",
+        "2027-06-07",
+        "2027-06-21",
+        "2027-07-05",
+        "2027-07-19",
+        "2027-09-06",
+        "2027-09-20",
+        "2027-10-04",
+        "2027-10-18",
+        "2027-11-01",
+        "2027-11-15",
+        "2027-11-29",
+        "2027-12-13",
+        "2027-12-20"
+    ];
+
+    riddlesDates2027.forEach(formattedDate => {
+        mondayReadingGroupEvents.push({
+            "id": newIdCounter++,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+            "date": formattedDate,
+            "time": "1:45-3:15pm",
+            "location": "The Centre in Morningside",
+            "locationLink": "https://www.christchurchmorningside.org/centre.html",
+            "description": "We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
             "link": "Contact :ioberski[at]gmail.com"
         });
     });
@@ -2393,12 +2556,12 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
         "id": 1000, // Unique ID for the consolidated event
         "organization": "Anthroposophy in Edinburgh",
-        "title": "Monday Reading group: Riddles of Philosophy by Rudolf Steiner",
-        "date": "31 Aug, 7 & 21 Sep, 5 & 19 Oct, 2, 16 & 30 Nov, 14 Dec (2026).",
-        "time": "1:45-3:15pm",
-        "location": "The Centre of Christ Church Morningside",
+        "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+        "date": "ongoing",
+        "time": "1:45-3:15pm (selected Mondays)",
+        "location": "The Centre in Morningside",
         "locationLink": "https://www.christchurchmorningside.org/centre.html",
-        "description": "",
+        "description": "2026 dates: 31 Aug; 7, 21 Sep; 5, 19 Oct; 2, 16, 30 Nov; 14 Dec. 2027 dates: 18 Jan; 1, 15 Feb; 1, 15 Mar; 5, 19 Apr; 3, 17, 31 May; 7, 21 Jun; 5, 19 Jul; 6, 20 Sep; 4, 18 Oct; 1, 15, 29 Nov; 13, 20 Dec.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
@@ -2407,10 +2570,10 @@ document.addEventListener('DOMContentLoaded', () => {
     "id": 1002,
     "organization": "Anthroposophy in Edinburgh",
     "title": "Thursday Online Study Group of the Leading Thoughts",
-    "date": "Starts 3 Sep 2026; weekly.",
+    "date": "ongoing",
     "time": "Thursdays, 19:00–20:00",
     "location": "Online",
-    "description": "",
+    "description": "Paused for summer. Restarts on Thursday 3 September 2026.",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -2427,26 +2590,40 @@ document.addEventListener('DOMContentLoaded', () => {
     allEvents.push({
     // Removed 7 Oct (handled by loop)
     });
-    // Add weekly Thursday events from 3 September 2026 onwards
+    // Add weekly Thursday events from 15 January 2026 onwards
     (() => {
         let id = 2008;
-        let date = new Date(2026, 8, 3); // 3 September 2026 (Thursday)
+        let date = new Date(2026, 0, 15); // 15 January 2026 (Thursday)
         const endDate = new Date(2026, 11, 31); // 31 December 2026
+        // List of public holidays to skip (UK/Scotland, 2026):
+        const skipDates = [
+            "2026-01-29", // CANCELLED
+            "2026-04-02",
+            "2026-04-09",
+            "2026-07-23",
+            "2026-07-30",
+            "2026-08-06",
+            "2026-08-13",
+            "2026-08-20",
+            "2026-08-27"
+        ];
         while (date <= endDate) {
             const year = date.getFullYear();
             const month = (date.getMonth() + 1).toString().padStart(2, '0');
             const day = date.getDate().toString().padStart(2, '0');
             const dateStr = `${year}-${month}-${day}`;
-            allEvents.push({
-                "id": id++,
-                "organization": "Anthroposophy in Edinburgh",
-                "title": "Thursday Online Study Group of the Leading Thoughts",
-                "date": dateStr,
-                "time": "19:00-20:00",
-                "location": "Online",
-                "description": "Weekly meeting.",
-                "link": "Contact :ioberski[at]gmail.com"
-            });
+            if (!skipDates.includes(dateStr)) {
+                allEvents.push({
+                    "id": id++,
+                    "organization": "Anthroposophy in Edinburgh",
+                    "title": "Thursday Online Study Group of the Leading Thoughts",
+                    "date": dateStr,
+                    "time": "19:00-20:00",
+                    "location": "Online",
+                    "description": "Weekly meeting.",
+                    "link": "Contact :ioberski[at]gmail.com"
+                });
+            }
             date.setDate(date.getDate() + 7);
         }
     })();
@@ -2959,15 +3136,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dateString === 'ongoing' || dateString.match(/\d{4}:/) || dateString.includes(',')) {
             return dateString;
         }
-        const parsedDate = new Date(dateString);
-        if (isNaN(parsedDate)) {
-            return dateString;
-        }
         // Format: DD-MM-YYYY (e.g., 31-07-2025)
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-        const startDate = parsedDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
+        const parsedStartDate = new Date(dateString);
+        if (Number.isNaN(parsedStartDate.getTime())) {
+            return dateString;
+        }
+        const startDate = parsedStartDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
         if (endDateString && dateString !== endDateString) {
-            const endDate = new Date(endDateString).toLocaleDateString('en-GB', options).replace(/\//g, '-');
+            const parsedEndDate = new Date(endDateString);
+            if (Number.isNaN(parsedEndDate.getTime())) {
+                return startDate;
+            }
+            const endDate = parsedEndDate.toLocaleDateString('en-GB', options).replace(/\//g, '-');
             return `${startDate} to ${endDate}`;
         }
         return startDate;
@@ -3225,7 +3406,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (consolidatedMondayStudyGroupEvent) {
                     regularUpcomingEvents = regularUpcomingEvents.filter(event =>
                         !(event.organization === "Anthroposophy in Edinburgh" &&
-                          event.title.startsWith("Monday Reading group: Riddles of Philosophy by Rudolf Steiner") &&
+                          event.title.startsWith("Monday Study group: Riddles of Philosophy by Rudolf Steiner") &&
                           event.id >= 100 && event.id < 1000)
                     );
                 }
