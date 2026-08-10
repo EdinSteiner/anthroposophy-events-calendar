@@ -2508,6 +2508,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Scheduled dates for 2027
+    const riddlesDates2027 = [
+        "2027-01-18",
+        "2027-02-01",
+        "2027-02-15",
+        "2027-03-01",
+        "2027-03-15",
+        "2027-04-05",
+        "2027-04-19",
+        "2027-05-03",
+        "2027-05-17",
+        "2027-05-31",
+        "2027-06-07",
+        "2027-06-21",
+        "2027-07-05",
+        "2027-07-19",
+        "2027-09-06",
+        "2027-09-20",
+        "2027-10-04",
+        "2027-10-18",
+        "2027-11-01",
+        "2027-11-15",
+        "2027-11-29",
+        "2027-12-13",
+        "2027-12-20"
+    ];
+
+    riddlesDates2027.forEach(formattedDate => {
+        mondayReadingGroupEvents.push({
+            "id": newIdCounter++,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Monday Study group: Riddles of Philosophy by Rudolf Steiner",
+            "date": formattedDate,
+            "time": "1:45-3:15pm",
+            "location": "The Centre in Morningside",
+            "locationLink": "https://www.christchurchmorningside.org/centre.html",
+            "description": "We'll study Rudolf Steiner's 'Riddles of Philosophy'.",
+            "link": "Contact :ioberski[at]gmail.com"
+        });
+    });
+
     // Add the newly generated fortnightly events to allEvents
     allEvents.push(...mondayReadingGroupEvents);
 
@@ -2520,7 +2561,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "time": "1:45-3:15pm (selected Mondays)",
         "location": "The Centre in Morningside",
         "locationLink": "https://www.christchurchmorningside.org/centre.html",
-        "description": "Dates: 31 Aug; 7, 21 Sep; 5, 19 Oct; 2, 16, 30 Nov; 14 Dec. No other dates planned yet.",
+        "description": "2026 dates: 31 Aug; 7, 21 Sep; 5, 19 Oct; 2, 16, 30 Nov; 14 Dec. 2027 dates: 18 Jan; 1, 15 Feb; 1, 15 Mar; 5, 19 Apr; 3, 17, 31 May; 7, 21 Jun; 5, 19 Jul; 6, 20 Sep; 4, 18 Oct; 1, 15, 29 Nov; 13, 20 Dec.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
