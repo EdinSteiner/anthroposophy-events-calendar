@@ -1764,13 +1764,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.eventbrite.co.uk/e/the-mystery-drama-of-our-lives-talk-and-workshop-by-adrian-locher-tickets-1990732514540"
         },
         {
-            "id": 3503,
+            "id": 3504,
             "organization": "Anthroposophy in Edinburgh",
-            "title": "Introduction to Anthroposophical Initiatives in and around Edinburgh",
-            "date": "2026-09-20",
-            "time": "14:00-16:30",
-            "location": "Columcille",
-            "description": "Free.",
+            "title": "Michaelmas gathering",
+            "date": "2026-09-26",
+            "time": "14:30-17:00",
+            "location": "Hoyland House, (Tiphereth), Torphin Road, EH13 0PQ",
+            "description": "Contributions by way of a verse, song, thought, question, reminiscence, expressing the mood of Michaelmas and your relationship to this festival will be most welcome - please let Huw Sheppard (sheppardhuw[at]yahoo.com) know if you would like to offer something. Also a small festive bite to share!<br><br>All members and friends welcome.",
             "link": "https://www.facebook.com/anthroposophyscotland"
         },
         {
@@ -2561,7 +2561,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "time": "1:45-3:15pm (selected Mondays)",
         "location": "The Centre in Morningside",
         "locationLink": "https://www.christchurchmorningside.org/centre.html",
-        "description": "2026 dates: 31 Aug; 7, 21 Sep; 5, 19 Oct; 2, 16, 30 Nov; 14 Dec. 2027 dates: 18 Jan; 1, 15 Feb; 1, 15 Mar; 5, 19 Apr; 3, 17, 31 May; 7, 21 Jun; 5, 19 Jul; 6, 20 Sep; 4, 18 Oct; 1, 15, 29 Nov; 13, 20 Dec.",
+        "description": "2026: 21 Sep, 5, 19 Oct, 2, 16, 30 Nov, 14 Dec. 2027: 18 Jan, 1, 15 Feb, 1, 15 Mar, 5, 19 Apr, 3, 17, 31 May, 7, 21 Jun, 5, 19 Jul, 6, 20 Sep, 4, 18 Oct, 1, 15, 29 Nov, 13, 20 Dec.",
         "link": "Contact :ioberski[at]gmail.com",
         "isOrganizationDetail": true // Mark as organization detail
     });
@@ -2573,7 +2573,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "date": "ongoing",
     "time": "Thursdays, 19:00–20:00",
     "location": "Online",
-    "description": "Paused for summer. Restarts on Thursday 3 September 2026.",
+    "description": "Restarts on Thursday 1 October 2026.",
     "link": "Contact :ioberski[at]gmail.com",
     "isOrganizationDetail": true
     });
@@ -2593,19 +2593,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add weekly Thursday events from 15 January 2026 onwards
     (() => {
         let id = 2008;
-        let date = new Date(2026, 0, 15); // 15 January 2026 (Thursday)
+        let date = new Date(2026, 9, 1); // 1 October 2026 (Thursday)
         const endDate = new Date(2026, 11, 31); // 31 December 2026
         // List of public holidays to skip (UK/Scotland, 2026):
         const skipDates = [
-            "2026-01-29", // CANCELLED
-            "2026-04-02",
-            "2026-04-09",
-            "2026-07-23",
-            "2026-07-30",
-            "2026-08-06",
-            "2026-08-13",
-            "2026-08-20",
-            "2026-08-27"
+            "2026-10-29",
+            "2026-11-26",
+            "2026-12-24",
+            "2026-12-31"
         ];
         while (date <= endDate) {
             const year = date.getFullYear();
@@ -3016,10 +3011,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return text;
         }
 
+        const normalizedText = text
+            .replace(/(\d{4})\s*dates?\s*:\s*/gi, '$1: ')
+            .replace(/(\d{4})\s*:\s*:\s*/g, '$1: ');
+
         const yearBlockRegex = /(\d{4})\s*:\s*([\s\S]*?)(?=(?:\s*\d{4}\s*:)|$)/g;
         const parsedBlocks = [];
         let blockMatch;
-        while ((blockMatch = yearBlockRegex.exec(text)) !== null) {
+        while ((blockMatch = yearBlockRegex.exec(normalizedText)) !== null) {
             parsedBlocks.push({
                 year: parseInt(blockMatch[1], 10),
                 entriesText: blockMatch[2].trim()
@@ -3048,11 +3047,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const remainingBlocks = parsedBlocks
             .map(({ year, entriesText }) => {
                 const rawEntries = entriesText
-                    .split(',')
+                    .split(/[;,]/)
                     .map(entry => entry.trim().replace(/\.+$/, ''))
                     .filter(Boolean);
 
+                let currentMonth = null;
                 const remainingEntries = rawEntries.filter(entry => {
+                    const standaloneDayMatch = entry.match(/^(\d{1,2})$/);
+                    if (standaloneDayMatch && currentMonth !== null) {
+                        const day = parseInt(standaloneDayMatch[1], 10);
+                        const entryDate = new Date(year, currentMonth, day);
+                        entryDate.setHours(0, 0, 0, 0);
+                        return entryDate >= today;
+                    }
+
                     const dateMatch = entry.match(/(\d{1,2})\s+([A-Za-z]+)/);
                     if (!dateMatch) {
                         return true;
@@ -3065,6 +3073,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         return true;
                     }
 
+                    currentMonth = month;
                     const entryDate = new Date(year, month, day);
                     entryDate.setHours(0, 0, 0, 0);
                     return entryDate >= today;
@@ -3379,6 +3388,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(event => event.isOrganizationDetail)
                 .map(event => {
                     const cleanedEvent = { ...event };
+                    if (event.title === "Monday Study group: Riddles of Philosophy by Rudolf Steiner" && typeof event.description === 'string') {
+                        cleanedEvent.description = event.description.replace(/2026 dates:\s*31 Aug;\s*7,\s*21 Sep;\s*/i, '2026 dates: ');
+                    }
                     cleanedEvent.date = trimPastEntriesFromYearDateList(cleanedEvent.date, today);
                     cleanedEvent.description = trimPastEntriesFromYearDateList(cleanedEvent.description, today);
                     return cleanedEvent;
