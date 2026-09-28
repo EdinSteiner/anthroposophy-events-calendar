@@ -1342,6 +1342,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "Accessibility: Accessible drop-off only. Transport: Bus routes 3, 25, 30, 33, 38. Activities: Cafe, Garden, Stalls, Fun activities, 12:00 - Puppet Show (Tickets £7). Booking: Call 0131 541 2284.",
             "link": "https://www.garvaldedinburgh.org.uk/"
         },
+        {
+            "id": 2134,
+            "organization": "Garvald Edinburgh",
+            "title": "Forming Space",
+            "date": "2026-09-28",
+            "endDate": "2026-10-09",
+            "time": "11:00 - 18:00",
+            "location": "Summerhall Arts, 1, Summerhall, Edinburgh, EH9 1PL",
+            "description": "An exhibition of handmade vessels by the artists and makers of Garvald Edinburgh. Until Friday 9 October 2026.",
+            "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
+        },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
