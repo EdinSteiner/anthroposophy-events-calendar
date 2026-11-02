@@ -1353,6 +1353,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "description": "An exhibition of handmade vessels by the artists and makers of Garvald Edinburgh. Until Friday 9 October 2026.",
             "link": "https://www.garvaldedinburgh.org.uk/news-and-events"
         },
+        {
+            "id": 2135,
+            "organization": "Garvald Edinburgh",
+            "title": "Garvald Artists at Art Car Boot Sale Glasgow 2026!",
+            "date": "2026-11-07",
+            "endDate": "2026-11-08",
+            "time": "Saturday 10am-6pm; Sunday 11am-5pm",
+            "location": "The Briggait, 141 Bridgegate, Glasgow G1 5HZ",
+            "description": "Tickets available online.",
+            "link": "https://www.tickettailor.com/events/patriciaflemingprojects/2373123"
+        },
 //
         // --- Camphill (Loch Arthur) (No specific upcoming events found via search) ---
         {
