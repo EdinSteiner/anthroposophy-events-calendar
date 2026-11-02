@@ -2556,6 +2556,28 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "21 Napier Road, Edinburgh",
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2657,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026: 5 Nov, 12 Nov, 19 Nov, 26 Nov.",
+            "time": "Thursdays at 10:30am",
+            "location": "Check with Peter for venue",
+            "description": "Weekly Thursday Gospel Study.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/",
+            "isOrganizationDetail": true
+        },
+        {
+            "id": 2658,
+            "organization": "Edinburgh Christian Community",
+            "title": "Sunday Services",
+            "date": "2026: 8 Nov, 15 Nov, 22 Nov.",
+            "time": "Sundays at 10:00am and 11:30am",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "8 Nov, 10am: The Act of Consecration of Man (Rev 8, 1-5); 11:30am: Remembering our Dead. 15 Nov, 10am: The Act of Consecration of Man (Rev 21, 1-8). 22 Nov, 10am: The Act of Consecration of Man (Rev 22, 1-11); 11:30am: Sharing Personal Highlights of 2026.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/",
+            "isOrganizationDetail": true
         }
     ];
 
@@ -3547,6 +3569,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Exclude individual 'Life Is Weird' daily entries from organization view
                 const lifeIsWeirdIds = [2111, 2112];
                 regularUpcomingEvents = regularUpcomingEvents.filter(event => !lifeIsWeirdIds.includes(event.id));
+            }
+
+            if (orgName === "Edinburgh Christian Community") {
+                const novemberScheduleIds = [2648, 2649, 2650, 2651, 2652, 2653, 2654, 2655, 2656];
+                regularUpcomingEvents = regularUpcomingEvents.filter(event => !novemberScheduleIds.includes(event.id));
             }
 
             if (orgName === "Iddo Oberski") {
