@@ -2466,6 +2466,96 @@ document.addEventListener('DOMContentLoaded', () => {
             "location": "21 Napier Road, Edinburgh",
             "description": "",
             "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2648,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-11-05",
+            "time": "10:30",
+            "location": "Check with Peter for venue",
+            "description": "Weekly Thursday study.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2649,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-11-12",
+            "time": "10:30",
+            "location": "Check with Peter for venue",
+            "description": "Weekly Thursday study.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2650,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-11-19",
+            "time": "10:30",
+            "location": "Check with Peter for venue",
+            "description": "Weekly Thursday study.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2651,
+            "organization": "Edinburgh Christian Community",
+            "title": "Gospel Study",
+            "date": "2026-11-26",
+            "time": "10:30",
+            "location": "Check with Peter for venue",
+            "description": "Weekly Thursday study.",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2652,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-11-08",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Revelation 8, 1-5",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2653,
+            "organization": "Edinburgh Christian Community",
+            "title": "Remembering our Dead",
+            "date": "2026-11-08",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2654,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-11-15",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Revelation 21, 1-8",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2655,
+            "organization": "Edinburgh Christian Community",
+            "title": "The Act of Consecration of Man",
+            "date": "2026-11-22",
+            "time": "10:00",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "Revelation 22, 1-11",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
+        },
+        {
+            "id": 2656,
+            "organization": "Edinburgh Christian Community",
+            "title": "Sharing Personal Highlights of 2026",
+            "date": "2026-11-22",
+            "time": "11:30",
+            "location": "21 Napier Road, Edinburgh",
+            "description": "",
+            "link": "https://www.thechristiancommunity.co.uk/the-christian-community-in-edinburgh/"
         }
     ];
 
