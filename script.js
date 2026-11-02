@@ -1796,6 +1796,16 @@ document.addEventListener('DOMContentLoaded', () => {
             "link": "https://www.facebook.com/anthroposophyscotland"
         },
         {
+            "id": 3505,
+            "organization": "Anthroposophy in Edinburgh",
+            "title": "Solovyov's The Anti-Christ. A Reading by Glen Williamson",
+            "date": "2026-11-07",
+            "time": "19:00-20:00",
+            "location": "See Eventbrite for location",
+            "description": "Tickets and more information on Eventbrite.",
+            "link": "https://www.eventbrite.co.uk/manage/events/1999169755555"
+        },
+        {
             "id": 2538,
             "organization": "Edinburgh Steiner School",
             "title": "Steiner Waldorf Education Taster Day",
